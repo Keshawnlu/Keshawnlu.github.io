@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>找位置问题 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 1025. 除数博弈 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/Keshawnlu.github.io/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">找位置问题</a>
+                <a href="#" class="post-name">Leetcode 1025. 除数博弈</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            找位置问题
+            Leetcode 1025. 除数博弈
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">708</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">471</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/02/24</span>
+                    <span class="post-intro-time">2020/04/29</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,29 +395,21 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>2020.3.1更新</p>
-<p>错误理解题目的意思，以为的是每过一轮就要重新排列（导致编号为1的人永远出不去），其实是每出局一个人就自动变成新的圈，然后循环报数。</p>
-<p>不过问题不大，只要把每次判断当前未出局人数前的num清零操作取消即可。</p>
-<hr>
-<p>首先想说的是确实是已经好久没写博客了，还是自己太懒…和自己感觉没啥特别想写的，所以开学以后学了c#，顺便写一点算法相关的问题吧。</p>
-<hr>
-<p>【问题描述】</p>
-<p>n 个人围成一圈, 并依次编号1～n。从编号为1 的人开始，按顺时针方向每隔一人选出一个，剩下的人重新围成一圈，如此循环直到剩下两人，这剩下的两人就是幸运儿。如果你想成为最后两个幸运儿，请问开始时应该站在什么位置？（设3&lt;=n&lt;=50）</p>
-<p><img src="https://pic.downk.cc/item/5e53b77b6127cc0713795c3b.jpg" alt="img"></p>
-<p>【输入】</p>
-<p>开始时的人数n</p>
-<p>【输出】</p>
-<p>第1 行是选出顺序，第2 行是两名幸运儿的开始位置（按升序排列），位置编号之间用一个空格分开。</p>
-<p>【样例输入】 </p>
-<p>12</p>
-<p>【样例输出】</p>
-<p>2 4 6 8 10 12 3 7 11 5</p>
-<p>1 9</p>
-<hr>
-<p>思考：一开始拿到这个题的时候，确实没啥好的想法，然后百度了一波，发现这是约瑟夫环问题，然后看了一些大佬写的代码，讲道理没有特别看懂，然后索性不看了，自己想了想以后好像可以用数组的方法去解决问题。</p>
-<p>首先定义一个数组，代表人数，初始值都为false，由于最后只能留下两个人，所以当还没出局的人数大于2时，一直进行循环。</p>
-<p>定义一个变量num来存储实际已经间隔的人数，每个人“报数”时num都会加一，当遇到该位置为之前已经出局的人时，将num减一，当num为2时，即代表该位置的人要出局，再将num置为0即可，下面是代码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line"></span><br><span class="line">namespace Week2</span><br><span class="line">&#123;</span><br><span class="line">    class Problem3</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.Write(&quot;请输入人数：&quot;);</span><br><span class="line">            int n = Convert.ToInt32(Console.ReadLine()) ;</span><br><span class="line"></span><br><span class="line">            //初始化</span><br><span class="line">            bool[] People = new bool[n + 1];</span><br><span class="line"></span><br><span class="line">            for(int i = 0; i &lt; n + 1; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                People[i] = false;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            int now_count = n;  //当前存在人数</span><br><span class="line">            int num = 0;    //判断间隔的人数</span><br><span class="line">            while(now_count &gt; 2)</span><br><span class="line">            &#123;</span><br><span class="line">                for (int j = 1; j &lt; n + 1; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    num++;</span><br><span class="line">                    if(People[j] == true)</span><br><span class="line">                    &#123;</span><br><span class="line">                        num -= 1;   //当前的人之前已经出局了</span><br><span class="line">                    &#125;</span><br><span class="line">                    else if(num == 2)</span><br><span class="line">                    &#123;</span><br><span class="line">                        People[j] = true;</span><br><span class="line">                        Console.Write(j + &quot; &quot;);</span><br><span class="line">                        now_count -= 1;</span><br><span class="line">                        num = 0;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Console.WriteLine();</span><br><span class="line"></span><br><span class="line">            for(int i = 1; i &lt; n + 1; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if(People[i] == false)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.Write(i + &quot; &quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h2><p>爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。</p>
+<p>最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：</p>
+<p>选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。<br>用 N - x 替换黑板上的数字 N 。<br>如果玩家无法执行这些操作，就会输掉游戏。</p>
+<p>只有在爱丽丝在游戏中取得胜利时才返回 True，否则返回 false。假设两个玩家都以最佳状态参与游戏。</p>
+<p>示例 1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：2</span><br><span class="line">输出：true</span><br><span class="line">解释：爱丽丝选择 1，鲍勃无法进行操作。</span><br></pre></td></tr></table></figure>
+
+<p>示例 2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：3</span><br><span class="line">输出：false</span><br><span class="line">解释：爱丽丝选择 1，鲍勃也选择 1，然后爱丽丝无法进行操作。</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<p>1 &lt;= N &lt;= 1000</p>
+<p>思路：首先我们可以知道N = 1 和 N = 2 时爱丽丝的胜负情况。那么我们将后面的N(即3 &lt;= N &lt;= 1000)都化简为前面已知的情况并存储下来，假如当前的数为N，若在[1, N - 1]中存在一个数x，首先满足 N % x == 0(说明爱丽丝本次可以进行操作)，其次满足dp[N - x] == false(即下一次轮到鲍勃时，无法进行操作)，满足这两点就说明爱丽丝获胜了，若循环后，没有一个x满足这两点，则爱丽丝就是输了(因为 N - x 的范围在[1, N-1]内， 即取1都不能满足，说明和N = 1的情况一样是输了)</p>
+<p>C++代码如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">divisorGame</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">bool</span> dp[<span class="number">1001</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="literal">false</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= N; i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i] = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(dp[i - j] == <span class="literal">false</span> &amp;&amp; i % j == <span class="number">0</span>)&#123;</span><br><span class="line">                     <span class="comment">// i即为N, j即为x</span></span><br><span class="line">                    dp[i] = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; </span><br><span class="line">                    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[N];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
     </article>
@@ -427,17 +419,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/Keshawnlu.github.io/2020/04/10/2021考研计划/" title= "2021考研计划">
-                    <div class="nextTitle">2021考研计划</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/Keshawnlu.github.io/2019/10/14/时晨《傀儡村事件》/" title= "时晨《傀儡村事件》">
-                    <div class="prevTitle">时晨《傀儡村事件》</div>
+                <a href= "/Keshawnlu.github.io/2020/04/10/2021考研计划/" title= "2021考研计划">
+                    <div class="prevTitle">2021考研计划</div>
                 </a>
             
         </li>
@@ -578,7 +565,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题简介"><span class="toc-number">1.</span> <span class="toc-text">问题简介</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
