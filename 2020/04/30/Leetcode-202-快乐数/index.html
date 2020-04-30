@@ -422,8 +422,8 @@ a_{i}表示每一位上的数字，并且 0 <= a_{i} <= 9,
 \\
 \leq \lim_{m\to ∞} \frac{m * 9^2}{10^{m-1}}
 \\
-=0</script><p>注意最后一步放缩，分子向上放（a_{i}&lt;=9a  &lt;=9），分母向下缩（mm 位数肯定是大于等于 mm 位数最小的那个数）。</p>
-<p>好了，这就证明了不会有一个一直增长的链表，而且在 nn 非常大的时候，通过 squareSum(n)squareSum(n) 操作会急剧变小。</p>
+=0</script><p>注意最后一步放缩，分子向上放（ai &lt;= 9），分母向下缩（m位数肯定是大于等于m位数最小的那个数）。</p>
+<p>好了，这就证明了不会有一个一直增长的链表，而且在 n 非常大的时候，通过 squareSum(n)操作会急剧变小。</p>
 <p>通过上述操作我们知道了只有两种情况的可能，所以我们可以设置一个set，来存储每次平方和后的结果，如果在某次平方和后得到的结果在之前已经遇到过了，说明就陷入了循环，返回false即可，如果最后的结果为1，即返回true，说明是快乐数。</p>
 <p>代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">SquareSum</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">            sum += <span class="built_in">pow</span>(n % <span class="number">10</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">            n /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; hashset;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">        hashset.insert(n);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">1</span>)&#123;</span><br><span class="line"></span><br><span class="line">            n = SquareSum(n);</span><br><span class="line">            <span class="comment">//.second 插入成功返回true,插入失败返回false</span></span><br><span class="line">            <span class="keyword">if</span>(hashset.insert(n).second == <span class="literal">false</span>)	</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -848,12 +848,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/Keshawnlu.github.io/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/Keshawnlu.github.io/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/Keshawnlu.github.io/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/Keshawnlu.github.io/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -952,24 +952,9 @@ jsonContent:
     </div>
     <!-- async load share.js -->
     
-        <script src="/Keshawnlu.github.io/scripts/share.js" async></script>    
+        <script src="/Keshawnlu.github.io/scripts/share.js" async></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->    
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
+    </body>
 </html>
 
 
