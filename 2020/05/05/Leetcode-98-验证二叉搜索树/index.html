@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>东野圭吾《秘密》 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 98. 验证二叉搜索树 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/Keshawnlu.github.io/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">东野圭吾《秘密》</a>
+                <a href="#" class="post-name">Leetcode 98. 验证二叉搜索树</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            东野圭吾《秘密》
+            Leetcode 98. 验证二叉搜索树
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">440</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">332</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2020/05/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,12 +401,21 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="2019推理小说阅读计划-2-50"><a href="#2019推理小说阅读计划-2-50" class="headerlink" title="2019推理小说阅读计划(2/50)"></a>2019推理小说阅读计划(2/50)</h2><h3 id="东野圭吾-《秘密》"><a href="#东野圭吾-《秘密》" class="headerlink" title="东野圭吾 《秘密》"></a>东野圭吾 《秘密》</h3><p>以前在网上看到过一个梗，如果你女朋友和妈妈因为一个诅咒发生了灵魂互换，只有和一个人xxx才能解除诅咒，你会选择谁。</p>
-<p>在这本书里，便是采用了这种设定，因事故去世的妻子的灵魂(或者说是意识)跑到了男主女儿的身上，在男主感到慰藉的同时，随之也产生了很多问题…</p>
-<p>男主有着正常的生理欲望，但自己做不到和有着妻子意识的女儿的身体发生关系，所以他也幻想和自己女儿的老师发生关系，也找过小姐，但因为自己对妻子的责任，最终没有背叛，这也是他之后因为”妻子”和学校里的男生约会，防着他打电话时安装窃听，内心十分悲痛的原因。</p>
-<p>我不想去思考妻子是否真的算背叛了男主，因为由于身体的原因，有些事情可能不得不去面对，自己不可能和男主一直相伴到老。她用了假装自己女儿的意识回到了原来身体的办法，去减轻男主的痛苦。(在这里其实我以为女儿的意识是真的回来了)</p>
-<p>但当最后男主在”女儿”结婚时发现那个戒指时，他才知道女儿的意识一直没有回来，这一切只是妻子演给他看的。故事到这里也就结束了，不知道男主以后的人生会是怎么样，我只知道他被害死自己妻子的司机的前妻的私生子给绿了</p>
-<p><img src="https://img3.doubanio.com/view/subject/l/public/s5909700.jpg" alt></p>
+        <h2 id="题目简介"><a href="#题目简介" class="headerlink" title="题目简介"></a>题目简介</h2><p>给定一个二叉树，判断其是否是一个有效的二叉搜索树。</p>
+<p>假设一个二叉搜索树具有如下特征：</p>
+<ul>
+<li>节点的左子树只包含小于当前节点的数。</li>
+<li>节点的右子树只包含大于当前节点的数。</li>
+<li><p>所有左子树和右子树自身必须也是二叉搜索树。</p>
+<p><strong>示例 1:</strong> </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    2</span><br><span class="line">   / \</span><br><span class="line">  1   3</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p> <strong>示例 2:</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    5</span><br><span class="line">   / \</span><br><span class="line">  1   4</span><br><span class="line">     / \</span><br><span class="line">    3   6</span><br><span class="line">输出: false</span><br><span class="line">解释: 输入为: [5,1,4,null,null,3,6]。</span><br><span class="line">     根节点的值为 5 ，但是其右子节点值为 4 。</span><br></pre></td></tr></table></figure>
+<p>思路：因为是二叉搜索树，所以最左边的值最小，最右边的值最大，所以我们可以采用中序遍历，即先遍历左子树，再访问根节点，再遍历右子树。只有当前节点的值大于上一个遍历到的点的值，才符合搜索树的定义，不然直接返回false。</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">long</span> pre = <span class="number">-10000000000</span>;	<span class="comment">//记录上一个点的值</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidBST</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!isValidBST(root-&gt;left))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root -&gt; val &lt;= pre)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            pre = root -&gt; val;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!isValidBST(root-&gt;right))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -409,17 +424,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/Keshawnlu.github.io/2019/10/14/东野圭吾《红手指》/" title= "东野圭吾《红手指》">
-                    <div class="nextTitle">东野圭吾《红手指》</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/Keshawnlu.github.io/2019/10/14/东野圭吾《信》/" title= "东野圭吾《信》">
-                    <div class="prevTitle">东野圭吾《信》</div>
+                <a href= "/Keshawnlu.github.io/2020/05/04/Leetcode-45-跳跃游戏-II/" title= "Leetcode 45. 跳跃游戏 II">
+                    <div class="prevTitle">Leetcode 45. 跳跃游戏 II</div>
                 </a>
             
         </li>
@@ -560,7 +570,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2019推理小说阅读计划-2-50"><span class="toc-number">1.</span> <span class="toc-text">2019推理小说阅读计划(2/50)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#东野圭吾-《秘密》"><span class="toc-number">1.1.</span> <span class="toc-text">东野圭吾 《秘密》</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介"><span class="toc-number">1.</span> <span class="toc-text">题目简介</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
