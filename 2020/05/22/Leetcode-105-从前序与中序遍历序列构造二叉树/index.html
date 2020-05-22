@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 105. 从前序与中序遍历序列构造二叉树 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header index-header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Keshawn_lu&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Leetcode 105. 从前序与中序遍历序列构造二叉树</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Keshawn_lu's Blog</a>
 </header>
@@ -221,23 +232,23 @@
 
 
 
-height:100vh;
+height:50vh;
 ">
     
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(https://ae01.alicdn.com/kf/HTB1xNZybbH1gK0jSZFw7637aXXao.png)"></div>
+    <div class="site-intro-img" style="background-image: url(https://pic.superbed.cn/item/5d383e5d451253d178a78147.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Keshawn_lu's Blog
-            <!-- 文章页  -->
+            Leetcode 105. 从前序与中序遍历序列构造二叉树
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:100vh;
             <!-- 主页副标题  -->
             
             
-                Become a better myself.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">574</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/05/22</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,198 +399,83 @@ height:100vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/14/东野圭吾《秘密》/" >
-            
-                <span>东野圭吾《秘密》</span>
-        </a>
-        <div class="abstract-content">
-            2019推理小说阅读计划(2/50)东野圭吾 《秘密》以前在网上看到过一个梗，如果你女朋友和妈妈因为一个诅咒发生了灵魂互换，只有和一个人xxx才能解除诅咒，你会选择谁。
-在这本书里，便是采用了这种设定，因事故去世的妻子的灵魂(或者说是意识)跑到了男主女儿的身上，在男主感到慰藉的同时，随之也产生了很多问题…
-男主有着正常的生理欲望，但自己做不到和有着妻子意识的女儿的身体发生关系，所以他也幻想和自己女儿的老师发生关系，也找过小姐，但因为自己对妻子的责任，最终没有背叛，这也是他之后因为”妻子”和学校里的男生约会，防着他打电话时安装窃听，内心十分悲痛的原因。
-我不想去思考妻子是否真的算背叛了男主...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>根据一棵树的前序遍历与中序遍历构造二叉树。</p>
+<p><strong>注意:</strong><br>你可以假设树中没有重复的元素。</p>
+<p>例如，给出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前序遍历 preorder = [3,9,20,15,7]</span><br><span class="line">中序遍历 inorder = [9,3,15,20,7]</span><br></pre></td></tr></table></figure>
+<p>返回如下的二叉树：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  3</span><br><span class="line"> / \</span><br><span class="line">9  20</span><br><span class="line">  /  \</span><br><span class="line"> 15   7</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>我们就按下面这个例子来讲解一下思路。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前序遍历 preorder = [3,9,20,15,7]</span><br><span class="line">中序遍历 inorder = [9,3,15,20,7]</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>首先我们根据前序遍历知道它的第一个结点<code>3</code>便是根节点，再去遍历中序遍历，从而知道根节点在中序遍历的位置。</p>
+</li>
+<li><p>知道了根节点在中序遍历中的位置后，我们便能知道这棵树的左子树为<code>[9]</code>，右子树为<code>[15,20,7]</code>。将这些数字按照在前序遍历和中序遍历的位置存到<code>pre_left, pre_right, in_left, in_right</code>中。</p>
+<p>即<code>pre_left = [9], pre_right = [20,15,7], in_left = [9], in_right = [15, 20, 7]</code>。</p>
+</li>
+<li><p>再利用递归，将根节点的左子树和右子树看成一颗新的树(同样拥有根节点和它们的左右子树)。得到左子树的根节点为<code>9</code>，右子树的根节点为<code>20</code>，再分别构造新的<code>pre_left, pre_right, in_left, in_right</code>。</p>
+<ul>
+<li>左子树只有根节点<code>9</code>了，结束递归。</li>
+<li>右子树：<code>pre_left = [15], pre_right = [7], in_left = [15], in_right = [7]</code></li>
+</ul>
+</li>
+<li><p>第二次递归，新的左右子树都只有一个结点，分别作为新的子树的根节点后结束递归。</p>
+</li>
+<li><p>最后返回根节点<code>root</code>即可。</p>
+</li>
+</ol>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">buildTree</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; preorder, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; inorder)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> size = preorder.size();</span><br><span class="line">        <span class="keyword">if</span>(size == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        </span><br><span class="line">        TreeNode* root = <span class="keyword">new</span> TreeNode(preorder[<span class="number">0</span>]);  <span class="comment">//根节点</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; pre_left, pre_right, in_left, in_right;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="comment">//左子树的中序遍历</span></span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; size; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(preorder[<span class="number">0</span>] == inorder[i])</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            in_left.push_back(inorder[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//右子树的中序遍历</span></span><br><span class="line">        <span class="keyword">for</span>(i = i + <span class="number">1</span>; i &lt; size; i++)&#123;</span><br><span class="line"></span><br><span class="line">            in_right.push_back(inorder[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//j = 0 时为根节点，得从1开始</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; size; j++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//左右子树的前序遍历</span></span><br><span class="line">            <span class="keyword">if</span>(j &lt;= in_left.size())</span><br><span class="line">                pre_left.push_back(preorder[j]);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                pre_right.push_back(preorder[j]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        root -&gt; left = buildTree(pre_left, in_left);</span><br><span class="line">        root -&gt; right = buildTree(pre_right, in_right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/14/东野圭吾《信》/" >
-            
-                <span>东野圭吾《信》</span>
-        </a>
-        <div class="abstract-content">
-            2019推理小说阅读计划(1/50)东野圭吾 《信》严格意义上来说，这本书并不算推理小说，虽然可能有那么一点解谜的成分在里面。但更像是一本主角的成长小说和在某一角度反映社会的社会学小说。因哥哥为了家庭和弟弟的学业而入室偷窃，被发现后因冲动杀人而导致的犯罪事实，使弟弟在后来的人生中被迫贴上了杀人犯的弟弟的标签，踏入社会后更是因为歧视放弃自己的音乐梦想，放弃了爱情。到最后为了不让自己的妻子和女儿的生活受到影响而选择与自己的哥哥断绝关系。
-即使一再强调哥哥的犯罪与自己无关，且不是恶性犯罪，但这个社会不会给你过多辩解的机会或者说不会理睬你的辩解。
-“没有歧视和偏见的世界，那只是想象中的产物。”感...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/07/14/博客初步搭建成功/" >
-            
-                <span>博客初步搭建成功</span>
-        </a>
-        <div class="abstract-content">
-            
-2019/07/24更新
-讲述一下这段时间自己坎坷的搭建过程吧，遇到最大的困难是图床，一开始用的是贴图网的图床，但是贴图网的免费版每七天就会删除相册里的图片，这谁顶得住呀，又不想花太多钱在图床上，所以pass了贴图网，后来找了一些免费的图床，但是加载速度是真的不行(果然花钱的肯定比免费的好)，再后来又找到了七牛，本以为自己买的域名认证通过以后，绑定在七牛上，一切问题都迎刃而解，但是当我兴致勃勃去绑定域名的时候才发现这玩意还得备案，所以又去找备案的方法，填信息的时候发现需要一个备案服务号(好像叫这个，记不清了)，但是这东西好像得买了服务器以后才有，但我用的是github给自己的空间，淘宝...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/4/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
-    </nav>
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= https://pic.superbed.cn/item/5d383e4b451253d178a78084.jpg >
-    <div class="profile-name">鸣蜩十九</div>
-    
-    <div class="profile-signature">
-        Always
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/05/21/Leetcode-5-最长回文子串/" title= "Leetcode 5. 最长回文子串">
+                    <div class="prevTitle">Leetcode 5. 最长回文子串</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTMxOS8yMTgzMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
+
+<!-- City版安装代码已完成 -->
     
     
-    <div class="profile-social">
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-            
-                <a href="mailto:809759109@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/Keshawnlu" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/wechat.jpg" />
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title=qq>
-                  
-                  <img class="profile-qr" src="/assets/qq.jpg" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>友链</div>
-            
-                
-                    <span>
-                        <a href= https://blog.csdn.net/qq_33948567 target="_black">CSDN</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.bilibili.com target="_black">BiliBili</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >About cute author</a>
-        </div>
-    
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=86 src="//music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66">
-</iframe>
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -632,6 +565,24 @@ height:100vh;
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1546,6 +1497,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
