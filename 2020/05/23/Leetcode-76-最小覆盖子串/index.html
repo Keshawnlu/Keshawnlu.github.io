@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 155. 最小栈 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 76. 最小覆盖子串 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 155. 最小栈</a>
+                <a href="#" class="post-name">Leetcode 76. 最小覆盖子串</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 155. 最小栈
+            Leetcode 76. 最小覆盖子串
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,20 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">409</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">599</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/12</span>
+                    <span class="post-intro-time">2020/05/23</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,22 +403,23 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p> 设计一个支持 <code>push</code> ，<code>pop</code> ，<code>top</code> 操作，并能在常数时间内检索到最小元素的栈。 </p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字符的最小子串。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: S = &quot;ADOBECODEBANC&quot;, T = &quot;ABC&quot;</span><br><span class="line">输出: &quot;BANC&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
 <ul>
-<li><code>push(x)</code> —— 将元素 x 推入栈中。</li>
-<li><code>pop()</code> —— 删除栈顶的元素。</li>
-<li><code>top()</code> —— 获取栈顶元素。</li>
-<li><p><code>getMin()</code> —— 检索栈中的最小元素。 </p>
-<p><strong>示例:</strong> </p>
-</li>
+<li>如果 S 中不存这样的子串，则返回空字符串 <code>&quot;&quot;</code>。</li>
+<li>如果 S 中存在这样的子串，我们保证它是唯一的答案。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]</span><br><span class="line">[[],[-2],[0],[-3],[],[],[],[]]</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">[null,null,null,null,-3,null,0,-2]</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line">MinStack minStack = new MinStack();</span><br><span class="line">minStack.push(-2);</span><br><span class="line">minStack.push(0);</span><br><span class="line">minStack.push(-3);</span><br><span class="line">minStack.getMin();   --&gt; 返回 -3.</span><br><span class="line">minStack.pop();</span><br><span class="line">minStack.top();      --&gt; 返回 0.</span><br><span class="line">minStack.getMin();   --&gt; 返回 -2.</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>先将<code>T</code>中的字符存入至哈希表中，然后利用滑动窗口的思想，右端窗口不断往右遍历(即扩大窗口)，并将字符压入<code>window</code>中，若发现当前字符出现在<code>T</code>中，并且出现次数也相等时(即<code>str_t[s[right]] == window[s[right]]</code>)，将<code>valid++</code>，说明已经有一个字符已经满足要求了。当<code>valid == str_t.size()</code>时，说明所有字符均已满足要求，开始尝试缩小窗口。</p>
+<p>当所有字符每次满足要求时(<code>valid == str_t.size()</code>)，保存满足要求子串的最小长度及当前的<code>left</code>(即窗口的开始位置)。然后将<code>left</code>不断往右移，将字符逐渐移出(即缩小窗口)。若遇到之前满足要求的字符，由于将当前字符移出后，一定不会再满足要求了，所以<code>valid--</code>，<code>left</code>结束移动的标志时<code>valid != str_t.size()</code>。</p>
+<p>当<code>right</code>移动至字符串<code>S</code>的结尾时，结束遍历。</p>
+<p><code>tips:</code></p>
 <ul>
-<li><code>pop</code>、<code>top</code> 和 <code>getMin</code> 操作总是在 <strong>非空栈</strong> 上调用。</li>
+<li>判断字符是否出现在<code>T</code>的哈希表中时，需要使用<code>find()</code>或其他可行的方法，<strong>不能使用</strong><code>str_t[s[right]] &gt; 0</code>的判定方法，这样会时<code>str_t.size()</code>扩大。</li>
+<li>结束遍历后，若<code>len</code>为初始值，则不存在这样的子串，返回空，但<code>len</code>的值需要设的大一点。</li>
 </ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>使用stack结构，设置两个栈，一个存储正常数据的栈，一个存储栈中最小数据的辅助栈，push数据时，将辅助栈的栈顶元素和当前数据进行比较，将较小值push进辅助栈，这样就能保证辅助栈的栈顶元素永远是栈中的最小元素。正常栈pop出元素时，则将辅助栈的栈顶元素也pop出即可。其他操作较为简单，直接调用函数即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MinStack</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/** initialize your data structure here. */</span></span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; min_stack;   <span class="comment">//栈顶存储最小元素</span></span><br><span class="line">    MinStack() &#123;</span><br><span class="line">        min_stack.push(INT_MAX);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        s.push(x);</span><br><span class="line">        min_stack.push(min(x, min_stack.top()));    <span class="comment">//将最小值存入最小栈的栈顶</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        s.pop();</span><br><span class="line">        min_stack.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> s.top();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getMin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> min_stack.top();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MinStack object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MinStack* obj = new MinStack();</span></span><br><span class="line"><span class="comment"> * obj-&gt;push(x);</span></span><br><span class="line"><span class="comment"> * obj-&gt;pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj-&gt;top();</span></span><br><span class="line"><span class="comment"> * int param_4 = obj-&gt;getMin();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">minWindow</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> t)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">unordered_map</span> &lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; window, <span class="keyword">str_t</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> valid = <span class="number">0</span>;	<span class="comment">//满足需求的字符的个数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; t.length(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">str_t</span>[t[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">1000000</span>;</span><br><span class="line">        <span class="keyword">while</span>(right &lt; s.length())&#123;    <span class="comment">//扩大窗口</span></span><br><span class="line"></span><br><span class="line">            window[s[right]]++; <span class="comment">//字符压入窗口</span></span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">str_t</span>.find(s[right]) != <span class="keyword">str_t</span>.end())&#123;	<span class="comment">//此字符出现在T中</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(window[s[right]] == <span class="keyword">str_t</span>[s[right]])	<span class="comment">//出现次数相等</span></span><br><span class="line">                    valid++;</span><br><span class="line">            &#125;</span><br><span class="line">            right++;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(valid == <span class="keyword">str_t</span>.size())&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(right - left &lt; len)&#123;</span><br><span class="line"></span><br><span class="line">                    start = left;</span><br><span class="line">                    len = right - left;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">str_t</span>.find(s[left]) != <span class="keyword">str_t</span>.end())&#123;     <span class="comment">//缩小窗口</span></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(window[s[left]] == <span class="keyword">str_t</span>[s[left]])</span><br><span class="line">                        valid--;</span><br><span class="line">                &#125;</span><br><span class="line">                window[s[left]]--;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> len == <span class="number">1000000</span> ? <span class="string">""</span> : s.substr(start, len);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -425,17 +428,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/13/Leetcode-102-二叉树的层序遍历/" title= "Leetcode 102. 二叉树的层序遍历">
-                    <div class="nextTitle">Leetcode 102. 二叉树的层序遍历</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/11/Leetcode-50-Pow-x-n/" title= "Leetcode 50. Pow(x, n)">
-                    <div class="prevTitle">Leetcode 50. Pow(x, n)</div>
+                <a href= "/2020/05/22/Leetcode-105-从前序与中序遍历序列构造二叉树/" title= "Leetcode 105. 从前序与中序遍历序列构造二叉树">
+                    <div class="prevTitle">Leetcode 105. 从前序与中序遍历序列构造二叉树</div>
                 </a>
             
         </li>
