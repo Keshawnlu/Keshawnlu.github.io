@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>时晨《五行塔事件》 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 5417. 定长子串中元音的最大数目 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">时晨《五行塔事件》</a>
+                <a href="#" class="post-name">Leetcode 5417. 定长子串中元音的最大数目</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            时晨《五行塔事件》
+            Leetcode 5417. 定长子串中元音的最大数目
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">84</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">580</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2020/05/24</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,8 +401,41 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="2019推理小说阅读计划-10-50"><a href="#2019推理小说阅读计划-10-50" class="headerlink" title="2019推理小说阅读计划(10/50)"></a>2019推理小说阅读计划(10/50)</h2><h3 id="时晨-《五行塔事件》"><a href="#时晨-《五行塔事件》" class="headerlink" title="时晨 《五行塔事件》"></a>时晨 《五行塔事件》</h3><p>隔了n久终于看完了这本书，主要还是因为懒吧…所以就懒得写读后感了…<br>最近《QED可以的》第二季也在b站播出了，对推理小说感兴趣的小可爱们可以去看一下呀～</p>
-<p><img src="https://img3.doubanio.com/view/subject/l/public/s29487974.jpg" alt></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你字符串 <code>s</code> 和整数 <code>k</code> 。</p>
+<p>请返回字符串 <code>s</code> 中长度为 <code>k</code> 的单个子字符串中可能包含的最大元音字母数。</p>
+<p>英文中的 <strong>元音字母</strong> 为（<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>）。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;abciiidef&quot;, k = 3</span><br><span class="line">输出：3</span><br><span class="line">解释：子字符串 &quot;iii&quot; 包含 3 个元音字母。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;aeiou&quot;, k = 2</span><br><span class="line">输出：2</span><br><span class="line">解释：任意长度为 2 的子字符串都包含 2 个元音字母。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;leetcode&quot;, k = 3</span><br><span class="line">输出：2</span><br><span class="line">解释：&quot;lee&quot;、&quot;eet&quot; 和 &quot;ode&quot; 都包含 2 个元音字母。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;rhythms&quot;, k = 4</span><br><span class="line">输出：0</span><br><span class="line">解释：字符串 s 中不含任何元音字母。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;tryhard&quot;, k = 4</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
+<li><code>s</code> 由小写英文字母组成</li>
+<li><code>1 &lt;= k &lt;= s.length</code></li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>一开始想着用暴力法，结果就很自然的超时了。然后想了一下，觉得应该能用动态规划来做，首先<code>dp[i]</code>的含义是以<code>i</code>为结尾的<code>k</code>个字符的字符串的元音数目。所以需要先初始化<code>dp[k - 1]</code>。</p>
+<p>从<code>i == k</code>开始遍历时，存在两种大情况(<code>s[i - k]</code>代表每次子字符串的首个字符)：</p>
+<ul>
+<li>若<code>s[i - k]</code>为元音字母：<ul>
+<li>若<code>s[i]</code>也为元音字母，则<code>dp[i] = dp[i - 1]</code></li>
+<li>若<code>s[i]</code>不为元音字母，则<code>dp[i] = dp[i - 1] - 1</code></li>
+</ul>
+</li>
+<li>若<code>s[i - k]</code>不为元音字母：<ul>
+<li>若<code>s[i]</code>为元音字母，则<code>dp[i] = dp[i - 1] + 1</code> </li>
+<li>若<code>s[i]</code>不为元音字母，则<code>dp[i] = dp[i - 1]</code></li>
+</ul>
+</li>
+</ul>
+<p>然后每次存储最大值，最后返回即可。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(c == <span class="string">'a'</span> || c == <span class="string">'e'</span> || c == <span class="string">'i'</span> || c == <span class="string">'o'</span> || c == <span class="string">'u'</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxVowels</span><span class="params">(<span class="built_in">string</span> s, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(s.length(), <span class="number">0</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">'a'</span> || s[i] == <span class="string">'e'</span> || s[i] == <span class="string">'i'</span> || s[i] == <span class="string">'o'</span> || s[i] == <span class="string">'u'</span>)</span><br><span class="line">                dp[k - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> num = dp[k - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = k; i &lt; s.length(); i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(judge(s[i - k]))&#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(judge(s[i]))</span><br><span class="line">                    dp[i] = dp[i - <span class="number">1</span>];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[i] = dp[i - <span class="number">1</span>] - <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(judge(s[i]))</span><br><span class="line">                    dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[i] = dp[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(dp[i] &gt; num)</span><br><span class="line">                num = dp[i];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -406,16 +445,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/10/14/时晨《傀儡村事件》/" title= "时晨《傀儡村事件》">
-                    <div class="nextTitle">时晨《傀儡村事件》</div>
+                <a href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" title= "Leetcode 5418. 二叉树中的伪回文路径">
+                    <div class="nextTitle">Leetcode 5418. 二叉树中的伪回文路径</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/14/时晨《镜狱岛事件》/" title= "时晨《镜狱岛事件》">
-                    <div class="prevTitle">时晨《镜狱岛事件》</div>
+                <a href= "/2020/05/23/Leetcode-76-最小覆盖子串/" title= "Leetcode 76. 最小覆盖子串">
+                    <div class="prevTitle">Leetcode 76. 最小覆盖子串</div>
                 </a>
             
         </li>
@@ -556,7 +595,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2019推理小说阅读计划-10-50"><span class="toc-number">1.</span> <span class="toc-text">2019推理小说阅读计划(10/50)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#时晨-《五行塔事件》"><span class="toc-number">1.1.</span> <span class="toc-text">时晨 《五行塔事件》</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
