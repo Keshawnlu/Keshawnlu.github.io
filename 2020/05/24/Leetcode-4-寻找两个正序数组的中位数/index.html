@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 5418. 二叉树中的伪回文路径 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 4. 寻找两个正序数组的中位数 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 5418. 二叉树中的伪回文路径</a>
+                <a href="#" class="post-name">Leetcode 4. 寻找两个正序数组的中位数</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 5418. 二叉树中的伪回文路径
+            Leetcode 4. 寻找两个正序数组的中位数
             <!-- 404 -->
             
         </h1>
@@ -266,13 +266,13 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">914</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.3k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,32 +401,44 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「<strong>伪回文</strong>」的，当它满足：路径经过的所有节点值的排列中，存在一个回文序列。</p>
-<p>请你返回从根到叶子节点的所有路径中 <strong>伪回文</strong> 路径的数目。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://pic.downk.cc/item/5ec9efe2c2a9a83be593af86.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [2,3,1,3,1,null,1]</span><br><span class="line">输出：2 </span><br><span class="line">解释：上图为给定的二叉树。总共有 3 条从根到叶子的路径：红色路径 [2,3,3] ，绿色路径 [2,1,1] 和路径 [2,3,1] 。</span><br><span class="line">     在这些路径中，只有红色和绿色的路径是伪回文路径，因为红色路径 [2,3,3] 存在回文排列 [3,2,3] ，绿色路径 [2,1,1] 存在回文排列 [1,2,1] 。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<p><img src="https://pic.downk.cc/item/5ec9effac2a9a83be593c04b.png" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [2,1,1,1,3,null,null,null,null,null,1]</span><br><span class="line">输出：1 </span><br><span class="line">解释：上图为给定二叉树。总共有 3 条从根到叶子的路径：绿色路径 [2,1,1] ，路径 [2,1,3,1] 和路径 [2,1] 。</span><br><span class="line">     这些路径中只有绿色路径是伪回文路径，因为 [2,1,1] 存在回文排列 [1,2,1] 。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [9]</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定两个大小为 m 和 n 的正序（从小到大）数组 <code>nums1</code> 和 <code>nums2</code>。</p>
+<p>请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。</p>
+<p>你可以假设 <code>nums1</code> 和 <code>nums2</code> 不会同时为空。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">则中位数是 2.0</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">则中位数是 (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>由于要求时间复杂度为<code>O(log(m + n))</code>，所以就不能粗暴的将两个数组直接合并再排序了。而是要用到二分的思想，看了大佬们的题解后，找到了一种还算是能理解的算法，相当于把这个问题转化成了找第  <strong>K</strong> 小的元素。</p>
+<p>假设我们要找第 <code>k</code> 小数，我们可以每次循环排除掉 <code>k/2</code> 个数。看下边一个例子。</p>
+<p>假设我们要找第 7 小的数字。(4 + 10) / 2 = 7</p>
+<p><img src="https://pic.downk.cc/item/5eca0cb7c2a9a83be5acb7c9.jpg" alt></p>
+<p>我们比较两个数组的第 <code>k/2</code> 个数字，如果 <code>k</code> 是奇数，向下取整。也就是比较第 3 个数字</p>
+<p>因为 3 &lt; 4，所以第二个数组的1,2,3都可以排除掉，相当于排除了3个数字。</p>
+<p>由于我们已经排除掉了 3 个数字，就是这 3 个数字一定在最前边，所以在两个新数组中，我们只需要找第 7 - 3 = 4 小的数字就可以了，也就是 k = 4。</p>
+<p><strong>橙色的部分表示已经去掉的数字。</strong></p>
+<p><img src="https://pic.downk.cc/item/5eca0e15c2a9a83be5ae5314.jpg" alt></p>
+<p>此时两个数组，比较第 2 个数字，3  &lt;  5，所以我们可以把小的那个数组中的 1 ，3 排除掉了。</p>
+<p><img src="https://pic.downk.cc/item/5eca0d89c2a9a83be5ad93be.jpg" alt></p>
+<p>我们又排除掉 2 个数字，所以现在找第 4 - 2 = 2 小的数字就可以了。此时比较两个数组中的第 k / 2 = 1 个数</p>
+<p>此时我们要比较第 1 个数字，判断两个数组中第一个数字哪个小就可以了，虽然此时两个数相等，但是我们无论去掉哪个数组中的都行，因为去掉 1 个总会保留 1 个的，所以没有影响。</p>
+<p><img src="https://pic.downk.cc/item/5eca0effc2a9a83be5af1b3d.jpg" alt></p>
+<p>由于又去掉 1 个数字，此时我们要找第 1 小的数字，所以只需判断两个数组中第一个数字哪个小就可以了，也就是 4。</p>
+<p>所以第 7 小的数字是 4。</p>
+<p>我们每次都是取 <code>k/2</code> 的数进行比较，有时候可能会遇到数组长度小于 <code>k/2</code>的时候。</p>
+<p><img src="https://pic.downk.cc/item/5eca0f54c2a9a83be5af799f.jpg" alt></p>
+<p>此时 k / 2 等于 3，而上边的数组长度是 2，我们此时将箭头指向它的末尾就可以了。这样的话，由于 2 &lt; 3，所以就会导致上边的数组 1，2 都被排除。造成下边的情况。</p>
+<p><img src="https://pic.downk.cc/item/5eca0f6fc2a9a83be5af9d0d.jpg" alt></p>
+<p>由于 2 个元素被排除，所以此时 k = 5，又由于上边的数组已经空了，我们只需要返回下边的数组的第 5 个数字就可以了。</p>
+<p>讲完例子，回到代码中，关键点就是两个数组每次是否能找到第 <strong>K / 2</strong> 个数字，如果找到了就把该值取出来，找不到就赋上一个<code>INT_MAX</code>，然后比较两个数组第 <code>K/2</code>个数字，哪个数组的第 <code>k/2</code>个数字小，就把该数组的前<code>k/2</code>个数字都排除掉，并将该数组的起始位置往后移动<code>k/2</code>个位置，并且<code>k</code>需要减去<code>k/2</code>,递归即可。</p>
+<p>由于两个数组长度之和 m+n 的奇偶不确定，因此需要分情况来讨论，对于奇数的情况，直接找到最中间的数即可，偶数的话需要求<strong>最中间两个数的平均值</strong>。我们分别找第 <strong>(m+n+1) / 2</strong> 个，和 <strong>(m+n+2) / 2</strong> 个，然后求其平均值即可，这对奇偶数均适用。假如 m+n 为奇数的话，那么其实 (m+n+1) / 2 和 (m+n+2) / 2 的值相等，相当于两个相同的数字相加再除以2，还是其本身。</p>
+<p><code>tips:</code></p>
 <ul>
-<li>给定二叉树的节点数目在 <code>1</code> 到 <code>10^5</code> 之间。</li>
-<li>节点值在 <code>1</code> 到 <code>9</code> 之间。</li>
+<li><p>若数组的起始位置大于等于该数组的长度，说明该数组已经排除了所有元素，已为空。</p>
+</li>
+<li><p>若<code>k == 1</code>，则只需返回两数组<strong>起始位置</strong>元素较小的那个值即可。</p>
+</li>
 </ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>第一次在周赛里做出第三道题，还是有点开心的。</p>
-<p>首先要做的就是将根节点到叶子结点的所有路径存下来，运用递归即可，需要注意逻辑上的问题。在到达叶子结点时需保存完整的路径，在返回父节点时需删除当前结点。</p>
-<p>将路径都找出来后，便是要验证是否存在回文串了，我这里用的方法应该不是最优法，不过暂时还想不到更好的方法。</p>
-<p>首先将数组进行排序，然后进行遍历，若当前元素与下一个元素相等，则跳一个元素；若不等，则<code>count++</code>，即存在<code>count</code>个只出现了一次的元素。</p>
-<p>然后根据路径长度的奇偶性来判定：</p>
-<ul>
-<li>若路径长度为奇数，则最多可以允许一个<code>count</code>；<code>count == 0</code>的情况，说明出现一次的元素在排序后的数组的最后面。</li>
-<li>若路径长度为偶数，则不能有只存在一次的元素。</li>
-</ul>
-<p>最后返回符合条件的路径数目即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; allPath;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//找到所有路径</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findAllPath</span><span class="params">(TreeNode*pRoot, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;path)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        path.push_back(pRoot-&gt; val);</span><br><span class="line">        <span class="keyword">if</span> (pRoot-&gt;left == <span class="literal">NULL</span> &amp;&amp; pRoot-&gt;right == <span class="literal">NULL</span>) <span class="comment">//达到了叶子节点</span></span><br><span class="line">        &#123;</span><br><span class="line">            allPath.push_back(path);<span class="comment">//保存路径</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (pRoot-&gt;left != <span class="literal">NULL</span>)<span class="comment">//左子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            findAllPath(pRoot-&gt;left, path);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (pRoot-&gt;right != <span class="literal">NULL</span>)<span class="comment">//右子树</span></span><br><span class="line">        &#123;</span><br><span class="line">            findAllPath(pRoot-&gt;right, path);</span><br><span class="line">        &#125;</span><br><span class="line">        path.pop_back();<span class="comment">//在返回到父节点之前，在路径上删除当前节点</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//判断是否存在回文串</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        sort(path.begin(), path.end());</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; path.size() - <span class="number">1</span>; i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(path[i] == path[i + <span class="number">1</span>])&#123;</span><br><span class="line">                </span><br><span class="line">                i++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                </span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(path.size() % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; count == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(path.size() % <span class="number">2</span> != <span class="number">0</span> &amp;&amp; count &lt;= <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">pseudoPalindromicPaths</span> <span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path;</span><br><span class="line">        findAllPath(root, path);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; allPath.size(); i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(judge(allPath[i]))</span><br><span class="line">                num++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment">//寻找第K小的元素</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findKth</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums1, <span class="keyword">int</span> start1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums2, <span class="keyword">int</span> start2, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(start1 &gt;= nums1.size()) <span class="comment">//nums1已经删除了全部元素，已为空</span></span><br><span class="line">            <span class="keyword">return</span> nums2[start2 + k - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(start2 &gt;= nums2.size())  <span class="comment">//nums2已经删除了全部元素，已为空</span></span><br><span class="line">            <span class="keyword">return</span> nums1[start1 + k - <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(k == <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> min(nums1[start1], nums2[start2]);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断两个数组是否存在第 k/2 个数字</span></span><br><span class="line">        <span class="keyword">int</span> mid_nums1 = (start1 + k / <span class="number">2</span>  - <span class="number">1</span> &lt; nums1.size())</span><br><span class="line">         ? nums1[start1 + k / <span class="number">2</span> - <span class="number">1</span>] : INT_MAX;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> mid_nums2 = (start2 + k / <span class="number">2</span>  - <span class="number">1</span> &lt; nums2.size())</span><br><span class="line">         ? nums2[start2 + k / <span class="number">2</span> - <span class="number">1</span>] : INT_MAX;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//删除了 k/2 个数字</span></span><br><span class="line">        <span class="keyword">if</span>(mid_nums1 &lt; mid_nums2)</span><br><span class="line">            <span class="keyword">return</span> findKth(nums1, start1 + k / <span class="number">2</span>, nums2, start2, k - k / <span class="number">2</span>);   </span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> findKth(nums1, start1, nums2, start2 + k / <span class="number">2</span>, k - k / <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> m = nums1.size();</span><br><span class="line">        <span class="keyword">int</span> n = nums2.size();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> k1 = (m + n + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> k2 = (m + n + <span class="number">2</span>) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> (findKth(nums1, <span class="number">0</span>, nums2, <span class="number">0</span>, k1) + findKth(nums1, <span class="number">0</span>, nums2, <span class="number">0</span>, k2)) / <span class="number">2.0</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -435,17 +447,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/24/Leetcode-4-寻找两个正序数组的中位数/" title= "Leetcode 4. 寻找两个正序数组的中位数">
-                    <div class="nextTitle">Leetcode 4. 寻找两个正序数组的中位数</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" title= "Leetcode 5417. 定长子串中元音的最大数目">
-                    <div class="prevTitle">Leetcode 5417. 定长子串中元音的最大数目</div>
+                <a href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" title= "Leetcode 5418. 二叉树中的伪回文路径">
+                    <div class="prevTitle">Leetcode 5418. 二叉树中的伪回文路径</div>
                 </a>
             
         </li>
