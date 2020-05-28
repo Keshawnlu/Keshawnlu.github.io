@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 152. 乘积最大子数组 · Keshawn_lu&#39;s Blog</title>
+    <title>Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,8 +77,6 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -203,23 +201,14 @@
 </head>
 
     
-        <body class="post-body">
+        <body class="home-body">
     
     
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >Keshawn_lu&#39;s Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">Leetcode 152. 乘积最大子数组</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>Keshawn_lu's Blog</a>
 </header>
@@ -232,23 +221,23 @@
 
 
 
-height:50vh;
+height:100vh;
 ">
     
     <!-- 主页  -->
     
     
-    <!-- 404页  -->
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(https://pic.superbed.cn/item/5d383e5d451253d178a78147.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(https://ae01.alicdn.com/kf/HTB1xNZybbH1gK0jSZFw7637aXXao.png)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 152. 乘积最大子数组
-            <!-- 404 -->
+            Keshawn_lu's Blog
+            <!-- 文章页  -->
             
         </h1>
         <!-- 副标题 -->
@@ -256,49 +245,12 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-            <!-- 404 -->
+                Become a better myself.
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">331</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/18</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -399,73 +351,147 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你一个整数数组 <code>nums</code> ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。</p>
-<p> <strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,3,-2,4]</span><br><span class="line">输出: 6</span><br><span class="line">解释: 子数组 [2,3] 有最大乘积 6。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [-2,0,-1]</span><br><span class="line">输出: 0</span><br><span class="line">解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>利用动态规划的思想，因为数组有负数的存在(存在<strong>负负得正</strong>为最大值的情况)，所以我们需要将每次以<code>i</code>为结尾的子数组乘积的最大值和最小值求出来。</p>
-<script type="math/tex; mode=display">
-f_{max}(i) = max(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})
-\\
-f_{min}(i) = min(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})</script><p>最后将$f_{max}$的最大值求出即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>* dp_min = <span class="keyword">new</span> <span class="keyword">int</span>[nums.size()]; <span class="comment">//保存最小值</span></span><br><span class="line">        <span class="keyword">int</span>* dp_max = <span class="keyword">new</span> <span class="keyword">int</span>[nums.size()]; <span class="comment">//保存最大值</span></span><br><span class="line">        </span><br><span class="line">        dp_min[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        dp_max[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> max_num = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp_max[i] = max(max(dp_max[i - <span class="number">1</span>] * nums[i], dp_min[i - <span class="number">1</span>] * nums[i]), nums[i]);</span><br><span class="line"></span><br><span class="line">            dp_min[i] = min(min(dp_max[i - <span class="number">1</span>] * nums[i], dp_min[i - <span class="number">1</span>] * nums[i]), nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(dp_max[i] &gt; max_num)</span><br><span class="line">                max_num = dp_max[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> max_num;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/07/14/博客初步搭建成功/" >
+            
+                <span>博客初步搭建成功</span>
+        </a>
+        <div class="abstract-content">
+            
+2019/07/24更新
+讲述一下这段时间自己坎坷的搭建过程吧，遇到最大的困难是图床，一开始用的是贴图网的图床，但是贴图网的免费版每七天就会删除相册里的图片，这谁顶得住呀，又不想花太多钱在图床上，所以pass了贴图网，后来找了一些免费的图床，但是加载速度是真的不行(果然花钱的肯定比免费的好)，再后来又找到了七牛，本以为自己买的域名认证通过以后，绑定在七牛上，一切问题都迎刃而解，但是当我兴致勃勃去绑定域名的时候才发现这玩意还得备案，所以又去找备案的方法，填信息的时候发现需要一个备案服务号(好像叫这个，记不清了)，但是这东西好像得买了服务器以后才有，但我用的是github给自己的空间，淘宝...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/14</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
     </article>
-    <!-- license  -->
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/19/Leetcode-680-验证回文字符串-Ⅱ/" title= "Leetcode 680. 验证回文字符串 Ⅱ">
-                    <div class="nextTitle">Leetcode 680. 验证回文字符串 Ⅱ</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/17/Leetcode-210-课程表-II/" title= "Leetcode 210. 课程表 II">
-                    <div class="prevTitle">Leetcode 210. 课程表 II</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTMxOS8yMTgzMg==">
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/page/5/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    </nav>
     
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src= https://pic.superbed.cn/item/5d383e4b451253d178a78084.jpg >
+    <div class="profile-name">鸣蜩十九</div>
+    
+    <div class="profile-signature">
+        Always
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:809759109@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/Keshawnlu" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/wechat.jpg" />
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title=qq>
+                  
+                  <img class="profile-qr" src="/assets/qq.jpg" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>友链</div>
+            
+                
+                    <span>
+                        <a href= https://blog.csdn.net/qq_33948567 target="_black">CSDN</a>
+                    </span>
+                
+            
+                
+                    <span>
+                        <a href= //www.bilibili.com target="_black">BiliBili</a>
+                    </span>
+                
+            
+                
+            
+        </div>
+    
+    
+        <div class="about-me">
+            <a href = "/about" >About cute author</a>
+        </div>
+    
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=86 src="//music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66">
+</iframe>
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -555,24 +581,6 @@ f_{min}(i) = min(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})</script>
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1665,8 +1673,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({

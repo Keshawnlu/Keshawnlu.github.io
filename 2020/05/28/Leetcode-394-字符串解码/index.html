@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 152. 乘积最大子数组 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 394. 字符串解码 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 152. 乘积最大子数组</a>
+                <a href="#" class="post-name">Leetcode 394. 字符串解码</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 152. 乘积最大子数组
+            Leetcode 394. 字符串解码
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">331</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">655</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/18</span>
+                    <span class="post-intro-time">2020/05/28</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,17 +401,23 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你一个整数数组 <code>nums</code> ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。</p>
-<p> <strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,3,-2,4]</span><br><span class="line">输出: 6</span><br><span class="line">解释: 子数组 [2,3] 有最大乘积 6。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [-2,0,-1]</span><br><span class="line">输出: 0</span><br><span class="line">解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>利用动态规划的思想，因为数组有负数的存在(存在<strong>负负得正</strong>为最大值的情况)，所以我们需要将每次以<code>i</code>为结尾的子数组乘积的最大值和最小值求出来。</p>
-<script type="math/tex; mode=display">
-f_{max}(i) = max(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})
-\\
-f_{min}(i) = min(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})</script><p>最后将$f_{max}$的最大值求出即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>* dp_min = <span class="keyword">new</span> <span class="keyword">int</span>[nums.size()]; <span class="comment">//保存最小值</span></span><br><span class="line">        <span class="keyword">int</span>* dp_max = <span class="keyword">new</span> <span class="keyword">int</span>[nums.size()]; <span class="comment">//保存最大值</span></span><br><span class="line">        </span><br><span class="line">        dp_min[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        dp_max[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> max_num = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp_max[i] = max(max(dp_max[i - <span class="number">1</span>] * nums[i], dp_min[i - <span class="number">1</span>] * nums[i]), nums[i]);</span><br><span class="line"></span><br><span class="line">            dp_min[i] = min(min(dp_max[i - <span class="number">1</span>] * nums[i], dp_min[i - <span class="number">1</span>] * nums[i]), nums[i]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(dp_max[i] &gt; max_num)</span><br><span class="line">                max_num = dp_max[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> max_num;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个经过编码的字符串，返回它解码后的字符串。</p>
+<p>编码规则为: <code>k[encoded_string]</code>，表示其中方括号内部的 <em>encoded_string</em> 正好重复 <em>k</em> 次。注意 <em>k</em> 保证为正整数。</p>
+<p>你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。</p>
+<p>此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 <em>k</em> ，例如不会出现像 <code>3a</code> 或 <code>2[4]</code> 的输入。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = &quot;3[a]2[bc]&quot;, 返回 &quot;aaabcbc&quot;.</span><br><span class="line">s = &quot;3[a2[c]]&quot;, 返回 &quot;accaccacc&quot;.</span><br><span class="line">s = &quot;2[abc]3[cd]ef&quot;, 返回 &quot;abcabccdcdcdef&quot;.</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>利用栈，遇到数字时则将连续的一串数字压入栈(如<code>326[a]</code>，遇到<code>3</code>时，将<code>326</code>找到并作为整体压入栈)；</p>
+<p>遇到字母或左括号时直接压入栈；</p>
+<p>遇到右括号时开始弹出栈顶元素，直到遇到左括号为止，则中间弹出的均是字母，将这些字母保存起来并翻转到正确的顺序。将左括号弹出后，此时栈顶元素为数字，<strong>将数字弹出</strong>，并根据数字生成新的字符串并压入栈。</p>
+<p>最后栈中只会有一系列的字符串，获取后翻转至正确顺序，组合起来返回即可。</p>
+<p><code>tips:</code></p>
+<ul>
+<li>判定字符是否是数字是可用<code>isdigit()</code>函数，判定字符是否是字母时可用<code>isalpha()</code>函数。</li>
+<li>字符串转换为数字时可用<code>stoi()</code>函数。</li>
+<li><code>char</code>转换为<code>string</code>类型时，可用<code>string (size_t n, char c), 如string(1, &#39;c&#39;)</code>。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">getdigits</span><span class="params">(<span class="built_in">string</span> s, <span class="keyword">int</span>&amp; ptr)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> res = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">isdigit</span>(s[ptr]))&#123;</span><br><span class="line"></span><br><span class="line">            res += s[ptr++];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">getstring</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; in_str)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> res = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> s : in_str)&#123;</span><br><span class="line"></span><br><span class="line">            res += s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">decodeString</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="built_in">string</span>&gt; temp;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; s.length())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//是数字的情况</span></span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">isdigit</span>(s[i]))&#123;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">string</span> num = getdigits(s, i);</span><br><span class="line">                temp.push(num);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//字母及左括号的情况</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">isalpha</span>(s[i]) || s[i] == <span class="string">'['</span>)&#123;</span><br><span class="line"></span><br><span class="line">                temp.push(<span class="built_in">string</span>(<span class="number">1</span>, s[i]));</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123; <span class="comment">//右括号的情况</span></span><br><span class="line"></span><br><span class="line">                i++;</span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; sub;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span>(temp.top() != <span class="string">"["</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    sub.push_back(temp.top()); <span class="comment">//字母压入数组</span></span><br><span class="line">                    temp.pop();</span><br><span class="line">                &#125;</span><br><span class="line">                temp.pop(); <span class="comment">//将左括号弹出</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">int</span> time = stoi(temp.top());    <span class="comment">//此时栈顶元素为次数</span></span><br><span class="line">                temp.pop();	<span class="comment">//不能忘了将数字弹出</span></span><br><span class="line"></span><br><span class="line">                reverse(sub.begin(), sub.end());    <span class="comment">//翻转</span></span><br><span class="line"></span><br><span class="line">                <span class="built_in">string</span> sub_str, time_str = getstring(sub);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span>(time != <span class="number">0</span>)&#123;</span><br><span class="line">                    </span><br><span class="line">                    sub_str += time_str;</span><br><span class="line">                    time--;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                temp.push(sub_str);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">        <span class="keyword">while</span>(!temp.empty())&#123;</span><br><span class="line"></span><br><span class="line">            res.push_back(temp.top());</span><br><span class="line">            temp.pop();</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">        reverse(res.begin(), res.end());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> getstring(res);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -420,17 +426,12 @@ f_{min}(i) = min(f_{max}(i - 1) * a_{i}, f_{min}(i - 1) * a_{i}, a_{i})</script>
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/19/Leetcode-680-验证回文字符串-Ⅱ/" title= "Leetcode 680. 验证回文字符串 Ⅱ">
-                    <div class="nextTitle">Leetcode 680. 验证回文字符串 Ⅱ</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/17/Leetcode-210-课程表-II/" title= "Leetcode 210. 课程表 II">
-                    <div class="prevTitle">Leetcode 210. 课程表 II</div>
+                <a href= "/2020/05/27/Leetcode-974-和可被-K-整除的子数组/" title= "Leetcode 974. 和可被 K 整除的子数组">
+                    <div class="prevTitle">Leetcode 974. 和可被 K 整除的子数组</div>
                 </a>
             
         </li>
