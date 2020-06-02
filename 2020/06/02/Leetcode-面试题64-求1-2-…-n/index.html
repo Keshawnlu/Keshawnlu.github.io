@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>东野圭吾《新参者》 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 面试题64. 求1+2+…+n · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">东野圭吾《新参者》</a>
+                <a href="#" class="post-name">Leetcode 面试题64. 求1+2+…+n</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            东野圭吾《新参者》
+            Leetcode 面试题64. 求1+2+…+n
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">254</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">231</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2020/06/02</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,9 +395,19 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="2019推理小说阅读计划-4-50"><a href="#2019推理小说阅读计划-4-50" class="headerlink" title="2019推理小说阅读计划(4/50)"></a>2019推理小说阅读计划(4/50)</h2><h3 id="东野圭吾-《新参者》"><a href="#东野圭吾-《新参者》" class="headerlink" title="东野圭吾 《新参者》"></a>东野圭吾 《新参者》</h3><p>终于把去年买的书都看完了√<br>首先从名字上看其实有两重含义，一是死者峰子是刚来到这条街的新参者，二是警官加贺也是刚来到这里的新参者(小说中我记得的一共是三次加贺提到自己是个新参者)。<br>因为这个案件的产生，通过九个故事让我们跟随加贺的脚步去了解与峰子有关的每个人，让案件的细节逐渐显露出来，在每个故事中体现出了每个家庭一开始存在的一些问题，并通过加贺的”探案”去解决，这个贴近生活的设定使这本小说在推理案件外显的格外温情，这大概也就是这本小说的亮点所在吧。</p>
-<p>ps:结束了东野圭吾的几本书，开始进行阅读中国推理小说的计划。</p>
-<p><img src="https://img3.doubanio.com/view/subject/l/public/s28363320.jpg" alt></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 3</span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = 9</span><br><span class="line">输出: 45</span><br></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<ul>
+<li><code>1 &lt;= n &lt;= 10000</code></li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>不能使用<code>for</code>，就想到用递归，但是需要判断递归结束的标志，也就是<code>n —&gt; n - 1 -&gt; ... -&gt; 0</code>，<code>n</code>到达<code>0</code>时需要退出递归。所以可以使用逻辑运算符<code>&amp;&amp;</code>的<strong>短路性质</strong>。</p>
+<p>即对于 <code>A &amp;&amp; B</code> 这个表达式，如果 A 表达式返回 <code>False</code> ，那么 <code>A &amp;&amp; B</code> 已经确定为 <code>False</code> ，此时不会去执行表达式 B。</p>
+<p><code>n &amp;&amp; (n += sumNums(n - 1))</code>，当<code>n == 0</code>时，便不会去执行后面的部分。所以就相当于停止了递归。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        n &amp;&amp; (n += sumNums(n - <span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -406,17 +416,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/10/14/陆烨华《超能力侦探事务所》/" title= "陆烨华《超能力侦探事务所》">
-                    <div class="nextTitle">陆烨华《超能力侦探事务所》</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/14/东野圭吾《红手指》/" title= "东野圭吾《红手指》">
-                    <div class="prevTitle">东野圭吾《红手指》</div>
+                <a href= "/2020/06/01/Leetcode-1431-拥有最多糖果的孩子/" title= "Leetcode 1431. 拥有最多糖果的孩子">
+                    <div class="prevTitle">Leetcode 1431. 拥有最多糖果的孩子</div>
                 </a>
             
         </li>
@@ -557,7 +562,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2019推理小说阅读计划-4-50"><span class="toc-number">1.</span> <span class="toc-text">2019推理小说阅读计划(4/50)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#东野圭吾-《新参者》"><span class="toc-number">1.1.</span> <span class="toc-text">东野圭吾 《新参者》</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
