@@ -346,110 +346,34 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/26/Leetcode-287-寻找重复数/" >
+        <a class="abstract-title" href = "/2020/06/04/Leetcode-238-除自身以外数组的乘积/" >
             
-                <span>Leetcode 287. 寻找重复数</span>
+                <span>Leetcode 238. 除自身以外数组的乘积</span>
         </a>
         <div class="abstract-content">
-            题目简介：给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
-示例 1:
-12输入: [1,3,4,2,2]输出: 2
-示例 2:
-12输入: [3,1,3,4,2]输出: 3
-说明：
+            题目简介：给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
+示例:
+12输入: [1,2,3,4]输出: [24,12,8,6]
+提示：题目数据保证数组之中任意元素的全部前缀元素和后缀（甚至是整个数组）的乘积都在 32 位整数范围内。
+说明: 请不要使用除法，且在 O(n) 时间复杂度内完成此题。
+思路：将除自身以外的数组分为自身左边的数组和自身右边的数组两部分。
+通过两次循环分别求出左边数组的乘积与右边数组的乘积。
+tip:
 
-不能更改原数组（假设数组是只读的）。
-只能使用额外的 O(1) 的空间。
-时间复杂度小于 O($n^{2}$) 。
-数组中只有一个重复的数字，但它可能不止重复出现一次。
+注意具体的手法…
 
-思路：由于说明中的要求过多，所以不能按照普通的方法来做，所以想到使用二分的方法。
-每次先算出中位数mid，然后求原...
+代码如...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/26</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/04</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/24/Leetcode-4-寻找两个正序数组的中位数/" >
-            
-                <span>Leetcode 4. 寻找两个正序数组的中位数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
-请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
-你可以假设 nums1 和 nums2 不会同时为空。
-示例 1:
-1234nums1 = [1, 3]nums2 = [2]则中位数是 2.0
-示例 2:
-1234nums1 = [1, 2]nums2 = [3, 4]则中位数是 (2 + 3)/2 = 2.5
-思路：由于要求时间复杂度为O(log(m + n))，所以就不能粗暴的将两个数组直接合并再排序了。而是要用到二分的思想，看了大佬们的题解后，找到了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/09/Leetcode-69-x-的平方根/" >
-            
-                <span>Leetcode 69. x 的平方根</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：实现  int sqrt(int x)  函数。
-计算并返回 x 的平方根，其中 x 是非负整数。
-由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
- 示例 1: 
-12输入: 4输出: 2
- 示例 2: 
-1234输入: 8输出: 2说明: 8 的平方根是 2.82842...,      由于返回类型是整数，小数部分将被舍去。
-思路：使用二分查找，若循环时，x / mid = mid（防止溢出，即x = mid * mid）或 x / mid &gt; mid &amp;&amp; x / (mid + 1) &lt; mid + 1(代表平方根为小数，此时的m...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
     
 </div>
             
