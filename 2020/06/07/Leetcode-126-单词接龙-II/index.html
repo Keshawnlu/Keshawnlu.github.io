@@ -432,7 +432,7 @@ height:50vh;
 <p><code>tips:</code></p>
 <ul>
 <li>在<code>bool check_transform(string &amp;word1, string &amp;word2)</code>函数中，若参数不加<code>&amp;</code>，便会超时，原因我也不知道…</li>
-<li><code>cost[last_word] + 1 &lt;= cost[next]</code>相当于 <code>cost[last_word_id] + 1 == cost[next] || cost[next] == INT_MAX</code></li>
+<li><code>cost[last_word] + 1 &lt;= cost[next]</code>相当于 <code>cost[last_word] + 1 == cost[next] || cost[next] == INT_MAX</code></li>
 <li>对BFS有了初步的了解…</li>
 </ul>
 <h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断两个单词能否互相转换</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">check_transform</span><span class="params">(<span class="built_in">string</span> &amp;word1, <span class="built_in">string</span> &amp;word2)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> difference = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; word1.length() &amp;&amp; difference &lt; <span class="number">2</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(word1[i] != word2[i])</span><br><span class="line">                difference++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> difference == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; findLadders(<span class="built_in">string</span> beginWord, <span class="built_in">string</span> endWord, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; wordList) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; wordId;  <span class="comment">//word-&gt;ID的映射</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; idWord;  <span class="comment">//ID-&gt;word的映射</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; edges;  <span class="comment">//构造图</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordList.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(!wordId.count(wordList[i]))&#123;</span><br><span class="line"></span><br><span class="line">                wordId[wordList[i]] = id++;</span><br><span class="line">                idWord.push_back(wordList[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!wordId.count(endWord))</span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;;  <span class="comment">//不存在结束单词，返回空</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(!wordId.count(beginWord))&#123;</span><br><span class="line"></span><br><span class="line">            wordId[beginWord] = id++;   <span class="comment">//加入起始单词</span></span><br><span class="line">            idWord.push_back(beginWord);</span><br><span class="line">        &#125;</span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">        <span class="comment">//构造图</span></span><br><span class="line">        edges.resize(id);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; idWord.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; idWord.size(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(check_transform(idWord[i], idWord[j]))&#123;</span><br><span class="line"></span><br><span class="line">                    edges[i].push_back(j);</span><br><span class="line">                    edges[j].push_back(i);  <span class="comment">//构造两条有向边</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> endWord_id = wordId[endWord];</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; q;</span><br><span class="line">        q.push(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;wordId[beginWord]&#125;); <span class="comment">//起始单词作为一个路径入队</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//cost[id]：从起始单词出发，转换到id所代表的单词所需的次数(代价)</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; cost(id, INT_MAX);</span><br><span class="line">        cost[wordId[beginWord]] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; now_path = q.front();</span><br><span class="line">            q.pop();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> last_word_id = now_path.back();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//当前路径最后一个为结束单词时</span></span><br><span class="line">            <span class="keyword">if</span>(last_word_id == endWord_id)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; temp;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; now_path.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">                    temp.push_back(idWord[now_path[i]]);</span><br><span class="line">                &#125;</span><br><span class="line">                res.push_back(temp);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; edges[last_word_id].size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//路径最后一个单词的连接单词</span></span><br><span class="line">                    <span class="keyword">int</span> next = edges[last_word_id][i];</span><br><span class="line">                    <span class="keyword">if</span>(cost[last_word_id] + <span class="number">1</span> &lt;= cost[next])&#123;</span><br><span class="line"></span><br><span class="line">                        cost[next] = cost[last_word_id] + <span class="number">1</span>; <span class="comment">//更新转换次数 </span></span><br><span class="line"></span><br><span class="line">                        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp(now_path.begin(), now_path.end());</span><br><span class="line">                        temp.push_back(next);</span><br><span class="line">                        q.push(temp);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -608,8 +608,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
     
     
     
@@ -1799,6 +1797,11 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
@@ -1824,6 +1827,11 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
@@ -1834,17 +1842,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -1872,13 +1870,13 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
-        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
-        <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
+        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -1886,9 +1884,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
-        <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
-    
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
@@ -1927,9 +1925,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
