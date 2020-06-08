@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 837. 新21点 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 990. 等式方程的可满足性 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 837. 新21点</a>
+                <a href="#" class="post-name">Leetcode 990. 等式方程的可满足性</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 837. 新21点
+            Leetcode 990. 等式方程的可满足性
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "并查集">并查集</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">739</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">910</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/03</span>
+                    <span class="post-intro-time">2020/06/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,32 +401,42 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：</p>
-<p>爱丽丝以 <code>0</code> 分开始，并在她的得分少于 <code>K</code> 分时抽取数字。 抽取时，她从 <code>[1, W]</code> 的范围中随机获得一个整数作为分数进行累计，其中 <code>W</code> 是整数。 每次抽取都是独立的，其结果具有相同的概率。</p>
-<p>当爱丽丝获得不少于 <code>K</code> 分时，她就停止抽取数字。 爱丽丝的分数不超过 <code>N</code> 的概率是多少？</p>
-<p><strong>示例1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 10, K = 1, W = 10</span><br><span class="line">输出：1.00000</span><br><span class="line">说明：爱丽丝得到一张卡，然后停止。</span><br></pre></td></tr></table></figure>
-<p><strong>示例2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 6, K = 1, W = 10</span><br><span class="line">输出：0.60000</span><br><span class="line">说明：爱丽丝得到一张卡，然后停止。</span><br><span class="line">在 W = 10 的 6 种可能下，她的得分不超过 N = 6 分。</span><br></pre></td></tr></table></figure>
-<p><strong>示例3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 21, K = 17, W = 10</span><br><span class="line">输出：0.73278</span><br></pre></td></tr></table></figure>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 <code>equations[i]</code> 的长度为 <code>4</code>，并采用两种不同的形式之一：<code>&quot;a==b&quot;</code> 或 <code>&quot;a!=b&quot;</code>。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。</p>
+<p>只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回 <code>true</code>，否则返回 <code>false</code>。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;a==b&quot;,&quot;b!=a&quot;]</span><br><span class="line">输出：false</span><br><span class="line">解释：如果我们指定，a = 1 且 b = 1，那么可以满足第一个方程，但无法满足第二个方程。没有办法分配变量同时满足这两个方程。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输出：[&quot;b==a&quot;,&quot;a==b&quot;]</span><br><span class="line">输入：true</span><br><span class="line">解释：我们可以指定 a = 1 且 b = 1 以满足满足这两个方程。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;a==b&quot;,&quot;b==c&quot;,&quot;a==c&quot;]</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;a==b&quot;,&quot;b!=c&quot;,&quot;c==a&quot;]</span><br><span class="line">输出：false</span><br></pre></td></tr></table></figure>
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;c==c&quot;,&quot;b==d&quot;,&quot;x!=z&quot;]</span><br><span class="line">输出：true</span><br></pre></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ol>
-<li><code>0 &lt;= K &lt;= N &lt;= 10000</code></li>
-<li><code>1 &lt;= W &lt;= 10000</code></li>
-<li>如果答案与正确答案的误差不超过 <code>10^-5</code>，则该答案将被视为正确答案通过</li>
-<li>此问题的判断限制时间已经减少。</li>
+<li><code>1 &lt;= equations.length &lt;= 500</code></li>
+<li><code>equations[i].length == 4</code></li>
+<li><code>equations[i][0]</code> 和 <code>equations[i][3]</code> 是小写字母</li>
+<li><code>equations[i][1]</code> 要么是 <code>&#39;=&#39;</code>，要么是 <code>&#39;!&#39;</code></li>
+<li><code>equations[i][2]</code> 是 <code>&#39;=&#39;</code></li>
 </ol>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>运用动态规划，<code>dp[i]</code>代表的是，当爱丽丝手牌得分为<code>i</code>时，她最终停止抽牌时(即游戏结束)，手牌得分 <code>&lt;= N</code>的概率。</p>
-<p><code>i</code>最小值为<code>0</code>， 最大值为<code>K - W + 1</code>，即倒数第二次的手牌得分为<code>K - 1</code>，最后一次拿了<code>W</code>的分数。</p>
-<p>由于只能在手牌得分<code>&lt; K</code>时我们才能抽牌，所以先将无法进行抽牌的情况进行初始化，即<code>K &lt;= i &lt;= K - W + 1</code>，当 <code>i &lt;= N</code>时，概率为<code>1</code>，否则为<code>0</code>(根据题意，最终得分大于<code>N</code>时为失败，即概率为<code>0</code>)。然后定义一个<code>sum</code>，代表这些概率的总和，<code>sum / W</code>便代表了手牌分数为<code>K - 1</code>时，下一次抽牌后总分数不超过<code>N</code>的概率(即<code>dp[K - 1] = sum / W</code>)。</p>
-<p>然后<code>i</code>从<code>K - 1</code>向前遍历，运用滑动窗口的概念，每次将总概率<code>sum</code>减去<code>dp[i + W]</code>，加上<code>dp[i]</code>，即将窗口往左滑动一格。</p>
-<p>最后返回<code>dp[0]</code>，即爱丽丝初始手牌得分为<code>0</code>时，最后分数不超过<code>N</code>的概率。</p>
-<p><code>tip:</code></p>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>第一次做并查集的题目，看了两篇比较有意思的博客，把并查集初步的搞懂了。</p>
+<p>首先有26个字母，在没有等式限制时，它们自成一派，每个字母都是自己门派的掌门人。</p>
+<p>当有等式限制时，若两者相等，则说明两个门派需要合并成一个门派，谁是新的掌门人并不重要。</p>
+<p>若两者不能相等时，则寻找各自门派的掌门人，若两者的掌门人是一样的，说明不符合题意，返回<code>false</code>即可。</p>
+<p>在寻找掌门人时，可以使用路径压缩，简单点来说，若一开始从掌门人到字母一共有好几个阶级，这样子找掌门人时便要一层一层的向上，比较浪费时间。但是我们关心的只有门派掌门人是谁，和你中间的人是谁并没有关系，所以在寻找的过程中，我们可以将过程中遇到的人都直接隶属于掌门麾下，这样子寻找掌门人的速度就快很多了。</p>
+<p>大致上就像这样：</p>
+<p><img src="https://pic.downk.cc/item/5eddab2cc2a9a83be5e7a76e.jpg" alt></p>
+<p><code>tips:</code></p>
 <ul>
-<li><code>dp[i] =</code><script type="math/tex">\frac{dp[i + 1] + dp[i + 2] + … + dp[i + W]}{W}</script></li>
+<li>记录讲解并查集的博客：<ol>
+<li><a href="https://blog.csdn.net/liujian20150808/article/details/50848646" target="_blank" rel="noopener">https://blog.csdn.net/liujian20150808/article/details/50848646</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/93647900" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/93647900</a></li>
+</ol>
+</li>
 </ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//代表爱丽丝得分为i时,最终停止抽牌时,手牌得分 &lt;= N的概率 (0 &lt;= i &lt;= K+W-1)</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; dp(K + W);   </span><br><span class="line"></span><br><span class="line">        <span class="keyword">double</span> sum = <span class="number">0</span>; <span class="comment">//保存概率值</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = K; i &lt;= K + W - <span class="number">1</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i &lt;= N)</span><br><span class="line">                dp[i] = <span class="number">1.0</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                dp[i] = <span class="number">0.0</span>;    <span class="comment">//得分大于N, 概率为0</span></span><br><span class="line"></span><br><span class="line">            sum += dp[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = K - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i] = sum / W;</span><br><span class="line">            sum = sum - dp[i + W] + dp[i];   <span class="comment">//窗口向左滑动</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>];   <span class="comment">//初始爱丽丝手牌得分为0</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; father;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(father[x] == x)  <span class="comment">//父节点就是本身，自己就是掌门</span></span><br><span class="line">            <span class="keyword">return</span> x;   <span class="comment">//返回自己即可</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//将自己的父节点设为根节点，路径压缩，将自己直属于掌门麾下</span></span><br><span class="line">            father[x] = find(father[x]); </span><br><span class="line">            <span class="keyword">return</span> father[x];   <span class="comment">//返回根节点，本派掌门</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">equationsPossible</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; equations)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        father.resize(<span class="number">26</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            father[i] = i;  <span class="comment">//都先自成一派</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; equations.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(equations[i][<span class="number">1</span>] == <span class="string">'='</span>)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//找第一个字母的掌门</span></span><br><span class="line">                <span class="keyword">int</span> father1 = find(equations[i][<span class="number">0</span>] - <span class="string">'a'</span>);</span><br><span class="line">                 <span class="comment">//找第二个字母的掌门</span></span><br><span class="line">                <span class="keyword">int</span> father2 = find(equations[i][<span class="number">3</span>] - <span class="string">'a'</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(father1 != father2)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//掌门不一样，合并成一个门派</span></span><br><span class="line">                    father[father1] = father2;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; equations.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(equations[i][<span class="number">1</span>] == <span class="string">'!'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//找第一个字母的掌门</span></span><br><span class="line">                <span class="keyword">int</span> father1 = find(equations[i][<span class="number">0</span>] - <span class="string">'a'</span>);</span><br><span class="line">                 <span class="comment">//找第二个字母的掌门</span></span><br><span class="line">                <span class="keyword">int</span> father2 = find(equations[i][<span class="number">3</span>] - <span class="string">'a'</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(father1 == father2)  <span class="comment">//掌门不能一样</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -437,17 +445,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/04/Leetcode-238-除自身以外数组的乘积/" title= "Leetcode 238. 除自身以外数组的乘积">
-                    <div class="nextTitle">Leetcode 238. 除自身以外数组的乘积</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/02/Leetcode-面试题64-求1-2-…-n/" title= "Leetcode 面试题64. 求1+2+…+n">
-                    <div class="prevTitle">Leetcode 面试题64. 求1+2+…+n</div>
+                <a href= "/2020/06/07/Leetcode-5430-设计浏览器历史记录/" title= "Leetcode 5430. 设计浏览器历史记录">
+                    <div class="prevTitle">Leetcode 5430. 设计浏览器历史记录</div>
                 </a>
             
         </li>
