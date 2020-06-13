@@ -346,370 +346,31 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/Leetcode-50-Pow-x-n/" >
+        <a class="abstract-title" href = "/2020/04/29/Leetcode-1025-除数博弈/" >
             
-                <span>Leetcode 50. Pow(x, n)</span>
+                <span>Leetcode 1025. 除数博弈</span>
         </a>
         <div class="abstract-content">
-            题目简介：实现 pow(x, n) ，即计算 x 的 n 次幂函数。
-示例 1:
-12输入: 2.00000, 10输出: 1024.00000
-示例 2:
-12输入: 2.10000, 3输出: 9.26100
-示例 3:
-123输入: 2.00000, -2输出: 0.25000解释: 2-2 = 1/22 = 1/4 = 0.25
-说明:
-
--100.0 &lt; x &lt; 100.0
-
-n 是 32 位有符号整数，其数值范围是
-
-[-2^{31}, 2^{31} - 1]
-
-思路：利用递归，将n对半分开，若n为奇数，则用n % 2将剩余的数算出来，最后相乘即可，时间复杂度为O...
+            题目简介爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。
+最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：
+选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。用 N - x 替换黑板上的数字 N 。如果玩家无法执行这些操作，就会输掉游戏。
+只有在爱丽丝在游戏中取得胜利时才返回 True，否则返回 false。假设两个玩家都以最佳状态参与游戏。
+示例 1：
+123输入：2输出：true解释：爱丽丝选择 1，鲍勃无法进行操作。
+示例 2：
+123输入：3输出：false解释：爱丽丝选择 1，鲍勃也选择 1，然后爱丽丝无法进行操作。
+提...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/10/Leetcode-236-二叉树的最近公共祖先/" >
-            
-                <span>Leetcode 236. 二叉树的最近公共祖先</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
-百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
-例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]
-
- 示例 1: 
-123输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1输出: 3解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
- 示例 2: 
-123输入: roo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/10/Leetcode-5405-形成两个异或相等数组的三元组数目/" >
-            
-                <span>Leetcode 5405. 形成两个异或相等数组的三元组数目</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个整数数组 arr 。
-现需要从数组中取三个下标 i、j 和 k ，其中 (0 &lt;= i &lt; j &lt;= k &lt; arr.length) 。
-a 和 b 定义如下：
-
-a = arr[i] ^ arr[i + 1] ^ ... ^ arr[j - 1]
-b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k] 
-
-注意：^ 表示 按位异或 操作。
-请返回能够令 a == b 成立的三元组 (i, j , k) 的数目。
- 示例 1： 
-123输入：arr = [2,3,1,6,7]输出：4解释：满足题意的三元组分别是 (0,1,2...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/09/Leetcode-69-x-的平方根/" >
-            
-                <span>Leetcode 69. x 的平方根</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：实现  int sqrt(int x)  函数。
-计算并返回 x 的平方根，其中 x 是非负整数。
-由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
- 示例 1: 
-12输入: 4输出: 2
- 示例 2: 
-1234输入: 8输出: 2说明: 8 的平方根是 2.82842...,      由于返回类型是整数，小数部分将被舍去。
-思路：使用二分查找，若循环时，x / mid = mid（防止溢出，即x = mid * mid）或 x / mid &gt; mid &amp;&amp; x / (mid + 1) &lt; mid + 1(代表平方根为小数，此时的m...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/08/Leetcode-221-最大正方形/" >
-            
-                <span>Leetcode 221. 最大正方形</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：在一个由 0 和 1 组成的二维矩阵内，找到只包含 1 的最大正方形，并返回其面积。
-示例:
-12345678输入: 1 0 1 0 01 0 1 1 11 1 1 1 11 0 0 1 0输出: 4
-思路：利用动态规划的思想，dp[i] [j]代表的是以第i行第j列为正方形右下角坐标的能形成的最大的正方形的边长。
-首先将第1行和第1列进行初始化。然后遍历其他的坐标，如果当前坐标为0，即形成不了正方形，dp[i] [j]即为0， 若为1，则比较dp[i - 1] [j] 和 dp[i] [j - 1] 的值，选择两者间较小的值，设为length（如下图的第一个例子，因为dp[i...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/08</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/29</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/07/Leetcode-572-另一个树的子树/" >
-            
-                <span>Leetcode 572. 另一个树的子树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个非空二叉树 s 和 t，检验 s 中是否包含和 t 具有相同结构和节点值的子树。s 的一个子树包括 s 的一个节点和这个节点的所有子孙。s 也可以看做它自身的一棵子树。
-示例 1:给定的树 s:
-12345    3   / \  4   5 / \1   2
- 给定的树 t： 
-123  4  / \1   2
-返回 true，因为 t 与 s 的一个子树拥有相同的结构和节点值。
-示例 2:
-给定的树 s： 
-1234567    3   / \  4   5 / \1   2   /  0
- 给定的树 t： 
-123  4 / \1   2
- 返回 false。 
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/06/Leetcode-983-最低票价/" >
-            
-                <span>Leetcode 983. 最低票价</span>
-        </a>
-        <div class="abstract-content">
-            题目简介在一个火车旅行很受欢迎的国度，你提前一年计划了一些火车旅行。在接下来的一年里，你要旅行的日子将以一个名为 days 的数组给出。每一项是一个从 1 到 365 的整数。
-火车票有三种不同的销售方式：
-
-一张为期一天的通行证售价为 costs[0] 美元；
-一张为期七天的通行证售价为 costs[1] 美元；
-一张为期三十天的通行证售价为 costs[2] 美元。
-
-通行证允许数天无限制的旅行。 例如，如果我们在第 2 天获得一张为期 7 天的通行证，那么我们可以连着旅行 7 天：第 2 天、第 3 天、第 4 天、第 5 天、第 6 天、第 7 天和第 8 天。
-返回你想要完成在...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/05/Leetcode-98-验证二叉搜索树/" >
-            
-                <span>Leetcode 98. 验证二叉搜索树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介给定一个二叉树，判断其是否是一个有效的二叉搜索树。
-假设一个二叉搜索树具有如下特征：
-
-节点的左子树只包含小于当前节点的数。
-节点的右子树只包含大于当前节点的数。
-所有左子树和右子树自身必须也是二叉搜索树。
-示例 1: 
-
-
-12345输入:    2   / \  1   3输出: true
- 示例 2: 
-123456789输入:    5   / \  1   4     / \    3   6输出: false解释: 输入为: [5,1,4,null,null,3,6]。     根节点的值为 5 ，但是其右子节点值为 4 。
-思路：因为是二叉搜索树，所以最左边的值最小...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/04/Leetcode-45-跳跃游戏-II/" >
-            
-                <span>Leetcode 45. 跳跃游戏 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介给定一个非负整数数组，你最初位于数组的第一个位置。
-数组中的每个元素代表你在该位置可以跳跃的最大长度。
-你的目标是使用最少的跳跃次数到达数组的最后一个位置。
-示例: 
-1234输入: [2,3,1,1,4]输出: 2解释: 跳到最后一个位置的最小跳跃数是 2。     从下标为 0 跳到下标为 1 的位置，跳 1 步，然后跳 3 步到达数组的最后一个位置。
-思路：首先定义一个far来表示在遍历元素的过程中(遍历至每次跳跃的终点end前)，所能达到的最远的距离，即为下次跳跃的end。每次到达end以后，即一次跳跃结束，更新end后进行下一次的跳跃。
-如示例中[2,3,1,1,4],...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/03/王道数据结构-线性表的顺序表示-课后算法题/" >
-            
-                <span>王道数据结构 线性表的顺序表示(课后算法题)</span>
-        </a>
-        <div class="abstract-content">
-            
-从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空则显示出错信息并退出运行。
-代码如下：
-123456789101112131415161718192021222324252627282930313233343536373839#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;bool EraseMindata(int&amp; value, vector&lt;int&gt; &amp;data) &#123;    if (data.si...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "线性表">线性表</a>
     
 </div>
             
@@ -719,7 +380,7 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/categories/算法相关/page/4/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/3/">3</a><a class="page-number" href="/categories/算法相关/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/categories/算法相关/page/6/">6</a><a class="extend next" rel="next" href="/categories/算法相关/page/6/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/tags/动态规划/">&#60; PREV</a><a class="page-number" href="/tags/动态规划/">1</a><span class="page-number current">2</span>
     </nav>
     
 </main>
