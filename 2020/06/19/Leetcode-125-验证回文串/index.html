@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>时晨《傀儡村事件》 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 125. 验证回文串 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">时晨《傀儡村事件》</a>
+                <a href="#" class="post-name">Leetcode 125. 验证回文串</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            时晨《傀儡村事件》
+            Leetcode 125. 验证回文串
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,22 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">23</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">327</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2020/06/19</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,8 +403,21 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="2019推理小说阅读计划-11-50"><a href="#2019推理小说阅读计划-11-50" class="headerlink" title="2019推理小说阅读计划(11/50)"></a>2019推理小说阅读计划(11/50)</h2><h3 id="时晨-《傀儡村事件》"><a href="#时晨-《傀儡村事件》" class="headerlink" title="时晨 《傀儡村事件》"></a>时晨 《傀儡村事件》</h3><p>时晨三部曲✓</p>
-<p><img src="https://img1.doubanio.com/view/subject/l/public/s29816578.jpg" alt></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
+<p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;A man, a plan, a canal: Panama&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;race a car&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>由于不考虑大小写的问题，使用<code>transform()</code>函数将字符串中的字符都转换为大写。</p>
+<p>利用双指针，初始化指向字符串的开头和末尾，由于只考虑数字和字母，所以指针指向的值不为数字和字母的话，便向后或向前移动，直至找到数字或字母即可。</p>
+<p><code>tips:</code></p>
+<ul>
+<li>注意边界的问题</li>
+<li>学会<code>isalpha()</code>和<code>isdigit()</code>函数，方便判断</li>
+<li><a href="https://www.cnblogs.com/balingybj/p/4678880.html" target="_blank" rel="noopener">transform()函数的定义</a>，<code>transform(s.begin(), s.end(), s.begin(), ::toupper)</code>便将字符串中的字符都转化为大写。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = s.length() - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//转换为大写</span></span><br><span class="line">        transform(s.begin(), s.end(), s.begin(), ::<span class="built_in">toupper</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(left &lt; s.length() &amp;&amp; !<span class="built_in">isalpha</span>(s[left]) &amp;&amp; !<span class="built_in">isdigit</span>(s[left]))</span><br><span class="line">                left++;</span><br><span class="line">            <span class="keyword">while</span>(right &gt;= <span class="number">0</span> &amp;&amp; !<span class="built_in">isalpha</span>(s[right]) &amp;&amp; !<span class="built_in">isdigit</span>(s[right]))</span><br><span class="line">                right--;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(left &lt; right &amp;&amp; s[left] != s[right])</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            </span><br><span class="line">            left++;</span><br><span class="line">            right--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -405,17 +426,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/02/24/找位置问题/" title= "找位置问题">
-                    <div class="nextTitle">找位置问题</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/14/时晨《五行塔事件》/" title= "时晨《五行塔事件》">
-                    <div class="prevTitle">时晨《五行塔事件》</div>
+                <a href= "/2020/06/18/Leetcode-1028-从先序遍历还原二叉树/" title= "Leetcode 1028. 从先序遍历还原二叉树">
+                    <div class="prevTitle">Leetcode 1028. 从先序遍历还原二叉树</div>
                 </a>
             
         </li>
@@ -556,7 +572,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2019推理小说阅读计划-11-50"><span class="toc-number">1.</span> <span class="toc-text">2019推理小说阅读计划(11/50)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#时晨-《傀儡村事件》"><span class="toc-number">1.1.</span> <span class="toc-text">时晨 《傀儡村事件》</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
