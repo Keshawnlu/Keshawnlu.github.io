@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 125. 验证回文串 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 10. 正则表达式匹配 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 125. 验证回文串</a>
+                <a href="#" class="post-name">Leetcode 10. 正则表达式匹配</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 125. 验证回文串
+            Leetcode 10. 正则表达式匹配
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">327</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">997</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/19</span>
+                    <span class="post-intro-time">2020/06/20</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,21 +401,44 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
-<p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;A man, a plan, a canal: Panama&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;race a car&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>由于不考虑大小写的问题，使用<code>transform()</code>函数将字符串中的字符都转换为大写。</p>
-<p>利用双指针，初始化指向字符串的开头和末尾，由于只考虑数字和字母，所以指针指向的值不为数字和字母的话，便向后或向前移动，直至找到数字或字母即可。</p>
-<p><code>tips:</code></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你一个字符串 <code>s</code> 和一个字符规律 <code>p</code>，请你来实现一个支持 <code>&#39;.&#39;</code> 和 <code>&#39;*&#39;</code> 的正则表达式匹配。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;.&apos; 匹配任意单个字符</span><br><span class="line">&apos;*&apos; 匹配零个或多个前面的那一个元素</span><br></pre></td></tr></table></figure>
+<p>所谓匹配，是要涵盖 <strong>整个</strong> 字符串 <code>s</code>的，而不是部分字符串。</p>
+<p><strong>说明:</strong></p>
 <ul>
-<li>注意边界的问题</li>
-<li>学会<code>isalpha()</code>和<code>isdigit()</code>函数，方便判断</li>
-<li><a href="https://www.cnblogs.com/balingybj/p/4678880.html" target="_blank" rel="noopener">transform()函数的定义</a>，<code>transform(s.begin(), s.end(), s.begin(), ::toupper)</code>便将字符串中的字符都转化为大写。</li>
+<li><code>s</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母。</li>
+<li><code>p</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母，以及字符 <code>.</code> 和 <code>*</code>。</li>
 </ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = s.length() - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//转换为大写</span></span><br><span class="line">        transform(s.begin(), s.end(), s.begin(), ::<span class="built_in">toupper</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(left &lt; s.length() &amp;&amp; !<span class="built_in">isalpha</span>(s[left]) &amp;&amp; !<span class="built_in">isdigit</span>(s[left]))</span><br><span class="line">                left++;</span><br><span class="line">            <span class="keyword">while</span>(right &gt;= <span class="number">0</span> &amp;&amp; !<span class="built_in">isalpha</span>(s[right]) &amp;&amp; !<span class="built_in">isdigit</span>(s[right]))</span><br><span class="line">                right--;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(left &lt; right &amp;&amp; s[left] != s[right])</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            </span><br><span class="line">            left++;</span><br><span class="line">            right--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;aa&quot;</span><br><span class="line">p = &quot;a&quot;</span><br><span class="line">输出: false</span><br><span class="line">解释: &quot;a&quot; 无法匹配 &quot;aa&quot; 整个字符串。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;aa&quot;</span><br><span class="line">p = &quot;a*&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 因为 &apos;*&apos; 代表可以匹配零个或多个前面的那一个元素, 在这里前面的元素就是 &apos;a&apos;。因此，字符串 &quot;aa&quot; 可被视为 &apos;a&apos; 重复了一次。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;ab&quot;</span><br><span class="line">p = &quot;.*&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: &quot;.*&quot; 表示可匹配零个或多个（&apos;*&apos;）任意字符（&apos;.&apos;）。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 4:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;aab&quot;</span><br><span class="line">p = &quot;c*a*b&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 因为 &apos;*&apos; 表示零个或多个，这里 &apos;c&apos; 为 0 个, &apos;a&apos; 被重复一次。因此可以匹配字符串 &quot;aab&quot;。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 5:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;mississippi&quot;</span><br><span class="line">p = &quot;mis*is*p*.&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>又是一道看了解析也做的异常艰难的题…尽力把思路讲清楚吧</p>
+<p>首先利用动态规划的思想，<code>dp[i][j]</code>代表<code>s[0...i]</code>和<code>p[0...j]</code>是否能匹配成功。</p>
+<p>为了方便处理边界问题，两个字符串都先在<strong>开头加上一个空格</strong>，初始化<code>dp[0][0] = true</code>。</p>
+<p>然后先初始化字符串<code>s</code>为空时，匹配的情况，也就是初始化<code>dp[0][j]</code>的值。只有当<code>p[j] == &#39;*&#39;</code>时，令<code>p[j - 1]</code>重复0次，也就是去掉<code>p[j - 1], p[j]</code>这两个字符，才有可能与空字符串匹配成功，此时<code>dp[0][j] == dp[0][j - 2]</code>。</p>
+<p>然后开始循环遍历<code>s</code>与<code>j</code>字符串，会遇到以下这几种情况：</p>
+<ol>
+<li><code>p[j] != &#39;*&#39;</code>时，若<code>s[i] == p[j] || p[j] == &#39;.&#39;</code>，那么当前字符是匹配成功的，所以<code>dp[i][j] == dp[i - 1][j - 1]</code>。</li>
+<li><code>p[j] == &#39;*&#39;</code>时：<ol>
+<li>匹配0次，也就是将<code>p[j - 1], p[j]</code>都去除后能匹配成功，<code>dp[i][j] == dp[i][j - 2]</code>。</li>
+<li>当<code>p[j - 1] == &#39;.&#39; || p[j - 1] == s[i]</code>时，则<code>dp[i][j]</code><strong>取决于</strong><code>dp[i - 1][j]</code>，因为在<code>s</code>最后加一个一样的字符也没有关系，即<code>s[i] == s[i - 1]</code>，因为<code>*</code>可以匹配任意个相同的字符。所以<code>dp[i][j] == dp[i - 1][j]</code>。(<code>aaa</code>与 <code>aaa*</code>是匹配的，也就是<code>*</code>使末尾的<code>a</code>重复一次：<code>a* == a</code>)</li>
+<li>综合上面两种情况，<code>dp[i][j] == zero || one</code>。</li>
+</ol>
+</li>
+</ol>
+<p>最后返回<code>dp[s.length() - 1][p.length() - 1]</code>即可。</p>
+<p><code>tip:</code></p>
+<ul>
+<li>开头加空格的方法很实用，利于代码的理解及后续操作。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isMatch</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> p)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(p.empty())</span><br><span class="line">            <span class="keyword">return</span> s.empty();</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; dp(s.length() + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(p.length() + <span class="number">1</span>, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//处理边界,加空格</span></span><br><span class="line">        s = <span class="string">" "</span> + s;</span><br><span class="line">        p = <span class="string">" "</span> + p;</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//初始化</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt; p.length(); j++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(p[j] == <span class="string">'*'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                dp[<span class="number">0</span>][j] = dp[<span class="number">0</span>][j - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; p.length(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(s[i] == p[j] || p[j] == <span class="string">'.'</span>) <span class="comment">//当前匹配成功</span></span><br><span class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(p[j] == <span class="string">'*'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">bool</span> zero;  <span class="comment">//匹配0次</span></span><br><span class="line">                    <span class="keyword">bool</span> one;   <span class="comment">//匹配1次</span></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">2</span> &gt;= <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                        zero = dp[i][j - <span class="number">2</span>];</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//若dp[i - 1][j]已匹配成功，那么s[i] == s[i - 1]，即在最后加一个一样的也没有关系，因为*可以匹配任意个相同的字符</span></span><br><span class="line">                    one = dp[i - <span class="number">1</span>][j] &amp;&amp; (p[j - <span class="number">1</span>] == <span class="string">'.'</span> || p[j - <span class="number">1</span>] == s[i]);</span><br><span class="line">                    dp[i][j] = zero || one;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[s.length() - <span class="number">1</span>][p.length() - <span class="number">1</span>];</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -426,17 +447,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/20/Leetcode-10-正则表达式匹配/" title= "Leetcode 10. 正则表达式匹配">
-                    <div class="nextTitle">Leetcode 10. 正则表达式匹配</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/18/Leetcode-1028-从先序遍历还原二叉树/" title= "Leetcode 1028. 从先序遍历还原二叉树">
-                    <div class="prevTitle">Leetcode 1028. 从先序遍历还原二叉树</div>
+                <a href= "/2020/06/19/Leetcode-125-验证回文串/" title= "Leetcode 125. 验证回文串">
+                    <div class="prevTitle">Leetcode 125. 验证回文串</div>
                 </a>
             
         </li>
