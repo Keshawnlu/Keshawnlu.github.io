@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 210. 课程表 II · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 124. 二叉树中的最大路径和 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 210. 课程表 II</a>
+                <a href="#" class="post-name">Leetcode 124. 二叉树中的最大路径和</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 210. 课程表 II
+            Leetcode 124. 二叉树中的最大路径和
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.1k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">452</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/17</span>
+                    <span class="post-intro-time">2020/06/21</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,45 +401,21 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>现在你总共有 <em>n</em> 门课需要选，记为 <code>0</code> 到 <code>n-1</code>。</p>
-<p>在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: <code>[0,1]</code></p>
-<p>给定课程总量以及它们的先决条件，返回你为了学完所有课程所安排的学习顺序。</p>
-<p>可能会有多个正确的顺序，你只要返回一种就可以了。如果不可能完成所有课程，返回一个空数组。</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个<strong>非空</strong>二叉树，返回其最大路径和。</p>
+<p>本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径<strong>至少包含一个</strong>节点，且不一定经过根节点。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 2, [[1,0]] </span><br><span class="line">输出: [0,1]</span><br><span class="line">解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3]</span><br><span class="line"></span><br><span class="line">       1</span><br><span class="line">      / \</span><br><span class="line">     2   3</span><br><span class="line"></span><br><span class="line">输出: 6</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: 4, [[1,0],[2,0],[3,1],[3,2]]</span><br><span class="line">输出: [0,1,2,3] or [0,2,1,3]</span><br><span class="line">解释: 总共有 4 门课程。要学习课程 3，你应该先完成课程 1 和课程 2。并且课程 1 和课程 2 都应该排在课程 0 之后。</span><br><span class="line"> 因此，一个正确的课程顺序是 [0,1,2,3] 。另一个正确的排序是 [0,2,1,3] 。</span><br></pre></td></tr></table></figure>
-<p><strong>说明:</strong></p>
-<ol>
-<li>输入的先决条件是由<strong>边缘列表</strong>表示的图形，而不是邻接矩阵。详情请参见<a href="http://blog.csdn.net/woaidapaopao/article/details/51732947" target="_blank" rel="noopener">图的表示法</a>。</li>
-<li>你可以假定输入的先决条件中没有重复的边。</li>
-</ol>
-<p><strong>提示:</strong></p>
-<ol>
-<li><p>这个问题相当于查找一个循环是否存在于有向图中。如果存在循环，则不存在拓扑排序，因此不可能选取所有课程进行学习。</p>
-</li>
-<li><p><a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="noopener">通过 DFS 进行拓扑排序</a> - 一个关于Coursera的精彩视频教程（21分钟），介绍拓扑排序的基本概念。</p>
-</li>
-<li>拓扑排序也可以通过 <a href="https://baike.baidu.com/item/宽度优先搜索/5224802?fr=aladdin&amp;fromid=2148012&amp;fromtitle=广度优先搜索" target="_blank" rel="noopener">BFS</a> 完成。</li>
-</ol>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>这是一道拓扑排序的题，首先我们把每一门课看成一个节点，若在学习 <strong>A</strong> 课程之前必须完成课程 <strong>B</strong> ，则从 <strong>B</strong> 到 <strong>A</strong> 连接一条有向边，这样在拓扑排序中，<strong>B</strong> 一定出现在 <strong>A</strong> 的前面。</p>
-<p>我们使用广度优先搜索，定义一个队列，首先将入度为<code>0</code>的顶点入队(即没有先修课程的限制)。当我们将队头的节点出队后(即存入答案)，就可以移除它的所有出边，代表着它的相邻节点<strong>少了一门先修课程的要求</strong>，这样循环直至队列为空。</p>
-<p>若最后的答案包含了这<code>n</code>个结点，则找到了一种拓扑排序；否则图中存在环(存在无法入队的顶点)，即不存在拓扑排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: [-10,9,20,null,null,15,7]</span><br><span class="line"></span><br><span class="line">   -10</span><br><span class="line">   / \</span><br><span class="line">  9  20</span><br><span class="line">    /  \</span><br><span class="line">   15   7</span><br><span class="line">   </span><br><span class="line">输出: 42</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>对于二叉树中的一个节点，<strong>该节点</strong>的最大路径和取决于该节点的值与该节点的左右子节点的<strong>最大贡献值和</strong>，如果子节点的最大贡献值<strong>为正</strong>，则计入该节点的最大路径和，否则不计入该节点的最大路径和。</p>
+<p>同时用<code>maxSum</code>不断存储过程中的最大路径和，最后返回即可。</p>
 <p><code>tips:</code></p>
 <ul>
-<li>给定一个包含 <em>n</em> 个节点的有向图 <em>G</em>，我们给出它的节点编号的一种排列，如果满足：</li>
+<li>利用<code>max(0, val)</code>来排除负数的值</li>
+<li><code>root -&gt; val + max(leftVal, rightVal)</code>的含义是返回经过<code>root</code>的<strong>单边最大分支</strong>给上游</li>
+<li><code>maxValue()</code>函数的作用便是计算一个节点的最大贡献值，具体而言，就是在以该节点为根节点的子树中寻找以该节点为起点的一条路径，使得该路径上的节点值之和最大。</li>
 </ul>
-<blockquote>
-<p>对于图 <em>G</em> 中的任意一条有向边 (<em>u</em>,<em>v</em>)，<em>u</em> 在排列中都出现在 <em>v</em> 的前面。</p>
-</blockquote>
-<p>​    那么称该排列是图 <em>G</em> 的「拓扑排序」。</p>
-<ul>
-<li><p>如果图 <em>G</em> 中存在环（即图 <em>G</em> 不是「有向无环图」），那么图 <em>G</em> 不存在拓扑排序。这是因为假设图中存在环$x_{1},x_{2},…,x_{n},x_{1}$，那么$x_{1}$在排列中必须出现在$x_{n}$的前面，但$x_{n}$同时也必须出现在$x_{1}$的前面，因此不存在一个满足要求的排列，也就不存在拓扑排序；</p>
-</li>
-<li><p>如果图 <em>G</em> 是有向无环图，那么它的拓扑排序可能不止一种。举一个最极端的例子，如果图 <em>G</em> 值包含 <em>n</em> 个节点却没有任何边，那么任意一种编号的排列都可以作为拓扑排序。</p>
-</li>
-</ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; edges;  <span class="comment">//存储图的边，edges[0][1]代表从0到1的边</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; indegree;   <span class="comment">//存储每个节点的入度</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; findOrder(<span class="keyword">int</span> numCourses, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; prerequisites)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">        edges.resize(numCourses);</span><br><span class="line">        indegree.resize(numCourses);    <span class="comment">//resize，默认元素都为0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> info : prerequisites)&#123;</span><br><span class="line"></span><br><span class="line">            edges[info[<span class="number">1</span>]].push_back(info[<span class="number">0</span>]);  <span class="comment">//从info[1]到info[0]的边</span></span><br><span class="line">            indegree[info[<span class="number">0</span>]]++;    <span class="comment">//info[0]入度+1;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; indegree.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(indegree[i] == <span class="number">0</span>)</span><br><span class="line">                q.push(i);    <span class="comment">//将入度为0的点入队</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> node_start = q.front();</span><br><span class="line">            q.pop();    <span class="comment">//取出队头元素</span></span><br><span class="line">            res.push_back(node_start);   <span class="comment">//放入答案</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> node_end : edges[node_start])&#123;</span><br><span class="line">                indegree[node_end]--;   <span class="comment">//相应的节点入度减一</span></span><br><span class="line">                <span class="keyword">if</span>(indegree[node_end] == <span class="number">0</span>)</span><br><span class="line">                    q.push(node_end);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(res.size() != numCourses)</span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;;  <span class="comment">//不存在拓扑排序</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> maxSum = INT_MIN;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxValue</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;	<span class="comment">//空节点贡献为0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> leftVal = max(maxValue(root -&gt; left), <span class="number">0</span>);   <span class="comment">//大于0才有贡献</span></span><br><span class="line">        <span class="keyword">int</span> rightVal = max(maxValue(root -&gt; right), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//路径为 left -&gt; root -&gt; right</span></span><br><span class="line">        <span class="keyword">int</span> nowVal = root -&gt; val + leftVal + rightVal;  </span><br><span class="line">        maxSum = max(maxSum, nowVal);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//返回经过root的单边最大分支给上游</span></span><br><span class="line">        <span class="keyword">return</span> root -&gt; val + max(leftVal, rightVal);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxPathSum</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        maxValue(root);</span><br><span class="line">        <span class="keyword">return</span> maxSum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -448,17 +424,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/18/Leetcode-152-乘积最大子数组/" title= "Leetcode 152. 乘积最大子数组">
-                    <div class="nextTitle">Leetcode 152. 乘积最大子数组</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/17/Leetcode-5413-重新排列句子中的单词/" title= "Leetcode 5413. 重新排列句子中的单词">
-                    <div class="prevTitle">Leetcode 5413. 重新排列句子中的单词</div>
+                <a href= "/2020/06/21/嵌入式复习作业汇总/" title= "嵌入式复习作业汇总">
+                    <div class="prevTitle">嵌入式复习作业汇总</div>
                 </a>
             
         </li>
