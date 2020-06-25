@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 16. 最接近的三数之和 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 139. 单词拆分 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 16. 最接近的三数之和</a>
+                <a href="#" class="post-name">Leetcode 139. 单词拆分</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 16. 最接近的三数之和
+            Leetcode 139. 单词拆分
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">435</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">477</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/24</span>
+                    <span class="post-intro-time">2020/06/25</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,20 +401,27 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个包括 <em>n</em> 个整数的数组 <code>nums</code> 和 一个目标值 <code>target</code>。找出 <code>nums</code> 中的三个整数，使得它们的和与 <code>target</code> 最接近。返回这三个数的和。假定每组输入只存在唯一答案。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [-1,2,1,-4], target = 1</span><br><span class="line">输出：2</span><br><span class="line">解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个<strong>非空</strong>字符串 <em>s</em> 和一个包含<strong>非空</strong>单词列表的字典 <em>wordDict</em>，判定 <em>s</em> 是否可以被空格拆分为一个或多个在字典中出现的单词。</p>
+<p><strong>说明：</strong></p>
 <ul>
-<li><code>3 &lt;= nums.length &lt;= 10^3</code></li>
-<li><code>-10^3 &lt;= nums[i] &lt;= 10^3</code></li>
-<li><code>-10^4 &lt;= target &lt;= 10^4</code></li>
+<li>拆分时可以重复使用字典中的单词。</li>
+<li>你可以假设字典中没有重复的单词。</li>
 </ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>这题与<a href="http://mingtiao.top/2020/06/12/Leetcode-15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">15. 三数之和</a>有相似之处，可以采取相同的双指针方法。</p>
-<p>首先依然是先排序，然后循环数字，如果碰到与前一个相同的数字，则<code>continue</code>，防止重复判断。</p>
-<p>然后每次定义<code>left = i + 1, right = nums.size() - 1</code>，比较<code>sum</code>与<code>target</code>的大小，其中<code>sum = nums[i] + nums[left] + nums[right]</code>。若<code>sum &lt; target</code>，则<code>left</code>向后移动到不重复的第一个数字(防止重复判断)；若<code>sum &gt; target</code>，则<code>right</code>向前移动到不重复的第一个数字；若<code>sum == target</code>，则直接返回<code>target</code>即可(相差为0)。</p>
-<p>在循环过程中保存与<code>target</code>差值最小的<code>sum</code>，最后返回即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        sort(nums.begin(), nums.end());</span><br><span class="line">        <span class="keyword">int</span> Min_Sum = INT_MAX;</span><br><span class="line">        <span class="keyword">int</span> nearest = INT_MAX;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="comment">//去重</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">int</span> left = i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> right = nums.size() - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">int</span> sum = nums[i] + nums[left] + nums[right];</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">abs</span>(sum - target) &lt; nearest)&#123;</span><br><span class="line"></span><br><span class="line">                    Min_Sum = sum;</span><br><span class="line">                    nearest = <span class="built_in">abs</span>(sum - target);</span><br><span class="line">                &#125;</span><br><span class="line">                    </span><br><span class="line">                <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[left] == nums[left + <span class="number">1</span>])</span><br><span class="line">                        left++; <span class="comment">//去重</span></span><br><span class="line"></span><br><span class="line">                    left++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[right] == nums[right - <span class="number">1</span>])</span><br><span class="line">                        right--;    <span class="comment">//去重</span></span><br><span class="line"></span><br><span class="line">                    right--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">return</span> target;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Min_Sum;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;, &quot;code&quot;]</span><br><span class="line">输出: true</span><br><span class="line">解释: 返回 true 因为 &quot;leetcode&quot; 可以被拆分成 &quot;leet code&quot;。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;applepenapple&quot;, wordDict = [&quot;apple&quot;, &quot;pen&quot;]</span><br><span class="line">输出: true</span><br><span class="line">解释: 返回 true 因为 &quot;applepenapple&quot; 可以被拆分成 &quot;apple pen apple&quot;。</span><br><span class="line">     注意你可以重复使用字典中的单词。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;, &quot;dog&quot;, &quot;sand&quot;, &quot;and&quot;, &quot;cat&quot;]</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>使用动态规划的思想，<code>dp[i]</code>代表<code>0 ~ i - 1</code>的字符串能否被成功拆分。</p>
+<p>先将字典中的单词存入哈希表，方便查找。</p>
+<p>我们可以将<code>0 ~ i - 1</code>的字符串可以分为<code>0 ~ j - 1</code>和<code>j ~ i - 1</code>，所以<code>dp[i]</code><strong>取决于</strong><code>dp[j]</code>和<code>s.substr(j, i - j)</code>这个字符串是否为单词表中的单词。</p>
+<p>所以<strong>切割点</strong><code>j</code>的遍历范围每次都为<code>0 ~ i - 1</code>。</p>
+<p><code>tip:</code></p>
+<ul>
+<li>可以在初始化时多分配一个空间，<code>dp[0] = true</code>，代表空串时成功分割单词。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">wordBreak</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; wordDict)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; <span class="built_in">map</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; wordDict.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">map</span>[wordDict[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; dp(s.size() + <span class="number">1</span>, <span class="literal">false</span>);</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="literal">true</span>;   <span class="comment">//代表空串为true</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.size() + <span class="number">1</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++)&#123; <span class="comment">//寻找切割点</span></span><br><span class="line"></span><br><span class="line">                <span class="built_in">string</span> j_To_i = s.substr(j, i - j);</span><br><span class="line">                <span class="keyword">if</span>(dp[j] &amp;&amp; <span class="built_in">map</span>[j_To_i])&#123; <span class="comment">//0 ~ j - 1 和 j ~ i - 1都可找到</span></span><br><span class="line"></span><br><span class="line">                    dp[i] = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;          </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[s.size()];</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -425,17 +430,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/25/图形学知识点/" title= "图形学知识点">
-                    <div class="nextTitle">图形学知识点</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/23/Leetcode-67-二进制求和/" title= "Leetcode 67. 二进制求和">
-                    <div class="prevTitle">Leetcode 67. 二进制求和</div>
+                <a href= "/2020/06/25/图形学知识点/" title= "图形学知识点">
+                    <div class="prevTitle">图形学知识点</div>
                 </a>
             
         </li>
