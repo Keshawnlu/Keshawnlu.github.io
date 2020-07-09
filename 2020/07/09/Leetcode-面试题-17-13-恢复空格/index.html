@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 3. 无重复字符的最长子串 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 面试题 17.13. 恢复空格 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 3. 无重复字符的最长子串</a>
+                <a href="#" class="post-name">Leetcode 面试题 17.13. 恢复空格</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 3. 无重复字符的最长子串
+            Leetcode 面试题 17.13. 恢复空格
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">401</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">545</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/02</span>
+                    <span class="post-intro-time">2020/07/09</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,15 +401,25 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;abcabcbb&quot;</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br></pre></td></tr></table></figure>
-<p> <strong>示例 2:</strong> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;bbbbb&quot;</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span><br></pre></td></tr></table></figure>
-<p> <strong>示例 3:</strong> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;pwwkew&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>​    这道题需要用到滑动窗口的概念。先设置一个set，如果能将当前字符存入就说明没有产生重复，左窗口不变，右窗口往右扩大一格(即窗口扩大一格)。如果添加失败，就说明产生了重复，此时右窗口不变，左窗口往右移动一格(即窗口缩小一格)，再尝试添加重复的字符(即 i- -)。每次循环后记录窗口长度(即子串长度)，返回最大的值即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> r = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;    <span class="comment">//窗口左端和右端</span></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">char</span>&gt; maxstring;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(maxstring.insert(s[i]).second == <span class="literal">true</span>)&#123;</span><br><span class="line"></span><br><span class="line">                r++;    <span class="comment">//添加成功，右窗口往右移动一位</span></span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">                maxstring.erase(s[l]);  <span class="comment">//左窗口往右移动一位</span></span><br><span class="line">                l++;</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            count = max(count, r - l);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>哦，不！你不小心把一个长篇文章中的空格、标点都删掉了，并且大写也弄成了小写。像句子<code>I reset the computer. It still didn’t boot!</code>已经变成了<code>&quot;iresetthecomputeritstilldidntboot&quot;</code>。在处理标点符号和大小写之前，你得先把它断成词语。当然了，你有一本厚厚的词典<code>dictionary</code>，不过，有些词没在词典里。假设文章用<code>sentence</code>表示，设计一个算法，把文章断开，要求未识别的字符最少，返回<strong>未识别的字符数。</strong></p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">dictionary = [&quot;looked&quot;,&quot;just&quot;,&quot;like&quot;,&quot;her&quot;,&quot;brother&quot;]</span><br><span class="line">sentence = &quot;jesslookedjustliketimherbrother&quot;</span><br><span class="line">输出： 7</span><br><span class="line">解释： 断句后为&quot;jess looked just like tim her brother&quot;，共7个未识别字符。</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= len(sentence) &lt;= 1000</code></li>
+<li><code>dictionary</code>中总字符数不超过 150000。</li>
+<li>你可以认为<code>dictionary</code>和<code>sentence</code>中只包含小写字母。</li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>利用动态规划的思想，<code>dp[i]</code>为<code>sentence[0...i]</code>的未匹配字符个数。</p>
+<p>首先<code>sentence = &quot; &quot; + sentence</code>，处理边界问题。</p>
+<p>首先定义一个哈希表，将字典中的单词存入。</p>
+<p>首先每个<code>dp[i]</code>初始化值为<code>dp[i - 1] + 1</code>(即先默认<code>sentence[i]</code>为不匹配字符)，然后<code>j</code>从<code>1</code>遍历到<code>i</code>(<code>sentence[0]</code>为空格，单词表中可能有<strong>一个字符</strong>的单词)，若<code>sentence[j ... i]</code>为单词表中的单词，则这部分是匹配成功的，所以<code>dp[i] = min(dp[i], dp[j - 1])</code>(保留最小值)。</p>
+<p>最后返回<code>dp[sentence.size() - 1]</code>即可。</p>
+<p><code>tip:</code></p>
+<ul>
+<li>看题解用字典树效率更高，先留个坑以后来做。现在用的方法时间复杂度<code>O(n^2)</code>，用时感人…</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">respace</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; dictionary, <span class="built_in">string</span> sentence)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; <span class="built_in">map</span>;</span><br><span class="line"></span><br><span class="line">        sentence = <span class="string">" "</span> + sentence;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(sentence.size(), <span class="number">0</span>);   <span class="comment">//以i结尾的未匹配字符个数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dictionary.size(); i++)</span><br><span class="line">            <span class="built_in">map</span>[dictionary[i]]++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; sentence.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//j...i的字符串为单词</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">map</span>.count(sentence.substr(j, i - j + <span class="number">1</span>)))&#123;   </span><br><span class="line"></span><br><span class="line">                    <span class="comment">//j...i已匹配成功。</span></span><br><span class="line">                    dp[i] = min(dp[i], dp[j - <span class="number">1</span>]);  </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[sentence.size() - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -420,17 +428,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/03/Leetcode-53-最大子序和/" title= "Leetcode 53. 最大子序和">
-                    <div class="nextTitle">Leetcode 53. 最大子序和</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/01/Leetcode-21-合并两个有序链表/" title= "Leetcode 21. 合并两个有序链表">
-                    <div class="prevTitle">Leetcode 21. 合并两个有序链表</div>
+                <a href= "/2020/07/08/Leetcode-面试题-16-11-跳水板/" title= "Leetcode 面试题 16.11. 跳水板">
+                    <div class="prevTitle">Leetcode 面试题 16.11. 跳水板</div>
                 </a>
             
         </li>
