@@ -346,6 +346,45 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/14/Leetcode-136-只出现一次的数字/" >
+            
+                <span>Leetcode 136. 只出现一次的数字</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+ 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？ 
+示例 1:
+12输入: [2,2,1]输出: 1
+示例 2:
+12输入: [4,1,2,1,2]输出: 4
+思路：使用位运算(异或)，因为a ^ a = 0，a ^ a ^ b = 0 ^ b = b，并且位运算符合交换律，所以将数组中所有的数依次位运算以后，出现两次的数的位运算后变为0，所以最后留下来的数便是只出现一次的，即是结果，时间复杂度O(n)，空间复杂度O(1)。
+tip:
+
+异或相同为0...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/13/Leetcode-102-二叉树的层序遍历/" >
             
                 <span>Leetcode 102. 二叉树的层序遍历</span>
@@ -563,9 +602,9 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
     
 </div>
             
@@ -677,47 +716,6 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/05/Leetcode-98-验证二叉搜索树/" >
-            
-                <span>Leetcode 98. 验证二叉搜索树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介给定一个二叉树，判断其是否是一个有效的二叉搜索树。
-假设一个二叉搜索树具有如下特征：
-
-节点的左子树只包含小于当前节点的数。
-节点的右子树只包含大于当前节点的数。
-所有左子树和右子树自身必须也是二叉搜索树。
-示例 1: 
-
-
-12345输入:    2   / \  1   3输出: true
- 示例 2: 
-123456789输入:    5   / \  1   4     / \    3   6输出: false解释: 输入为: [5,1,4,null,null,3,6]。     根节点的值为 5 ，但是其右子节点值为 4 。
-思路：因为是二叉搜索树，所以最左边的值最小...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
     
 </div>
             
@@ -2419,9 +2417,28 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 101
+        Total : 102
         </div>
         <!-- search  -->
         
@@ -2434,6 +2451,11 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2020/07/12/Leetcode-174-地下城游戏/" >Leetcode 174. 地下城游戏</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -2891,11 +2913,6 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
         </li>
     
@@ -2907,6 +2924,11 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -2936,12 +2958,12 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
@@ -2958,25 +2980,25 @@ b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+    
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
