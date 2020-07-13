@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 1014. 最佳观光组合 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 350. 两个数组的交集 II · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 1014. 最佳观光组合</a>
+                <a href="#" class="post-name">Leetcode 350. 两个数组的交集 II</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 1014. 最佳观光组合
+            Leetcode 350. 两个数组的交集 II
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,20 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">391</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">324</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/17</span>
+                    <span class="post-intro-time">2020/07/13</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,24 +403,22 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定正整数数组 <code>A</code>，<code>A[i]</code> 表示第 <code>i</code> 个观光景点的评分，并且两个景点 <code>i</code> 和 <code>j</code> 之间的距离为 <code>j - i</code>。</p>
-<p>一对景点（<code>i &lt; j</code>）组成的观光组合的得分为（<code>A[i] + A[j] + i - j</code>）：景点的评分之和<strong>减去</strong>它们两者之间的距离。</p>
-<p>返回一对观光景点能取得的最高分。</p>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[8,1,5,2,6]</span><br><span class="line">输出：11</span><br><span class="line">解释：i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ol>
-<li><code>2 &lt;= A.length &lt;= 50000</code></li>
-<li><code>1 &lt;= A[i] &lt;= 1000</code></li>
-</ol>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>利用动态规划的思想，<code>dp[i]</code>代表<code>0 ~ i - 1</code>之间的景点和<code>i</code>景点组合评分的最大值。</p>
-<p>在<code>dp[i]</code>取得最大值的情况有两种：</p>
-<ol>
-<li><code>A[i] + A[i - 1] - 1</code>，即第<code>i</code>个和第<code>i - 1</code>个景点的组合评分。</li>
-<li><code>A[i] - A[i - 1] - 1 + dp[i - 1]</code>，设与第<code>i - 1</code>个景点组合评分最高的景点为<code>j</code>，由于<code>dp[i - 1]</code>中肯定包含了<code>A[i - 1]</code>；所以这个方程的结果就是当前第<code>i</code>个景点与第<code>j</code>个景点的组合评分。</li>
-</ol>
-<p>再用一个变量存储遍历过程中取到的组合评分最大值，最后返回即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxScoreSightseeingPair</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(A.size(), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">1</span>] = A[<span class="number">0</span>] + A[<span class="number">1</span>] - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> max_score = dp[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; A.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> score1 = A[i] - A[i - <span class="number">1</span>] - <span class="number">1</span> + dp[i - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">int</span> score2 = A[i] + A[i - <span class="number">1</span>] - <span class="number">1</span>;</span><br><span class="line">            dp[i] = max(score1, score2);</span><br><span class="line"></span><br><span class="line">            max_score = max(max_score, dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> max_score; </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定两个数组，编写一个函数来计算它们的交集。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [1,2,2,1], nums2 = [2,2]</span><br><span class="line">输出：[2,2]</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]</span><br><span class="line">输出：[4,9]</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<ul>
+<li>输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。</li>
+<li>我们可以不考虑输出结果的顺序。</li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>先将两个数组进行排序(从小到大)，然后设置两个指针分别指向两个数组的开头。</p>
+<p>当<code>nums1[i] == nums2[j]</code>，将目标值压入结果数组，然后两个指针都往后移动一位。</p>
+<p>若<code>nums1[i] &lt; nums2[j]</code>，说明当前<code>nums1[i]</code>值过小，<code>i++</code>，往后移动一位。</p>
+<p>若<code>nums1[i] &gt; nums2[j]</code>，说明当前<code>nums2[j]</code>值过小，<code>j++</code>，往后移动一位。</p>
+<p>直至一个指针循环完所指数组时跳出循环。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; intersect(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line"></span><br><span class="line">        sort(nums1.begin(), nums1.end());</span><br><span class="line">        sort(nums2.begin(), nums2.end());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i &lt; nums1.size() &amp;&amp; j &lt; nums2.size())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(nums1[i] == nums2[j])&#123;</span><br><span class="line"></span><br><span class="line">                res.push_back(nums1[i]);</span><br><span class="line">                i++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums1[i] &lt; nums2[j])</span><br><span class="line">                i++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                j++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -427,17 +427,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/18/Leetcode-1028-从先序遍历还原二叉树/" title= "Leetcode 1028. 从先序遍历还原二叉树">
-                    <div class="nextTitle">Leetcode 1028. 从先序遍历还原二叉树</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/16/Leetcode-297-二叉树的序列化与反序列化/" title= "Leetcode 297. 二叉树的序列化与反序列化">
-                    <div class="prevTitle">Leetcode 297. 二叉树的序列化与反序列化</div>
+                <a href= "/2020/07/12/Leetcode-174-地下城游戏/" title= "Leetcode 174. 地下城游戏">
+                    <div class="prevTitle">Leetcode 174. 地下城游戏</div>
                 </a>
             
         </li>
