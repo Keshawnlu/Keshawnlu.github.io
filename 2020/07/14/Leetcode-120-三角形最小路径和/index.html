@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 718. 最长重复子数组 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 120. 三角形最小路径和 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 718. 最长重复子数组</a>
+                <a href="#" class="post-name">Leetcode 120. 三角形最小路径和</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 718. 最长重复子数组
+            Leetcode 120. 三角形最小路径和
             <!-- 404 -->
             
         </h1>
@@ -268,18 +268,16 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">339</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">447</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/01</span>
+                    <span class="post-intro-time">2020/07/14</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,23 +401,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给两个整数数组 <code>A</code> 和 <code>B</code> ，返回两个数组中公共的、长度最长的子数组的长度。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">A: [1,2,3,2,1]</span><br><span class="line">B: [3,2,1,4,7]</span><br><span class="line">输出: 3</span><br><span class="line">解释: </span><br><span class="line">长度最长的公共子数组是 [3, 2, 1]。</span><br></pre></td></tr></table></figure>
-<p><strong>说明:</strong></p>
-<ol>
-<li><code>1 &lt;= len(A), len(B) &lt;= 1000</code></li>
-<li><code>0 &lt;= A[i], B[i] &lt; 100</code></li>
-</ol>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>使用动态规划的思想，<code>d[i][j]</code>代表以<code>A[i]</code>与<code>B[j]</code><strong>为结尾</strong>的公共最长子序列。</p>
-<p>当<code>A[i] != B[j]</code>时，<code>dp[i][j] == 0</code></p>
-<p>当<code>A[i] == B[j]</code>时，<code>dp[i][j] == dp[i - 1][j - 1] + 1</code>，即之前的公共最长子序列 + 1。</p>
-<p>最后返回<code>dp[i][j]</code>中的最大值即可。</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。</p>
+<p><strong>相邻的结点</strong> 在这里指的是 <code>下标</code> 与 <code>上一层结点下标</code> 相同或者等于 <code>上一层结点下标 + 1</code> 的两个结点。</p>
+<p>例如，给定三角形：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">     [2],</span><br><span class="line">    [3,4],</span><br><span class="line">   [6,5,7],</span><br><span class="line">  [4,1,8,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>自顶向下的最小路径和为 <code>11</code>（即，<strong>2</strong> + <strong>3</strong> + <strong>5</strong> + <strong>1</strong> = 11）。</p>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，<code>dp[i][j]</code>代表<strong>从起点开始</strong>走到<code>(i, j)</code>点的最小路径和。</p>
+<p>首先初始化第一列和<strong>最后一列</strong>(处理边界问题)。</p>
+<p>由于<code>(i, j)</code>只能从<code>(i - 1, j)</code>和<code>(i - 1, j - 1)</code>两个点走过来，所以<code>dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j]) + triangle[i][j]</code>。</p>
+<p>最后返回三角形<strong>最后一行</strong><code>dp</code>值中最小的值即可。</p>
 <p><code>tip:</code></p>
 <ul>
-<li>需初始化<code>dp[0][j], dp[i][0]</code>。</li>
+<li>需要注意的是计算<code>triangle[i][j]</code>这个点的<code>dp</code>时，可能会不存在<code>triangle[i - 1][j]</code>这个点，从而不存在<code>dp[i - 1][j]</code>，所以需要初始化最后一列。</li>
 </ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; B)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; dp(A.size(), <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(B.size(), <span class="number">0</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> Max_len = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; B.size(); j++)&#123;</span><br><span class="line"></span><br><span class="line">            dp[<span class="number">0</span>][j] = (A[<span class="number">0</span>] == B[j]) ? <span class="number">1</span> : <span class="number">0</span>;  <span class="comment">//初始化</span></span><br><span class="line">            Max_len = max(Max_len, dp[<span class="number">0</span>][j]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i][<span class="number">0</span>] = (A[i] == B[<span class="number">0</span>]) ? <span class="number">1</span> : <span class="number">0</span>;  <span class="comment">//初始化</span></span><br><span class="line">            Max_len = max(Max_len, dp[i][<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; A.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; B.size(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(A[i] == B[j])&#123;</span><br><span class="line"></span><br><span class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">                    Max_len = max(Max_len, dp[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[i][j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Max_len;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minimumTotal</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; triangle)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; dp(triangle.size(), <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(triangle.size(), <span class="number">0</span>));    <span class="comment">//走到(i, j)位置上的最小路径和</span></span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = triangle[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">//初始化第一列和最后一列</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; triangle.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] + triangle[i][<span class="number">0</span>];</span><br><span class="line">            dp[i][triangle[i].size() - <span class="number">1</span>] = dp[i - <span class="number">1</span>][triangle[i - <span class="number">1</span>].size() - <span class="number">1</span>] + triangle[i][triangle[i].size() - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; triangle.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++)&#123;</span><br><span class="line"></span><br><span class="line">                dp[i][j] = min(dp[i - <span class="number">1</span>][j - <span class="number">1</span>], dp[i - <span class="number">1</span>][j]) + triangle[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> res = INT_MAX;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; triangle[triangle.size() - <span class="number">1</span>].size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            res = min(res, dp[triangle.size() - <span class="number">1</span>][i]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -428,17 +423,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/07/02/Leetcode-378-有序矩阵中第K小的元素/" title= "Leetcode 378. 有序矩阵中第K小的元素">
-                    <div class="nextTitle">Leetcode 378. 有序矩阵中第K小的元素</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/30/Leetcode-剑指-Offer-09-用两个栈实现队列/" title= "Leetcode 剑指 Offer 09. 用两个栈实现队列">
-                    <div class="prevTitle">Leetcode 剑指 Offer 09. 用两个栈实现队列</div>
+                <a href= "/2020/07/13/Leetcode-350-两个数组的交集-II/" title= "Leetcode 350. 两个数组的交集 II">
+                    <div class="prevTitle">Leetcode 350. 两个数组的交集 II</div>
                 </a>
             
         </li>
