@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 837. 新21点 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 96. 不同的二叉搜索树 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 837. 新21点</a>
+                <a href="#" class="post-name">Leetcode 96. 不同的二叉搜索树</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 837. 新21点
+            Leetcode 96. 不同的二叉搜索树
             <!-- 404 -->
             
         </h1>
@@ -268,18 +268,16 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
-    
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">739</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">362</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/03</span>
+                    <span class="post-intro-time">2020/07/15</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,32 +401,21 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：</p>
-<p>爱丽丝以 <code>0</code> 分开始，并在她的得分少于 <code>K</code> 分时抽取数字。 抽取时，她从 <code>[1, W]</code> 的范围中随机获得一个整数作为分数进行累计，其中 <code>W</code> 是整数。 每次抽取都是独立的，其结果具有相同的概率。</p>
-<p>当爱丽丝获得不少于 <code>K</code> 分时，她就停止抽取数字。 爱丽丝的分数不超过 <code>N</code> 的概率是多少？</p>
-<p><strong>示例1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 10, K = 1, W = 10</span><br><span class="line">输出：1.00000</span><br><span class="line">说明：爱丽丝得到一张卡，然后停止。</span><br></pre></td></tr></table></figure>
-<p><strong>示例2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 6, K = 1, W = 10</span><br><span class="line">输出：0.60000</span><br><span class="line">说明：爱丽丝得到一张卡，然后停止。</span><br><span class="line">在 W = 10 的 6 种可能下，她的得分不超过 N = 6 分。</span><br></pre></td></tr></table></figure>
-<p><strong>示例3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：N = 21, K = 17, W = 10</span><br><span class="line">输出：0.73278</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ol>
-<li><code>0 &lt;= K &lt;= N &lt;= 10000</code></li>
-<li><code>1 &lt;= W &lt;= 10000</code></li>
-<li>如果答案与正确答案的误差不超过 <code>10^-5</code>，则该答案将被视为正确答案通过</li>
-<li>此问题的判断限制时间已经减少。</li>
-</ol>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>运用动态规划，<code>dp[i]</code>代表的是，当爱丽丝手牌得分为<code>i</code>时，她最终停止抽牌时(即游戏结束)，手牌得分 <code>&lt;= N</code>的概率。</p>
-<p><code>i</code>最小值为<code>0</code>， 最大值为<code>K - W + 1</code>，即倒数第二次的手牌得分为<code>K - 1</code>，最后一次拿了<code>W</code>的分数。</p>
-<p>由于只能在手牌得分<code>&lt; K</code>时我们才能抽牌，所以先将无法进行抽牌的情况进行初始化，即<code>K &lt;= i &lt;= K - W + 1</code>，当 <code>i &lt;= N</code>时，概率为<code>1</code>，否则为<code>0</code>(根据题意，最终得分大于<code>N</code>时为失败，即概率为<code>0</code>)。然后定义一个<code>sum</code>，代表这些概率的总和，<code>sum / W</code>便代表了手牌分数为<code>K - 1</code>时，下一次抽牌后总分数不超过<code>N</code>的概率(即<code>dp[K - 1] = sum / W</code>)。</p>
-<p>然后<code>i</code>从<code>K - 1</code>向前遍历，运用滑动窗口的概念，每次将总概率<code>sum</code>减去<code>dp[i + W]</code>，加上<code>dp[i]</code>，即将窗口往左滑动一格。</p>
-<p>最后返回<code>dp[0]</code>，即爱丽丝初始手牌得分为<code>0</code>时，最后分数不超过<code>N</code>的概率。</p>
-<p><code>tip:</code></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个整数 <em>n</em>，求以 1 … <em>n</em> 为节点组成的二叉搜索树有多少种？</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: 3</span><br><span class="line">输出: 5</span><br><span class="line">解释:</span><br><span class="line">给定 n = 3, 一共有 5 种不同结构的二叉搜索树:</span><br><span class="line"></span><br><span class="line">   1         3     3      2      1</span><br><span class="line">    \       /     /      / \      \</span><br><span class="line">     3     2     1      1   3      2</span><br><span class="line">    /     /       \                 \</span><br><span class="line">   2     1         2                 3</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，<code>dp[i]</code>代表<code>i</code>个节点能构成的二叉搜索树数量。</p>
+<p>首先若有<code>i</code>个节点，那么节点<code>1,2,3,...,i</code>都能作为根节点。</p>
+<p>我们假设以<code>3</code>作为根节点，那么左子树为<code>1,2</code>，右子树为<code>4,5,6,...,i</code>。</p>
+<p>所以左子树构成二叉搜索树的数量为<code>dp[2]</code>，右子树构成二叉搜索树的数量为<code>dp[i - 3]</code>(有<code>i - 3</code>个节点)。</p>
+<p>所以<code>i</code>个节点，并以<code>3</code>作为根节点所能构成的二叉搜索树总数为<code>dp[2] * dp[i - 3]</code>。</p>
+<p>所以我们只要循环节点<code>1 ... i</code>，把<strong>每个节点当做根节点时</strong>能构成的二叉搜索树数量<strong>累加</strong>即可，答案即为<code>dp[i]</code>。</p>
+<p><code>tips:</code></p>
 <ul>
-<li><code>dp[i] =</code><script type="math/tex">\frac{dp[i + 1] + dp[i + 2] + … + dp[i + W]}{W}</script></li>
+<li><code>dp[0]</code>代表空树的情况，<code>dp[0] = 1</code>。</li>
+<li><code>dp[1]</code>代表只有一个节点的情况，<code>dp[1] = 1</code>。</li>
 </ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//代表爱丽丝得分为i时,最终停止抽牌时,手牌得分 &lt;= N的概率 (0 &lt;= i &lt;= K+W-1)</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; dp(K + W);   </span><br><span class="line"></span><br><span class="line">        <span class="keyword">double</span> sum = <span class="number">0</span>; <span class="comment">//保存概率值</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = K; i &lt;= K + W - <span class="number">1</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i &lt;= N)</span><br><span class="line">                dp[i] = <span class="number">1.0</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                dp[i] = <span class="number">0.0</span>;    <span class="comment">//得分大于N, 概率为0</span></span><br><span class="line"></span><br><span class="line">            sum += dp[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = K - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line"></span><br><span class="line">            dp[i] = sum / W;</span><br><span class="line">            sum = sum - dp[i + W] + dp[i];   <span class="comment">//窗口向左滑动</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>];   <span class="comment">//初始爱丽丝手牌得分为0</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; dp(n + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;  <span class="comment">//空树</span></span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;  <span class="comment">//一个结点</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n + <span class="number">1</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; j++)&#123;</span><br><span class="line"></span><br><span class="line">                dp[i] += dp[j - <span class="number">1</span>] * dp[i - j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -437,17 +424,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/04/Leetcode-238-除自身以外数组的乘积/" title= "Leetcode 238. 除自身以外数组的乘积">
-                    <div class="nextTitle">Leetcode 238. 除自身以外数组的乘积</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/02/Leetcode-面试题64-求1-2-…-n/" title= "Leetcode 面试题64. 求1+2+…+n">
-                    <div class="prevTitle">Leetcode 面试题64. 求1+2+…+n</div>
+                <a href= "/2020/07/14/Leetcode-120-三角形最小路径和/" title= "Leetcode 120. 三角形最小路径和">
+                    <div class="prevTitle">Leetcode 120. 三角形最小路径和</div>
                 </a>
             
         </li>
