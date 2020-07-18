@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>东野圭吾《红手指》 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 97. 交错字符串 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">东野圭吾《红手指》</a>
+                <a href="#" class="post-name">Leetcode 97. 交错字符串</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            东野圭吾《红手指》
+            Leetcode 97. 交错字符串
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">265</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">410</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/10/14</span>
+                    <span class="post-intro-time">2020/07/18</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,10 +401,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="2019推理小说阅读计划-3-50"><a href="#2019推理小说阅读计划-3-50" class="headerlink" title="2019推理小说阅读计划(3/50)"></a>2019推理小说阅读计划(3/50)</h2><h3 id="东野圭吾-《红手指》"><a href="#东野圭吾-《红手指》" class="headerlink" title="东野圭吾 《红手指》"></a>东野圭吾 《红手指》</h3><p>很佩服东野圭吾的是，这本书除了主体的案件之外，还穿插了好几条亲情的线，有加贺和他父亲的，前原和他母亲政惠的，前原和直巳的，八重子和直巳的，在这些隐含的亲情线之中，也体现出了现代家庭的教育问题，说实话当我看到直巳杀了小女孩后漠不关心该事，沉迷电子游戏，甚至还将责任推给父母时，真的很想打这个孩子一顿。</p>
-<p>当我知道红手指是侦破案件的重要点时并没有觉得多少惊奇，这里的推理层次也并不是很深。但当我以为案件就这样结束的时候，母亲一直在装痴呆这件事情才让我感到眼前一亮。</p>
-<p>总结起来，这本书在讲推理的同时，我觉得更重要的是在讲家庭教育与家人之间的感情。</p>
-<p><img src="https://img3.doubanio.com/view/subject/l/public/s6950680.jpg" alt></p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定三个字符串 <em>s1</em>, <em>s2</em>, <em>s3</em>, 验证 <em>s3</em> 是否是由 <em>s1</em> 和 <em>s2</em> 交错组成的。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbcbcac&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbbaccc&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，<code>dp[i][j]</code>代表<code>s1</code>的前<code>i</code>个字符和<code>s2</code>的前<code>j</code>个字符能否构成<code>s3</code>的前<code>i + j</code>个字符。</p>
+<p>初始化<code>dp[0][0] = true</code>。</p>
+<p><code>dp[i][j]</code>存在两种情况的判定：</p>
+<ol>
+<li>若<code>s1[i - 1] == s3[i + j - 1]</code>，即<code>s1</code>的第<code>i</code>个字符等于<code>s3</code>的第<code>i + j</code>个字符，此时<code>dp[i][j]</code>取决于<code>s1</code>的前<code>i - 1</code>个字符与<code>s2</code>的前<code>j</code>个字符能否构成<code>s3</code>的前<code>i + j - 1</code>个字符，即<code>dp[i][j] = dp[i - 1][j]</code>。</li>
+<li>若<code>s2[j - 1] == s3[i + j - 1]</code>，即<code>s2</code>的第<code>j</code>个字符等于<code>s3</code>的第<code>i + j</code>个字符，此时<code>dp[i][j]</code>取决于<code>s1</code>的前<code>i</code>个字符与<code>s2</code>的前<code>j - 1</code>个字符能否构成<code>s3</code>的前<code>i + j - 1</code>个字符，即<code>dp[i][j] = dp[i][j - 1]</code>。</li>
+</ol>
+<p>最后返回<code>dp[s1.size()][s2.size()]</code>即可。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isInterleave</span><span class="params">(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2, <span class="built_in">string</span> s3)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(s1.size() + s2.size() != s3.size())	<span class="comment">//长度不同,直接返回false</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; dp(s1.size() + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(s2.size() + <span class="number">1</span>, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;    <span class="comment">//s1的前i个和s2的前j个能否组成s3</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= s1.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= s2.size(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(i &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(s1[i - <span class="number">1</span>] == s3[i + j - <span class="number">1</span>])&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(dp[i - <span class="number">1</span>][j])</span><br><span class="line">                            dp[i][j] = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(j &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(s2[j - <span class="number">1</span>] == s3[i + j - <span class="number">1</span>])&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(dp[i][j - <span class="number">1</span>])</span><br><span class="line">                            dp[i][j] = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s1.size()][s2.size()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -407,17 +423,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/10/14/东野圭吾《新参者》/" title= "东野圭吾《新参者》">
-                    <div class="nextTitle">东野圭吾《新参者》</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/10/14/东野圭吾《秘密》/" title= "东野圭吾《秘密》">
-                    <div class="prevTitle">东野圭吾《秘密》</div>
+                <a href= "/2020/07/17/Leetcode-35-搜索插入位置/" title= "Leetcode 35. 搜索插入位置">
+                    <div class="prevTitle">Leetcode 35. 搜索插入位置</div>
                 </a>
             
         </li>
@@ -558,7 +569,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2019推理小说阅读计划-3-50"><span class="toc-number">1.</span> <span class="toc-text">2019推理小说阅读计划(3/50)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#东野圭吾-《红手指》"><span class="toc-number">1.1.</span> <span class="toc-text">东野圭吾 《红手指》</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
