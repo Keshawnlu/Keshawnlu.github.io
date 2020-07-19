@@ -346,6 +346,44 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/04/Leetcode-32-最长有效括号/" >
+            
+                <span>Leetcode 32. 最长有效括号</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个只包含 &#39;(&#39; 和 &#39;)&#39; 的字符串，找出最长的包含有效括号的子串的长度。
+示例 1:
+123输入: &quot;(()&quot;输出: 2解释: 最长有效括号子串为 &quot;()&quot;
+示例 2:
+123输入: &quot;)()())&quot;输出: 4解释: 最长有效括号子串为 &quot;()()&quot;
+思路：利用动态规划的思想，dp[i]代表以s[i]为结尾的字符串的有效括号长度。
+所以以(为结尾的是不会有有效括号长度的，dp[i] = 0。
+以)为结尾的有两种情况
+
+s[i] = &#39;)&#39; &...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/01/Leetcode-718-最长重复子数组/" >
             
                 <span>Leetcode 718. 最长重复子数组</span>
@@ -671,46 +709,6 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/21/Leetcode-5-最长回文子串/" >
-            
-                <span>Leetcode 5. 最长回文子串</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
-示例 1：
-123输入: &quot;babad&quot;输出: &quot;bab&quot;注意: &quot;aba&quot; 也是一个有效答案。
-示例 2：
-12输入: &quot;cbbd&quot;输出: &quot;bb&quot;
-思路：定义一个dp[i][j]数组，来判断s[i]……s[j]的子字符串是否为回文串。
-遍历字符串，若s[i] == s[j]，则存在以下两种情况都可判别s[i]……s[j]为回文串：
-
-dp[i + 1][j - 1] == true
-j ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
     
 </div>
             
@@ -2539,9 +2537,24 @@ j ...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 108
+        Total : 109
         </div>
         <!-- search  -->
         
@@ -2554,6 +2567,11 @@ j ...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span><a class="archive-post-title" href= "/2020/07/19/Leetcode-312-戳气球/" >Leetcode 312. 戳气球</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3056,6 +3074,16 @@ j ...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
@@ -3071,17 +3099,7 @@ j ...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -3091,7 +3109,7 @@ j ...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -3131,9 +3149,9 @@ j ...
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
-    
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     

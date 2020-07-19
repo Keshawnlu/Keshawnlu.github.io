@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 5413. 重新排列句子中的单词 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 312. 戳气球 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 5413. 重新排列句子中的单词</a>
+                <a href="#" class="post-name">Leetcode 312. 戳气球</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 5413. 重新排列句子中的单词
+            Leetcode 312. 戳气球
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">733</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">683</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/17</span>
+                    <span class="post-intro-time">2020/07/19</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,33 +401,29 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>「句子」是一个用空格分隔单词的字符串。给你一个满足下述格式的句子 <code>text</code> :</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>有 <code>n</code> 个气球，编号为<code>0</code> 到 <code>n-1</code>，每个气球上都标有一个数字，这些数字存在数组 <code>nums</code> 中。</p>
+<p>现在要求你戳破所有的气球。如果你戳破气球 <code>i</code> ，就可以获得 <code>nums[left] * nums[i] * nums[right]</code> 个硬币。 这里的 <code>left</code> 和 <code>right</code> 代表和 <code>i</code> 相邻的两个气球的序号。注意当你戳破了气球 <code>i</code> 后，气球 <code>left</code> 和气球 <code>right</code> 就变成了相邻的气球。</p>
+<p>求所能获得硬币的最大数量。</p>
+<p><strong>说明:</strong></p>
 <ul>
-<li>句子的首字母大写</li>
-<li><code>text</code> 中的每个单词都用单个空格分隔。</li>
+<li>你可以假设 <code>nums[-1] = nums[n] = 1</code>，但注意它们不是真实存在的所以并不能被戳破。</li>
+<li>0 ≤ <code>n</code> ≤ 500, 0 ≤ <code>nums[i]</code> ≤ 100</li>
 </ul>
-<p>请你重新排列 <code>text</code> 中的单词，使所有单词按其长度的升序排列。如果两个单词的长度相同，则保留其在原句子中的相对顺序。</p>
-<p>请同样按上述格式返回新的句子。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：text = &quot;Leetcode is cool&quot;</span><br><span class="line">输出：&quot;Is cool leetcode&quot;</span><br><span class="line">解释：句子中共有 3 个单词，长度为 8 的 &quot;Leetcode&quot; ，长度为 2 的 &quot;is&quot; 以及长度为 4 的 &quot;cool&quot; 。</span><br><span class="line">输出需要按单词的长度升序排列，新句子中的第一个单词首字母需要大写。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入：text = &quot;Keep calm and code on&quot;</span><br><span class="line">输出：&quot;On and keep calm code&quot;</span><br><span class="line">解释：输出的排序情况如下：</span><br><span class="line">&quot;On&quot; 2 个字母。</span><br><span class="line">&quot;and&quot; 3 个字母。</span><br><span class="line">&quot;keep&quot; 4 个字母，因为存在长度相同的其他单词，所以它们之间需要保留在原句子中的相对顺序。</span><br><span class="line">&quot;calm&quot; 4 个字母。</span><br><span class="line">&quot;code&quot; 4 个字母。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：text = &quot;To be or not to be&quot;</span><br><span class="line">输出：&quot;To be or to be not&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,1,5,8]</span><br><span class="line">输出: 167 </span><br><span class="line">解释: nums = [3,1,5,8] --&gt; [3,5,8] --&gt;   [3,8]   --&gt;  [8]  --&gt; []</span><br><span class="line">     coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，<code>dp[i][j]</code>代表将<strong>开区间</strong><code>(i, j)</code>内的所有气球戳爆后所能获得的最大硬币数量。</p>
+<p>为处理边界问题，先将<code>nums</code>的最前面和最后面插入1。</p>
+<p>由于是开区间，所以<code>i</code>的取值为<code>0 ~ n - 1</code>(<code>n</code>为没插入1前的数组长度)，第一个气球为<code>nums[0] = 1</code>，最后一个气球为<code>nums[n] = 1</code>，所以若<code>i &gt;= n</code>，则没有气球可以戳了。</p>
+<p><code>j</code>的取值为<code>i + 2 ~ n + 1</code>，若<code>j &lt; i + 2</code>，则<strong>开区间</strong>里没有气球可以戳了。</p>
+<p>所以在<code>(i, j)</code>区间里循环定义<code>k</code>，即<code>k</code>的取值为<code>i + 1 ~ j - 1</code>。</p>
+<p><code>k</code>的左边最大硬币数为<code>dp[i][k]</code>，<code>k</code>的右边最大硬币数为<code>dp[k][j]</code>，将这些气球都戳爆后，<strong>最后戳</strong><code>nums[k]</code>这个气球，获得的硬币数为<code>nums[i] * nums[k] * nums[j]</code>。(因为一定有一个是最后被戳爆的气球，所以循环遍历，找出硬币数最大值时的那个<code>k</code>即可)。</p>
+<p>所以<code>dp[i][j] = max(dp[i][j], dp[i][k] + dp[k][j] + nums[i] * nums[k] * nums[j])</code>。</p>
+<p>最后返回<code>dp[0][n + 1]</code>，即不要最开始和最后面我们插入的那两个气球，只要中间的<code>1,2, ..., n</code>个气球。</p>
+<p><code>tip:</code></p>
 <ul>
-<li><code>text</code> 以大写字母开头，然后包含若干小写字母以及单词间的单个空格。</li>
-<li><code>1 &lt;= text.length &lt;= 10^5</code></li>
+<li><code>i, j, k</code>的边界值比较重要，需要理解清楚。</li>
 </ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>首先将字符串以空格为间隔值分割开来，将每一个值存入vector中，再根据string的长度进行排序，最后注意首字母大写及其他字母需要小写的要求即可。</p>
-<p><code>tips:</code></p>
-<ul>
-<li>分割字符串需要用到<code>char *strtok(char *s,const char *delim)</code>函数；函数功能：分解字符串为一组字符串，<code>s</code>为要分解的字符串，<code>delim</code>为分隔字符串。</li>
-<li><code>strtok()</code>第一个参数为<code>NULL</code>的时候，该函数默认使用上一次未分割完的字符串的未分割的起始位置作为本次分割的起始位置，直到分割结束为止。</li>
-<li><code>c_str()</code>函数返回一个指向正规C字符串的指针, 内容与本string串相同. </li>
-<li>排序时不能改变原有的相对位置，所以需要用到<code>stable_sort()</code>函数。</li>
-</ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(s1.length() &lt; s2.length())</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">arrangeWords</span><span class="params">(<span class="built_in">string</span> text)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">char</span> * strc = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(text.c_str()) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(strc, text.c_str());	<span class="comment">//需要使用strcpy()</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">char</span>* temp = strtok(strc, <span class="string">" "</span>); </span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(temp != <span class="literal">NULL</span>)&#123;</span><br><span class="line">            </span><br><span class="line">            res.push_back(<span class="built_in">string</span>(temp));</span><br><span class="line">            temp = strtok(<span class="literal">NULL</span>, <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        stable_sort(res.begin(), res.end(), cmp);</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">string</span> res_s;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; res.size(); i++)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">0</span>)&#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(<span class="string">'a'</span> &lt;= res[i][<span class="number">0</span>] &amp;&amp; res[i][<span class="number">0</span>] &lt;= <span class="string">'z'</span>)</span><br><span class="line">                    res[i][<span class="number">0</span>] -= <span class="number">32</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(<span class="string">'A'</span> &lt;= res[i][<span class="number">0</span>] &amp;&amp; res[i][<span class="number">0</span>] &lt;= <span class="string">'Z'</span>)</span><br><span class="line">                    res[i][<span class="number">0</span>] += <span class="number">32</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            res_s += res[i];</span><br><span class="line">            <span class="keyword">if</span>(i != res.size() - <span class="number">1</span>)</span><br><span class="line">                res_s += <span class="string">" "</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line">        <span class="keyword">return</span> res_s;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxCoins</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line"></span><br><span class="line">        nums.push_back(<span class="number">1</span>);</span><br><span class="line">        nums.insert(nums.begin(), <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//(i, j)区间内，戳破所有气球所能获得的最大硬币数</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; dp(nums.size(), <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(nums.size(), <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">2</span>; j &lt;= n + <span class="number">1</span>; j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = i + <span class="number">1</span>; k &lt; j; k++)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">int</span> coins = nums[i] * nums[k] * nums[j];</span><br><span class="line">                    <span class="comment">//(i, k) + k + (k, j)</span></span><br><span class="line">                    dp[i][j] = max(dp[i][j], dp[i][k] + dp[k][j] + coins);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>][n + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -436,17 +432,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/05/17/Leetcode-210-课程表-II/" title= "Leetcode 210. 课程表 II">
-                    <div class="nextTitle">Leetcode 210. 课程表 II</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/05/16/Leetcode-5397-最简分数/" title= "Leetcode 5397. 最简分数">
-                    <div class="prevTitle">Leetcode 5397. 最简分数</div>
+                <a href= "/2020/07/18/Leetcode-97-交错字符串/" title= "Leetcode 97. 交错字符串">
+                    <div class="prevTitle">Leetcode 97. 交错字符串</div>
                 </a>
             
         </li>
