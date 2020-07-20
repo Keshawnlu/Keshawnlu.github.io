@@ -346,6 +346,44 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/Leetcode-309-最佳买卖股票时机含冷冻期/" >
+            
+                <span>Leetcode 309. 最佳买卖股票时机含冷冻期</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。
+设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:
+
+你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
+
+示例:
+123输入: [1,2,3,0,2]输出: 3 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
+思路：一开始自己想到的动态规划方法参照了昨天做的 恢复空格 的方法，dp[i]代表第i天结束后的最大收益。
+首先dp[i] = dp[i - 1]进行初始化...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/09/Leetcode-面试题-17-13-恢复空格/" >
             
                 <span>Leetcode 面试题 17.13. 恢复空格</span>
@@ -670,51 +708,10 @@ tip:
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/01/Leetcode-718-最长重复子数组/" >
-            
-                <span>Leetcode 718. 最长重复子数组</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给两个整数数组 A 和 B ，返回两个数组中公共的、长度最长的子数组的长度。
-示例 1:
-123456输入:A: [1,2,3,2,1]B: [3,2,1,4,7]输出: 3解释: 长度最长的公共子数组是 [3, 2, 1]。
-说明:
-
-1 &lt;= len(A), len(B) &lt;= 1000
-0 &lt;= A[i], B[i] &lt; 100
-
-思路：使用动态规划的思想，d[i][j]代表以A[i]与B[j]为结尾的公共最长子序列。
-当A[i] != B[j]时，dp[i][j] == 0
-当A[i] == B[j]时，dp[i][j] == dp[i - 1]...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2020/07/">&#60; PREV</a><a class="page-number" href="/archives/2020/07/">1</a><span class="page-number current">2</span>
+        <a class="extend prev" rel="prev" href="/archives/2020/07/">&#60; PREV</a><a class="page-number" href="/archives/2020/07/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2020/07/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/07/page/3/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -2548,9 +2545,32 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 109
+        Total : 110
         </div>
         <!-- search  -->
         
@@ -2563,6 +2583,11 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/20</span><a class="archive-post-title" href= "/2020/07/20/Leetcode-167-两数之和-II-输入有序数组/" >Leetcode 167. 两数之和 II - 输入有序数组</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3080,7 +3105,7 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
@@ -3095,17 +3120,17 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
@@ -3127,9 +3152,9 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
@@ -3145,9 +3170,9 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
-        <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
-    
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
