@@ -359,6 +359,42 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/18/Leetcode-152-乘积最大子数组/" >
+            
+                <span>Leetcode 152. 乘积最大子数组</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+123输入: [2,3,-2,4]输出: 6解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+123输入: [-2,0,-1]输出: 0解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+思路：利用动态规划的思想，因为数组有负数的存在(存在负负得正为最大值的情况)，所以我们需要将每次以i为结尾的子数组乘积的最大值和最小值求出来。
+
+f_{max}(i) = max(f_{max}(i - 1) * a_{i}, f_{mi...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/17/Leetcode-210-课程表-II/" >
             
                 <span>Leetcode 210. 课程表 II</span>
@@ -684,50 +720,6 @@ getMin() —— 检索栈中的最小元素。
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/Leetcode-50-Pow-x-n/" >
-            
-                <span>Leetcode 50. Pow(x, n)</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：实现 pow(x, n) ，即计算 x 的 n 次幂函数。
-示例 1:
-12输入: 2.00000, 10输出: 1024.00000
-示例 2:
-12输入: 2.10000, 3输出: 9.26100
-示例 3:
-123输入: 2.00000, -2输出: 0.25000解释: 2-2 = 1/22 = 1/4 = 0.25
-说明:
-
--100.0 &lt; x &lt; 100.0
-
-n 是 32 位有符号整数，其数值范围是
-
-[-2^{31}, 2^{31} - 1]
-
-思路：利用递归，将n对半分开，若n为奇数，则用n % 2将剩余的数算出来，最后相乘即可，时间复杂度为O...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
     
 </div>
             
@@ -2870,9 +2862,14 @@ n 是 32 位有符号整数，其数值范围是
     
     
     
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 118
+        Total : 119
         </div>
         <!-- search  -->
         
@@ -2885,6 +2882,11 @@ n 是 32 位有符号整数，其数值范围是
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/2020/07/29/Leetcode-2-两数相加/" >Leetcode 2. 两数相加</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3427,22 +3429,17 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -3467,17 +3464,22 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -3494,11 +3496,11 @@ n 是 32 位有符号整数，其数值范围是
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
@@ -3526,9 +3528,9 @@ n 是 32 位有符号整数，其数值范围是
     
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
-        <span class="sidebar-tag-name" data-tags="并查集"><span class="iconfont-archer">&#xe606;</span>并查集</span>
-    
         <span class="sidebar-tag-name" data-tags="递归"><span class="iconfont-archer">&#xe606;</span>递归</span>
+    
+        <span class="sidebar-tag-name" data-tags="并查集"><span class="iconfont-archer">&#xe606;</span>并查集</span>
     
         <span class="sidebar-tag-name" data-tags="线性表"><span class="iconfont-archer">&#xe606;</span>线性表</span>
     
@@ -3565,9 +3567,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
