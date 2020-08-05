@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 67. 二进制求和 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 337. 打家劫舍 III · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 67. 二进制求和</a>
+                <a href="#" class="post-name">Leetcode 337. 打家劫舍 III</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 67. 二进制求和
+            Leetcode 337. 打家劫舍 III
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,22 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">387</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">608</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/23</span>
+                    <span class="post-intro-time">2020/08/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,26 +405,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给你两个二进制字符串，返回它们的和（用二进制表示）。</p>
-<p>输入为 <strong>非空</strong> 字符串且只包含数字 <code>1</code> 和 <code>0</code>。</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>在上次打劫完一条街道之后和一圈房屋后，小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为“根”。 除了“根”之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。</p>
+<p>计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: a = &quot;11&quot;, b = &quot;1&quot;</span><br><span class="line">输出: &quot;100&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,3,null,3,null,1]</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   2   3</span><br><span class="line">    \   \ </span><br><span class="line">     3   1</span><br><span class="line">     </span><br><span class="line">输出: 7 </span><br><span class="line">解释: 小偷一晚能够盗取的最高金额 = 3 + 3 + 1 = 7.</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: a = &quot;1010&quot;, b = &quot;1011&quot;</span><br><span class="line">输出: &quot;10101&quot;</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ul>
-<li>每个字符串仅由字符 <code>&#39;0&#39;</code> 或 <code>&#39;1&#39;</code> 组成。</li>
-<li><code>1 &lt;= a.length, b.length &lt;= 10^4</code></li>
-<li>字符串如果不是 <code>&quot;0&quot;</code> ，就都不含前导零。</li>
-</ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>首先的想法是将二进制先转换为十进制进行相加，再转化成二进制字符串，但是位数多了就会超时，所以开始想别的方法。</p>
-<p>然后想到了可以使用<strong>模拟竖式</strong>的方法，先用补0的方法将两个字符串变成相同的长度；再从后向前逐位相加，若相加 <code>&gt;= 2</code>，则向前一位进1。</p>
-<p><code>tips:</code></p>
-<ul>
-<li>学会<code>a[i] - &#39;0&#39;</code>的方法将字符串变成数字(ASCII码)。</li>
-<li>注意补零的方法</li>
-</ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">addBinary</span><span class="params">(<span class="built_in">string</span> a, <span class="built_in">string</span> b)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(a.size() &lt; b.size())&#123;</span><br><span class="line"></span><br><span class="line">            a = <span class="string">"0"</span> + a;    <span class="comment">//补0，使等长</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(b.size() &lt; a.size())&#123;</span><br><span class="line"></span><br><span class="line">            b = <span class="string">"0"</span> + b;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//从后往前，对齐按位相加</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = a.size() - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--)&#123;</span><br><span class="line"></span><br><span class="line">            a[i] = a[i] - <span class="string">'0'</span> + b[i];</span><br><span class="line">            <span class="keyword">if</span>(a[i] &gt;= <span class="string">'2'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                a[i] = (a[i] - <span class="string">'0'</span>) % <span class="number">2</span> + <span class="string">'0'</span>;</span><br><span class="line">                a[i - <span class="number">1</span>]++; <span class="comment">//进位</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        a[<span class="number">0</span>] = a[<span class="number">0</span>] - <span class="string">'0'</span> + b[<span class="number">0</span>];   <span class="comment">//处理第0位</span></span><br><span class="line">        <span class="keyword">if</span>(a[<span class="number">0</span>] &gt;= <span class="string">'2'</span>)&#123;</span><br><span class="line"></span><br><span class="line">            a[<span class="number">0</span>] = (a[<span class="number">0</span>] - <span class="string">'0'</span>) % <span class="number">2</span> + <span class="string">'0'</span>;</span><br><span class="line">            a = <span class="string">'1'</span> + a;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,4,5,1,3,null,1]</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    / \</span><br><span class="line">   4   5</span><br><span class="line">  / \   \ </span><br><span class="line"> 1   3   1</span><br><span class="line"> </span><br><span class="line">输出: 9</span><br><span class="line">解释: 小偷一晚能够盗取的最高金额 = 4 + 5 = 9.</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，由于每个结点都有选中和未选中的状态，所以定义两个哈希表(哈希映射)。</p>
+<p><code>choose[root]</code>代表以<code>root</code>作为根节点<strong>并选中</strong><code>root</code>时所能盗取的最高金额。</p>
+<p><code>unchoose[root]</code>代表以<code>root</code>作为根节点，<strong>并且未选中</strong><code>root</code>时所能盗取的最高金额。</p>
+<p>若选中了根节点<code>root</code>，则<code>choose[root] = root -&gt; val + unchoose[root -&gt; left] + unchoose[root -&gt; right]</code>，即根节点的值加上未选中左右孩子时的金额和。</p>
+<p>若未选中根节点<code>root</code>，则<strong>左右孩子可选也可不选</strong>，所以取左右孩子选或不选的最大值即可，即<code>unchoose[root] = max(choose[root -&gt; left], unchoose[root -&gt; left]) + max(choose[root -&gt; right], unchoose[root -&gt; right])</code>。</p>
+<p>通过深度优先遍历的方法<strong>后序遍历</strong>这棵二叉树，即可得到每个结点的两个值。(需要由下往上的动态规划)</p>
+<p>最后返回<code>choose[root]</code>，<code>unchoose[root]</code>的较大值即可。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;TreeNode*, <span class="keyword">int</span>&gt; choose, unchoose;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        dfs(root -&gt; left);</span><br><span class="line">        dfs(root -&gt; right);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//选了根节点</span></span><br><span class="line">        choose[root] = root -&gt; val + unchoose[root -&gt; left] + unchoose[root -&gt; right];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//未选根节点</span></span><br><span class="line">        unchoose[root] = max(choose[root -&gt; left], unchoose[root -&gt; left]) + max(choose[root -&gt; right], unchoose[root -&gt; right]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">rob</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        dfs(root);</span><br><span class="line">        <span class="keyword">return</span> choose[root] &gt; unchoose[root] ? choose[root] : unchoose[root];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -431,17 +427,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/24/Leetcode-16-最接近的三数之和/" title= "Leetcode 16. 最接近的三数之和">
-                    <div class="nextTitle">Leetcode 16. 最接近的三数之和</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/22/Leetcode-面试题-16-18-模式匹配/" title= "Leetcode 面试题 16.18. 模式匹配">
-                    <div class="prevTitle">Leetcode 面试题 16.18. 模式匹配</div>
+                <a href= "/2020/08/04/Leetcode-207-课程表/" title= "Leetcode 207. 课程表">
+                    <div class="prevTitle">Leetcode 207. 课程表</div>
                 </a>
             
         </li>
