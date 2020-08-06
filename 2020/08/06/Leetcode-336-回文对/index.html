@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 97. 交错字符串 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 336. 回文对 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 97. 交错字符串</a>
+                <a href="#" class="post-name">Leetcode 336. 回文对</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 97. 交错字符串
+            Leetcode 336. 回文对
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,20 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">410</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">816</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/18</span>
+                    <span class="post-intro-time">2020/08/06</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,20 +403,33 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定三个字符串 <em>s1</em>, <em>s2</em>, <em>s3</em>, 验证 <em>s3</em> 是否是由 <em>s1</em> 和 <em>s2</em> 交错组成的。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbcbcac&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s1 = &quot;aabcc&quot;, s2 = &quot;dbbca&quot;, s3 = &quot;aadbbbaccc&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>动态规划，<code>dp[i][j]</code>代表<code>s1</code>的前<code>i</code>个字符和<code>s2</code>的前<code>j</code>个字符能否构成<code>s3</code>的前<code>i + j</code>个字符。</p>
-<p>初始化<code>dp[0][0] = true</code>。</p>
-<p><code>dp[i][j]</code>存在两种情况的判定：</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一组 <strong>互不相同</strong> 的单词， 找出所有<strong>不同</strong> 的索引对<code>(i, j)</code>，使得列表中的两个单词， <code>words[i] + words[j]</code> ，可拼接成回文串。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;abcd&quot;,&quot;dcba&quot;,&quot;lls&quot;,&quot;s&quot;,&quot;sssll&quot;]</span><br><span class="line">输出：[[0,1],[1,0],[3,2],[2,4]] </span><br><span class="line">解释：可拼接成的回文串为 [&quot;dcbaabcd&quot;,&quot;abcddcba&quot;,&quot;slls&quot;,&quot;llssssll&quot;]</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;bat&quot;,&quot;tab&quot;,&quot;cat&quot;]</span><br><span class="line">输出：[[0,1],[1,0]] </span><br><span class="line">解释：可拼接成的回文串为 [&quot;battab&quot;,&quot;tabbat&quot;]</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>对于字符串<code>s1</code>，<code>s2</code>，若<code>s1 + s2</code>能组成回文串，那么有以下三种情况：</p>
 <ol>
-<li>若<code>s1[i - 1] == s3[i + j - 1]</code>，即<code>s1</code>的第<code>i</code>个字符等于<code>s3</code>的第<code>i + j</code>个字符，此时<code>dp[i][j]</code>取决于<code>s1</code>的前<code>i - 1</code>个字符与<code>s2</code>的前<code>j</code>个字符能否构成<code>s3</code>的前<code>i + j - 1</code>个字符，即<code>dp[i][j] = dp[i - 1][j]</code>。</li>
-<li>若<code>s2[j - 1] == s3[i + j - 1]</code>，即<code>s2</code>的第<code>j</code>个字符等于<code>s3</code>的第<code>i + j</code>个字符，此时<code>dp[i][j]</code>取决于<code>s1</code>的前<code>i</code>个字符与<code>s2</code>的前<code>j - 1</code>个字符能否构成<code>s3</code>的前<code>i + j - 1</code>个字符，即<code>dp[i][j] = dp[i][j - 1]</code>。</li>
+<li><code>len_s1 = len_s2</code>，那么<code>s1</code>的翻转就是<code>s2</code>。</li>
+<li><code>len_s1 &gt; len_s2</code>，那么<code>s1</code>能分成两个部分<code>t1, t2</code>。其中<code>t1</code>的翻转为<code>s2</code>，<code>t2</code>为回文串。</li>
+<li><code>len_s1 &lt; len_s2</code>，那么<code>s2</code>能分成两个部分<code>t1, t2</code>。其中<code>t1</code>的翻转为<code>s1</code>，<code>t2</code>为回文串。</li>
 </ol>
-<p>最后返回<code>dp[s1.size()][s2.size()]</code>即可。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isInterleave</span><span class="params">(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2, <span class="built_in">string</span> s3)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(s1.size() + s2.size() != s3.size())	<span class="comment">//长度不同,直接返回false</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; dp(s1.size() + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(s2.size() + <span class="number">1</span>, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;    <span class="comment">//s1的前i个和s2的前j个能否组成s3</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= s1.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= s2.size(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(i &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(s1[i - <span class="number">1</span>] == s3[i + j - <span class="number">1</span>])&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(dp[i - <span class="number">1</span>][j])</span><br><span class="line">                            dp[i][j] = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(j &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(s2[j - <span class="number">1</span>] == s3[i + j - <span class="number">1</span>])&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(dp[i][j - <span class="number">1</span>])</span><br><span class="line">                            dp[i][j] = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s1.size()][s2.size()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>所以我们首先定义一个哈希表，将每个<strong>单词的翻转映射为单词的索引下标。</strong></p>
+<p>然后对于每个单词，我们尝试找到一个<strong>切割点<code>j</code></strong>，使左右两部分至少有一部分为回文串。</p>
+<ol>
+<li><p>若左部分<code>words[0 ... j - 1]</code>为回文串，那么我们就尝试在哈希表中找到右部分的翻转，下标记为<code>right_id</code>，那么<code>words[right_id] + words[i]</code>为回文串，并将下标压入答案数组。</p>
+</li>
+<li><p>若右部分<code>words[j ... m - 1]</code>为回文串(<code>m</code>为单词的长度)，那么我们就尝试在哈希表中找到左部分的翻转，下标记为<code>left_id</code>，那么<code>words[i] + words[left_id]</code>为回文串，并将下标压入答案数组。</p>
+</li>
+</ol>
+<p><code>tips:</code></p>
+<ul>
+<li>对于判断字符串是否为回文串的函数<code>judge()</code>，需要注意函数实现中循环的条件参数，不要弄错。</li>
+<li>为了数组的去重，压入数组前需要经过<code>check()</code>函数的判断。</li>
+<li>因为找的是<strong>不同的索引对</strong>，所以<code>right_id, left_id</code>不能等于<code>i</code>本身。</li>
+<li>默认空字符串也为回文串。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; words_reverse;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//回文串判断函数</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="built_in">string</span>&amp; s, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> len = right - left + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len / <span class="number">2</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(s[i + left] != s[left + len - i - <span class="number">1</span>])</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在哈希表中寻找字符串的翻转</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">find_reverse_word</span><span class="params">(<span class="built_in">string</span>&amp; s, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> find_str = s.substr(left, right - left + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(words_reverse.count(find_str))</span><br><span class="line">            <span class="keyword">return</span> words_reverse[find_str];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//检查重复</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; res.size(); k++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(res[k][<span class="number">0</span>] == i &amp;&amp; res[k][<span class="number">1</span>] == j)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; palindromePairs(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; words) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> temp = words[i];</span><br><span class="line"></span><br><span class="line">            reverse(temp.begin(), temp.end());</span><br><span class="line">            words_reverse[temp] = i;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> m = words[i].size();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= m; j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(judge(words[i], <span class="number">0</span>, j - <span class="number">1</span>))&#123;  <span class="comment">//左半部为回文串</span></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">int</span> right_id = find_reverse_word(words[i], j, m - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(right_id != <span class="number">-1</span> &amp;&amp; right_id != i)&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(check(right_id, i))	<span class="comment">//去重</span></span><br><span class="line">                            res.push_back(&#123;right_id, i&#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(judge(words[i], j, m - <span class="number">1</span>))&#123;  <span class="comment">//右半部为回文串</span></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">int</span> left_id = find_reverse_word(words[i], <span class="number">0</span>, j - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(left_id != <span class="number">-1</span> &amp;&amp; left_id != i)&#123;</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span>(check(i, left_id))	<span class="comment">//去重</span></span><br><span class="line">                            res.push_back(&#123;i, left_id&#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -423,17 +438,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/07/19/Leetcode-312-戳气球/" title= "Leetcode 312. 戳气球">
-                    <div class="nextTitle">Leetcode 312. 戳气球</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/07/17/Leetcode-35-搜索插入位置/" title= "Leetcode 35. 搜索插入位置">
-                    <div class="prevTitle">Leetcode 35. 搜索插入位置</div>
+                <a href= "/2020/08/05/Leetcode-337-打家劫舍-III/" title= "Leetcode 337. 打家劫舍 III">
+                    <div class="prevTitle">Leetcode 337. 打家劫舍 III</div>
                 </a>
             
         </li>
