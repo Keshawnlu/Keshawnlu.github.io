@@ -346,6 +346,44 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/Leetcode-309-最佳买卖股票时机含冷冻期/" >
+            
+                <span>Leetcode 309. 最佳买卖股票时机含冷冻期</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。
+设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:
+
+你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
+
+示例:
+123输入: [1,2,3,0,2]输出: 3 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
+思路：一开始自己想到的动态规划方法参照了昨天做的 恢复空格 的方法，dp[i]代表第i天结束后的最大收益。
+首先dp[i] = dp[i - 1]进行初始化...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/09/Leetcode-面试题-17-13-恢复空格/" >
             
                 <span>Leetcode 面试题 17.13. 恢复空格</span>
@@ -674,47 +712,10 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/13/Leetcode-70-爬楼梯/" >
-            
-                <span>Leetcode 70. 爬楼梯</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
-每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
-注意：给定 n 是一个正整数。
-示例 1：
-12345输入： 2输出： 2解释： 有两种方法可以爬到楼顶。1.  1 阶 + 1 阶2.  2 阶
-示例 2：
-123456输入： 3输出： 3解释： 有三种方法可以爬到楼顶。1.  1 阶 + 1 阶 + 1 阶2.  1 阶 + 2 阶3.  2 阶 + 1 阶
-思路：经典动态规划，dp[i] = dp[i - 1] + dp[i - 2]，初始化dp[0], dp[1], dp[2]即可。
-代码如下：123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/tags/动态规划/">&#60; PREV</a><a class="page-number" href="/tags/动态规划/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/动态规划/page/3/">3</a><a class="extend next" rel="next" href="/tags/动态规划/page/3/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/tags/动态规划/">&#60; PREV</a><a class="page-number" href="/tags/动态规划/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/动态规划/page/3/">3</a><a class="page-number" href="/tags/动态规划/page/4/">4</a><a class="extend next" rel="next" href="/tags/动态规划/page/3/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -3088,9 +3089,26 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 137
+        Total : 138
         </div>
         <!-- search  -->
         
@@ -3103,6 +3121,11 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2020/08/15/Leetcode-546-移除盒子/" >Leetcode 546. 移除盒子</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3807,35 +3830,35 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
-        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
-    
-        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
+        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
+    
+        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+    
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
-        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
-    
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
@@ -3880,9 +3903,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
-    
         <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
+    
+        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
