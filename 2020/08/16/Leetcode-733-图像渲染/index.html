@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 44. 通配符匹配 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 733. 图像渲染 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 44. 通配符匹配</a>
+                <a href="#" class="post-name">Leetcode 733. 图像渲染</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 44. 通配符匹配
+            Leetcode 733. 图像渲染
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">673</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">600</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/05</span>
+                    <span class="post-intro-time">2020/08/16</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,43 +401,25 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个字符串 (<code>s</code>) 和一个字符模式 (<code>p</code>) ，实现一个支持 <code>&#39;?&#39;</code> 和 <code>&#39;*&#39;</code> 的通配符匹配。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;?&apos; 可以匹配任何单个字符。</span><br><span class="line">&apos;*&apos; 可以匹配任意字符串（包括空字符串）。</span><br></pre></td></tr></table></figure>
-<p>两个字符串<strong>完全匹配</strong>才算匹配成功。</p>
-<p><strong>说明:</strong></p>
-<ul>
-<li><code>s</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母。</li>
-<li><code>p</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母，以及字符 <code>?</code> 和 <code>*</code></li>
-</ul>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>有一幅以二维整数数组表示的图画，每一个整数表示该图画的像素值大小，数值在 0 到 65535 之间。</p>
+<p>给你一个坐标 <code>(sr, sc)</code> 表示图像渲染开始的像素值（行 ，列）和一个新的颜色值 <code>newColor</code>，让你重新上色这幅图像。</p>
+<p>为了完成上色工作，从初始坐标开始，记录初始坐标的上下左右四个方向上像素值与初始坐标相同的相连像素点，接着再记录这四个方向上符合条件的像素点与他们对应四个方向上像素值与初始坐标相同的相连像素点，……，重复该过程。将所有有记录的像素点的颜色值改为新的颜色值。</p>
+<p>最后返回经过上色渲染后的图像。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;aa&quot;</span><br><span class="line">p = &quot;a&quot;</span><br><span class="line">输出: false</span><br><span class="line">解释: &quot;a&quot; 无法匹配 &quot;aa&quot; 整个字符串。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;aa&quot;</span><br><span class="line">p = &quot;*&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: &apos;*&apos; 可以匹配任意字符串。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;cb&quot;</span><br><span class="line">p = &quot;?a&quot;</span><br><span class="line">输出: false</span><br><span class="line">解释: &apos;?&apos; 可以匹配 &apos;c&apos;, 但第二个 &apos;a&apos; 无法匹配 &apos;b&apos;。</span><br></pre></td></tr></table></figure>
-<p><strong>示例 4:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;adceb&quot;</span><br><span class="line">p = &quot;*a*b&quot;</span><br><span class="line">输出: true</span><br><span class="line">解释: 第一个 &apos;*&apos; 可以匹配空字符串, 第二个 &apos;*&apos; 可以匹配字符串 &quot;dce&quot;.</span><br></pre></td></tr></table></figure>
-<p><strong>示例 5:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">s = &quot;acdcb&quot;</span><br><span class="line">p = &quot;a*c?b&quot;</span><br><span class="line">输出: false</span><br></pre></td></tr></table></figure>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>这题与<a href="http://mingtiao.top/2020/06/20/Leetcode-10-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/">10.正则表达式匹配</a>挺像的，不过考虑的方面没那题这么多。</p>
-<p>利用动态规划的思想，<code>dp[i][j]</code>代表两字符串以<code>s[i]</code>与<code>p[j]</code><strong>为结尾</strong>的匹配情况。</p>
-<p>首先是特殊情况的判断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">image = [[1,1,1],[1,1,0],[1,0,1]]</span><br><span class="line">sr = 1, sc = 1, newColor = 2</span><br><span class="line">输出: [[2,2,2],[2,2,0],[2,0,1]]</span><br><span class="line">解析: </span><br><span class="line">在图像的正中间，(坐标(sr,sc)=(1,1)),</span><br><span class="line">在路径上所有符合条件的像素点的颜色都被更改成2。</span><br><span class="line">注意，右下角的像素没有更改为2，</span><br><span class="line">因为它不是在上下左右四个方向上与初始点相连的像素点。</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong></p>
 <ul>
-<li>s为空，p为空，返回<code>true</code>。</li>
-<li>s不为空，p为空，返回<code>false</code>。</li>
+<li><code>image</code> 和 <code>image[0]</code> 的长度在范围 <code>[1, 50]</code> 内。</li>
+<li>给出的初始点将满足 <code>0 &lt;= sr &lt; image.length</code> 和 <code>0 &lt;= sc &lt; image[0].length</code>。</li>
+<li><code>image[i][j]</code> 和 <code>newColor</code> 表示的颜色值在范围 <code>[0, 65535]</code>内。</li>
 </ul>
-<p><code>p[i]</code>在匹配时有以下三种情况：</p>
-<ol>
-<li><code>p[j] == s[i]</code>，此时<code>dp[i][j] == dp[i - 1][j - 1]</code>。</li>
-<li><code>p[j] == ?</code>，此时<code>p[j]</code>可以匹配任意单个字符，所以<code>dp[i][j] == dp[i - 1][j - 1]</code>。</li>
-<li><code>p[j] == *</code>，此时<code>p[j]</code>可以匹配0， 1，多次字符。所以<code>dp[i][j] = dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j];</code></li>
-</ol>
-<p><code>tip:</code></p>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>深度优先搜索，保存原先的颜色以后，在原图的基础上修改即可，</p>
+<p><code>tips:</code></p>
 <ul>
-<li>为方便处理边界问题，s，p最前面都加一个空格。</li>
-<li>首先初始化<code>dp[0][j]</code>，即s为空，p不为空的情况。</li>
+<li>当原图颜色与新颜色相同时，<strong>直接返回原图</strong>，否则会陷入死循环中。</li>
+<li>利用<code>dx, dy</code>数组方便方向上的判断。</li>
 </ul>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isMatch</span><span class="params">(<span class="built_in">string</span> s, <span class="built_in">string</span> p)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(s.empty() &amp;&amp; p.empty())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(p.empty() &amp;&amp; !s.empty())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        s = <span class="string">" "</span> + s;</span><br><span class="line">        p = <span class="string">" "</span> + p;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; dp(s.length(), <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(p.length(), <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; p.length(); j++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(p[j] == <span class="string">'*'</span>)</span><br><span class="line">                dp[<span class="number">0</span>][j] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; p.length(); j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(s[i] == p[j] || p[j] == <span class="string">'?'</span>)</span><br><span class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j - <span class="number">1</span>];    <span class="comment">//匹配单个字符</span></span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(p[j] == <span class="string">'*'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//匹配0, 1, 多次字符</span></span><br><span class="line">                    dp[i][j] = dp[i][j - <span class="number">1</span>] || dp[i - <span class="number">1</span>][j - <span class="number">1</span>] || dp[i - <span class="number">1</span>][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dp[s.length() - <span class="number">1</span>][p.length() - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> oldcolor;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; image, <span class="keyword">int</span> sr, <span class="keyword">int</span> sc, <span class="keyword">int</span> newColor)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        image[sr][sc] = newColor;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> x = sr + dx[i];</span><br><span class="line">            <span class="keyword">int</span> y = sc + dy[i];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(x &gt;= <span class="number">0</span> &amp;&amp; x &lt; image.size() &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; y &lt; image[<span class="number">0</span>].size())&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(image[x][y] == oldcolor)</span><br><span class="line">                    dfs(image, x, y, newColor);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; floodFill(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; image, <span class="keyword">int</span> sr, <span class="keyword">int</span> sc, <span class="keyword">int</span> newColor) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(image[sr][sc] == newColor)</span><br><span class="line">            <span class="keyword">return</span> image;</span><br><span class="line"></span><br><span class="line">        oldcolor = image[sr][sc];</span><br><span class="line"></span><br><span class="line">        dfs(image, sr, sc, newColor);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> image;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -446,17 +428,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/07/05/Leetcode-5454-统计全-1-子矩形/" title= "Leetcode 5454. 统计全 1 子矩形">
-                    <div class="nextTitle">Leetcode 5454. 统计全 1 子矩形</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/07/04/Leetcode-32-最长有效括号/" title= "Leetcode 32. 最长有效括号">
-                    <div class="prevTitle">Leetcode 32. 最长有效括号</div>
+                <a href= "/2020/08/15/Leetcode-546-移除盒子/" title= "Leetcode 546. 移除盒子">
+                    <div class="prevTitle">Leetcode 546. 移除盒子</div>
                 </a>
             
         </li>
