@@ -346,6 +346,78 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/18/Leetcode-152-乘积最大子数组/" >
+            
+                <span>Leetcode 152. 乘积最大子数组</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+123输入: [2,3,-2,4]输出: 6解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+123输入: [-2,0,-1]输出: 0解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+思路：利用动态规划的思想，因为数组有负数的存在(存在负负得正为最大值的情况)，所以我们需要将每次以i为结尾的子数组乘积的最大值和最小值求出来。
+
+f_{max}(i) = max(f_{max}(i - 1) * a_{i}, f_{mi...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/17/Leetcode-210-课程表-II/" >
+            
+                <span>Leetcode 210. 课程表 II</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：现在你总共有 n 门课需要选，记为 0 到 n-1。
+在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们: [0,1]
+给定课程总量以及它们的先决条件，返回你为了学完所有课程所安排的学习顺序。
+可能会有多个正确的顺序，你只要返回一种就可以了。如果不可能完成所有课程，返回一个空数组。
+示例 1:
+123输入: 2, [[1,0]] 输出: [0,1]解释: 总共有 2 门课程。要学习课程 1，你需要先完成课程 0。因此，正确的课程顺序为 [0,1] 。
+示例 2:
+1234输入: 4, [[1,0],[2,0],[3,...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/17/Leetcode-5413-重新排列句子中的单词/" >
             
                 <span>Leetcode 5413. 重新排列句子中的单词</span>
@@ -635,86 +707,6 @@ getMin() —— 检索栈中的最小元素。
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/Leetcode-50-Pow-x-n/" >
-            
-                <span>Leetcode 50. Pow(x, n)</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：实现 pow(x, n) ，即计算 x 的 n 次幂函数。
-示例 1:
-12输入: 2.00000, 10输出: 1024.00000
-示例 2:
-12输入: 2.10000, 3输出: 9.26100
-示例 3:
-123输入: 2.00000, -2输出: 0.25000解释: 2-2 = 1/22 = 1/4 = 0.25
-说明:
-
--100.0 &lt; x &lt; 100.0
-
-n 是 32 位有符号整数，其数值范围是
-
-[-2^{31}, 2^{31} - 1]
-
-思路：利用递归，将n对半分开，若n为奇数，则用n % 2将剩余的数算出来，最后相乘即可，时间复杂度为O...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/10/Leetcode-236-二叉树的最近公共祖先/" >
-            
-                <span>Leetcode 236. 二叉树的最近公共祖先</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
-百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
-例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]
-
- 示例 1: 
-123输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1输出: 3解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
- 示例 2: 
-123输入: roo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
     
 </div>
             
@@ -3142,9 +3134,33 @@ n 是 32 位有符号整数，其数值范围是
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 139
+        Total : 141
         </div>
         <!-- search  -->
         
@@ -3157,6 +3173,16 @@ n 是 32 位有符号整数，其数值范围是
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/18</span><a class="archive-post-title" href= "/2020/08/18/Leetcode-109-有序链表转换二叉搜索树/" >Leetcode 109. 有序链表转换二叉搜索树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span><a class="archive-post-title" href= "/2020/08/17/Leetcode-110-平衡二叉树/" >Leetcode 110. 平衡二叉树</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3839,12 +3865,12 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -3877,8 +3903,6 @@ n 是 32 位有符号整数，其数值范围是
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
@@ -3887,13 +3911,15 @@ n 是 32 位有符号整数，其数值范围是
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     

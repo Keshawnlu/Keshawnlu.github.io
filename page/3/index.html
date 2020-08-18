@@ -359,6 +359,84 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/31/Leetcode-面试题-08-03-魔术索引/" >
+            
+                <span>Leetcode 面试题 08.03. 魔术索引</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：魔术索引。 在数组A[0...n-1]中，有所谓的魔术索引，满足条件A[i] = i。给定一个有序整数数组，编写一种方法找出魔术索引，若有的话，在数组A中找出一个魔术索引，如果没有，则返回-1。若有多个魔术索引，返回索引值最小的一个。
+示例1:
+123输入：nums = [0, 2, 3, 4, 5]输出：0说明: 0下标的元素为0
+示例2:
+12输入：nums = [1, 1, 1]输出：1
+说明:
+
+nums长度在[1, 1000000]之间
+此题为原书中的 Follow-up，即数组中可能包含重复元素的版本
+
+思路：首先最简单的就是循环遍历一次数组即可。
+为了优化，我们可...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/31</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/30/Leetcode-343-整数拆分/" >
+            
+                <span>Leetcode 343. 整数拆分</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个正整数 n，将其拆分为至少两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
+示例 1:
+123输入: 2输出: 1解释: 2 = 1 + 1, 1 × 1 = 1。
+示例 2:
+123输入: 10输出: 36解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。
+说明: 你可以假设 n 不小于 2 且不大于 58。
+思路：动态规划，dp[i]代表正整数i，拆分为至少两个正整数的和，并使这些整数的乘积最大化，可以获得的最大乘积。
+所以对于一个正整数i &gt;= 2，乘积的最大值存在以下两种情况：
+
+将i分为j, i - j，并且i ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/29/Leetcode-2-两数相加/" >
             
                 <span>Leetcode 2. 两数相加</span>
@@ -649,83 +727,10 @@ numbers[mid] &lt; numbers[right]，此时mi...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/21/Leetcode-95-不同的二叉搜索树-II/" >
-            
-                <span>Leetcode 95. 不同的二叉搜索树 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数 n，生成所有由 1 … n 为节点所组成的 二叉搜索树 。
-示例：
-1234567891011121314151617输入：3输出：[  [1,null,3,2],  [3,2,null,1],  [3,1,null,null,2],  [2,1,3],  [1,null,2,null,3]]解释：以上的输出对应以下 5 种不同结构的二叉搜索树：   1         3     3      2      1    \       /     /      / \      \     3     2     1      1   3      2    / ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/20/Leetcode-167-两数之和-II-输入有序数组/" >
-            
-                <span>Leetcode 167. 两数之和 II - 输入有序数组</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个已按照 升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
-函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
-说明:
-
-返回的下标值（index1 和 index2）不是从零开始的。
-你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
-
-示例:
-123输入: numbers = [2, 7, 11, 15], target = 9输出: [1,2]解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
-思路：双指针，一共有三种情况：
-
-number...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/4/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -3249,9 +3254,33 @@ number...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 139
+        Total : 141
         </div>
         <!-- search  -->
         
@@ -3264,6 +3293,16 @@ number...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/18</span><a class="archive-post-title" href= "/2020/08/18/Leetcode-109-有序链表转换二叉搜索树/" >Leetcode 109. 有序链表转换二叉搜索树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span><a class="archive-post-title" href= "/2020/08/17/Leetcode-110-平衡二叉树/" >Leetcode 110. 平衡二叉树</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3946,12 +3985,12 @@ number...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -3984,8 +4023,6 @@ number...
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
@@ -3994,13 +4031,15 @@ number...
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
