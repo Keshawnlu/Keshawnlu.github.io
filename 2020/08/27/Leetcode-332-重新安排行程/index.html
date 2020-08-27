@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Leetcode 350. 两个数组的交集 II · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 332. 重新安排行程 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Leetcode 350. 两个数组的交集 II</a>
+                <a href="#" class="post-name">Leetcode 332. 重新安排行程</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Leetcode 350. 两个数组的交集 II
+            Leetcode 332. 重新安排行程
             <!-- 404 -->
             
         </h1>
@@ -266,20 +266,22 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">324</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">633</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/13</span>
+                    <span class="post-intro-time">2020/08/27</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -403,22 +405,26 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定两个数组，编写一个函数来计算它们的交集。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [1,2,2,1], nums2 = [2,2]</span><br><span class="line">输出：[2,2]</span><br></pre></td></tr></table></figure>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个机票的字符串二维数组 <code>[from, to]</code>，子数组中的两个成员分别表示飞机出发和降落的机场地点，对该行程进行重新规划排序。所有这些机票都属于一个从 JFK（肯尼迪国际机场）出发的先生，所以该行程必须从 JFK 开始。</p>
+<p><strong>说明:</strong></p>
+<ol>
+<li>如果存在多种有效的行程，你可以按字符自然排序返回最小的行程组合。例如，行程 [“JFK”, “LGA”] 与 [“JFK”, “LGB”]相比就更小，排序更靠前</li>
+<li>所有的机场都用三个大写字母表示（机场代码）。</li>
+<li>假定所有机票至少存在一种合理的行程。</li>
+</ol>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [[&quot;MUC&quot;, &quot;LHR&quot;], [&quot;JFK&quot;, &quot;MUC&quot;], [&quot;SFO&quot;, &quot;SJC&quot;], [&quot;LHR&quot;, &quot;SFO&quot;]]</span><br><span class="line">输出: [&quot;JFK&quot;, &quot;MUC&quot;, &quot;LHR&quot;, &quot;SFO&quot;, &quot;SJC&quot;]</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]</span><br><span class="line">输出：[4,9]</span><br></pre></td></tr></table></figure>
-<p><strong>说明：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [[&quot;JFK&quot;,&quot;SFO&quot;],[&quot;JFK&quot;,&quot;ATL&quot;],[&quot;SFO&quot;,&quot;ATL&quot;],[&quot;ATL&quot;,&quot;JFK&quot;],[&quot;ATL&quot;,&quot;SFO&quot;]]</span><br><span class="line">输出: [&quot;JFK&quot;,&quot;ATL&quot;,&quot;JFK&quot;,&quot;SFO&quot;,&quot;ATL&quot;,&quot;SFO&quot;]</span><br><span class="line">解释: 另一种有效的行程是 [&quot;JFK&quot;,&quot;SFO&quot;,&quot;ATL&quot;,&quot;JFK&quot;,&quot;ATL&quot;,&quot;SFO&quot;]。但是它自然排序更大更靠后。</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>还是深搜+回溯的做法，深搜的终止条件是结果数组中的元素数量等于行程数量+1，即<code>res.size() == tickets.size() + 1</code>。</p>
+<p>我们需要用到哈希表<code>unordered_map&lt;string, map&lt;string, int&gt;&gt; targets</code>来存储<strong>出发机场到多个降落机场的映射</strong>，由于使用了map，降落机场的排序将从小至大，满足题目要求，而map中的<code>int</code>用来判断该机场是否已被使用(防止重复循环)。</p>
+<p>将哈希表初始化后便可进行深搜回溯，最后返回<code>res</code>即可。</p>
+<p><code>tips:</code></p>
 <ul>
-<li>输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。</li>
-<li>我们可以不考虑输出结果的顺序。</li>
+<li>哈希表的选择很重要</li>
+<li>要使用<code>const string</code>的格式，不然会报错</li>
 </ul>
-<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>先将两个数组进行排序(从小到大)，然后设置两个指针分别指向两个数组的开头。</p>
-<p>当<code>nums1[i] == nums2[j]</code>，将目标值压入结果数组，然后两个指针都往后移动一位。</p>
-<p>若<code>nums1[i] &lt; nums2[j]</code>，说明当前<code>nums1[i]</code>值过小，<code>i++</code>，往后移动一位。</p>
-<p>若<code>nums1[i] &gt; nums2[j]</code>，说明当前<code>nums2[j]</code>值过小，<code>j++</code>，往后移动一位。</p>
-<p>直至一个指针循环完所指数组时跳出循环。</p>
-<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; intersect(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums1, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums2) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line"></span><br><span class="line">        sort(nums1.begin(), nums1.end());</span><br><span class="line">        sort(nums2.begin(), nums2.end());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i &lt; nums1.size() &amp;&amp; j &lt; nums2.size())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(nums1[i] == nums2[j])&#123;</span><br><span class="line"></span><br><span class="line">                res.push_back(nums1[i]);</span><br><span class="line">                i++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums1[i] &lt; nums2[j])</span><br><span class="line">                i++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                j++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;&gt; targets;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span>&amp; target, <span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(res.size() == num)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(pair&lt;<span class="keyword">const</span> <span class="built_in">string</span>, <span class="keyword">int</span>&gt;&amp; fly : targets[target])&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(fly.second &gt; <span class="number">0</span>)&#123;  <span class="comment">//未被使用</span></span><br><span class="line"></span><br><span class="line">                res.push_back(fly.first);</span><br><span class="line">                fly.second--;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(dfs(fly.first, num))</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                </span><br><span class="line">                res.pop_back(); <span class="comment">//撤销选择，弹出元素</span></span><br><span class="line">                fly.second++;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; findItinerary(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt;&amp; tickets) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tickets.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">            targets[tickets[i][<span class="number">0</span>]][tickets[i][<span class="number">1</span>]]++;    <span class="comment">//初始化</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        res.push_back(<span class="string">"JFK"</span>);</span><br><span class="line">        dfs(<span class="string">"JFK"</span>, tickets.size() + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -427,17 +433,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/07/14/Leetcode-120-三角形最小路径和/" title= "Leetcode 120. 三角形最小路径和">
-                    <div class="nextTitle">Leetcode 120. 三角形最小路径和</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/07/12/Leetcode-174-地下城游戏/" title= "Leetcode 174. 地下城游戏">
-                    <div class="prevTitle">Leetcode 174. 地下城游戏</div>
+                <a href= "/2020/08/26/Leetcode-17-电话号码的字母组合/" title= "Leetcode 17. 电话号码的字母组合">
+                    <div class="prevTitle">Leetcode 17. 电话号码的字母组合</div>
                 </a>
             
         </li>
