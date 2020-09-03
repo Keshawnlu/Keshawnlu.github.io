@@ -11,7 +11,7 @@
 
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="author" content="John Doe">
     <meta name="renderer" content="webkit">
@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 51. N 皇后 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -198,17 +198,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  -->
+    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </head>
 
     
+        <body class="post-body">
     
-<header class="header">
+    
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Keshawn_lu&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Leetcode 51. N 皇后</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Keshawn_lu's Blog</a>
 </header>
@@ -220,24 +231,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://pic.superbed.cn/item/5d383e5d451253d178a78147.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Leetcode 51. N 皇后
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">581</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/09/03</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,370 +401,77 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/02/Leetcode-面试题64-求1-2-…-n/" >
-            
-                <span>Leetcode 面试题64. 求1+2+…+n</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
-示例 1：
-12输入: n = 3输出: 6
-示例 2：
-12输入: n = 9输出: 45
-限制：
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p><em>n</em> 皇后问题研究的是如何将 <em>n</em> 个皇后放置在 <em>n</em>×<em>n</em> 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
+<p><img src="https://pic.downk.cc/item/5f509e74160a154a672afe5c.png" alt></p>
+<p>上图为 8 皇后问题的一种解法。</p>
+<p>给定一个整数 <em>n</em>，返回所有不同的 <em>n</em> 皇后问题的解决方案。</p>
+<p>每一种解法包含一个明确的 <em>n</em> 皇后问题的棋子放置方案，该方案中 <code>&#39;Q&#39;</code> 和 <code>&#39;.&#39;</code> 分别代表了皇后和空位。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">输入：4</span><br><span class="line">输出：[</span><br><span class="line"> [&quot;.Q..&quot;,  // 解法 1</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;..Q.&quot;],</span><br><span class="line">  </span><br><span class="line">  [&quot;..Q.&quot;,  // 解法 2</span><br><span class="line">  &quot;Q...&quot;,</span><br><span class="line">  &quot;...Q&quot;,</span><br><span class="line">  &quot;.Q..&quot;]</span><br><span class="line">]</span><br><span class="line">解释: 4 皇后问题存在两个不同的解法。</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li>皇后彼此不能相互攻击，也就是说：任何两个皇后都不能处于同一条横行、纵行或斜线上。</li>
+</ul>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>又是深搜+回溯的做法，<strong>一行一行</strong>来放皇后，对于每行，遍历每列的位置，对于每个位置，进行下列判断：</p>
+<ol>
+<li>该列在之前的行上是否已有皇后<strong>(只需关心之前的行即可，因为是逐行放皇后的)。</strong></li>
+<li>在45度和135度角的斜行上，是否已有皇后(同样只需关心之前的行即可)。</li>
+</ol>
+<p>当遍历完<code>n</code>行时，即<code>row == n</code>，此时便为一个答案，加入答案数组即可。</p>
+<p><code>tip:</code></p>
+<ul>
+<li>注意<code>chess</code>数组的初始化。</li>
+</ul>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; chess, <span class="keyword">int</span> n, <span class="keyword">int</span> row)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(row == n)&#123;</span><br><span class="line"></span><br><span class="line">            res.push_back(chess);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//一行一行来</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; n; col++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(judge(chess, row, col))&#123;</span><br><span class="line"></span><br><span class="line">                chess[row][col] = <span class="string">'Q'</span>;</span><br><span class="line">                dfs(chess, n, row + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">                chess[row][col] = <span class="string">'.'</span>;  <span class="comment">//回溯</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; chess, <span class="keyword">int</span> row, <span class="keyword">int</span> col)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断列, 只关心之前的行即可</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(chess[i][col] == <span class="string">'Q'</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断45度角, 只需要判断之前行数的就行了</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = row - <span class="number">1</span>, j = col + <span class="number">1</span>; i &gt;= <span class="number">0</span> &amp;&amp; j &lt; chess.size(); i--, j++)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(chess[i][j] == <span class="string">'Q'</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断135度角</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = row - <span class="number">1</span>, j = col - <span class="number">1</span>; i &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>; i--, j--)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(chess[i][j] == <span class="string">'Q'</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; solveNQueens(<span class="keyword">int</span> n) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; chess(n, <span class="built_in">string</span>(n, <span class="string">'.'</span>));</span><br><span class="line"></span><br><span class="line">        dfs(chess, n, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-1 &lt;= n &lt;= 10000
-
-思路：不能使用for，就想到用递归，但是需要判断递归结束的标志，也就是n —&gt; n - 1 -&gt; ... -&gt; 0，n到达0时需要退出递归。所以可以使用逻辑运算符&amp;&amp;的短路性质。
-即对于 A &amp;&amp; B 这个表达式，如果 A 表达式返回 Fa...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/02</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/01/Leetcode-1431-拥有最多糖果的孩子/" >
-            
-                <span>Leetcode 1431. 拥有最多糖果的孩子</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。
-对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。注意，允许有多个孩子同时拥有 最多 的糖果数目。
-示例 1：
-12345678输入：candies = [2,3,5,1,3], extraCandies = 3输出：[true,true,true,false,true] 解释：孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/01</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/31/Leetcode-101-对称二叉树/" >
-            
-                <span>Leetcode 101. 对称二叉树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，检查它是否是镜像对称的。
-例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
-12345    1   / \  2   2 / \ / \3  4 4  3
-但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
-12345  1 / \2   2 \   \ 3    3
-思路：运用递归，由于是镜像对称，所以判定左树的左子树和右树的右子树，左树的右子树和右树的左子树是否相等即可。
-tips:
-
-两结点均为空时，相等
-只有一结点为空时，不相等
-
-代码如下：123456789101112131415161718192021222324...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/31/Leetcode-5425-切割后面积最大的蛋糕/" >
-            
-                <span>Leetcode 5425. 切割后面积最大的蛋糕</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：矩形蛋糕的高度为 h 且宽度为 w，给你两个整数数组 horizontalCuts 和 verticalCuts，其中 horizontalCuts[i] 是从矩形蛋糕顶部到第 i 个水平切口的距离，类似地， verticalCuts[j] 是从矩形蛋糕的左侧到第 j 个竖直切口的距离。
-请你按数组 horizontalCuts 和 verticalCuts 中提供的水平和竖直位置切割后，请你找出 面积最大 的那份蛋糕，并返回其 面积 。由于答案可能是一个很大的数字，因此需要将结果对 10^9 + 7 取余后返回。
-示例 1：
-
-123输入：h = 5, w = 4, hori...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/30/Leetcode-84-柱状图中最大的矩形/" >
-            
-                <span>Leetcode 84. 柱状图中最大的矩形</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
-求在该柱状图中，能够勾勒出来的矩形的最大面积。
-
-以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。
-
-图中阴影部分为所能勾勒出的最大矩形面积，其面积为 10 个单位。
-示例:
-12输入: [2,1,5,6,2,3]输出: 10
-思路：首先我们得先知道对于一个矩形，它所能达到的最大面积取决于最短的那条边，所以例如上图高度为5的矩形，它要想达到以5为高度的最大面积，就必须往左右找能大于等于它高度的矩形，这样子以5为高度的矩形才能有最大的宽度。所以我们需要...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/29/Leetcode-198-打家劫舍/" >
-            
-                <span>Leetcode 198. 打家劫舍</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
-给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。
-示例 1:
-1234输入: [1,2,3,1]输出: 4解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。     偷窃到的最高金额 = 1 + 3 = 4 。
-示例 2:
-1234输入: [2,7,9,3,1]输出: 12解释: 偷窃 1 号房屋 (...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/28/Leetcode-394-字符串解码/" >
-            
-                <span>Leetcode 394. 字符串解码</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个经过编码的字符串，返回它解码后的字符串。
-编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。
-你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。
-此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。
-示例:
-123s = &quot;3[a]2[bc]&quot;, 返回 &quot;aaabcbc&quot;.s = &quot;3[a2[c]]&quot;, 返回 &q...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/27/Leetcode-974-和可被-K-整除的子数组/" >
-            
-                <span>Leetcode 974. 和可被 K 整除的子数组</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数数组 A，返回其中元素之和可被 K 整除的（连续、非空）子数组的数目。
-示例：
-12345输入：A = [4,5,0,-2,-3,1], K = 5输出：7解释：有 7 个子数组满足其元素之和可被 K = 5 整除：[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
-提示：
-
-1 &lt;= A.length &lt;= 30000
--10000 &lt;= A[i] &lt;= 10000
-2 &lt;= K &lt;= 10000
-
-思路：使用前缀和的思想，s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/26/Leetcode-287-寻找重复数/" >
-            
-                <span>Leetcode 287. 寻找重复数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
-示例 1:
-12输入: [1,3,4,2,2]输出: 2
-示例 2:
-12输入: [3,1,3,4,2]输出: 3
-说明：
-
-不能更改原数组（假设数组是只读的）。
-只能使用额外的 O(1) 的空间。
-时间复杂度小于 O($n^{2}$) 。
-数组中只有一个重复的数字，但它可能不止重复出现一次。
-
-思路：由于说明中的要求过多，所以不能按照普通的方法来做，所以想到使用二分的方法。
-每次先算出中位数mid，然后求原...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/25/Leetcode-146-LRU缓存机制/" >
-            
-                <span>Leetcode 146. LRU缓存机制</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：运用你所掌握的数据结构，设计和实现一个 LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
-获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。
-写入数据 put(key, value) - 如果密钥已经存在，则变更其数据值；如果密钥不存在，则插入该组「密钥/数据值」。当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
-进阶:
-你是否可以在 O(1) 时间复杂度内完成这两种操作？
-示例:
-1234567891011LRUCac...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双向链表">双向链表</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/09/02/Leetcode-剑指-Offer-20-表示数值的字符串/" title= "Leetcode 剑指 Offer 20. 表示数值的字符串">
+                    <div class="prevTitle">Leetcode 剑指 Offer 20. 表示数值的字符串</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTMxOS8yMTgzMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2020/page/10/">&#60; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/9/">9</a><a class="page-number" href="/archives/2020/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/archives/2020/page/12/">12</a><a class="page-number" href="/archives/2020/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/15/">15</a><a class="extend next" rel="next" href="/archives/2020/page/12/">NEXT &#62;</a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -793,6 +563,24 @@ tips:
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -4387,6 +4175,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -4402,7 +4192,7 @@ jsonContent:
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
 
