@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 226. 翻转二叉树 · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header index-header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Keshawn_lu&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Leetcode 226. 翻转二叉树</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Keshawn_lu's Blog</a>
 </header>
@@ -221,23 +232,23 @@
 
 
 
-height:100vh;
+height:50vh;
 ">
     
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(https://ae01.alicdn.com/kf/HTB1xNZybbH1gK0jSZFw7637aXXao.png)"></div>
+    <div class="site-intro-img" style="background-image: url(https://pic.superbed.cn/item/5d383e5d451253d178a78147.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Keshawn_lu's Blog
-            <!-- 文章页  -->
+            Leetcode 226. 翻转二叉树
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:100vh;
             <!-- 主页副标题  -->
             
             
-                Become a better myself.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">137</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/09/16</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,446 +399,65 @@ height:100vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/03/王道数据结构-线性表的顺序表示-课后算法题/" >
-            
-                <span>王道数据结构 线性表的顺序表示(课后算法题)</span>
-        </a>
-        <div class="abstract-content">
-            
-从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空则显示出错信息并退出运行。
-代码如下：
-123456789101112131415161718192021222324252627282930313233343536373839#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;bool EraseMindata(int&amp; value, vector&lt;int&gt; &amp;data) &#123;    if (data.si...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "线性表">线性表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/03/Leetcode-53-最大子序和/" >
-            
-                <span>Leetcode 53. 最大子序和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
-示例:
-123输入: [-2,1,-3,4,-1,2,1,-5,4],输出: 6解释: 连续子数组 [4,-1,2,1] 的和最大，为6。
-思路：做今天的每日一题时，做完以后发现这是一年前做过的,,,就当重新做了一遍了，使用动态规划的思想，dp[i]代表的是以nums[i]结尾的的最大子序和，遍历一遍后，将vector中最大的数返回即可。
-代码如下：
-1234567891011121314151617181920class Solution &#123;public:    i...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/02/Leetcode-3-无重复字符的最长子串/" >
-            
-                <span>Leetcode 3. 无重复字符的最长子串</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
-示例 1:
-123输入: &quot;abcabcbb&quot;输出: 3 解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。
- 示例 2: 
-123输入: &quot;bbbbb&quot;输出: 1解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。
- 示例 3: 
-1234输入: &quot;pwwkew&quot;输出: 3解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。     请注意，你的答案必须...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/01/Leetcode-21-合并两个有序链表/" >
-            
-                <span>Leetcode 21. 合并两个有序链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
-示例：
-12输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
-思路：​    使用归并法并成一个链表，将两个链表的首个元素值进行比较，小的那个赋值后往前进一格，大的那个不动，直到有一个链表全部遍历完，再把剩下的还有元素剩余的链表全部赋值即可。
-代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041424...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/30/Leetcode-202-快乐数/" >
-            
-                <span>Leetcode 202. 快乐数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：编写一个算法来判断一个数 n 是不是快乐数。
-「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。如果 可以变为  1，那么这个数就是快乐数。
-如果 n 是快乐数就返回 True ；不是，则返回 False 。
- 示例：
-1234567输入：19输出：true解释：12 + 92 = 8282 + 22 = 6862 + 82 = 10012 + 02 + 02 = 1
-思路：因为每个数最后的结果，要么是1，要么是无限循环，以下是大佬的证明
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>翻转一棵二叉树。</p>
+<p><strong>示例：</strong></p>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  2     7</span><br><span class="line"> / \   / \</span><br><span class="line">1   3 6   9</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     4</span><br><span class="line">   /   \</span><br><span class="line">  7     2</span><br><span class="line"> / \   / \</span><br><span class="line">9   6 3   1</span><br></pre></td></tr></table></figure>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>相当于中序遍历，从根节点出发，将左右子树互换即可。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        TreeNode* temp = root -&gt; left;</span><br><span class="line">        root -&gt; left = root -&gt; right;</span><br><span class="line">        root -&gt; right = temp;</span><br><span class="line"></span><br><span class="line">        dfs(root -&gt; left);</span><br><span class="line">        dfs(root -&gt; right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        dfs(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-设 n=\overline{a_{...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-</div>
-            
-        </div>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/29/Leetcode-1025-除数博弈/" >
-            
-                <span>Leetcode 1025. 除数博弈</span>
-        </a>
-        <div class="abstract-content">
-            题目简介爱丽丝和鲍勃一起玩游戏，他们轮流行动。爱丽丝先手开局。
-最初，黑板上有一个数字 N 。在每个玩家的回合，玩家需要执行以下操作：
-选出任一 x，满足 0 &lt; x &lt; N 且 N % x == 0 。用 N - x 替换黑板上的数字 N 。如果玩家无法执行这些操作，就会输掉游戏。
-只有在爱丽丝在游戏中取得胜利时才返回 True，否则返回 false。假设两个玩家都以最佳状态参与游戏。
-示例 1：
-123输入：2输出：true解释：爱丽丝选择 1，鲍勃无法进行操作。
-示例 2：
-123输入：3输出：false解释：爱丽丝选择 1，鲍勃也选择 1，然后爱丽丝无法进行操作。
-提...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/10/2021考研计划/" >
-            
-                <span>2021考研计划</span>
-        </a>
-        <div class="abstract-content">
-            2020.6.4更新
-
-数学
-复习全书一轮过完高数部分(主要在看问题的分类汇总和解题的方法)，1800基础篇二刷完成45+页。
-7月份~8月份看完数学强化课，刷完660(每天6页左右)，完成1800强化篇(每天一页)。
-8月份开始二刷复习全书(重点在刷题)，预计9月份完成。
-9月份开始真题计划，之后计划暂定。
-
-
-英语
-软件上背完了《十天搞定考研词汇》，开始背《恋恋有词》，没有太大打算再买一本词汇书，6月份每天背300个单词，之后无特殊情况，每个月多背50个。
-英一阅读还剩最后5篇，预计6月中旬完成。
-暑假开始后(7月中旬前)，开始英二真题(先做阅读)，一个月完成十年真题的阅读(每3天做...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/10</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/找位置问题/" >
-            
-                <span>找位置问题</span>
-        </a>
-        <div class="abstract-content">
-            2020.3.1更新
-错误理解题目的意思，以为的是每过一轮就要重新排列（导致编号为1的人永远出不去），其实是每出局一个人就自动变成新的圈，然后循环报数。
-不过问题不大，只要把每次判断当前未出局人数前的num清零操作取消即可。
-
-首先想说的是确实是已经好久没写博客了，还是自己太懒…和自己感觉没啥特别想写的，所以开学以后学了c#，顺便写一点算法相关的问题吧。
-
-【问题描述】
-n 个人围成一圈, 并依次编号1～n。从编号为1 的人开始，按顺时针方向每隔一人选出一个，剩下的人重新围成一圈，如此循环直到剩下两人，这剩下的两人就是幸运儿。如果你想成为最后两个幸运儿，请问开始时应该站在什么位置？（设3...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/14/时晨《傀儡村事件》/" >
-            
-                <span>时晨《傀儡村事件》</span>
-        </a>
-        <div class="abstract-content">
-            2019推理小说阅读计划(11/50)时晨 《傀儡村事件》时晨三部曲✓
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/10/14/时晨《五行塔事件》/" >
-            
-                <span>时晨《五行塔事件》</span>
-        </a>
-        <div class="abstract-content">
-            2019推理小说阅读计划(10/50)时晨 《五行塔事件》隔了n久终于看完了这本书，主要还是因为懒吧…所以就懒得写读后感了…最近《QED可以的》第二季也在b站播出了，对推理小说感兴趣的小可爱们可以去看一下呀～
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/15/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/17/">NEXT &#62;</a>
-    </nav>
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= https://pic.superbed.cn/item/5d383e4b451253d178a78084.jpg >
-    <div class="profile-name">鸣蜩十九</div>
-    
-    <div class="profile-signature">
-        Always
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/09/15/Leetcode-37-解数独/" title= "Leetcode 37. 解数独">
+                    <div class="prevTitle">Leetcode 37. 解数独</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTMxOS8yMTgzMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
+
+<!-- City版安装代码已完成 -->
     
     
-    <div class="profile-social">
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-            
-                <a href="mailto:809759109@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/Keshawnlu" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/wechat.jpg" />
-                </span>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer qq" title=qq>
-                  
-                  <img class="profile-qr" src="/assets/qq.jpg" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>友链</div>
-            
-                
-                    <span>
-                        <a href= https://blog.csdn.net/qq_33948567 target="_black">CSDN</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.bilibili.com target="_black">BiliBili</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >About cute author</a>
-        </div>
-    
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=86 src="//music.163.com/outchain/player?type=2&id=26092806&auto=1&height=66">
-</iframe>
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -880,6 +547,24 @@ n 个人围成一圈, 并依次编号1～n。从编号为1 的人开始，按顺
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -4786,6 +4471,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
