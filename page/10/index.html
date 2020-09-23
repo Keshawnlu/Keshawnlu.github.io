@@ -359,6 +359,41 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/28/Leetcode-209-长度最小的子数组/" >
+            
+                <span>Leetcode 209. 长度最小的子数组</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的连续子数组，返回 0。
+示例：
+123输入：s = 7, nums = [2,3,1,2,4,3]输出：2解释：子数组 [4,3] 是该条件下的长度最小的连续子数组。
+思路：设置双指针，起始均指向首元素，定义一个sum，表示子数组的累积和。
+然后右指针开始向右移动，sum一直累加nums[right]，直至sum &gt;= s，此时左指针开始向右移动，sum依次减去nums[left]，并每次保存sum &gt;= s时的子数组长度，直至...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/06/27/Leetcode-41-缺失的第一个正数/" >
             
                 <span>Leetcode 41. 缺失的第一个正数</span>
@@ -572,9 +607,9 @@ OpenGL 是什么？它有哪些特...
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
     
 </div>
             
@@ -709,44 +744,6 @@ OpenGL 是什么？它有哪些特...
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/21</span>
             </div>
             <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/20/Leetcode-10-正则表达式匹配/" >
-            
-                <span>Leetcode 10. 正则表达式匹配</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 &#39;.&#39; 和 &#39;*&#39; 的正则表达式匹配。
-12&apos;.&apos; 匹配任意单个字符&apos;*&apos; 匹配零个或多个前面的那一个元素
-所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
-说明:
-
-s 可能为空，且只包含从 a-z 的小写字母。
-p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
-
-示例 1:
-12345输入:s = &quot;aa&quot;p = &quot;a&quot;输出: false解释: &quot;a&quot; 无...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
             
         </div>
     </article>
@@ -3981,9 +3978,30 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 176
+        Total : 177
         </div>
         <!-- search  -->
         
@@ -3996,6 +4014,11 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2020/09/23/Leetcode-617-合并二叉树/" >Leetcode 617. 合并二叉树</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -4649,12 +4672,12 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
@@ -4828,22 +4851,22 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -4858,6 +4881,11 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
@@ -4868,17 +4896,12 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
@@ -4891,17 +4914,23 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
+        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
@@ -4909,21 +4938,15 @@ p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
-    
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
-        <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
-    
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
+    
+        <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
         <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
