@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>图形学知识点 · Keshawn_lu&#39;s Blog</title>
+    <title>Leetcode 117. 填充每个节点的下一个右侧节点指针 II · Keshawn_lu&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Keshawn_lu&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">图形学知识点</a>
+                <a href="#" class="post-name">Leetcode 117. 填充每个节点的下一个右侧节点指针 II</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            图形学知识点
+            Leetcode 117. 填充每个节点的下一个右侧节点指针 II
             <!-- 404 -->
             
         </h1>
@@ -264,14 +264,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">347</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/25</span>
+                    <span class="post-intro-time">2020/09/28</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,250 +401,20 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="第一讲："><a href="#第一讲：" class="headerlink" title="第一讲："></a>第一讲：</h2><ol>
-<li><p>计算机图形学中的三大基础内容</p>
-<p>建模、动画、绘制</p>
-</li>
-</ol>
-<h2 id="第二讲："><a href="#第二讲：" class="headerlink" title="第二讲："></a>第二讲：</h2><ol>
-<li><p>什么是图形应用系统？它们有哪些共同构成？</p>
+        <h2 id="题目简介："><a href="#题目简介：" class="headerlink" title="题目简介："></a>题目简介：</h2><p>给定一个二叉树</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Node &#123;</span><br><span class="line">  int val;</span><br><span class="line">  Node *left;</span><br><span class="line">  Node *right;</span><br><span class="line">  Node *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 <code>NULL</code>。</p>
+<p>初始状态下，所有 next 指针都被设置为 <code>NULL</code>。</p>
+<p> <strong>示例：</strong></p>
+<p><img src="https://pic.downk.cc/item/5f716ec1160a154a67073b69.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [1,2,3,4,5,null,7]</span><br><span class="line">输出：[1,#,2,3,#,4,5,7,#]</span><br><span class="line">解释：给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 B 所示。</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
 <ul>
-<li>输入设备：接收用户输入</li>
-<li>输出设备：呈现内容</li>
-<li>计算/处理设备：接收输入并计算以输出</li>
+<li>树中的节点数小于 <code>6000</code></li>
+<li><code>-100 &lt;= node.val &lt;= 100</code></li>
 </ul>
-</li>
-<li><p>图形学中的计算/处理设备主要有？</p>
-<p>CPU、GPU</p>
-</li>
-<li><p>图形平台的两类模式是？各自特点？</p>
-<ol>
-<li><p>立即模式</p>
-<ul>
-<li><p>OpenGL, Direct3D等早期固定管线</p>
-</li>
-<li><p>场景数据由应用提供和维护</p>
-</li>
-<li><p>独立于图形硬件的接口</p>
-</li>
-<li><p>高性能</p>
-</li>
-</ul>
-</li>
-<li><p>保留模式</p>
-<ul>
-<li>WPF</li>
-<li>OpenGL等现代基于着色器(Shader)的可编程管线</li>
-<li>更高层次的抽象</li>
-<li>场景数据维护</li>
-<li>易于复杂设计实现</li>
-<li>性能损失</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>OpenGL 是什么？它有哪些特点？</p>
-<p>OpenGL是一个专业的、功能强大的3D图形接口。通过使用OpenGL,用户可以方便、高效地绘制出多种3D图形视觉效果,如光照、纹理、半透明、阴影和材质等。其特点有:</p>
-<ul>
-<li>工业标准</li>
-<li>跨平台性</li>
-<li>易用性</li>
-<li>出色的编程特性</li>
-<li>详细的文档。</li>
-</ul>
-</li>
-<li><p>什么是图形管线？</p>
-<p>相互连接的一系列数据处理单元，前一单元的输出将作为后 一单元的输入</p>
-</li>
-<li><p>. OpenGL 固定管线有哪些特点？</p>
-<p>管线中的功能模块可以通过参数进行配置，各功能模块中的算法固定</p>
-</li>
-<li><p>OpenGL 固定管线程序结构？</p>
-<ul>
-<li>初始化管线</li>
-<li>指定显示窗口/视图（大小、位置）</li>
-<li>设置照相机</li>
-<li>设置光源</li>
-<li>加载模型数据（几何数据、纹理数据…）</li>
-<li>设置事件响应函数</li>
-<li>开始事件循环</li>
-</ul>
-</li>
-<li><p>OpenGL 基本绘制图元有哪些？</p>
-<p>点、线、三角形、多边形</p>
-</li>
-</ol>
-<h2 id="第三讲："><a href="#第三讲：" class="headerlink" title="第三讲："></a>第三讲：</h2><ol>
-<li><p>向量在图形学中有哪些主要应用？</p>
-<p>表示方向、偏移、空间位置</p>
-</li>
-<li><p>内积(点积)  $x·y = x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}$（代数定义），$x·y = ||x|| ||y|| cos(a)$（几何定义），结果为标量</p>
-</li>
-<li><p>叉积，结果为新向量</p>
-<p><img src="https://pic.downk.cc/item/5ef44b0c14195aa59419a1e8.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44b2314195aa59419ab94.png" alt></p>
-</li>
-<li><p>二维变换：平移、旋转、缩放矩阵</p>
-<p><img src="https://pic.downk.cc/item/5ef44b3314195aa59419b2c2.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44b5614195aa59419c5c9.png" alt></p>
-</li>
-<li><p>二维形状的三角化</p>
-<p><img src="https://pic.downk.cc/item/5ef44b6314195aa59419cc87.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44b6f14195aa59419d1fb.png" alt></p>
-</li>
-</ol>
-<h2 id="第四讲："><a href="#第四讲：" class="headerlink" title="第四讲："></a>第四讲：</h2><ol>
-<li><p>了解人视觉系统的基本构成</p>
-<ul>
-<li>眼睛： 信号接收</li>
-<li>视神经：信号传递</li>
-<li>视觉皮层：信号处理</li>
-</ul>
-</li>
-<li><p>颜色感知基本过程</p>
-<ul>
-<li>入射光光谱</li>
-<li>眼睛接收</li>
-<li>视网膜/视神经计算三色响应值</li>
-<li>大脑感知颜色</li>
-</ul>
-</li>
-<li><p>RGB 颜色模型：定义及其特点</p>
-<p>通过组合红、绿、蓝三元色得到不同颜色，在显示器、电视机以及相机等设备中广泛使用。所能表示的颜色有一定范围，不适合描述主观感知。</p>
-</li>
-<li><p>了解颜色空间的基本定义及其特点</p>
-<p>定义一个X, Y, Z坐标系，每一颜色对应三维空间内的一个 点，该三维空间称为颜色空间。</p>
-<p>CIE-XYZ颜色空间： 使用“虚拟/想象”的三原色，无法生产对应的实际光源以再现所有可见光，对图像的编码和计算将变得低效且不实用。</p>
-</li>
-<li><p>二维图像表示</p>
-<p><img src="https://pic.downk.cc/item/5ef44b7b14195aa59419de4c.png" alt></p>
-</li>
-<li><p>掌握二维图像的基本操作：线性滤波的定义、计算方法及其应用范围</p>
-<p>计算函数是对像素的加权和</p>
-</li>
-</ol>
-<h2 id="第五讲："><a href="#第五讲：" class="headerlink" title="第五讲："></a>第五讲：</h2><ol>
-<li><p>掌握纹理映射的基本概念</p>
-<ul>
-<li>纹理映射只是改变表面外观而不改变其几何</li>
-<li>纹理映射使用图像建模表面外观</li>
-</ul>
-</li>
-<li><p>纹理图有哪几种类型？</p>
-<ul>
-<li>二维图像（外部图像）</li>
-<li>过程式纹理（代码生成）</li>
-</ul>
-</li>
-<li><p>纹理映射中的两大关键问题是？</p>
-<ul>
-<li>纹理坐标函数的设计</li>
-<li>反走样</li>
-</ul>
-</li>
-<li><p>了解纹理坐标函数的定义及其功能</p>
-<ul>
-<li>保障高质量纹理映射效果的关键</li>
-<li>对于一些表面，如平面或参数曲面，容易定义</li>
-<li>对于复杂表面，通常并不容易得到，需要仔细设计</li>
-</ul>
-</li>
-<li><p>纹理空间</p>
-<p>一般为包含纹理图像的矩形区域， 通常表示为单位正方形</p>
-</li>
-<li><p>纹理坐标有哪几种计算方式？</p>
-<ul>
-<li>几何计算方式（表面空间点）</li>
-<li>顶点插值方式（三角形网格，顶点插值）</li>
-</ul>
-</li>
-<li><p>什么是走样问题？纹理映射中的走样问题主要有那两类？</p>
-<ul>
-<li>图像空间中的一个像素对应纹理空间中的多个像素</li>
-<li>图像空间中的多个像素对应纹理空间中的一个像素</li>
-</ul>
-</li>
-<li><p>Mipmap</p>
-<p><img src="https://pic.downk.cc/item/5ef44b8a14195aa59419e54b.png" alt></p>
-</li>
-<li><p>OpenGL中纹理映射主要步骤</p>
-<p>读取纹理图像 • 申请纹理资源 • 绑定纹理资源 • 传入纹理图像 • 设置纹理参数 • 指定纹理坐标 • 设置纹理环境</p>
-</li>
-</ol>
-<h2 id="第六讲："><a href="#第六讲：" class="headerlink" title="第六讲："></a>第六讲：</h2><ol>
-<li><p>掌握一次、二次、三次 Bezier 曲线的构造方法及其数学特性</p>
-<p><img src="https://pic.downk.cc/item/5ef44b9814195aa59419ebce.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44ba414195aa59419f1b1.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44bb014195aa59419f77f.png" alt></p>
-</li>
-<li><p>了解如何在 OpenGL 中绘制 Bezier 曲线</p>
-<p><img src="https://pic.downk.cc/item/5ef44bbb14195aa59419fdae.png" alt></p>
-</li>
-</ol>
-<h2 id="第七讲："><a href="#第七讲：" class="headerlink" title="第七讲："></a>第七讲：</h2><ol>
-<li><p>了解 OpenGL 中绘制 B 样条曲线的过程</p>
-<p><img src="https://pic.downk.cc/item/5ef44bc714195aa5941a0394.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44bd414195aa5941a0a3a.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44bdf14195aa5941a0f59.png" alt></p>
-<p>13：节点数</p>
-<p>knots：节点数组</p>
-<p>3：stride大小，跨越几个点</p>
-<p>controlPoints：控制顶点数组</p>
-<p>4：B-Spline阶数</p>
-</li>
-</ol>
-<h2 id="第八讲："><a href="#第八讲：" class="headerlink" title="第八讲："></a>第八讲：</h2><ol>
-<li><p>掌握三维模型变换：旋转、平移以及缩放的矩阵形式及其推导过程</p>
-<p><img src="https://pic.downk.cc/item/5ef44bec14195aa5941a1495.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44bf614195aa5941a190b.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c0014195aa5941a1d87.png" alt></p>
-</li>
-<li><p>视点变换函数<code>gluLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ,upX, upY, upZ)</code></p>
-<p>第一组<code>eyex, eyey, eyez</code> 相机在世界坐标的位置<br>第二组<code>centerx, centery, centerz</code> 相机镜头对准的物体在世界坐标的位置<br>第三组<code>upx, upy, upz</code>相机向上的方向在世界坐标中的方向<br>你把相机想象成为你自己的脑袋：<br>第一组数据就是脑袋的位置<br>第二组数据就是眼睛看的物体的位置<br>第三组就是头顶朝向的方向（因为你可以歪着头看同一个物体）。</p>
-</li>
-<li><p>三维投影变换</p>
-<p><img src="https://pic.downk.cc/item/5ef44c0914195aa5941a2244.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c1314195aa5941a26d6.png" alt></p>
-</li>
-<li><p>视口变换：</p>
-<p><img src="https://pic.downk.cc/item/5ef44c1e14195aa5941a2bdd.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c2914195aa5941a3103.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c3314195aa5941a35dd.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c3c14195aa5941a3ad0.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c4714195aa5941a4049.png" alt></p>
-</li>
-</ol>
-<h2 id="第九讲："><a href="#第九讲：" class="headerlink" title="第九讲："></a>第九讲：</h2><p>略</p>
-<h2 id="第十讲："><a href="#第十讲：" class="headerlink" title="第十讲："></a>第十讲：</h2><ol>
-<li><p>Phong光照模型</p>
-<p><img src="https://pic.downk.cc/item/5ef44c5214195aa5941a45ff.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c7c14195aa5941a5af0.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c8914195aa5941a614b.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44ca514195aa5941a6dac.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44c5e14195aa5941a4b74.png" alt></p>
-</li>
-<li><p>OpenGL中的光照计算</p>
-<p><img src="https://pic.downk.cc/item/5ef44cb314195aa5941a73e1.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44d4114195aa5941ab179.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44d4b14195aa5941ab63f.png" alt></p>
-</li>
-<li><p>漫反射</p>
-<p><img src="https://pic.downk.cc/item/5ef44d5714195aa5941abb8d.png" alt></p>
-</li>
-</ol>
-<h2 id="第十一讲："><a href="#第十一讲：" class="headerlink" title="第十一讲："></a>第十一讲：</h2><ol>
-<li><p>光线跟踪算法</p>
-<p><img src="https://pic.downk.cc/item/5ef44d6114195aa5941ac07b.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44d8214195aa5941ad01b.png" alt></p>
-</li>
-<li><p>辐射度算法</p>
-<p><img src="https://pic.downk.cc/item/5ef44d6b14195aa5941ac539.png" alt></p>
-<p><img src="https://pic.downk.cc/item/5ef44d8c14195aa5941ad4a5.png" alt></p>
-</li>
-<li><p>全局光照明：</p>
-<p><img src="https://pic.downk.cc/item/5ef44d9714195aa5941ad987.png" alt></p>
-</li>
-</ol>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>层序遍历，需要注意的是<strong>每层的最右边的结点</strong>的<code>next</code>一定指向<code>NULL</code>，需要在循环时做出判断。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">// Definition for a Node.</span></span><br><span class="line"><span class="comment">class Node &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    int val;</span></span><br><span class="line"><span class="comment">    Node* left;</span></span><br><span class="line"><span class="comment">    Node* right;</span></span><br><span class="line"><span class="comment">    Node* next;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node() : val(0), left(NULL), right(NULL), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node(int _val, Node* _left, Node* _right, Node* _next)</span></span><br><span class="line"><span class="comment">        : val(_val), left(_left), right(_right), next(_next) &#123;&#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">Node* <span class="title">connect</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!root)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">queue</span>&lt;Node*&gt; qu;</span><br><span class="line"></span><br><span class="line">        qu.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!qu.empty())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> size = qu.size();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)&#123;</span><br><span class="line"></span><br><span class="line">                Node* top_node = qu.front();</span><br><span class="line">                qu.pop();</span><br><span class="line"></span><br><span class="line">                top_node -&gt; next = (i &lt; size - <span class="number">1</span>) ? qu.front() : <span class="literal">NULL</span>;	<span class="comment">//判断</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(top_node -&gt; left)</span><br><span class="line">                    qu.push(top_node -&gt; left);</span><br><span class="line">                <span class="keyword">if</span>(top_node -&gt; right)</span><br><span class="line">                    qu.push(top_node -&gt; right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -647,17 +423,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/25/Leetcode-139-单词拆分/" title= "Leetcode 139. 单词拆分">
-                    <div class="nextTitle">Leetcode 139. 单词拆分</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/06/24/Leetcode-16-最接近的三数之和/" title= "Leetcode 16. 最接近的三数之和">
-                    <div class="prevTitle">Leetcode 16. 最接近的三数之和</div>
+                <a href= "/2020/09/27/Leetcode-235-二叉搜索树的最近公共祖先/" title= "Leetcode 235. 二叉搜索树的最近公共祖先">
+                    <div class="prevTitle">Leetcode 235. 二叉搜索树的最近公共祖先</div>
                 </a>
             
         </li>
@@ -798,7 +569,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一讲："><span class="toc-number">1.</span> <span class="toc-text">第一讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二讲："><span class="toc-number">2.</span> <span class="toc-text">第二讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三讲："><span class="toc-number">3.</span> <span class="toc-text">第三讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四讲："><span class="toc-number">4.</span> <span class="toc-text">第四讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五讲："><span class="toc-number">5.</span> <span class="toc-text">第五讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六讲："><span class="toc-number">6.</span> <span class="toc-text">第六讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第七讲："><span class="toc-number">7.</span> <span class="toc-text">第七讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第八讲："><span class="toc-number">8.</span> <span class="toc-text">第八讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第九讲："><span class="toc-number">9.</span> <span class="toc-text">第九讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十讲："><span class="toc-number">10.</span> <span class="toc-text">第十讲：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十一讲："><span class="toc-number">11.</span> <span class="toc-text">第十一讲：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目简介："><span class="toc-number">1.</span> <span class="toc-text">题目简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路："><span class="toc-number">2.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下："><span class="toc-number">3.</span> <span class="toc-text">代码如下：</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
