@@ -346,6 +346,82 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/13/Leetcode-43-字符串相乘/" >
+            
+                <span>Leetcode 43. 字符串相乘</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+示例 1:
+12输入: num1 = &quot;2&quot;, num2 = &quot;3&quot;输出: &quot;6&quot;
+示例 2:
+12输入: num1 = &quot;123&quot;, num2 = &quot;456&quot;输出: &quot;56088&quot;
+说明：
+
+num1 和 num2 的长度小于110。
+num1 和 num2 只包含数字 0-9。
+num1 和 num2 均不以零开头，除非是数字 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/12/Leetcode-133-克隆图/" >
+            
+                <span>Leetcode 133. 克隆图</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你无向 连通 图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
+图中的每个节点都包含它的值 val（int） 和其邻居的列表（list[Node]）。
+1234class Node &#123;    public int val;    public List&lt;Node&gt; neighbors;&#125;
+测试用例格式：
+简单起见，每个节点的值都和它的索引相同。例如，第一个节点值为 1（val = 1），第二个节点值为 2（val = 2），以此类推。该图在测试用例中使用邻接列表表示。
+邻接列表 是用于表示有限图的无序列表的集合。每个列表都描述了图中节点的邻...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先遍历">广度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/08/11/Leetcode-130-被围绕的区域/" >
             
                 <span>Leetcode 130. 被围绕的区域</span>
@@ -626,91 +702,10 @@
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/03/Leetcode-415-字符串相加/" >
-            
-                <span>Leetcode 415. 字符串相加</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。
-注意：
-
-num1 和num2 的长度都小于 5100.
-num1 和num2 都只包含数字 0-9.
-num1 和num2 都不包含任何前导零。
-
-思路：模拟竖式相加，首先通过前缀补0的方式使两个字符串拥有相同的长度。
-然后从后往前，一位一位模拟相加，若有进位，则flag = 1。
-最后相加结束后，若flag = 1，则最后存在进位，res = &#39;1&#39; + res即可。
-代码如下：12345678910111213141516171819202122232425262728293031323...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/Leetcode-114-二叉树展开为链表/" >
-            
-                <span>Leetcode 114. 二叉树展开为链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，原地将它展开为一个单链表。
-例如，给定二叉树
-12345    1   / \  2   5 / \   \3   4   6
-将其展开为：
-12345678910111 \  2   \    3     \      4       \        5         \          6
-思路：前序遍历，将先后遍历到的结点存储起来。
-最后将每个结点连接在前一个结点的右子树上，前一个结点的左子树置为空。
-tip:
-
-不知道这个算不算原地…
-
-代码如下：123456789101112131415161718192021222324252627282930...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/categories/算法相关/page/5/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/4/">4</a><a class="page-number" href="/categories/算法相关/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/categories/算法相关/page/7/">7</a><a class="page-number" href="/categories/算法相关/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/17/">17</a><a class="extend next" rel="next" href="/categories/算法相关/page/7/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/categories/算法相关/page/5/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/4/">4</a><a class="page-number" href="/categories/算法相关/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/categories/算法相关/page/7/">7</a><a class="page-number" href="/categories/算法相关/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/18/">18</a><a class="extend next" rel="next" href="/categories/算法相关/page/7/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -4009,9 +4004,25 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 184
+        Total : 186
         </div>
         <!-- search  -->
         
@@ -4024,6 +4035,16 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2020/10/02/Leetcode-771-宝石与石头/" >Leetcode 771. 宝石与石头</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2020/10/02/Leetcode-LCP-19-秋叶收藏集/" >Leetcode LCP 19. 秋叶收藏集</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -4767,12 +4788,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
         </li>
     
     
@@ -4901,17 +4922,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -4941,6 +4957,11 @@ tip:
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
@@ -4963,31 +4984,31 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     

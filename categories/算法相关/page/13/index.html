@@ -346,6 +346,72 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/08/Leetcode-990-等式方程的可满足性/" >
+            
+                <span>Leetcode 990. 等式方程的可满足性</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，并采用两种不同的形式之一：&quot;a==b&quot; 或 &quot;a!=b&quot;。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。
+只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回 true，否则返回 false。
+示例 1：
+123输入：[&quot;a==b&quot;,&quot;b!=a&quot;]输出：false解释：如果我们指定，a = 1 且 b = 1，那么可以满足第一个方程，但无法满足第二个方程。没有办法分配变...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "并查集">并查集</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/07/Leetcode-5430-设计浏览器历史记录/" >
+            
+                <span>Leetcode 5430. 设计浏览器历史记录</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps 步。
+请你实现 BrowserHistory 类：
+
+BrowserHistory(string homepage) ，用 homepage 初始化浏览器类。
+void visit(string url) 从当前页跳转访问 url 对应的页面 。执行此操作会把浏览历史前进的记录全部删除。
+string back(int steps) 在浏览历史中后退 steps 步。如果你只能在浏览历史中后退至多 x 步且 s...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/07</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/06/07/Leetcode-126-单词接龙-II/" >
             
                 <span>Leetcode 126. 单词接龙 II</span>
@@ -638,80 +704,10 @@ tips:
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/31/Leetcode-5425-切割后面积最大的蛋糕/" >
-            
-                <span>Leetcode 5425. 切割后面积最大的蛋糕</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：矩形蛋糕的高度为 h 且宽度为 w，给你两个整数数组 horizontalCuts 和 verticalCuts，其中 horizontalCuts[i] 是从矩形蛋糕顶部到第 i 个水平切口的距离，类似地， verticalCuts[j] 是从矩形蛋糕的左侧到第 j 个竖直切口的距离。
-请你按数组 horizontalCuts 和 verticalCuts 中提供的水平和竖直位置切割后，请你找出 面积最大 的那份蛋糕，并返回其 面积 。由于答案可能是一个很大的数字，因此需要将结果对 10^9 + 7 取余后返回。
-示例 1：
-
-123输入：h = 5, w = 4, hori...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/30/Leetcode-84-柱状图中最大的矩形/" >
-            
-                <span>Leetcode 84. 柱状图中最大的矩形</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
-求在该柱状图中，能够勾勒出来的矩形的最大面积。
-
-以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。
-
-图中阴影部分为所能勾勒出的最大矩形面积，其面积为 10 个单位。
-示例:
-12输入: [2,1,5,6,2,3]输出: 10
-思路：首先我们得先知道对于一个矩形，它所能达到的最大面积取决于最短的那条边，所以例如上图高度为5的矩形，它要想达到以5为高度的最大面积，就必须往左右找能大于等于它高度的矩形，这样子以5为高度的矩形才能有最大的宽度。所以我们需要...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/categories/算法相关/page/12/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/11/">11</a><a class="page-number" href="/categories/算法相关/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/categories/算法相关/page/14/">14</a><a class="page-number" href="/categories/算法相关/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/17/">17</a><a class="extend next" rel="next" href="/categories/算法相关/page/14/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/categories/算法相关/page/12/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/11/">11</a><a class="page-number" href="/categories/算法相关/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/categories/算法相关/page/14/">14</a><a class="page-number" href="/categories/算法相关/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/18/">18</a><a class="extend next" rel="next" href="/categories/算法相关/page/14/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -4010,9 +4006,25 @@ tips:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 184
+        Total : 186
         </div>
         <!-- search  -->
         
@@ -4025,6 +4037,16 @@ tips:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2020/10/02/Leetcode-771-宝石与石头/" >Leetcode 771. 宝石与石头</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2020/10/02/Leetcode-LCP-19-秋叶收藏集/" >Leetcode LCP 19. 秋叶收藏集</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -4768,12 +4790,12 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
         </li>
     
     
@@ -4902,17 +4924,12 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -4942,6 +4959,11 @@ tips:
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
@@ -4964,31 +4986,31 @@ tips:
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
