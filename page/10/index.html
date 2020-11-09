@@ -359,6 +359,120 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/02/Leetcode-114-二叉树展开为链表/" >
+            
+                <span>Leetcode 114. 二叉树展开为链表</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个二叉树，原地将它展开为一个单链表。
+例如，给定二叉树
+12345    1   / \  2   5 / \   \3   4   6
+将其展开为：
+12345678910111 \  2   \    3     \      4       \        5         \          6
+思路：前序遍历，将先后遍历到的结点存储起来。
+最后将每个结点连接在前一个结点的右子树上，前一个结点的左子树置为空。
+tip:
+
+不知道这个算不算原地…
+
+代码如下：123456789101112131415161718192021222324252627282930...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >
+            
+                <span>Leetcode 5477. 排布二进制网格的最少交换次数</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个 n x n 的二进制网格 grid，每一次操作中，你可以选择网格的 相邻两行 进行交换。
+一个符合要求的网格需要满足主对角线以上的格子全部都是 0 。
+请你返回使网格满足要求的最少操作次数，如果无法使网格符合要求，请你返回 -1 。
+主对角线指的是从 (1, 1) 到 (n, n) 的这些格子。
+示例 1：
+12输入：grid = [[0,0,1],[1,1,0],[1,0,0]]输出：3
+示例 2：
+123输入：grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]输出：-1解释：所有行都是一样的，交换相邻行无法使网格符合要...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >
+            
+                <span>Leetcode 5476. 找出数组游戏的赢家</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个由 不同 整数组成的整数数组 arr 和一个整数 k 。
+每回合游戏都在数组的前两个元素（即 arr[0] 和 arr[1] ）之间进行。比较 arr[0] 与 arr[1] 的大小，较大的整数将会取得这一回合的胜利并保留在位置 0 ，较小的整数移至数组的末尾。当一个整数赢得 k 个连续回合时，游戏结束，该整数就是比赛的 赢家 。
+返回赢得比赛的整数。
+题目数据 保证 游戏存在赢家。
+示例 1：
+12345输入：arr = [2,1,3,5,4,6,7], k = 2输出：5解释：一起看一下本场游戏每回合的情况：因此将进行 4 回合比赛，其中 5 是赢家，因为它连胜 2...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/08/01/Leetcode-632-最小区间/" >
             
                 <span>Leetcode 632. 最小区间</span>
@@ -602,120 +716,6 @@ nums长度在[1, 1000000]之间
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "拓扑排序">拓扑排序</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/26/Leetcode-5473-灯泡开关-IV/" >
-            
-                <span>Leetcode 5473. 灯泡开关 IV</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：房间中有 n 个灯泡，编号从 0 到 n-1 ，自左向右排成一行。最开始的时候，所有的灯泡都是 关 着的。
-请你设法使得灯泡的开关状态和 target 描述的状态一致，其中 target[i] 等于 1 第 i 个灯泡是开着的，等于 0 意味着第 i 个灯是关着的。
-有一个开关可以用于翻转灯泡的状态，翻转操作定义如下：
-
-选择当前配置下的任意一个灯泡（下标为 i ）
-翻转下标从 i 到 n-1 的每个灯泡
-
-翻转时，如果灯泡的状态为 0 就变为 1，为 1 就变为 0 。
-返回达成 target 描述的状态所需的 最少 翻转次数。
-示例 1：
-1234567输入：target ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/25/Leetcode-410-分割数组的最大值/" >
-            
-                <span>Leetcode 410. 分割数组的最大值</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个非负整数数组和一个整数 m，你需要将这个数组分成 m 个非空的连续子数组。设计一个算法使得这 m 个子数组各自和的最大值最小。
-注意:数组长度 n 满足以下条件:
-
-1 ≤ n ≤ 1000
-1 ≤ m ≤ min(50, n)
-
-示例:
-1234567891011输入:nums = [7,2,5,10,8]m = 2输出:18解释:一共有四种方法将nums分割为2个子数组。其中最好的方式是将其分为[7,2,5] 和 [10,8]，因为此时这两个子数组各自的和的最大值为18，在所有情况中最小。
-思路：动态规划，dp[i][j]代表前i个数字分成j段，所有情况下，其各段和...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/23/Leetcode-64-最小路径和/" >
-            
-                <span>Leetcode 64. 最小路径和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
-说明：每次只能向下或者向右移动一步。
-示例:
-12345678输入:[  [1,3,1],  [1,5,1],  [4,2,1]]输出: 7解释: 因为路径 1→3→1→1→1 的总和最小。
-思路：动态规划，dp[i][j]代表以grid[i][j]为右下角时的最小路径和。
-首先初始化第一行和第一列。
-由于每次只能向下或者向右移动一步，所以dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]。
-最后返回dp[grid...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
             
@@ -4698,9 +4698,78 @@ nums长度在[1, 1000000]之间
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 212
+        Total : 215
         </div>
         <!-- search  -->
         
@@ -4713,6 +4782,21 @@ nums长度在[1, 1000000]之间
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-122-买卖股票的最佳时机-II/" >Leetcode 122. 买卖股票的最佳时机 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-127-单词接龙/" >Leetcode 127. 单词接龙</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-973-最接近原点的-K-个点/" >Leetcode 973. 最接近原点的 K 个点</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5546,12 +5630,12 @@ nums长度在[1, 1000000]之间
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -5735,7 +5819,7 @@ nums长度在[1, 1000000]之间
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -5750,17 +5834,22 @@ nums长度在[1, 1000000]之间
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -5771,11 +5860,6 @@ nums长度在[1, 1000000]之间
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -5794,13 +5878,13 @@ nums长度在[1, 1000000]之间
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
@@ -5814,11 +5898,11 @@ nums长度在[1, 1000000]之间
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
@@ -5871,9 +5955,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
@@ -5910,24 +5994,9 @@ jsonContent:
     <!-- CNZZ  -->
     
     </div>
-    <!-- async load share.js -->
+    <!-- async load share.js --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
+    </body>
 </html>
 
 

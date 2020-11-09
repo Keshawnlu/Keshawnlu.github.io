@@ -346,6 +346,117 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/05/Leetcode-5454-统计全-1-子矩形/" >
+            
+                <span>Leetcode 5454. 统计全 1 子矩形</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个只包含 0 和 1 的 rows * columns 矩阵 mat ，请你返回有多少个 子矩形 的元素全部都是 1 。
+示例 1：
+1234567891011输入：mat = [[1,0,1],            [1,1,0],            [1,1,0]]输出：13解释：有 6 个 1x1 的矩形。有 2 个 1x2 的矩形。有 3 个 2x1 的矩形。有 1 个 2x2 的矩形。有 1 个 3x1 的矩形。矩形数目总共 = 6 + 2 + 3 + 1 + 1 = 13 。
+示例 2：
+12345678910111213输入：mat = [[0,1,1...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/05/Leetcode-44-通配符匹配/" >
+            
+                <span>Leetcode 44. 通配符匹配</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 &#39;?&#39; 和 &#39;*&#39; 的通配符匹配。
+12&apos;?&apos; 可以匹配任何单个字符。&apos;*&apos; 可以匹配任意字符串（包括空字符串）。
+两个字符串完全匹配才算匹配成功。
+说明:
+
+s 可能为空，且只包含从 a-z 的小写字母。
+p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *
+
+示例 1:
+12345输入:s = &quot;aa&quot;p = &quot;a&quot;输出: false解释: &quot;a&quot; 无法匹配 &quo...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/04/Leetcode-32-最长有效括号/" >
+            
+                <span>Leetcode 32. 最长有效括号</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个只包含 &#39;(&#39; 和 &#39;)&#39; 的字符串，找出最长的包含有效括号的子串的长度。
+示例 1:
+123输入: &quot;(()&quot;输出: 2解释: 最长有效括号子串为 &quot;()&quot;
+示例 2:
+123输入: &quot;)()())&quot;输出: 4解释: 最长有效括号子串为 &quot;()()&quot;
+思路：利用动态规划的思想，dp[i]代表以s[i]为结尾的字符串的有效括号长度。
+所以以(为结尾的是不会有有效括号长度的，dp[i] = 0。
+以)为结尾的有两种情况
+
+s[i] = &#39;)&#39; &...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/03/Leetcode-108-将有序数组转换为二叉搜索树/" >
             
                 <span>Leetcode 108. 将有序数组转换为二叉搜索树</span>
@@ -593,129 +704,6 @@ tip:
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/26/Leetcode-面试题-02-01-移除重复节点/" >
-            
-                <span>Leetcode 面试题 02.01. 移除重复节点</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：编写代码，移除未排序链表中的重复节点。保留最开始出现的节点。
-示例1:
-12输入：[1, 2, 3, 3, 2, 1]输出：[1, 2, 3]
-示例2:
-12输入：[1, 1, 1, 1, 2]输出：[1, 2]
-提示：
-
-链表长度在[0, 20000]范围内。
-链表元素在[0, 20000]范围内。
-
-思路：首先先设置一个res = head来保存原始的head。
-然后定义一个哈希表，遍历链表时若第一次遇到节点中的val，则存入哈希表；
-否则，则一直删除节点，直至遇到不重复的节点，并把该节点的val存入哈希表。
-最后返回一开始定义的res即可。
-tip:
-
-注意要将删除过程后...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/25/Leetcode-139-单词拆分/" >
-            
-                <span>Leetcode 139. 单词拆分</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
-说明：
-
-拆分时可以重复使用字典中的单词。
-你可以假设字典中没有重复的单词。
-
-示例 1：
-123输入: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;, &quot;code&quot;]输出: true解释: 返回 true 因为 &quot;leetcode&quot; 可以被拆分成 &quot;leet code&quot;。
-示例 2：
-1234输入: s = &quot;a...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/24/Leetcode-16-最接近的三数之和/" >
-            
-                <span>Leetcode 16. 最接近的三数之和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
-示例：
-123输入：nums = [-1,2,1,-4], target = 1输出：2解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
-提示：
-
-3 &lt;= nums.length &lt;= 10^3
--10^3 &lt;= nums[i] &lt;= 10^3
--10^4 &lt;= target &lt;= 10^4
-
-思路：这题与15. 三数之和有相...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
     
 </div>
             
@@ -4592,9 +4580,78 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 212
+        Total : 215
         </div>
         <!-- search  -->
         
@@ -4607,6 +4664,21 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-122-买卖股票的最佳时机-II/" >Leetcode 122. 买卖股票的最佳时机 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-127-单词接龙/" >Leetcode 127. 单词接龙</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2020/11/09/Leetcode-973-最接近原点的-K-个点/" >Leetcode 973. 最接近原点的 K 个点</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5440,12 +5512,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -5629,7 +5701,7 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -5644,17 +5716,22 @@ tip:
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -5665,11 +5742,6 @@ tip:
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -5688,13 +5760,13 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
@@ -5708,11 +5780,11 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
@@ -5765,9 +5837,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
@@ -5806,22 +5878,7 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</body>
+    </body>
 </html>
 
 
