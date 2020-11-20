@@ -359,6 +359,185 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/24/Leetcode-1024-视频拼接/" >
+            
+                <span>Leetcode 1024. 视频拼接</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。
+视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。
+我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。
+示例 1：
+1234567输入：clips = [[0,2],[4,6...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/23/Leetcode-234-回文链表/" >
+            
+                <span>Leetcode 234. 回文链表</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：请判断一个链表是否为回文链表。
+示例 1:
+12输入: 1-&gt;2输出: false
+示例 2:
+12输入: 1-&gt;2-&gt;2-&gt;1输出: true
+进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
+思路：
+找到中间结点(若长度为奇数，则返回第n/2 + 1个结点；若长度为偶数，则返回第n/2个结点)
+切断前后两半，将后一半逆转
+前后链表逐个进行比较，若最后前一半链表剩下的结点数不超过1，则说明为回文链表
+
+代码如下：123456789101112131415161718192021222324252627282930313233343...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/22/Leetcode-763-划分字母区间/" >
+            
+                <span>Leetcode 763. 划分字母区间</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：字符串 S 由小写字母组成。我们要把这个字符串划分为尽可能多的片段，同一个字母只会出现在其中的一个片段。返回一个表示每个字符串片段的长度的列表。
+示例 1：
+123456输入：S = &quot;ababcbacadefegdehijhklij&quot;输出：[9,7,8]解释：划分结果为 &quot;ababcbaca&quot;, &quot;defegde&quot;, &quot;hijhklij&quot;。每个字母最多出现在一个片段中。像 &quot;ababcbacadefegde&quot;, &quot;hijhklij&quot; 的划分是错误的，因为划分...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/21/Leetcode-925-长按键入/" >
+            
+                <span>Leetcode 925. 长按键入</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。
+你将会检查键盘输入的字符 typed。如果它对应的可能是你的朋友的名字（其中一些字符可能被长按），那么就返回 True。
+示例 1：
+123输入：name = &quot;alex&quot;, typed = &quot;aaleex&quot;输出：true解释：&apos;alex&apos; 中的 &apos;a&apos; 和 &apos;e&apos; 被长按。
+示例 2：
+123输入：name = &quot;saeed&quot;, type...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/21/Leetcode-143-重排链表/" >
+            
+                <span>Leetcode 143. 重排链表</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个单链表 L：L0→L1→…→L n-1→Ln ，将其重新排列后变为： L0→L n→L1→L n-1→L2→L n-2→…
+你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+示例 1:
+1给定链表 1-&gt;2-&gt;3-&gt;4, 重新排列为 1-&gt;4-&gt;2-&gt;3.
+示例 2:
+1给定链表 1-&gt;2-&gt;3-&gt;4-&gt;5, 重新排列为 1-&gt;5-&gt;2-&gt;4-&gt;3.
+思路：分成三步：
+
+找到链表中点的前驱结点(快慢指针法)
+将前后两部分链表断开，再将后一半链表逆转
+将后一半逆转的链表并入前...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/10/19/Leetcode-844-比较含退格的字符串/" >
             
                 <span>Leetcode 844. 比较含退格的字符串</span>
@@ -546,208 +725,10 @@ tip:
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/14/Leetcode-24-两两交换链表中的节点/" >
-            
-                <span>Leetcode 24. 两两交换链表中的节点</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
-你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
- 示例 1：
-
-12输入：head = [1,2,3,4]输出：[2,1,4,3]
-示例 2：
-12输入：head = []输出：[]
-示例 3：
-12输入：head = [1]输出：[1]
-提示：
-
-链表中节点的数目在范围 [0, 100] 内
-0 &lt;= Node.val &lt;= 100
-
-思路：使用递归，递归的终止条件为没有结点或只有一个结点。
-在两两交换结点时，用 head 表示原始链表的头节点，用 newhead 表示新的链表的头节点。
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/12/Leetcode-530-二叉搜索树的最小绝对差/" >
-            
-                <span>Leetcode 530. 二叉搜索树的最小绝对差</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。
- 示例：
-12345678910111213输入：   1    \     3    /   2   输出：1解释：最小绝对差为 1，其中 2 和 1 的差的绝对值为 1（或者 2 和 3）。
-提示：
-
-树中至少有 2 个节点。
-
-思路：由于是二叉搜索树，所以其中序遍历必是一个升序序列。
-所以我们定义一个pre来保存root的中序遍历前驱结点，在遍历过程中依次相减，并保存最小值，最后返回即可。
-代码如下：123456789101112131415161718192021222324252627...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/11/Leetcode-416-分割等和子集/" >
-            
-                <span>Leetcode 416. 分割等和子集</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
-注意:
-
-每个数组中的元素不会超过 100
-数组的大小不会超过 200
-
-示例 1:
-12345输入: [1, 5, 11, 5]输出: true解释: 数组可以分割成 [1, 5, 5] 和 [11].
-示例 2:
-12345输入: [1, 2, 3, 5]输出: false解释: 数组不能分割成两个元素和相等的子集.
-思路：我们记所有元素的和为sum，由于sum为奇数时，无法分成两个相同的和，所以直接返回false。
-当sum为偶数时，我们需要知道是否能找到一种选数字的方案，使其和...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/10/Leetcode-142-环形链表-II/" >
-            
-                <span>Leetcode 142. 环形链表 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
-为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
-说明：不允许修改给定的链表。
-示例 1：
-123输入：head = [3,2,0,-4], pos = 1输出：tail connects to node index 1解释：链表中有一个环，其尾部连接到第二个节点。
-
-进阶：你是否可以不用额外空间解决此题？
-思路：在昨天的题目上进行修改，这回需要找的是入环点。
-
-我们可以根据上图进行数学公式的推导：
-设链...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/09/Leetcode-141-环形链表/" >
-            
-                <span>Leetcode 141. 环形链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个链表，判断链表中是否有环。
-如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
-如果链表中存在环，则返回 true 。 否则，返回 false 。
-进阶：
-你能用 O(1)（即，常量）内存解决此问题吗？
-示例 1：
-
-123输入：head = [3,2,0,-4], pos = 1输出：true解释：链表中有一个环，其尾部连接到第二个...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/4/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/4/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -4896,9 +4877,96 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 220
+        Total : 225
         </div>
         <!-- search  -->
         
@@ -4911,6 +4979,31 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-1030-距离顺序排列矩阵单元格/" >Leetcode 1030. 距离顺序排列矩阵单元格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-134-加油站/" >Leetcode 134. 加油站</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-147-对链表进行插入排序/" >Leetcode 147. 对链表进行插入排序</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-283-移动零/" >Leetcode 283. 移动零</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-406-根据身高重建队列/" >Leetcode 406. 根据身高重建队列</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5983,6 +6076,11 @@ tip:
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
         </li>
     
@@ -5994,11 +6092,6 @@ tip:
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6026,17 +6119,17 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
-    
-        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
-    
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -6052,11 +6145,13 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
@@ -6067,8 +6162,6 @@ tip:
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
         <span class="sidebar-tag-name" data-tags="堆"><span class="iconfont-archer">&#xe606;</span>堆</span>
-    
-        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="并查集"><span class="iconfont-archer">&#xe606;</span>并查集</span>
     

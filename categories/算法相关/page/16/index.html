@@ -346,6 +346,190 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/16/Leetcode-297-二叉树的序列化与反序列化/" >
+            
+                <span>Leetcode 297. 二叉树的序列化与反序列化</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。
+请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。
+示例: 
+12345678你可以将以下二叉树：    1   / \  2   3     / \    4   5序列化为 &quot;[1,2,3,null,null,4,5]&quot;
+提示: 这与 LeetCode 目...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/15/Leetcode-14-最长公共前缀/" >
+            
+                <span>Leetcode 14. 最长公共前缀</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 &quot;&quot;。
+示例 1:
+12输入: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]输出: &quot;fl&quot;
+示例 2:
+123输入: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]输出: &quot;&quot;解释: 输入不存在公共前缀。
+说明:
+所有输入只包含小写字母 a-z 。
+思路：首先将数组以字符串长度进行排序，因为最长的公共前缀最多也...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/14/Leetcode-1300-转变数组后最接近目标值的数组和/" >
+            
+                <span>Leetcode 1300. 转变数组后最接近目标值的数组和</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个整数数组 arr 和一个目标值 target ，请你返回一个整数 value ，使得将数组中所有大于 value 的值变成 value 后，数组的和最接近 target （最接近表示两者之差的绝对值最小）。
+如果有多种使得和最接近 target 的方案，请你返回这些整数中的最小值。
+请注意，答案不一定是 arr 中的数字。
+示例 1：
+123输入：arr = [4,9,3], target = 10输出：3解释：当选择 value 为 3 时，数组会变成 [3, 3, 3]，和为 9 ，这是最接近 target 的方案。
+示例 2：
+12输入：arr = [2,3,5]...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/14/Leetcode-5437-不同整数的最少数目/" >
+            
+                <span>Leetcode 5437. 不同整数的最少数目</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个整数数组 arr 和一个整数 k 。现需要从数组中恰好移除 k 个元素，请找出移除后数组中不同整数的最少数目。
+示例 1：
+123输入：arr = [5,5,4], k = 1输出：1解释：移除 1 个 4 ，数组中只剩下 5 一种整数。
+示例 2：
+123输入：arr = [4,3,1,1,3,3,2], k = 3输出：2解释：先移除 4、2 ，然后再移除两个 1 中的任意 1 个或者三个 3 中的任意 1 个，最后剩下 1 和 3 两种整数。
+提示：
+
+1 &lt;= arr.length &lt;= 10^5
+1 &lt;= arr[i] &lt;= 10^9
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/13/Leetcode-70-爬楼梯/" >
+            
+                <span>Leetcode 70. 爬楼梯</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+注意：给定 n 是一个正整数。
+示例 1：
+12345输入： 2输出： 2解释： 有两种方法可以爬到楼顶。1.  1 阶 + 1 阶2.  2 阶
+示例 2：
+123456输入： 3输出： 3解释： 有三种方法可以爬到楼顶。1.  1 阶 + 1 阶 + 1 阶2.  1 阶 + 2 阶3.  2 阶 + 1 阶
+思路：经典动态规划，dp[i] = dp[i - 1] + dp[i - 2]，初始化dp[0], dp[1], dp[2]即可。
+代码如下：123...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/06/12/Leetcode-15-三数之和/" >
             
                 <span>Leetcode 15. 三数之和</span>
@@ -510,200 +694,6 @@
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "并查集">并查集</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/07/Leetcode-5430-设计浏览器历史记录/" >
-            
-                <span>Leetcode 5430. 设计浏览器历史记录</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：你有一个只支持单个标签页的 浏览器 ，最开始你浏览的网页是 homepage ，你可以访问其他的网站 url ，也可以在浏览历史中后退 steps 步或前进 steps 步。
-请你实现 BrowserHistory 类：
-
-BrowserHistory(string homepage) ，用 homepage 初始化浏览器类。
-void visit(string url) 从当前页跳转访问 url 对应的页面 。执行此操作会把浏览历史前进的记录全部删除。
-string back(int steps) 在浏览历史中后退 steps 步。如果你只能在浏览历史中后退至多 x 步且 s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/07/Leetcode-126-单词接龙-II/" >
-            
-                <span>Leetcode 126. 单词接龙 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个单词（beginWord 和 endWord）和一个字典 wordList，找出所有从 beginWord 到 endWord 的最短转换序列。转换需遵循如下规则：
-
-每次转换只能改变一个字母。
-转换过程中的中间单词必须是字典中的单词。
-
-说明:
-
-如果不存在这样的转换序列，返回一个空列表。
-所有单词具有相同的长度。
-所有单词只由小写字母组成。
-字典中不存在重复的单词。
-你可以假设 beginWord 和 endWord 是非空的，且二者不相同。
-
-示例 1:
-12345678910输入:beginWord = &quot;hit&quot;,endWord = &qu...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/06/Leetcode-128-最长连续序列/" >
-            
-                <span>Leetcode 128. 最长连续序列</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个未排序的整数数组，找出最长连续序列的长度。
-要求算法的时间复杂度为 O(n)。
-示例:
-123输入: [100, 4, 200, 1, 3, 2]输出: 4解释: 最长连续序列是 [1, 2, 3, 4]。它的长度为 4。
-思路：首先设置一个集合，用来去重，减少循环的次数。
-为了减少循环的次数，当我们访问一个数时，若它的前驱也存在于集合中，比如{2,3,4,5,6}，3的前驱为2，因为已经有2的存在了，所以最长连续序列必不可能从3开始计数。
-所以我们找那些集合中不存在前驱的数，并以该数为起始点，统计最长的连续序列，最后返回最大值即可。
-由于循环时每个数最多被访问到1次，...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/05/Leetcode-面试题29-顺时针打印矩阵/" >
-            
-                <span>Leetcode 面试题29. 顺时针打印矩阵</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
-示例 1：
-12输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]输出：[1,2,3,6,9,8,7,4,5]
-示例 2：
-12输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]输出：[1,2,3,4,8,12,11,10,9,5,6,7]
-限制：
-
-0 &lt;= matrix.length &lt;= 100
-0 &lt;= matrix[i].length &lt;= 100
-
-思路：这题和我大一时候在算法书上看到的蛇形填数十分相似…可以用相同...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/04/Leetcode-238-除自身以外数组的乘积/" >
-            
-                <span>Leetcode 238. 除自身以外数组的乘积</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
-示例:
-12输入: [1,2,3,4]输出: [24,12,8,6]
-提示：题目数据保证数组之中任意元素的全部前缀元素和后缀（甚至是整个数组）的乘积都在 32 位整数范围内。
-说明: 请不要使用除法，且在 O(n) 时间复杂度内完成此题。
-思路：将除自身以外的数组分为自身左边的数组和自身右边的数组两部分。
-通过两次循环分别求出左边数组的乘积与右边数组的乘积。
-tip:
-
-注意具体的手法…
-
-代码如...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
     
 </div>
             
@@ -4756,9 +4746,96 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 220
+        Total : 225
         </div>
         <!-- search  -->
         
@@ -4771,6 +4848,31 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-1030-距离顺序排列矩阵单元格/" >Leetcode 1030. 距离顺序排列矩阵单元格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-134-加油站/" >Leetcode 134. 加油站</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-147-对链表进行插入排序/" >Leetcode 147. 对链表进行插入排序</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-283-移动零/" >Leetcode 283. 移动零</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2020/11/20/Leetcode-406-根据身高重建队列/" >Leetcode 406. 根据身高重建队列</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5843,6 +5945,11 @@ tip:
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
         </li>
     
@@ -5854,11 +5961,6 @@ tip:
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -5886,17 +5988,17 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
-    
-        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
-    
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -5912,11 +6014,13 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
+        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
@@ -5927,8 +6031,6 @@ tip:
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
         <span class="sidebar-tag-name" data-tags="堆"><span class="iconfont-archer">&#xe606;</span>堆</span>
-    
-        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="并查集"><span class="iconfont-archer">&#xe606;</span>并查集</span>
     
