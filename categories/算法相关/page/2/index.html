@@ -346,6 +346,89 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/15/Leetcode-402-移掉K位数字/" >
+            
+                <span>Leetcode 402. 移掉K位数字</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个以字符串表示的非负整数 num，移除这个数中的 k 位数字，使得剩下的数字最小。
+注意:
+
+num 的长度小于 10002 且 ≥ k。
+num 不会包含任何前导零。
+
+示例 1 :
+123输入: num = &quot;1432219&quot;, k = 3输出: &quot;1219&quot;解释: 移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219。
+示例 2 :
+123输入: num = &quot;10200&quot;, k = 1输出: &quot;200&quot;解释: 移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/14/Leetcode-922-按奇偶排序数组-II/" >
+            
+                <span>Leetcode 922. 按奇偶排序数组 II</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。
+对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。
+你可以返回任何满足上述条件的数组作为答案。
+示例：
+123输入：[4,2,5,7]输出：[4,5,2,7]解释：[4,7,2,5]，[2,5,4,7]，[2,7,4,5] 也会被接受。
+提示：
+
+2 &lt;= A.length &lt;= 20000
+A.length % 2 == 0
+0 &lt;= A[i] &lt;= 1000
+
+思路：首先将数组A整个赋值给res，并在其基础上修改res。
+若当前位置的元...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/11/14/Leetcode-328-奇偶链表/" >
             
                 <span>Leetcode 328. 奇偶链表</span>
@@ -630,90 +713,6 @@ arr1.length, arr2.length &lt;= 1000
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/03/Leetcode-941-有效的山脉数组/" >
-            
-                <span>Leetcode 941. 有效的山脉数组</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数数组 A，如果它是有效的山脉数组就返回 true，否则返回 false。
-让我们回顾一下，如果 A 满足下述条件，那么它是一个山脉数组：
-
-A.length &gt;= 3
-在 0 &lt; i &lt; A.length - 1 条件下，存在 i 使得：
-A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]
-A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
-
-
-
-示例 1：
-12输入：[2,1]输出：false
-示例 2：
-12输入：[3,5,5]输出：false
-示例 3：
-12输入：[0,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/29/Leetcode-129-求根到叶子节点数字之和/" >
-            
-                <span>Leetcode 129. 求根到叶子节点数字之和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，它的每个结点都存放一个 0-9 的数字，每条从根到叶子节点的路径都代表一个数字。
-例如，从根到叶子节点路径 1-&gt;2-&gt;3 代表数字 123。
-计算从根到叶子节点生成的所有数字之和。
-说明: 叶子节点是指没有子节点的节点。
-示例 1:
-123456789输入: [1,2,3]    1   / \  2   3输出: 25解释:从根到叶子节点路径 1-&gt;2 代表数字 12.从根到叶子节点路径 1-&gt;3 代表数字 13.因此，数字总和 = 12 + 13 = 25.
-示例 2:
-123456789101112输入: [4,9,0,5,1] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
     
 </div>
             
@@ -4924,9 +4923,49 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 228
+        Total : 230
         </div>
         <!-- search  -->
         
@@ -4939,6 +4978,16 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/29</span><a class="archive-post-title" href= "/2020/11/29/Leetcode-976-三角形的最大周长/" >Leetcode 976. 三角形的最大周长</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2020/11/25/Leetcode-1370-上升下降字符串/" >Leetcode 1370. 上升下降字符串</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -6031,7 +6080,12 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6041,7 +6095,7 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6051,22 +6105,17 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
@@ -6094,6 +6143,8 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
@@ -6104,19 +6155,17 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
@@ -6218,7 +6267,22 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 

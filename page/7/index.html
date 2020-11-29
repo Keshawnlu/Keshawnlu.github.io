@@ -359,6 +359,84 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/09/16/Leetcode-226-翻转二叉树/" >
+            
+                <span>Leetcode 226. 翻转二叉树</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：翻转一棵二叉树。
+示例：
+输入：
+12345     4   /   \  2     7 / \   / \1   3 6   9
+输出：
+12345     4   /   \  7     2 / \   / \9   6 3   1
+思路：相当于中序遍历，从根节点出发，将左右子树互换即可。
+代码如下：1234567891011121314151617181920212223242526272829303132/** * Definition for a binary tree node. * struct TreeNode &#123; *     int val; *...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/09/15/Leetcode-37-解数独/" >
+            
+                <span>Leetcode 37. 解数独</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：编写一个程序，通过已填充的空格来解决数独问题。
+一个数独的解法需遵循如下规则：
+
+数字 1-9 在每一行只能出现一次。
+数字 1-9 在每一列只能出现一次。
+数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+
+空白格用 &#39;.&#39; 表示。
+
+​                                                                            一个数独。
+
+​                                                                        ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/09/14/Leetcode-94-二叉树的中序遍历/" >
             
                 <span>Leetcode 94. 二叉树的中序遍历</span>
@@ -652,96 +730,6 @@ candidates 中的数字可以无限制重复被选取。
         <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "堆">堆</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/06/Leetcode-107-二叉树的层次遍历-II/" >
-            
-                <span>Leetcode 107. 二叉树的层次遍历 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
-例如：给定二叉树 [3,9,20,null,null,15,7],
-12345  3 / \9  20  /  \ 15   7
-返回其自底向上的层次遍历为：
-12345[  [15,7],  [9,20],  [3]]
-思路：广搜，最后将数组倒置即可。
-需要注意的是每次出队前需提前将当前的队列大小记录下来(也就是这层有多少元素)。
-tip:
-
-有空时用dfs方法实现一遍。
-
-代码如下：123456789101112131415161718192021222324252...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/05/Leetcode-60-第k个排列/" >
-            
-                <span>Leetcode 60. 第k个排列</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
-按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
-
-&quot;123&quot;
-&quot;132&quot;
-&quot;213&quot;
-&quot;231&quot;
-&quot;312&quot;
-&quot;321&quot;
-
-给定 n 和 k，返回第 k 个排列。
-说明：
-
-给定 n 的范围是 [1, 9]。
-给定 k 的范围是[1,  n!]。
-
-示例 1:
-12输入: n = 3, k = 3输出: &quot;213&quot;
-示例 2:
-12输入: n =...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
     
 </div>
             
@@ -5058,9 +5046,49 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 228
+        Total : 230
         </div>
         <!-- search  -->
         
@@ -5073,6 +5101,16 @@ tip:
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/29</span><a class="archive-post-title" href= "/2020/11/29/Leetcode-976-三角形的最大周长/" >Leetcode 976. 三角形的最大周长</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2020/11/25/Leetcode-1370-上升下降字符串/" >Leetcode 1370. 上升下降字符串</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -6165,7 +6203,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6175,7 +6218,7 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6185,22 +6228,17 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
@@ -6228,6 +6266,8 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
@@ -6238,19 +6278,17 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
@@ -6350,9 +6388,24 @@ jsonContent:
     <!-- CNZZ  -->
     
     </div>
-    <!-- async load share.js --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 

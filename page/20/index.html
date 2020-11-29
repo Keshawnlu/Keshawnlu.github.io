@@ -359,6 +359,81 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/19/Leetcode-680-验证回文字符串-Ⅱ/" >
+            
+                <span>Leetcode 680. 验证回文字符串 Ⅱ</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
+示例 1:
+12输入: &quot;aba&quot;输出: True
+示例 2:
+123输入: &quot;abca&quot;输出: True解释: 你可以删除c字符。
+注意:
+
+字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
+
+思路：首先写一个判断字符串是否是回文串的函数，然后设置两个指针一前一后依次遍历给定的字符串，如果两个指针指向的值不同，则判断字符串s[i + 1]……[j]或s[i]……s[j - 1]是否为回文串，即删除一个不相等的字符后，判断剩余的字符串是否为回文串。
+代...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/18/Leetcode-152-乘积最大子数组/" >
+            
+                <span>Leetcode 152. 乘积最大子数组</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+ 示例 1:
+123输入: [2,3,-2,4]输出: 6解释: 子数组 [2,3] 有最大乘积 6。
+示例 2:
+123输入: [-2,0,-1]输出: 0解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+思路：利用动态规划的思想，因为数组有负数的存在(存在负负得正为最大值的情况)，所以我们需要将每次以i为结尾的子数组乘积的最大值和最小值求出来。
+
+f_{max}(i) = max(f_{max}(i - 1) * a_{i}, f_{mi...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/17/Leetcode-210-课程表-II/" >
             
                 <span>Leetcode 210. 课程表 II</span>
@@ -646,88 +721,6 @@ tip:
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/12/Leetcode-155-最小栈/" >
-            
-                <span>Leetcode 155. 最小栈</span>
-        </a>
-        <div class="abstract-content">
-            题目简介： 设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。 
-
-push(x) —— 将元素 x 推入栈中。
-pop() —— 删除栈顶的元素。
-top() —— 获取栈顶元素。
-getMin() —— 检索栈中的最小元素。 
-示例: 
-
-
-12345678910111213141516输入：[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/Leetcode-50-Pow-x-n/" >
-            
-                <span>Leetcode 50. Pow(x, n)</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：实现 pow(x, n) ，即计算 x 的 n 次幂函数。
-示例 1:
-12输入: 2.00000, 10输出: 1024.00000
-示例 2:
-12输入: 2.10000, 3输出: 9.26100
-示例 3:
-123输入: 2.00000, -2输出: 0.25000解释: 2-2 = 1/22 = 1/4 = 0.25
-说明:
-
--100.0 &lt; x &lt; 100.0
-
-n 是 32 位有符号整数，其数值范围是
-
-[-2^{31}, 2^{31} - 1]
-
-思路：利用递归，将n对半分开，若n为奇数，则用n % 2将剩余的数算出来，最后相乘即可，时间复杂度为O...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
     
 </div>
             
@@ -5044,9 +5037,49 @@ n 是 32 位有符号整数，其数值范围是
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 228
+        Total : 230
         </div>
         <!-- search  -->
         
@@ -5059,6 +5092,16 @@ n 是 32 位有符号整数，其数值范围是
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/29</span><a class="archive-post-title" href= "/2020/11/29/Leetcode-976-三角形的最大周长/" >Leetcode 976. 三角形的最大周长</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2020/11/25/Leetcode-1370-上升下降字符串/" >Leetcode 1370. 上升下降字符串</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -6151,7 +6194,12 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6161,7 +6209,7 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6171,22 +6219,17 @@ n 是 32 位有符号整数，其数值范围是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《五行塔事件》/" >时晨《五行塔事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
@@ -6214,6 +6257,8 @@ n 是 32 位有符号整数，其数值范围是
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
@@ -6224,19 +6269,17 @@ n 是 32 位有符号整数，其数值范围是
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
-    
         <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
@@ -6336,9 +6379,24 @@ jsonContent:
     <!-- CNZZ  -->
     
     </div>
-    <!-- async load share.js --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 
