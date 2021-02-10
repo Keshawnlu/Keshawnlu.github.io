@@ -346,6 +346,117 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/29/Leetcode-214-最短回文串/" >
+            
+                <span>Leetcode 214. 最短回文串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。
+示例 1:
+12输入: &quot;aacecaaa&quot;输出: &quot;aaacecaaa&quot;
+示例 2:
+12输入: &quot;abcd&quot;输出: &quot;dcbabcd&quot;
+思路：第一次尝试用KMP方法做题，有点头疼。
+我们记s的逆转字符串为reverse_str，其实题目可以转换为s前缀和reverse_str后缀的最长公共部分，如下图所示：
+
+这时我们可以将模式串定义为s + # + reverse_str(#用来分割...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "KMP">KMP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/28/Leetcode-657-机器人能否返回原点/" >
+            
+                <span>Leetcode 657. 机器人能否返回原点</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。
+移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。
+注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。
+示例 1:
+123输入: &quot;UD&quot;输出: true解释：机器人向上移动一次，然后向下...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/26/Leetcode-17-电话号码的字母组合/" >
+            
+                <span>Leetcode 17. 电话号码的字母组合</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+
+示例:
+12输入：&quot;23&quot;输出：[&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
+思路：这题和昨天那题有异曲同工之妙，都要用到回溯。
+深度优先搜索，定义一个curpos来表示当前指...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/08/24/Leetcode-459-重复的子字符串/" >
             
                 <span>Leetcode 459. 重复的子字符串</span>
@@ -594,124 +705,10 @@ num1 和num2 都不包含任何前导零。
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/27/Leetcode-392-判断子序列/" >
-            
-                <span>Leetcode 392. 判断子序列</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定字符串 s 和 t ，判断 s 是否为 t 的子序列。
-你可以认为 s 和 t 中仅包含英文小写字母。字符串 t 可能会很长（长度 ~= 500,000），而 s 是个短字符串（长度 &lt;=100）。
-字符串的一个子序列是原始字符串删除一些（也可以不删除）字符而不改变剩余字符相对位置形成的新字符串。（例如，&quot;ace&quot;是&quot;abcde&quot;的一个子序列，而&quot;aec&quot;不是）。
-示例 1:s = &quot;abc&quot;, t = &quot;ahbgdc&quot;
-返回 true.
-示例 2:s = &quot;...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/26/Leetcode-5473-灯泡开关-IV/" >
-            
-                <span>Leetcode 5473. 灯泡开关 IV</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：房间中有 n 个灯泡，编号从 0 到 n-1 ，自左向右排成一行。最开始的时候，所有的灯泡都是 关 着的。
-请你设法使得灯泡的开关状态和 target 描述的状态一致，其中 target[i] 等于 1 第 i 个灯泡是开着的，等于 0 意味着第 i 个灯是关着的。
-有一个开关可以用于翻转灯泡的状态，翻转操作定义如下：
-
-选择当前配置下的任意一个灯泡（下标为 i ）
-翻转下标从 i 到 n-1 的每个灯泡
-
-翻转时，如果灯泡的状态为 0 就变为 1，为 1 就变为 0 。
-返回达成 target 描述的状态所需的 最少 翻转次数。
-示例 1：
-1234567输入：target ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/23/Leetcode-67-二进制求和/" >
-            
-                <span>Leetcode 67. 二进制求和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你两个二进制字符串，返回它们的和（用二进制表示）。
-输入为 非空 字符串且只包含数字 1 和 0。
-示例 1:
-12输入: a = &quot;11&quot;, b = &quot;1&quot;输出: &quot;100&quot;
-示例 2:
-12输入: a = &quot;1010&quot;, b = &quot;1011&quot;输出: &quot;10101&quot;
-提示：
-
-每个字符串仅由字符 &#39;0&#39; 或 &#39;1&#39; 组成。
-1 &lt;= a.length, b.length &lt;= 10^4
-字符串如果不是 &quot...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/tags/字符串/">&#60; PREV</a><a class="page-number" href="/tags/字符串/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/字符串/page/3/">3</a><a class="extend next" rel="next" href="/tags/字符串/page/3/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/tags/字符串/">&#60; PREV</a><a class="page-number" href="/tags/字符串/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/字符串/page/3/">3</a><a class="page-number" href="/tags/字符串/page/4/">4</a><a class="extend next" rel="next" href="/tags/字符串/page/3/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5194,9 +5191,52 @@ num1 和num2 都不包含任何前导零。
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 242
+        Total : 245
         </div>
         <!-- search  -->
         
@@ -5209,6 +5249,21 @@ num1 和num2 都不包含任何前导零。
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2021/02/10/PAT-1040-有几个PAT/" >PAT 1040.有几个PAT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2021/02/07/PAT-1033-旧键盘打字/" >PAT 1033.旧键盘打字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2021/02/06/PAT-1028-人口普查/" >PAT 1028.人口普查</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5257,12 +5312,12 @@ num1 和num2 都不包含任何前导零。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
         </li>
     
     
@@ -5811,12 +5866,12 @@ num1 和num2 都不包含任何前导零。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6385,7 +6440,7 @@ num1 和num2 都不包含任何前导零。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6395,12 +6450,12 @@ num1 和num2 都不包含任何前导零。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6443,8 +6498,6 @@ num1 和num2 都不包含任何前导零。
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
@@ -6455,11 +6508,13 @@ num1 和num2 都不包含任何前导零。
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
@@ -6467,13 +6522,13 @@ num1 和num2 都不包含任何前导零。
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -6526,9 +6581,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -6536,9 +6591,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
-        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

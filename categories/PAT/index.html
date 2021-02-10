@@ -346,6 +346,106 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/10/PAT-1040-有几个PAT/" >
+            
+                <span>PAT 1040.有几个PAT</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：字符串 APPAPT 中包含了两个单词 PAT，其中第一个 PAT 是第 2 位(P)，第 4 位(A)，第 6 位(T)；第二个 PAT 是第 3 位(P)，第 4 位(A)，第 6 位(T)。
+现给定字符串，问一共可以形成多少个 PAT？
+输入格式：输入只有一行，包含一个字符串，长度不超过105，只包含 P、A、T 三种字母。
+输出格式：在一行中输出给定字符串中包含多少个 PAT。由于结果可能比较大，只输出对 1000000007 取余数的结果。
+输入样例：1APPAPT
+输出样例：12
+思路：从前往后遍历，PA的数量为当前A之前P的数量，PAT的数量为当前T之前PA的数量...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/07/PAT-1033-旧键盘打字/" >
+            
+                <span>PAT 1033.旧键盘打字</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及坏掉的那些键，打出的结果文字会是怎样？
+输入格式：输入在 2 行中分别给出坏掉的那些键、以及应该输入的文字。其中对应英文字母的坏键以大写给出；每段文字是不超过 105 个字符的串。可用的字符包括字母 [a-z, A-Z]、数字 0-9、以及下划线 _（代表空格）、,、.、-、+（代表上档键）。题目保证第 2 行输入的文字串非空。
+注意：如果上档键坏掉了，那么大写的英文字母无法被打出。
+输出格式：在一行中输出能够被打出的结果文字。如果没有一个字符能被打出，则输出空行。
+输入样例：12...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/07</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/06/PAT-1028-人口普查/" >
+            
+                <span>PAT 1028.人口普查</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。
+这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。
+输入格式：输入在第一行给出正整数 N，取值在(0,105]；随后 N 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 yyyy/mm/dd（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。
+输出格式：在一行中顺序输出有效生日的个数、最年长人和最...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/02/05/PAT-1020-月饼/" >
             
                 <span>PAT 1020.月饼</span>
@@ -579,76 +679,11 @@ tips:
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/03/PAT-1004-成绩排名/" >
-            
-                <span>PAT 1004.成绩排名</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：读入 n（&gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。
-输入格式：每个测试输入包含 1 个测试用例，格式为
-12345第 1 行：正整数 n第 2 行：第 1 个学生的姓名 学号 成绩第 3 行：第 2 个学生的姓名 学号 成绩  ... ... ...第 n+1 行：第 n 个学生的姓名 学号 成绩
-其中姓名和学号均为不超过 10 个字符的字符串，成绩为 0 到 100 之间的一个整数，这里保证在一组测试用例中没有两个学生的成绩是相同的。
-输出格式：对每个测试用例输出 2 行，第 1 行是成绩最高学生的姓名和学号，第 2 行是成绩最低学生...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/02/02/PAT-1003-我要通过/" >
-            
-                <span>PAT 1003 我要通过</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：答案正确”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“答案正确”大派送 —— 只要读入的字符串满足下列条件，系统就输出“答案正确”，否则输出“答案错误”。
-得到“答案正确”的条件是：
-
-字符串中必须仅有 P、 A、 T这三种字符，不可以包含其它字符；
-任意形如 xPATx 的字符串都可以获得“答案正确”，其中 x 或者是空字符串，或者是仅由字母 A 组成的字符串；
-如果 aPbTc 是正确的，那么 aPbATca 也是正确的，其中 a、 b、 c 均或者是空字符串，或者是仅由字母 A 组成的字符串。
-
-现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/categories/PAT/page/2/">2</a><a class="extend next" rel="next" href="/categories/PAT/page/2/">NEXT &#62;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -5130,9 +5165,52 @@ tips:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 242
+        Total : 245
         </div>
         <!-- search  -->
         
@@ -5145,6 +5223,21 @@ tips:
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2021/02/10/PAT-1040-有几个PAT/" >PAT 1040.有几个PAT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2021/02/07/PAT-1033-旧键盘打字/" >PAT 1033.旧键盘打字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2021/02/06/PAT-1028-人口普查/" >PAT 1028.人口普查</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5193,12 +5286,12 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
         </li>
     
     
@@ -5747,12 +5840,12 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6321,7 +6414,7 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6331,12 +6424,12 @@ tips:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6379,8 +6472,6 @@ tips:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
@@ -6391,11 +6482,13 @@ tips:
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
@@ -6403,13 +6496,13 @@ tips:
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -6462,9 +6555,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -6472,9 +6565,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
-        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

@@ -346,6 +346,112 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/12/Leetcode-133-克隆图/" >
+            
+                <span>Leetcode 133. 克隆图</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你无向 连通 图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
+图中的每个节点都包含它的值 val（int） 和其邻居的列表（list[Node]）。
+1234class Node &#123;    public int val;    public List&lt;Node&gt; neighbors;&#125;
+测试用例格式：
+简单起见，每个节点的值都和它的索引相同。例如，第一个节点值为 1（val = 1），第二个节点值为 2（val = 2），以此类推。该图在测试用例中使用邻接列表表示。
+邻接列表 是用于表示有限图的无序列表的集合。每个列表都描述了图中节点的邻...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先遍历">广度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/11/Leetcode-130-被围绕的区域/" >
+            
+                <span>Leetcode 130. 被围绕的区域</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个二维的矩阵，包含 &#39;X&#39; 和 &#39;O&#39;（字母 O）。
+找到所有被 &#39;X&#39; 围绕的区域，并将这些区域里所有的 &#39;O&#39; 用 &#39;X&#39; 填充。
+示例:
+1234X X X XX O O XX X O XX O X X
+运行你的函数后，矩阵变为：
+1234X X X XX X X XX X X XX O X X
+解释:
+被围绕的区间不会存在于边界上，换句话说，任何边界上的 &#39;O&#39; 都不会被填充为 &#39;X&#39;。 任何不在边界上，或不与边界上的 &#39;O&#39; 相连的 &...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先遍历">广度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/10/Leetcode-696-计数二进制子串/" >
+            
+                <span>Leetcode 696. 计数二进制子串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1都是组合在一起的。
+重复出现的子串要计算它们出现的次数。
+示例 1 :
+1234567输入: &quot;00110011&quot;输出: 6解释: 有6个子串具有相同数量的连续1和0：“0011”，“01”，“1100”，“10”，“0011” 和 “01”。请注意，一些重复出现的子串要计算它们出现的次数。另外，“00110011”不是有效的子串，因为所有的0（和1）没有组合在一起。
+示例 2 :
+123输入: &quot;10101&quot;输出: 4解释: 有4个...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/08/09/Leetcode-93-复原IP地址/" >
             
                 <span>Leetcode 93. 复原IP地址</span>
@@ -589,120 +695,6 @@ num1 和num2 都不包含任何前导零。
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/Leetcode-114-二叉树展开为链表/" >
-            
-                <span>Leetcode 114. 二叉树展开为链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，原地将它展开为一个单链表。
-例如，给定二叉树
-12345    1   / \  2   5 / \   \3   4   6
-将其展开为：
-12345678910111 \  2   \    3     \      4       \        5         \          6
-思路：前序遍历，将先后遍历到的结点存储起来。
-最后将每个结点连接在前一个结点的右子树上，前一个结点的左子树置为空。
-tip:
-
-不知道这个算不算原地…
-
-代码如下：123456789101112131415161718192021222324252627282930...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >
-            
-                <span>Leetcode 5477. 排布二进制网格的最少交换次数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个 n x n 的二进制网格 grid，每一次操作中，你可以选择网格的 相邻两行 进行交换。
-一个符合要求的网格需要满足主对角线以上的格子全部都是 0 。
-请你返回使网格满足要求的最少操作次数，如果无法使网格符合要求，请你返回 -1 。
-主对角线指的是从 (1, 1) 到 (n, n) 的这些格子。
-示例 1：
-12输入：grid = [[0,0,1],[1,1,0],[1,0,0]]输出：3
-示例 2：
-123输入：grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]输出：-1解释：所有行都是一样的，交换相邻行无法使网格符合要...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >
-            
-                <span>Leetcode 5476. 找出数组游戏的赢家</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个由 不同 整数组成的整数数组 arr 和一个整数 k 。
-每回合游戏都在数组的前两个元素（即 arr[0] 和 arr[1] ）之间进行。比较 arr[0] 与 arr[1] 的大小，较大的整数将会取得这一回合的胜利并保留在位置 0 ，较小的整数移至数组的末尾。当一个整数赢得 k 个连续回合时，游戏结束，该整数就是比赛的 赢家 。
-返回赢得比赛的整数。
-题目数据 保证 游戏存在赢家。
-示例 1：
-12345输入：arr = [2,1,3,5,4,6,7], k = 2输出：5解释：一起看一下本场游戏每回合的情况：因此将进行 4 回合比赛，其中 5 是赢家，因为它连胜 2...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
     
 </div>
             
@@ -5195,9 +5187,52 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 242
+        Total : 245
         </div>
         <!-- search  -->
         
@@ -5210,6 +5245,21 @@ tip:
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2021/02/10/PAT-1040-有几个PAT/" >PAT 1040.有几个PAT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2021/02/07/PAT-1033-旧键盘打字/" >PAT 1033.旧键盘打字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2021/02/06/PAT-1028-人口普查/" >PAT 1028.人口普查</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5258,12 +5308,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
         </li>
     
     
@@ -5812,12 +5862,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6386,7 +6436,7 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6396,12 +6446,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6444,8 +6494,6 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
@@ -6456,11 +6504,13 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
@@ -6468,13 +6518,13 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -6527,9 +6577,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -6537,9 +6587,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
-        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

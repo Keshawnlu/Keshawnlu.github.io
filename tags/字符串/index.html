@@ -346,6 +346,106 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/10/PAT-1040-有几个PAT/" >
+            
+                <span>PAT 1040.有几个PAT</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：字符串 APPAPT 中包含了两个单词 PAT，其中第一个 PAT 是第 2 位(P)，第 4 位(A)，第 6 位(T)；第二个 PAT 是第 3 位(P)，第 4 位(A)，第 6 位(T)。
+现给定字符串，问一共可以形成多少个 PAT？
+输入格式：输入只有一行，包含一个字符串，长度不超过105，只包含 P、A、T 三种字母。
+输出格式：在一行中输出给定字符串中包含多少个 PAT。由于结果可能比较大，只输出对 1000000007 取余数的结果。
+输入样例：1APPAPT
+输出样例：12
+思路：从前往后遍历，PA的数量为当前A之前P的数量，PAT的数量为当前T之前PA的数量...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/07/PAT-1033-旧键盘打字/" >
+            
+                <span>PAT 1033.旧键盘打字</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及坏掉的那些键，打出的结果文字会是怎样？
+输入格式：输入在 2 行中分别给出坏掉的那些键、以及应该输入的文字。其中对应英文字母的坏键以大写给出；每段文字是不超过 105 个字符的串。可用的字符包括字母 [a-z, A-Z]、数字 0-9、以及下划线 _（代表空格）、,、.、-、+（代表上档键）。题目保证第 2 行输入的文字串非空。
+注意：如果上档键坏掉了，那么大写的英文字母无法被打出。
+输出格式：在一行中输出能够被打出的结果文字。如果没有一个字符能被打出，则输出空行。
+输入样例：12...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/07</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/06/PAT-1028-人口普查/" >
+            
+                <span>PAT 1028.人口普查</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。
+这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。
+输入格式：输入在第一行给出正整数 N，取值在(0,105]；随后 N 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 yyyy/mm/dd（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。
+输出格式：在一行中顺序输出有效生日的个数、最年长人和最...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/02/03/PAT-1009-说反话/" >
             
                 <span>PAT 1009.说反话</span>
@@ -601,121 +701,10 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/29/Leetcode-214-最短回文串/" >
-            
-                <span>Leetcode 214. 最短回文串</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。
-示例 1:
-12输入: &quot;aacecaaa&quot;输出: &quot;aaacecaaa&quot;
-示例 2:
-12输入: &quot;abcd&quot;输出: &quot;dcbabcd&quot;
-思路：第一次尝试用KMP方法做题，有点头疼。
-我们记s的逆转字符串为reverse_str，其实题目可以转换为s前缀和reverse_str后缀的最长公共部分，如下图所示：
-
-这时我们可以将模式串定义为s + # + reverse_str(#用来分割...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "KMP">KMP</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/28/Leetcode-657-机器人能否返回原点/" >
-            
-                <span>Leetcode 657. 机器人能否返回原点</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。
-移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。
-注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。
-示例 1:
-123输入: &quot;UD&quot;输出: true解释：机器人向上移动一次，然后向下...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/26/Leetcode-17-电话号码的字母组合/" >
-            
-                <span>Leetcode 17. 电话号码的字母组合</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
-给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
-
-示例:
-12输入：&quot;23&quot;输出：[&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
-思路：这题和昨天那题有异曲同工之妙，都要用到回溯。
-深度优先搜索，定义一个curpos来表示当前指...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/tags/字符串/page/2/">2</a><a class="page-number" href="/tags/字符串/page/3/">3</a><a class="extend next" rel="next" href="/tags/字符串/page/2/">NEXT &#62;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/tags/字符串/page/2/">2</a><a class="page-number" href="/tags/字符串/page/3/">3</a><a class="page-number" href="/tags/字符串/page/4/">4</a><a class="extend next" rel="next" href="/tags/字符串/page/2/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5198,9 +5187,52 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 242
+        Total : 245
         </div>
         <!-- search  -->
         
@@ -5213,6 +5245,21 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span><a class="archive-post-title" href= "/2021/02/10/PAT-1040-有几个PAT/" >PAT 1040.有几个PAT</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/07</span><a class="archive-post-title" href= "/2021/02/07/PAT-1033-旧键盘打字/" >PAT 1033.旧键盘打字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span><a class="archive-post-title" href= "/2021/02/06/PAT-1028-人口普查/" >PAT 1028.人口普查</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5261,12 +5308,12 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-6-jlh的童年1/" >浙工商OJ 6.jlh的童年1</a>
+            <span class="archive-post-date">02/02</span><a class="archive-post-title" href= "/2021/02/02/浙工商OJ-5-jlh吃水果/" >浙工商OJ 5.jlh吃水果</a>
         </li>
     
     
@@ -5815,12 +5862,12 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6389,7 +6436,7 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
         </li>
     
     
@@ -6399,12 +6446,12 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6447,8 +6494,6 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
@@ -6459,11 +6504,13 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
-        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
@@ -6471,13 +6518,13 @@ reverse()函数需要注意循环中的s[i + left]，并且i从0...
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -6530,9 +6577,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -6540,9 +6587,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
-        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
