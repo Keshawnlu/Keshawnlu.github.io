@@ -346,6 +346,193 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/11/数据挖掘期末复习汇总/" >
+            
+                <span>数据挖掘期末复习汇总</span>
+        </a>
+        <div class="abstract-content">
+            第一章1.2  什么是数据挖掘？数据挖掘是从大量数据中挖掘有趣模式和知识的过程。
+知识发现过程步骤：
+
+数据清理
+数据集成
+数据选择
+数据变换
+数据挖掘
+模式评估
+知识表示
+
+1.3 输入什么类型
+数据库数据
+数据仓库
+事务数据
+其他类型（数据流，空间数据等）
+
+1.4 输出什么类型
+特征化与区分
+频繁模式
+关联和相关性挖掘
+分类和回归
+聚类分析
+离群点分析
+
+第二章2.1 属性类型
+标称属性
+二元属性
+序数属性
+数值属性
+
+2.2 统计描述基本概念
+均值
+
+中位数
+
+众数
+
+加权平均
+
+极差（最大值和最小值之差）
+
+四分位数（Q_{i},i=1,2,3）
+
+四分位数极差（IQR=Q_{...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/11</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/29/Leetcode-976-三角形的最大周长/" >
+            
+                <span>Leetcode 976. 三角形的最大周长</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定由一些正数（代表长度）组成的数组 A，返回由其中三个长度组成的、面积不为零的三角形的最大周长。
+如果不能形成任何面积不为零的三角形，返回 0。
+示例 1：
+12输入：[2,1,2]输出：5
+示例 2：
+12输入：[1,2,1]输出：0
+示例 3：
+12输入：[3,2,3,4]输出：10
+示例 4：
+12输入：[3,6,2,3]输出：8
+提示：
+
+3 &lt;= A.length &lt;= 10000
+1 &lt;= A[i] &lt;= 10^6
+
+思路：先进行排序，然后从大到小的进行遍历，若不满足两边之和大于第三边的条件时，则继续遍历，否则返回答案。
+代码如下：1234...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/25/Leetcode-1370-上升下降字符串/" >
+            
+                <span>Leetcode 1370. 上升下降字符串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个字符串 s ，请你根据下面的算法重新构造字符串：
+
+从 s 中选出 最小 的字符，将它 接在 结果字符串的后面。
+从 s 剩余字符中选出 最小 的字符，且该字符比上一个添加的字符大，将它 接在 结果字符串后面。
+重复步骤 2 ，直到你没法从 s 中选择字符。
+从 s 中选出 最大 的字符，将它 接在 结果字符串的后面。
+从 s 剩余字符中选出 最大 的字符，且该字符比上一个添加的字符小，将它 接在 结果字符串后面。
+重复步骤 5 ，直到你没法从 s 中选择字符。
+重复步骤 1 到 6 ，直到 s 中所有字符都已经被选过。
+
+在任何一步中，如果最小或者最大字符不止一个 ，...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/24/Leetcode-222-完全二叉树的节点个数/" >
+            
+                <span>Leetcode 222. 完全二叉树的节点个数</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给出一个完全二叉树，求出该树的节点个数。
+说明：
+完全二叉树的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ $2^h$个节点。
+示例:
+12345678输入:     1   / \  2   3 / \  /4  5 6输出: 6
+思路：广度优先搜索，若当前层数的结点数不等于$2^{h-1}$，则说明这层为最后一层，直接返回size + res即可。
+否则，遍历每层的结点，将其加入队列中。
+代码如下：12345678910111213141516171...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/11/23/Leetcode-452-用最少数量的箭引爆气球/" >
             
                 <span>Leetcode 452. 用最少数量的箭引爆气球</span>
@@ -556,170 +743,10 @@ tip:
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/20/Leetcode-147-对链表进行插入排序/" >
-            
-                <span>Leetcode 147. 对链表进行插入排序</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：对链表进行插入排序。
-插入排序算法：
-
-插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。
-每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。
-重复直到所有输入数据插入完为止。
-
-示例 1：
-12输入: 4-&gt;2-&gt;1-&gt;3输出: 1-&gt;2-&gt;3-&gt;4
-示例 2：
-12输入: -1-&gt;5-&gt;3-&gt;4-&gt;0输出: -1-&gt;0-&gt;3-&gt;4-&gt;5
-思路：每次在插入元素时，都从前往后找到正确的插入位置。
-tip:
-
-当待插入的元素为...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/15/Leetcode-402-移掉K位数字/" >
-            
-                <span>Leetcode 402. 移掉K位数字</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个以字符串表示的非负整数 num，移除这个数中的 k 位数字，使得剩下的数字最小。
-注意:
-
-num 的长度小于 10002 且 ≥ k。
-num 不会包含任何前导零。
-
-示例 1 :
-123输入: num = &quot;1432219&quot;, k = 3输出: &quot;1219&quot;解释: 移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219。
-示例 2 :
-123输入: num = &quot;10200&quot;, k = 1输出: &quot;200&quot;解释: 移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/14/Leetcode-922-按奇偶排序数组-II/" >
-            
-                <span>Leetcode 922. 按奇偶排序数组 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。
-对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。
-你可以返回任何满足上述条件的数组作为答案。
-示例：
-123输入：[4,2,5,7]输出：[4,5,2,7]解释：[4,7,2,5]，[2,5,4,7]，[2,7,4,5] 也会被接受。
-提示：
-
-2 &lt;= A.length &lt;= 20000
-A.length % 2 == 0
-0 &lt;= A[i] &lt;= 1000
-
-思路：首先将数组A整个赋值给res，并在其基础上修改res。
-若当前位置的元...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/14/Leetcode-328-奇偶链表/" >
-            
-                <span>Leetcode 328. 奇偶链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
-请尝试使用原地算法完成。你的算法的空间复杂度应为 O(1)，时间复杂度应为 O(nodes)，nodes 为节点总数。
-示例 1:
-12输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL
-示例 2:
-12输入: 2-&gt;1-&gt;3-&gt;5-&gt;6-&gt;4-&gt;7-&gt;NULL 输出: 2-&gt;3-&gt;6-&...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/2/">&#60; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/archives/page/2/">&#60; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/26/">26</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5263,9 +5290,77 @@ A.length % 2 == 0
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 247
+        Total : 251
         </div>
         <!-- search  -->
         
@@ -5281,12 +5376,32 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2021/02/13/PAT-1045-快速排序/" >PAT 1045.快速排序</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1067-试密码/" >PAT 1067.试密码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/14</span><a class="archive-post-title" href= "/2021/02/14/PAT-1054-求平均值/" >PAT 1054.求平均值</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2021/02/13/PAT-1049-数列的片段和/" >PAT 1049.数列的片段和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2021/02/13/PAT-1045-快速排序/" >PAT 1045.快速排序</a>
         </li>
     
     
@@ -5306,12 +5421,12 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
@@ -5326,17 +5441,17 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1005-继续-3n-1-猜想/" >PAT 1005.继续(3n+1)猜想</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1008-数组元素循环右移问题/" >PAT 1008.数组元素循环右移问题</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1009-说反话/" >PAT 1009.说反话</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1005-继续-3n-1-猜想/" >PAT 1005.继续(3n+1)猜想</a>
         </li>
     
     
@@ -6295,12 +6410,12 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -6345,12 +6460,12 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
         </li>
     
     
@@ -6474,6 +6589,11 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
@@ -6484,17 +6604,12 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/孙沁文《凛冬之棺》/" >孙沁文《凛冬之棺》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《信》/" >东野圭吾《信》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
         </li>
     
     
@@ -6514,12 +6629,12 @@ A.length % 2 == 0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/李若楠《我的温柔是锋芒》/" >李若楠《我的温柔是锋芒》</a>
         </li>
     
     
@@ -6545,11 +6660,11 @@ A.length % 2 == 0
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
-    
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
@@ -6563,19 +6678,19 @@ A.length % 2 == 0
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
-        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
-    
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
-        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
-    
         <span class="sidebar-tag-name" data-tags="KMP"><span class="iconfont-archer">&#xe606;</span>KMP</span>
+    
+        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
@@ -6620,19 +6735,19 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
-    
         <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
+    
+        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
+        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
+    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
     
         <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
-        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
