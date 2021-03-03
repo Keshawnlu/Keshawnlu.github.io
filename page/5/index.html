@@ -359,6 +359,187 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/10/Leetcode-31-下一个排列/" >
+            
+                <span>Leetcode 31. 下一个排列</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
+如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+必须原地修改，只允许使用额外常数空间。
+以下是一些例子，输入位于左侧列，其相应输出位于右侧列。
+1231,2,3 → 1,3,23,2,1 → 1,2,31,1,5 → 1,5,1
+思路：这题看了题解以后感觉还是有点懵懵的，像是脑筋急转弯题一样，下面是个人的一点理解。
+首先是从后往前遍历，找到第一个破坏升序的元素位置pos（即nums[pos ... ]为降序数组），由于降序是最大的序列，所以我们先将后面降序的数组翻转，...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/09/Leetcode-127-单词接龙/" >
+            
+                <span>Leetcode 127. 单词接龙</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定两个单词（beginWord 和 endWord）和一个字典，找到从 beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：
+
+每次转换只能改变一个字母。
+转换过程中的中间单词必须是字典中的单词。
+
+说明:
+
+如果不存在这样的转换序列，返回 0。
+所有单词具有相同的长度。
+所有单词只由小写字母组成。
+字典中不存在重复的单词。
+你可以假设 beginWord 和 endWord 是非空的，且二者不相同。
+
+示例 1:
+123456789输入:beginWord = &quot;hit&quot;,endWord = &quot;cog&quot;,...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/09/Leetcode-122-买卖股票的最佳时机-II/" >
+            
+                <span>Leetcode 122. 买卖股票的最佳时机 II</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+示例 1:
+1234输入: [7,1,5,3,6,4]输出: 7解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/09/Leetcode-973-最接近原点的-K-个点/" >
+            
+                <span>Leetcode 973. 最接近原点的 K 个点</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：我们有一个由平面上的点组成的列表 points。需要从中找出 K 个距离原点 (0, 0) 最近的点。
+（这里，平面上两点之间的距离是欧几里德距离。）
+你可以按任何顺序返回答案。除了点坐标的顺序之外，答案确保是唯一的。
+示例 1：
+1234567输入：points = [[1,3],[-2,2]], K = 1输出：[[-2,2]]解释： (1, 3) 和原点之间的距离为 sqrt(10)，(-2, 2) 和原点之间的距离为 sqrt(8)，由于 sqrt(8) &lt; sqrt(10)，(-2, 2) 离原点更近。我们只需要距离原点最近的 K = 1 个点，所以答案就是 [...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/11/03/Leetcode-463-岛屿的周长/" >
+            
+                <span>Leetcode 463. 岛屿的周长</span>
+        </a>
+        <div class="abstract-content">
+            给定一个包含 0 和 1 的二维网格地图，其中 1 表示陆地 0 表示水域。
+网格中的格子水平和垂直方向相连（对角线方向不相连）。整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。
+岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。格子是边长为 1 的正方形。网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。
+示例 :
+123456789输入:[[0,1,0,0], [1,1,1,0], [0,1,0,0], [1,1,0,0]] 输出: 16解释: 它的周长是下面图片中的 16 个黄色的边：
+
+思路：每个陆地...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/11/03/Leetcode-349-两个数组的交集/" >
             
                 <span>Leetcode 349. 两个数组的交集</span>
@@ -545,186 +726,6 @@ A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/27/Leetcode-845-数组中的最长山脉/" >
-            
-                <span>Leetcode 845. 数组中的最长山脉</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：我们把数组 A 中符合下列属性的任意连续子数组 B 称为 “山脉”：
-
-B.length &gt;= 3
-存在 0 &lt; i &lt; B.length - 1 使得 B[0] &lt; B[1] &lt; ... B[i-1] &lt; B[i] &gt; B[i+1] &gt; ... &gt; B[B.length - 1]
-
-（注意：B 可以是 A 的任意子数组，包括整个数组 A。）
-给出一个整数数组 A，返回最长 “山脉 ” 的长度。
-如果不含有 “山脉 ” 则返回 0。
-示例 1：
-123输入：[2,1,4,7,3,2,5]输出：5解释：最长的 “山脉” 是 [...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/24/Leetcode-1024-视频拼接/" >
-            
-                <span>Leetcode 1024. 视频拼接</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。
-视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 clips[i][1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。
-我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。
-示例 1：
-1234567输入：clips = [[0,2],[4,6...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/23/Leetcode-234-回文链表/" >
-            
-                <span>Leetcode 234. 回文链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：请判断一个链表是否为回文链表。
-示例 1:
-12输入: 1-&gt;2输出: false
-示例 2:
-12输入: 1-&gt;2-&gt;2-&gt;1输出: true
-进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
-思路：
-找到中间结点(若长度为奇数，则返回第n/2 + 1个结点；若长度为偶数，则返回第n/2个结点)
-切断前后两半，将后一半逆转
-前后链表逐个进行比较，若最后前一半链表剩下的结点数不超过1，则说明为回文链表
-
-代码如下：123456789101112131415161718192021222324252627282930313233343...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/22/Leetcode-763-划分字母区间/" >
-            
-                <span>Leetcode 763. 划分字母区间</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：字符串 S 由小写字母组成。我们要把这个字符串划分为尽可能多的片段，同一个字母只会出现在其中的一个片段。返回一个表示每个字符串片段的长度的列表。
-示例 1：
-123456输入：S = &quot;ababcbacadefegdehijhklij&quot;输出：[9,7,8]解释：划分结果为 &quot;ababcbaca&quot;, &quot;defegde&quot;, &quot;hijhklij&quot;。每个字母最多出现在一个片段中。像 &quot;ababcbacadefegde&quot;, &quot;hijhklij&quot; 的划分是错误的，因为划分...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "贪心">贪心</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/10/21/Leetcode-925-长按键入/" >
-            
-                <span>Leetcode 925. 长按键入</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。
-你将会检查键盘输入的字符 typed。如果它对应的可能是你的朋友的名字（其中一些字符可能被长按），那么就返回 True。
-示例 1：
-123输入：name = &quot;alex&quot;, typed = &quot;aaleex&quot;输出：true解释：&apos;alex&apos; 中的 &apos;a&apos; 和 &apos;e&apos; 被长按。
-示例 2：
-123输入：name = &quot;saeed&quot;, type...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
     
 </div>
             
@@ -5464,9 +5465,54 @@ B.length &gt;= 3
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 251
+        Total : 256
         </div>
         <!-- search  -->
         
@@ -5482,12 +5528,37 @@ B.length &gt;= 3
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY52-位操作练习/" >牛客网 KY52.位操作练习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY68-子串计算/" >牛客网 KY68.子串计算</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY41-放苹果/" >牛客网 KY41.放苹果</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1067-试密码/" >PAT 1067.试密码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
         </li>
     
     
@@ -5527,12 +5598,12 @@ B.length &gt;= 3
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
@@ -6126,12 +6197,12 @@ B.length &gt;= 3
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6700,6 +6771,11 @@ B.length &gt;= 3
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
         </li>
     
@@ -6721,11 +6797,6 @@ B.length &gt;= 3
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6758,8 +6829,6 @@ B.length &gt;= 3
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
@@ -6768,11 +6837,13 @@ B.length &gt;= 3
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
-    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
@@ -6784,9 +6855,9 @@ B.length &gt;= 3
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
-        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
@@ -6794,9 +6865,9 @@ B.length &gt;= 3
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
-        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
-    
         <span class="sidebar-tag-name" data-tags="KMP"><span class="iconfont-archer">&#xe606;</span>KMP</span>
+    
+        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
@@ -6841,19 +6912,21 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
+        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="牛客网"><span class="iconfont-archer">&#xe60a;</span>牛客网</span>
+    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
     
         <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
-        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

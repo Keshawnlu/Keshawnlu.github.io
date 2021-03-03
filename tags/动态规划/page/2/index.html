@@ -346,6 +346,119 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/05/Leetcode-337-打家劫舍-III/" >
+            
+                <span>Leetcode 337. 打家劫舍 III</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：在上次打劫完一条街道之后和一圈房屋后，小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为“根”。 除了“根”之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。
+计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
+示例 1:
+12345678910输入: [3,2,3,null,3,null,1]     3    / \   2   3    \   \      3   1     输出: 7 解释: 小偷一晚能够盗取的最高金...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/30/Leetcode-343-整数拆分/" >
+            
+                <span>Leetcode 343. 整数拆分</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个正整数 n，将其拆分为至少两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
+示例 1:
+123输入: 2输出: 1解释: 2 = 1 + 1, 1 × 1 = 1。
+示例 2:
+123输入: 10输出: 36解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。
+说明: 你可以假设 n 不小于 2 且不大于 58。
+思路：动态规划，dp[i]代表正整数i，拆分为至少两个正整数的和，并使这些整数的乘积最大化，可以获得的最大乘积。
+所以对于一个正整数i &gt;= 2，乘积的最大值存在以下两种情况：
+
+将i分为j, i - j，并且i ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/25/Leetcode-410-分割数组的最大值/" >
+            
+                <span>Leetcode 410. 分割数组的最大值</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个非负整数数组和一个整数 m，你需要将这个数组分成 m 个非空的连续子数组。设计一个算法使得这 m 个子数组各自和的最大值最小。
+注意:数组长度 n 满足以下条件:
+
+1 ≤ n ≤ 1000
+1 ≤ m ≤ min(50, n)
+
+示例:
+1234567891011输入:nums = [7,2,5,10,8]m = 2输出:18解释:一共有四种方法将nums分割为2个子数组。其中最好的方式是将其分为[7,2,5] 和 [10,8]，因为此时这两个子数组各自的和的最大值为18，在所有情况中最小。
+思路：动态规划，dp[i][j]代表前i个数字分成j段，所有情况下，其各段和...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/23/Leetcode-64-最小路径和/" >
             
                 <span>Leetcode 64. 最小路径和</span>
@@ -579,108 +692,6 @@
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/09/Leetcode-面试题-17-13-恢复空格/" >
-            
-                <span>Leetcode 面试题 17.13. 恢复空格</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：哦，不！你不小心把一个长篇文章中的空格、标点都删掉了，并且大写也弄成了小写。像句子I reset the computer. It still didn’t boot!已经变成了&quot;iresetthecomputeritstilldidntboot&quot;。在处理标点符号和大小写之前，你得先把它断成词语。当然了，你有一本厚厚的词典dictionary，不过，有些词没在词典里。假设文章用sentence表示，设计一个算法，把文章断开，要求未识别的字符最少，返回未识别的字符数。
-示例：
-12345输入：dictionary = [&quot;looked&quot;,&...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/06/Leetcode-63-不同路径-II/" >
-            
-                <span>Leetcode 63. 不同路径 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
-机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
-现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
-
-网格中的障碍物和空位置分别用 1 和 0 来表示。
-说明：m 和 n 的值均不超过 100。
-示例 1:
-123456789101112输入:[  [0,0,0],  [0,1,0],  [0,0,0]]输出: 2解释:3x3 网格的正中间有一个障碍物。从左上角到右下角一共有 2 条不同的路径：1. 向右 -&gt; 向...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/05/Leetcode-5454-统计全-1-子矩形/" >
-            
-                <span>Leetcode 5454. 统计全 1 子矩形</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一个只包含 0 和 1 的 rows * columns 矩阵 mat ，请你返回有多少个 子矩形 的元素全部都是 1 。
-示例 1：
-1234567891011输入：mat = [[1,0,1],            [1,1,0],            [1,1,0]]输出：13解释：有 6 个 1x1 的矩形。有 2 个 1x2 的矩形。有 3 个 2x1 的矩形。有 1 个 2x2 的矩形。有 1 个 3x1 的矩形。矩形数目总共 = 6 + 2 + 3 + 1 + 1 = 13 。
-示例 2：
-12345678910111213输入：mat = [[0,1,1...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
     
 </div>
             
@@ -5314,9 +5325,54 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 251
+        Total : 256
         </div>
         <!-- search  -->
         
@@ -5332,12 +5388,37 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY52-位操作练习/" >牛客网 KY52.位操作练习</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY68-子串计算/" >牛客网 KY68.子串计算</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY41-放苹果/" >牛客网 KY41.放苹果</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1067-试密码/" >PAT 1067.试密码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
         </li>
     
     
@@ -5377,12 +5458,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
@@ -5976,12 +6057,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5476-找出数组游戏的赢家/" >Leetcode 5476. 找出数组游戏的赢家</a>
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2020/08/02/Leetcode-5477-排布二进制网格的最少交换次数/" >Leetcode 5477. 排布二进制网格的最少交换次数</a>
         </li>
     
     
@@ -6550,6 +6631,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《红手指》/" >东野圭吾《红手指》</a>
         </li>
     
@@ -6571,11 +6657,6 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -6608,8 +6689,6 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
@@ -6618,11 +6697,13 @@
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
-    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
+    
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
@@ -6634,9 +6715,9 @@
     
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
-        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
-    
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
@@ -6644,9 +6725,9 @@
     
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
     
-        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
-    
         <span class="sidebar-tag-name" data-tags="KMP"><span class="iconfont-archer">&#xe606;</span>KMP</span>
+    
+        <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
@@ -6691,19 +6772,21 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
-    
         <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
+    
+        <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
         <span class="sidebar-category-name" data-categories="2019推理小说阅读计划"><span class="iconfont-archer">&#xe60a;</span>2019推理小说阅读计划</span>
     
+        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="牛客网"><span class="iconfont-archer">&#xe60a;</span>牛客网</span>
+    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
     
         <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
-        <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
