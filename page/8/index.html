@@ -359,6 +359,193 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/12/Leetcode-530-二叉搜索树的最小绝对差/" >
+            
+                <span>Leetcode 530. 二叉搜索树的最小绝对差</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。
+ 示例：
+12345678910111213输入：   1    \     3    /   2   输出：1解释：最小绝对差为 1，其中 2 和 1 的差的绝对值为 1（或者 2 和 3）。
+提示：
+
+树中至少有 2 个节点。
+
+思路：由于是二叉搜索树，所以其中序遍历必是一个升序序列。
+所以我们定义一个pre来保存root的中序遍历前驱结点，在遍历过程中依次相减，并保存最小值，最后返回即可。
+代码如下：123456789101112131415161718192021222324252627...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/11/Leetcode-416-分割等和子集/" >
+            
+                <span>Leetcode 416. 分割等和子集</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+注意:
+
+每个数组中的元素不会超过 100
+数组的大小不会超过 200
+
+示例 1:
+12345输入: [1, 5, 11, 5]输出: true解释: 数组可以分割成 [1, 5, 5] 和 [11].
+示例 2:
+12345输入: [1, 2, 3, 5]输出: false解释: 数组不能分割成两个元素和相等的子集.
+思路：我们记所有元素的和为sum，由于sum为奇数时，无法分成两个相同的和，所以直接返回false。
+当sum为偶数时，我们需要知道是否能找到一种选数字的方案，使其和...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/10/Leetcode-142-环形链表-II/" >
+            
+                <span>Leetcode 142. 环形链表 II</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+说明：不允许修改给定的链表。
+示例 1：
+123输入：head = [3,2,0,-4], pos = 1输出：tail connects to node index 1解释：链表中有一个环，其尾部连接到第二个节点。
+
+进阶：你是否可以不用额外空间解决此题？
+思路：在昨天的题目上进行修改，这回需要找的是入环点。
+
+我们可以根据上图进行数学公式的推导：
+设链...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/09/Leetcode-141-环形链表/" >
+            
+                <span>Leetcode 141. 环形链表</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个链表，判断链表中是否有环。
+如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
+如果链表中存在环，则返回 true 。 否则，返回 false 。
+进阶：
+你能用 O(1)（即，常量）内存解决此问题吗？
+示例 1：
+
+123输入：head = [3,2,0,-4], pos = 1输出：true解释：链表中有一个环，其尾部连接到第二个...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/08/Leetcode-344-反转字符串/" >
+            
+                <span>Leetcode 344. 反转字符串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
+不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。
+你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。
+示例 1：
+12输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]
+示例 2：...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/10/07/Leetcode-75-颜色分类/" >
             
                 <span>Leetcode 75. 颜色分类</span>
@@ -538,199 +725,10 @@ J 中的字符...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/30/Leetcode-701-二叉搜索树中的插入操作/" >
-            
-                <span>Leetcode 701. 二叉搜索树中的插入操作</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据保证，新值和原始二叉搜索树中的任意节点值都不同。
-注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回任意有效的结果。
-例如, 
-123456789给定二叉搜索树:        4       / \      2   7     / \    1   3和 插入的值: 5
-你可以返回这个二叉搜索树:
-12345     4   /   \  2     7 / \   /1   3 5
-或者这个树也是有效的:
-     5
-   /...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/29/Leetcode-145-二叉树的后序遍历/" >
-            
-                <span>Leetcode 145. 二叉树的后序遍历</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，返回它的 后序 遍历。
-示例:
-12345678输入: [1,null,2,3]     1    \     2    /   3 输出: [3,2,1]
-进阶: 递归算法很简单，你可以通过迭代算法完成吗？
-思路：递归的算法就不说了，很熟练了。
-说说迭代的方法，也就是把递归栈显式的表达出来。这时需要将处理的节点放入栈之后，紧接着放入一个空指针作为标记。
-这种方法对于前中后序遍历都可用，只需交换次序即可。
-代码如下：12345678910111213141516171819202122232425262728293031323334353637383940414...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/28/Leetcode-117-填充每个节点的下一个右侧节点指针-II/" >
-            
-                <span>Leetcode 117. 填充每个节点的下一个右侧节点指针 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树
-123456struct Node &#123;  int val;  Node *left;  Node *right;  Node *next;&#125;
-填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。
-初始状态下，所有 next 指针都被设置为 NULL。
- 示例：
-
-123输入：root = [1,2,3,4,5,null,7]输出：[1,#,2,3,#,4,5,7,#]解释：给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/27/Leetcode-235-二叉搜索树的最近公共祖先/" >
-            
-                <span>Leetcode 235. 二叉搜索树的最近公共祖先</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
-百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
-例如，给定如下二叉搜索树: root = [6,2,8,0,4,7,9,null,null,3,5]
-
-示例 1:
-[]: 
-123输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8输出: 6 解释: 节点 2 和节点 8 的最近公共祖先是 6。
-示例 2:
-123输入: ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/26/Leetcode-113-路径总和-II/" >
-            
-                <span>Leetcode 113. 路径总和 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
-说明: 叶子节点是指没有子节点的节点。
-示例:给定如下二叉树，以及目标和 sum = 22，
-          5
-         / \
-        4   8
-       /   / \
-      11  13  4
-     /  \    / \
-    7    2  5   1
-返回:
-1234[   [5,4,11,2],   [5,8,4,5]]
-思路：关于树的回溯题，其实和数组的差不多，需要注意的是结点的val值可能为负的。
-代码如下：12345678910111...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/7/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/9/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/7/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/9/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5580,9 +5578,58 @@ J 中的字符...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 259
+        Total : 264
         </div>
         <!-- search  -->
         
@@ -5598,12 +5645,37 @@ J 中的字符...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >吴恩达团队NLP C2_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W3-Assignment/" >吴恩达团队NLP C2_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >吴恩达团队NLP C2_W4_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W1-Assignment/" >吴恩达团队NLP C1_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
         </li>
     
     
@@ -5623,12 +5695,12 @@ J 中的字符...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
@@ -5638,12 +5710,12 @@ J 中的字符...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
         </li>
     
     
@@ -6672,12 +6744,12 @@ J 中的字符...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -6914,17 +6986,17 @@ J 中的字符...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
-        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
-    
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
+        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     

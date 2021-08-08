@@ -359,6 +359,193 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/25/Leetcode-410-分割数组的最大值/" >
+            
+                <span>Leetcode 410. 分割数组的最大值</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个非负整数数组和一个整数 m，你需要将这个数组分成 m 个非空的连续子数组。设计一个算法使得这 m 个子数组各自和的最大值最小。
+注意:数组长度 n 满足以下条件:
+
+1 ≤ n ≤ 1000
+1 ≤ m ≤ min(50, n)
+
+示例:
+1234567891011输入:nums = [7,2,5,10,8]m = 2输出:18解释:一共有四种方法将nums分割为2个子数组。其中最好的方式是将其分为[7,2,5] 和 [10,8]，因为此时这两个子数组各自的和的最大值为18，在所有情况中最小。
+思路：动态规划，dp[i][j]代表前i个数字分成j段，所有情况下，其各段和...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/23/Leetcode-64-最小路径和/" >
+            
+                <span>Leetcode 64. 最小路径和</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+说明：每次只能向下或者向右移动一步。
+示例:
+12345678输入:[  [1,3,1],  [1,5,1],  [4,2,1]]输出: 7解释: 因为路径 1→3→1→1→1 的总和最小。
+思路：动态规划，dp[i][j]代表以grid[i][j]为右下角时的最小路径和。
+首先初始化第一行和第一列。
+由于每次只能向下或者向右移动一步，所以dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]。
+最后返回dp[grid...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/22/Leetcode-剑指-Offer-11-旋转数组的最小数字/" >
+            
+                <span>Leetcode 剑指 Offer 11. 旋转数组的最小数字</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。 
+示例 1：
+12输入：[3,4,5,1,2]输出：1
+示例 2：
+12输入：[2,2,2,0,1]输出：0
+思路：摸鱼做法：直接sort，返回数组最小值即可。
+二分做法：设最小值在数组的下标为min，将每次的numbers[mid]与numbers[right]比较，存在三种情况：
+
+numbers[mid] &lt; numbers[right]，此时mi...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/21/Leetcode-95-不同的二叉搜索树-II/" >
+            
+                <span>Leetcode 95. 不同的二叉搜索树 II</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个整数 n，生成所有由 1 … n 为节点所组成的 二叉搜索树 。
+示例：
+1234567891011121314151617输入：3输出：[  [1,null,3,2],  [3,2,null,1],  [3,1,null,null,2],  [2,1,3],  [1,null,2,null,3]]解释：以上的输出对应以下 5 种不同结构的二叉搜索树：   1         3     3      2      1    \       /     /      / \      \     3     2     1      1   3      2    / ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "递归">递归</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/20/Leetcode-167-两数之和-II-输入有序数组/" >
+            
+                <span>Leetcode 167. 两数之和 II - 输入有序数组</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个已按照 升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
+函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
+说明:
+
+返回的下标值（index1 和 index2）不是从零开始的。
+你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+
+示例:
+123输入: numbers = [2, 7, 11, 15], target = 9输出: [1,2]解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
+思路：双指针，一共有三种情况：
+
+number...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/20</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/19/Leetcode-312-戳气球/" >
             
                 <span>Leetcode 312. 戳气球</span>
@@ -533,193 +720,10 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/14/Leetcode-120-三角形最小路径和/" >
-            
-                <span>Leetcode 120. 三角形最小路径和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。
-相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。
-例如，给定三角形：
-123456[     [2],    [3,4],   [6,5,7],  [4,1,8,3]]
-自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。
-思路：动态规划，dp[i][j]代表从起点开始走到(i, j)点的最小路径和。
-首先初始化第一列和最后一列(处理边界问题)。
-由于(i, j)只能从(i - 1, j)和(i - 1, j - 1)两个...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/13/Leetcode-350-两个数组的交集-II/" >
-            
-                <span>Leetcode 350. 两个数组的交集 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个数组，编写一个函数来计算它们的交集。
-示例 1：
-12输入：nums1 = [1,2,2,1], nums2 = [2,2]输出：[2,2]
-示例 2:
-12输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]输出：[4,9]
-说明：
-
-输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。
-我们可以不考虑输出结果的顺序。
-
-思路：先将两个数组进行排序(从小到大)，然后设置两个指针分别指向两个数组的开头。
-当nums1[i] == nums2[j]，将目标值压入结果数组，然后两个指针都往后移动一位。
-若nums1[i] &lt...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/12/Leetcode-174-地下城游戏/" >
-            
-                <span>Leetcode 174. 地下城游戏</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：一些恶魔抓住了公主（P）并将她关在了地下城的右下角。地下城是由 M x N 个房间组成的二维网格。我们英勇的骑士（K）最初被安置在左上角的房间里，他必须穿过地下城并通过对抗恶魔来拯救公主。
-骑士的初始健康点数为一个正整数。如果他的健康点数在某一时刻降至 0 或以下，他会立即死亡。
-有些房间由恶魔守卫，因此骑士在进入这些房间时会失去健康点数（若房间里的值为负整数，则表示骑士将损失健康点数）；其他房间要么是空的（房间里的值为 0），要么包含增加骑士健康点数的魔法球（若房间里的值为正整数，则表示骑士将增加健康点数）。
-为了尽快到达公主，骑士决定每次只向右或向下移动一步。
-编写一个函数...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/11/Leetcode-315-计算右侧小于当前元素的个数/" >
-            
-                <span>Leetcode 315. 计算右侧小于当前元素的个数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数数组 nums，按要求返回一个新数组 counts。数组 counts 有该性质： counts[i] 的值是 nums[i] 右侧小于 nums[i] 的元素的数量。
-示例:
-1234567输入: [5,2,6,1]输出: [2,1,1,0] 解释:5 的右侧有 2 个更小的元素 (2 和 1).2 的右侧仅有 1 个更小的元素 (1).6 的右侧有 1 个更小的元素 (1).1 的右侧有 0 个更小的元素.
-思路：一开始直接用暴力法，然后很顺其自然的挂了。
-后来用了二分查找，即从后往前遍历，每次将遍历到的元素与sorted_arr中的元素进行比较，从而得出右侧小...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/Leetcode-309-最佳买卖股票时机含冷冻期/" >
-            
-                <span>Leetcode 309. 最佳买卖股票时机含冷冻期</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。
-设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:
-
-你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
-卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
-
-示例:
-123输入: [1,2,3,0,2]输出: 3 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
-思路：一开始自己想到的动态规划方法参照了昨天做的 恢复空格 的方法，dp[i]代表第i天结束后的最大收益。
-首先dp[i] = dp[i - 1]进行初始化...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/15/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/17/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/page/15/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/17/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5569,9 +5573,58 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 259
+        Total : 264
         </div>
         <!-- search  -->
         
@@ -5587,12 +5640,37 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >吴恩达团队NLP C2_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W3-Assignment/" >吴恩达团队NLP C2_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >吴恩达团队NLP C2_W4_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W1-Assignment/" >吴恩达团队NLP C1_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
         </li>
     
     
@@ -5612,12 +5690,12 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
@@ -5627,12 +5705,12 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
         </li>
     
     
@@ -6661,12 +6739,12 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -6903,17 +6981,17 @@ graph将会以邻接表方式给出，graph[i]表示图中与节点i相连的所
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
-        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
-    
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
+        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     

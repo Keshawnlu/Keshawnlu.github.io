@@ -346,6 +346,170 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >
+            
+                <span>吴恩达团队NLP C2_W4_Assignment</span>
+        </a>
+        <div class="abstract-content">
+            吴恩达团队NLP C2_W4_Assignment任务：计算单词嵌入并用于情感分析Part1：The Continuous bag of words model（CBOW）在这个模型下，我们给出上下文的单词，并尝试判断中间词。
+如有个字符串为：I am happy because I am learning
+我们设C = 2 ，当我们要预测happy时，则：
+
+𝐶 words before: [I, am]
+𝐶 words after: [because, I]
+
+模型结构图如下：
+
+其中$\bar x$为：
+
+公式如下：
+\begin{align} h &= W_1 \  X + ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "吴恩达团队NLP">吴恩达团队NLP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/08/吴恩达团队NLP-C2-W3-Assignment/" >
+            
+                <span>吴恩达团队NLP C2_W3_Assignment</span>
+        </a>
+        <div class="abstract-content">
+            吴恩达团队NLP C2_W3_Assignment任务：自动完成系统Part1：处理数据1.1  将文本数据切割成一行一个字符串12345678910111213141516171819def split_to_sentences(data):    """    Split data by linebreak "\n"        Args:        data: str        Returns:        A list of sentences    """    sentences = data.split('\n')        # Additional cle...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "吴恩达团队NLP">吴恩达团队NLP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >
+            
+                <span>吴恩达团队NLP C2_W2_Assignment</span>
+        </a>
+        <div class="abstract-content">
+            吴恩达团队NLP C2_W2_Assignment任务：词性标注(POS)Part1：Training1.1 构建 transition_counts, emission_counts, tag_counts
+transition_counts 计算的是每个tag与另一个tag相邻的次数 → (prev_tag, tag), 便于之后计算$P(ti |t{i-1})$
+emission_counts 计算的是word与相应tag出现的次数 → (tag, word)，便于之后计算$P(w_i|t_i)$
+tag_counts 计算的是每个tag出现的次数
+
+123456789101112...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "吴恩达团队NLP">吴恩达团队NLP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >
+            
+                <span>吴恩达团队NLP C2_W1_Assignment</span>
+        </a>
+        <div class="abstract-content">
+            吴恩达团队NLP C2_W1_Assignment任务：自动校正单词拼写Part1：处理数据将字符串数据读入，并将字符串都转化为小写，最后通过正则表达式将其中的单词找出来。
+1234567891011121314151617def process_data(file_name):    """    Input:         A file_name which is found in your current directory. You just have to read it in.     Output:         words: a list containing all...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "吴恩达团队NLP">吴恩达团队NLP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >
+            
+                <span>吴恩达团队NLP C1_W4_Assignment</span>
+        </a>
+        <div class="abstract-content">
+            吴恩达团队NLP C1_W4_Assignment课程链接：Coursera | Online Courses &amp; Credentials From Top Educators. Join for Free | Coursera
+任务：朴素机器翻译及LSH(局部敏感度哈希)Part1: 实现英语转法语1.1 生成embedding和转换矩阵1234567891011121314151617181920212223242526272829303132333435def get_matrices(en_fr, french_vecs, english_vecs):    """   ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "吴恩达团队NLP">吴恩达团队NLP</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >
             
                 <span>吴恩达团队NLP C1_W3_Assignment</span>
@@ -5181,9 +5345,58 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 259
+        Total : 264
         </div>
         <!-- search  -->
         
@@ -5199,12 +5412,37 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >吴恩达团队NLP C2_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W3-Assignment/" >吴恩达团队NLP C2_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >吴恩达团队NLP C2_W4_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W1-Assignment/" >吴恩达团队NLP C1_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2021/07/25/吴恩达团队NLP-C1-W3-Assignment/" >吴恩达团队NLP C1_W3_Assignment</a>
         </li>
     
     
@@ -5224,12 +5462,12 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
@@ -5239,12 +5477,12 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1060-爱丁顿数/" >PAT 1060.爱丁顿数</a>
+            <span class="archive-post-date">02/20</span><a class="archive-post-title" href= "/2021/02/20/PAT-1065-单身狗/" >PAT 1065.单身狗</a>
         </li>
     
     
@@ -6273,12 +6511,12 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >Leetcode 5417. 定长子串中元音的最大数目</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >Leetcode 5418. 二叉树中的伪回文路径</a>
         </li>
     
     
@@ -6515,17 +6753,17 @@ Part 1: 处理数据首先对数据进行预处理，删除杂音数据，并对
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
-        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
-    
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
+        <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
