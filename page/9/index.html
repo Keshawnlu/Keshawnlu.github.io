@@ -359,6 +359,225 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/08/Leetcode-344-反转字符串/" >
+            
+                <span>Leetcode 344. 反转字符串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
+不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。
+你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。
+示例 1：
+12输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]
+示例 2：...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/07/Leetcode-75-颜色分类/" >
+            
+                <span>Leetcode 75. 颜色分类</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+注意:不能使用代码库中的排序函数来解决这道题。
+示例:
+12输入: [2,0,2,1,1,0]输出: [0,0,1,1,2,2]
+进阶：
+
+一个直观的解决方案是使用计数排序的两趟扫描算法。
+首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
+你能想出一个仅使用常数空间的一趟扫描算法吗？
+
+思路：这题实际上就是排个序，由于只有三种颜色，我们可以先忽略...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/07</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/05/Leetcode-18-四数之和/" >
+            
+                <span>Leetcode 18. 四数之和</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，**b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+注意：
+答案中不可以包含重复的四元组。
+示例：
+12345678给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。满足要求的四元组集合为：[  [-1,  0, 0, 1],  [-2, -1, 1, 2],  [-2,  0, 0, 2]]
+思路：一开始想着回溯算法，可惜一直超时，于是放弃这个方法。
+看了题解...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/03/Leetcode-1-两数之和/" >
+            
+                <span>Leetcode 1. 两数之和</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+示例:
+1234给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]
+思路：利用哈希表，每次遍历到一个元素时，首先判断target - nums[i]是否已经在哈希表中了，如果在，则将两个下标存入结果数组中然后返回即可；如果不在，则将nums[i]存入哈希表。
+时间复杂度O(n)...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/02/Leetcode-771-宝石与石头/" >
+            
+                <span>Leetcode 771. 宝石与石头</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
+J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此&quot;a&quot;和&quot;A&quot;是不同类型的石头。
+示例 1:
+12输入: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;输出: 3
+示例 2:
+12输入: J = &quot;z&quot;, S = &quot;ZZ&quot;输出: 0
+注意:
+
+S 和 J 最多含有50个字母。
+J 中的字符...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/02/Leetcode-LCP-19-秋叶收藏集/" >
+            
+                <span>Leetcode LCP 19. 秋叶收藏集</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：小扣出去秋游，途中收集了一些红叶和黄叶，他利用这些叶子初步整理了一份秋叶收藏集 leaves， 字符串 leaves 仅包含小写字符 r 和 y， 其中字符 r 表示一片红叶，字符 y 表示一片黄叶。
+出于美观整齐的考虑，小扣想要将收藏集中树叶的排列调整成「红、黄、红」三部分。每部分树叶数量可以不相等，但均需大于等于 1。每次调整操作，小扣可以将一片红叶替换成黄叶或者将一片黄叶替换成红叶。请问小扣最少需要多少次调整操作才能将秋叶收藏集调整完毕。
+示例 1：
+
+输入：leaves = &quot;rrryyyrryyyrr&quot;
+输出：2
+解释：调整两次，将中间的两片红叶替...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/09/30/Leetcode-701-二叉搜索树中的插入操作/" >
             
                 <span>Leetcode 701. 二叉搜索树中的插入操作</span>
@@ -486,247 +705,6 @@ height:100vh;
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/26/Leetcode-113-路径总和-II/" >
-            
-                <span>Leetcode 113. 路径总和 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
-说明: 叶子节点是指没有子节点的节点。
-示例:给定如下二叉树，以及目标和 sum = 22，
-          5
-         / \
-        4   8
-       /   / \
-      11  13  4
-     /  \    / \
-    7    2  5   1
-返回:
-1234[   [5,4,11,2],   [5,8,4,5]]
-思路：关于树的回溯题，其实和数组的差不多，需要注意的是结点的val值可能为负的。
-代码如下：12345678910111...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/25/Leetcode-106-从中序与后序遍历序列构造二叉树/" >
-            
-                <span>Leetcode 106. 从中序与后序遍历序列构造二叉树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：根据一棵树的中序遍历与后序遍历构造二叉树。
-注意:你可以假设树中没有重复的元素。
-例如，给出
-12中序遍历 inorder = [9,3,15,20,7]后序遍历 postorder = [9,15,7,20,3]
-返回如下的二叉树：
-12345  3 / \9  20  /  \ 15   7
-思路：我们首先将每个结点在中序遍历中的位置存储下来。
-因为后序遍历的顺序为左右根，所以从后序遍历的最后一个结点开始遍历(树的根节点)。
-每次根据后序遍历遍历到的结点去找出该结点在中序遍历中的位置，然后递归即可。
-tip:
-
-由于后序遍历是左右根，所以递归时是先构建右子树，再构建左子树。...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/24/Leetcode-501-二叉搜索树中的众数/" >
-            
-                <span>Leetcode 501. 二叉搜索树中的众数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个有相同值的二叉搜索树（BST），找出 BST 中的所有众数（出现频率最高的元素）。
-假定 BST 有如下定义：
-
-结点左子树中所含结点的值小于等于当前结点的值
-结点右子树中所含结点的值大于等于当前结点的值
-左子树和右子树都是二叉搜索树
-
-例如：给定 BST [1,null,2,2],
-123451 \  2 /2
-返回[2].
-提示：如果众数超过1个，不需考虑输出顺序
-思路：没想太多，首先第一次遍历，将记录存入哈希表中，并找出其中的最大出现次数Maxnum。
-第二次遍历哈希表，将出现次数等于Maxnum的值存入结果数组中，最后返回即可。
-tip:
-
-学会哈希表的遍历
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/23/Leetcode-617-合并二叉树/" >
-            
-                <span>Leetcode 617. 合并二叉树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
-你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
-示例 1:
-1234567891011121314输入: 		Tree 1                     Tree 2                            1                         2                                      / \         ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/22/Leetcode-968-监控二叉树/" >
-            
-                <span>Leetcode 968. 监控二叉树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，我们在树的节点上安装摄像头。
-节点上的每个摄影头都可以监视其父对象、自身及其直接子对象。
-计算监控树的所有节点所需的最小摄像头数量。
- 示例 1：
-
-123输入：[0,0,null,0,0]输出：1解释：如图所示，一台摄像头足以监控所有节点。
-示例 2：
-
-123输入：[0,0,null,0,null,0,null,null,0]输出：2解释：需要至少两个摄像头来监视树的所有节点。 上图显示了摄像头放置的有效位置之一。
-提示：
-
-给定树的节点数的范围是 [1, 1000]。
-每个节点的值都是 0。
-
-思路：后序遍历，自下而上的来解决问题。
-我们将结点的状态分为三...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/21/Leetcode-538-把二叉搜索树转换为累加树/" >
-            
-                <span>Leetcode 538. 把二叉搜索树转换为累加树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉搜索树（Binary Search Tree），把它转换成为累加树（Greater Tree)，使得每个节点的值是原来的节点值加上所有大于它的节点值之和。
-例如：
-123456789输入: 原始二叉搜索树:              5            /   \           2     13           输出: 转换为累加树:             18            /   \          20     13
-思路：一开始的想法是先将结点值都一个个保存下来，然后再遍历搜索累加，但是这样子很慢。
-后来发现这是个二叉搜索树，那么...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/21</span>
             </div>
             <!-- tags  -->
             
@@ -5641,9 +5619,135 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 264
+        Total : 270
         </div>
         <!-- search  -->
         
@@ -5659,12 +5763,42 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W1-Assignment/" >吴恩达团队NLP C3_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W2-Assignment/" >吴恩达团队NLP C3_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W3-Assignment/" >吴恩达团队NLP C3_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W4-Assignment/" >吴恩达团队NLP C3_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W1-Assignment/" >吴恩达团队NLP C4_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W2-Assignment/" >吴恩达团队NLP C4_W2_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
         </li>
     
     
@@ -5709,12 +5843,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
@@ -5769,12 +5903,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
@@ -6982,12 +7116,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
@@ -7000,17 +7134,17 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -7024,9 +7158,9 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
@@ -7085,9 +7219,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
-    
         <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
+    
+        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -7134,24 +7268,9 @@ jsonContent:
     <!-- CNZZ  -->
     
     </div>
-    <!-- async load share.js -->
+    <!-- async load share.js --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
+    </body>
 </html>
 
 

@@ -359,6 +359,235 @@ height:100vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/17/Leetcode-110-平衡二叉树/" >
+            
+                <span>Leetcode 110. 平衡二叉树</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个二叉树，判断它是否是高度平衡的二叉树。
+本题中，一棵高度平衡二叉树定义为：
+一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1。
+示例 1:
+给定二叉树 [3,9,20,null,null,15,7]
+12345  3 / \9  20  /  \ 15   7
+返回 true 。
+给定二叉树 [1,2,2,3,3,null,null,4,4]
+1234567      1     / \    2   2   / \  3   3 / \4   4
+返回 false 。
+思路：首先写一个求左右子树高度的函数，然后需要遍历每个结点，若每个结点左右子树高度差都不超...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/16/Leetcode-733-图像渲染/" >
+            
+                <span>Leetcode 733. 图像渲染</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：有一幅以二维整数数组表示的图画，每一个整数表示该图画的像素值大小，数值在 0 到 65535 之间。
+给你一个坐标 (sr, sc) 表示图像渲染开始的像素值（行 ，列）和一个新的颜色值 newColor，让你重新上色这幅图像。
+为了完成上色工作，从初始坐标开始，记录初始坐标的上下左右四个方向上像素值与初始坐标相同的相连像素点，接着再记录这四个方向上符合条件的像素点与他们对应四个方向上像素值与初始坐标相同的相连像素点，……，重复该过程。将所有有记录的像素点的颜色值改为新的颜色值。
+最后返回经过上色渲染后的图像。
+示例 1:
+123456789输入: image = [[1,1,...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/15/Leetcode-546-移除盒子/" >
+            
+                <span>Leetcode 546. 移除盒子</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给出一些不同颜色的盒子，盒子的颜色由数字表示，即不同的数字表示不同的颜色。
+你将经过若干轮操作去去掉盒子，直到所有的盒子都去掉为止。每一轮你可以移除具有相同颜色的连续 k 个盒子（k &gt;= 1），这样一轮之后你将得到 k*k 个积分。
+当你将所有盒子都去掉之后，求你能获得的最大积分和。
+示例：
+12345678输入：boxes = [1,3,2,2,2,3,4,3,1]输出：23解释：[1, 3, 2, 2, 2, 3, 4, 3, 1] ----&gt; [1, 3, 3, 4, 3, 1] (3*3=9 分) ----&gt; [1, 3, 3, 3, 1] (1*1...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/14/Leetcode-20-有效的括号/" >
+            
+                <span>Leetcode 20. 有效的括号</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串，判断字符串是否有效。
+有效字符串需满足：
+
+左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+
+注意空字符串可被认为是有效字符串。
+示例 1:
+12输入: &quot;()&quot;输出: true
+示例 2:
+12输入: &quot;()[]&#123;&#125;&quot;输出: true
+示例 3:
+12输入: &quot;(]&quot;输出: false
+示例 4:
+12输入: &...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/13/Leetcode-43-字符串相乘/" >
+            
+                <span>Leetcode 43. 字符串相乘</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+示例 1:
+12输入: num1 = &quot;2&quot;, num2 = &quot;3&quot;输出: &quot;6&quot;
+示例 2:
+12输入: num1 = &quot;123&quot;, num2 = &quot;456&quot;输出: &quot;56088&quot;
+说明：
+
+num1 和 num2 的长度小于110。
+num1 和 num2 只包含数字 0-9。
+num1 和 num2 均不以零开头，除非是数字 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数学">数学</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/08/12/Leetcode-133-克隆图/" >
+            
+                <span>Leetcode 133. 克隆图</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你无向 连通 图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
+图中的每个节点都包含它的值 val（int） 和其邻居的列表（list[Node]）。
+1234class Node &#123;    public int val;    public List&lt;Node&gt; neighbors;&#125;
+测试用例格式：
+简单起见，每个节点的值都和它的索引相同。例如，第一个节点值为 1（val = 1），第二个节点值为 2（val = 2），以此类推。该图在测试用例中使用邻接列表表示。
+邻接列表 是用于表示有限图的无序列表的集合。每个列表都描述了图中节点的邻...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先遍历">广度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/08/11/Leetcode-130-被围绕的区域/" >
             
                 <span>Leetcode 130. 被围绕的区域</span>
@@ -489,231 +718,6 @@ height:100vh;
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/07/Leetcode-100-相同的树/" >
-            
-                <span>Leetcode 100. 相同的树</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个二叉树，编写一个函数来检验它们是否相同。
-如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
-示例 1:
-1234567输入:       1         1          / \       / \         2   3     2   3                 [1,2,3],   [1,2,3]输出: true
-示例 2:
-1234567输入:      1          1          /           \         2             2                 [1,2],    ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/06/Leetcode-336-回文对/" >
-            
-                <span>Leetcode 336. 回文对</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一组 互不相同 的单词， 找出所有不同 的索引对(i, j)，使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。
-示例 1：
-123输入：[&quot;abcd&quot;,&quot;dcba&quot;,&quot;lls&quot;,&quot;s&quot;,&quot;sssll&quot;]输出：[[0,1],[1,0],[3,2],[2,4]] 解释：可拼接成的回文串为 [&quot;dcbaabcd&quot;,&quot;abcddcba&quot;,&quot;slls&quot;,&quot;llssssll&quot;...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/05/Leetcode-337-打家劫舍-III/" >
-            
-                <span>Leetcode 337. 打家劫舍 III</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：在上次打劫完一条街道之后和一圈房屋后，小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为“根”。 除了“根”之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。
-计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
-示例 1:
-12345678910输入: [3,2,3,null,3,null,1]     3    / \   2   3    \   \      3   1     输出: 7 解释: 小偷一晚能够盗取的最高金...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/04/Leetcode-207-课程表/" >
-            
-                <span>Leetcode 207. 课程表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：你这个学期必须选修 numCourse 门课程，记为 0 到 numCourse-1 。
-在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们：[0,1]
-给定课程总量以及它们的先决条件，请你判断是否可能完成所有课程的学习？
-示例 1:
-123输入: 2, [[1,0]] 输出: true解释: 总共有 2 门课程。学习课程 1 之前，你需要完成课程 0。所以这是可能的。
-示例 2:
-123输入: 2, [[1,0],[0,1]]输出: false解释: 总共有 2 门课程。学习课程 1 之前，你需要先完成课程 0；并...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/04</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "图">图</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "拓扑排序">拓扑排序</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/03/Leetcode-415-字符串相加/" >
-            
-                <span>Leetcode 415. 字符串相加</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。
-注意：
-
-num1 和num2 的长度都小于 5100.
-num1 和num2 都只包含数字 0-9.
-num1 和num2 都不包含任何前导零。
-
-思路：模拟竖式相加，首先通过前缀补0的方式使两个字符串拥有相同的长度。
-然后从后往前，一位一位模拟相加，若有进位，则flag = 1。
-最后相加结束后，若flag = 1，则最后存在进位，res = &#39;1&#39; + res即可。
-代码如下：12345678910111213141516171819202122232425262728293031323...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串">字符串</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/Leetcode-114-二叉树展开为链表/" >
-            
-                <span>Leetcode 114. 二叉树展开为链表</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二叉树，原地将它展开为一个单链表。
-例如，给定二叉树
-12345    1   / \  2   5 / \   \3   4   6
-将其展开为：
-12345678910111 \  2   \    3     \      4       \        5         \          6
-思路：前序遍历，将先后遍历到的结点存储起来。
-最后将每个结点连接在前一个结点的右子树上，前一个结点的左子树置为空。
-tip:
-
-不知道这个算不算原地…
-
-代码如下：123456789101112131415161718192021222324252627282930...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
     
 </div>
             
@@ -5622,9 +5626,135 @@ tip:
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 264
+        Total : 270
         </div>
         <!-- search  -->
         
@@ -5640,12 +5770,42 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W1-Assignment/" >吴恩达团队NLP C3_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W2-Assignment/" >吴恩达团队NLP C3_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W3-Assignment/" >吴恩达团队NLP C3_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W4-Assignment/" >吴恩达团队NLP C3_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W1-Assignment/" >吴恩达团队NLP C4_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W2-Assignment/" >吴恩达团队NLP C4_W2_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
         </li>
     
     
@@ -5690,12 +5850,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
@@ -5750,12 +5910,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
@@ -6963,12 +7123,12 @@ tip:
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
@@ -6981,17 +7141,17 @@ tip:
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -7005,9 +7165,9 @@ tip:
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
@@ -7066,9 +7226,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
-    
         <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
+    
+        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -7115,24 +7275,9 @@ jsonContent:
     <!-- CNZZ  -->
     
     </div>
-    <!-- async load share.js -->
+    <!-- async load share.js --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
+    </body>
 </html>
 
 

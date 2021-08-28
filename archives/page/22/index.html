@@ -346,6 +346,223 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/05/Leetcode-面试题29-顺时针打印矩阵/" >
+            
+                <span>Leetcode 面试题29. 顺时针打印矩阵</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
+示例 1：
+12输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]输出：[1,2,3,6,9,8,7,4,5]
+示例 2：
+12输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]输出：[1,2,3,4,8,12,11,10,9,5,6,7]
+限制：
+
+0 &lt;= matrix.length &lt;= 100
+0 &lt;= matrix[i].length &lt;= 100
+
+思路：这题和我大一时候在算法书上看到的蛇形填数十分相似…可以用相同...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/04/Leetcode-238-除自身以外数组的乘积/" >
+            
+                <span>Leetcode 238. 除自身以外数组的乘积</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。
+示例:
+12输入: [1,2,3,4]输出: [24,12,8,6]
+提示：题目数据保证数组之中任意元素的全部前缀元素和后缀（甚至是整个数组）的乘积都在 32 位整数范围内。
+说明: 请不要使用除法，且在 O(n) 时间复杂度内完成此题。
+思路：将除自身以外的数组分为自身左边的数组和自身右边的数组两部分。
+通过两次循环分别求出左边数组的乘积与右边数组的乘积。
+tip:
+
+注意具体的手法…
+
+代码如...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/03/Leetcode-837-新21点/" >
+            
+                <span>Leetcode 837. 新21点</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：
+爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。
+当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？
+示例1：
+123输入：N = 10, K = 1, W = 10输出：1.00000说明：爱丽丝得到一张卡，然后停止。
+示例2：
+1234输入：N = 6, K = 1, W = 10输出：0.60000说明：爱丽丝得到一张卡，然后...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "滑动窗口">滑动窗口</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/02/Leetcode-面试题64-求1-2-…-n/" >
+            
+                <span>Leetcode 面试题64. 求1+2+…+n</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
+示例 1：
+12输入: n = 3输出: 6
+示例 2：
+12输入: n = 9输出: 45
+限制：
+
+1 &lt;= n &lt;= 10000
+
+思路：不能使用for，就想到用递归，但是需要判断递归结束的标志，也就是n —&gt; n - 1 -&gt; ... -&gt; 0，n到达0时需要退出递归。所以可以使用逻辑运算符&amp;&amp;的短路性质。
+即对于 A &amp;&amp; B 这个表达式，如果 A 表达式返回 Fa...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/02</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/01/Leetcode-1431-拥有最多糖果的孩子/" >
+            
+                <span>Leetcode 1431. 拥有最多糖果的孩子</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。
+对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。注意，允许有多个孩子同时拥有 最多 的糖果数目。
+示例 1：
+12345678输入：candies = [2,3,5,1,3], extraCandies = 3输出：[true,true,true,false,true] 解释：孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/01</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/31/Leetcode-101-对称二叉树/" >
+            
+                <span>Leetcode 101. 对称二叉树</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个二叉树，检查它是否是镜像对称的。
+例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
+12345    1   / \  2   2 / \ / \3  4 4  3
+但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
+12345  1 / \2   2 \   \ 3    3
+思路：运用递归，由于是镜像对称，所以判定左树的左子树和右树的右子树，左树的右子树和右树的左子树是否相等即可。
+tips:
+
+两结点均为空时，相等
+只有一结点为空时，不相等
+
+代码如下：123456789101112131415161718192021222324...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/31</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/31/Leetcode-5425-切割后面积最大的蛋糕/" >
             
                 <span>Leetcode 5425. 切割后面积最大的蛋糕</span>
@@ -472,231 +689,6 @@
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "栈">栈</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/27/Leetcode-974-和可被-K-整除的子数组/" >
-            
-                <span>Leetcode 974. 和可被 K 整除的子数组</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个整数数组 A，返回其中元素之和可被 K 整除的（连续、非空）子数组的数目。
-示例：
-12345输入：A = [4,5,0,-2,-3,1], K = 5输出：7解释：有 7 个子数组满足其元素之和可被 K = 5 整除：[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
-提示：
-
-1 &lt;= A.length &lt;= 30000
--10000 &lt;= A[i] &lt;= 10000
-2 &lt;= K &lt;= 10000
-
-思路：使用前缀和的思想，s...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/26/Leetcode-287-寻找重复数/" >
-            
-                <span>Leetcode 287. 寻找重复数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
-示例 1:
-12输入: [1,3,4,2,2]输出: 2
-示例 2:
-12输入: [3,1,3,4,2]输出: 3
-说明：
-
-不能更改原数组（假设数组是只读的）。
-只能使用额外的 O(1) 的空间。
-时间复杂度小于 O($n^{2}$) 。
-数组中只有一个重复的数字，但它可能不止重复出现一次。
-
-思路：由于说明中的要求过多，所以不能按照普通的方法来做，所以想到使用二分的方法。
-每次先算出中位数mid，然后求原...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/25/Leetcode-146-LRU缓存机制/" >
-            
-                <span>Leetcode 146. LRU缓存机制</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：运用你所掌握的数据结构，设计和实现一个 LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
-获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。
-写入数据 put(key, value) - 如果密钥已经存在，则变更其数据值；如果密钥不存在，则插入该组「密钥/数据值」。当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
-进阶:
-你是否可以在 O(1) 时间复杂度内完成这两种操作？
-示例:
-1234567891011LRUCac...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "哈希表">哈希表</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "双向链表">双向链表</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/24/Leetcode-4-寻找两个正序数组的中位数/" >
-            
-                <span>Leetcode 4. 寻找两个正序数组的中位数</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。
-请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
-你可以假设 nums1 和 nums2 不会同时为空。
-示例 1:
-1234nums1 = [1, 3]nums2 = [2]则中位数是 2.0
-示例 2:
-1234nums1 = [1, 2]nums2 = [3, 4]则中位数是 (2 + 3)/2 = 2.5
-思路：由于要求时间复杂度为O(log(m + n))，所以就不能粗暴的将两个数组直接合并再排序了。而是要用到二分的思想，看了大佬们的题解后，找到了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/24/Leetcode-5418-二叉树中的伪回文路径/" >
-            
-                <span>Leetcode 5418. 二叉树中的伪回文路径</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你一棵二叉树，每个节点的值为 1 到 9 。我们称二叉树中的一条路径是 「伪回文」的，当它满足：路径经过的所有节点值的排列中，存在一个回文序列。
-请你返回从根到叶子节点的所有路径中 伪回文 路径的数目。
-示例 1：
-
-1234输入：root = [2,3,1,3,1,null,1]输出：2 解释：上图为给定的二叉树。总共有 3 条从根到叶子的路径：红色路径 [2,3,3] ，绿色路径 [2,1,1] 和路径 [2,3,1] 。     在这些路径中，只有红色和绿色的路径是伪回文路径，因为红色路径 [2,3,3] 存在回文排列 [3,2,3] ，绿色路径 [2,1,1] 存在回...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先遍历">深度优先遍历</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/24/Leetcode-5417-定长子串中元音的最大数目/" >
-            
-                <span>Leetcode 5417. 定长子串中元音的最大数目</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给你字符串 s 和整数 k 。
-请返回字符串 s 中长度为 k 的单个子字符串中可能包含的最大元音字母数。
-英文中的 元音字母 为（a, e, i, o, u）。
-示例 1：
-123输入：s = &quot;abciiidef&quot;, k = 3输出：3解释：子字符串 &quot;iii&quot; 包含 3 个元音字母。
-示例 2：
-123输入：s = &quot;aeiou&quot;, k = 2输出：2解释：任意长度为 2 的子字符串都包含 2 个元音字母。
-示例 3：
-123输入：s = &quot;leetcode&quot;, k = 3输出：2解释：&qu...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
     
 </div>
             
@@ -5499,9 +5491,135 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 264
+        Total : 270
         </div>
         <!-- search  -->
         
@@ -5517,12 +5635,42 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W1-Assignment/" >吴恩达团队NLP C3_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W2-Assignment/" >吴恩达团队NLP C3_W2_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W3-Assignment/" >吴恩达团队NLP C3_W3_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W4-Assignment/" >吴恩达团队NLP C3_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W1-Assignment/" >吴恩达团队NLP C4_W1_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W2-Assignment/" >吴恩达团队NLP C4_W2_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W1-Assignment/" >吴恩达团队NLP C2_W1_Assignment</a>
         </li>
     
     
@@ -5567,12 +5715,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
@@ -5627,12 +5775,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
@@ -6840,12 +6988,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所2-神秘组织》/" >陆烨华《超能力侦探事务所2:神秘组织》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/陆烨华《超能力侦探事务所》/" >陆烨华《超能力侦探事务所》</a>
         </li>
     
     
@@ -6858,17 +7006,17 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
-        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
@@ -6882,9 +7030,9 @@
     
         <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
     
-        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
-    
         <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+    
+        <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
         <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
     
@@ -6943,9 +7091,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
-    
         <span class="sidebar-category-name" data-categories="算法相关"><span class="iconfont-archer">&#xe60a;</span>算法相关</span>
+    
+        <span class="sidebar-category-name" data-categories="杂谈"><span class="iconfont-archer">&#xe60a;</span>杂谈</span>
     
         <span class="sidebar-category-name" data-categories="PAT"><span class="iconfont-archer">&#xe60a;</span>PAT</span>
     
@@ -6994,22 +7142,7 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+    </body>
 </html>
 
 
