@@ -346,22 +346,85 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/18/Leetcode-47-全排列-II/" >
+        <a class="abstract-title" href = "/2022/11/01/Leetcode-1662-检查两个字符串数组是否相等/" >
             
-                <span>Leetcode 47. 全排列 II</span>
+                <span>Leetcode 1662. 检查两个字符串数组是否相等</span>
         </a>
         <div class="abstract-content">
-            题目简介：给定一个可包含重复数字的序列，返回所有不重复的全排列。
-示例:
-1234567输入: [1,1,2]输出:[  [1,1,2],  [1,2,1],  [2,1,1]]
-思路：回溯+深搜，为了方便操作，先将数组排序。
-为了去除重复，当nums[i] == nums[i - 1] &amp;&amp; !visit[i - 1]时，说明目前的元素nums[i]所要经历的遍历，之前的元素nums[i - 1]已经经历过一遍了，所以直接continue即可。
-代码如下：1234567891011121314151617181920212223242526272829303132333...
+            题目简介：给你两个字符串数组 word1 和 word2 。如果两个数组表示的字符串相同，返回 true ；否则，返回 false 。
+数组表示的字符串 是由数组中的所有元素 按顺序 连接形成的字符串。
+示例 1：
+123456输入：word1 = [&quot;ab&quot;, &quot;c&quot;], word2 = [&quot;a&quot;, &quot;bc&quot;]输出：true解释：word1 表示的字符串为 &quot;ab&quot; + &quot;c&quot; -&gt; &quot;abc&quot;word2 表示的字符串为 &quot;a&qu...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/18</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/11/01</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/10/31/Leetcode-481-神奇字符串/" >
+            
+                <span>Leetcode 481. 神奇字符串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：神奇字符串 s 仅由 &#39;1&#39; 和 &#39;2&#39; 组成，并需要遵守下面的规则：
+
+神奇字符串 s 的神奇之处在于，串联字符串中 &#39;1&#39; 和 &#39;2&#39; 的连续出现次数可以生成该字符串。
+
+s 的前几个元素是 s = &quot;1221121221221121122……&quot; 。如果将 s 中连续的若干 1 和 2 进行分组，可以得到 &quot;1 22 11 2 1 22 1 22 11 2 11 22 ......&quot; 。每组中 1 或者 2 的出现次数分别是 &quot;1 2 2 1 1 2 1 2 2...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/31</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双指针">双指针</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/10/30/Leetcode-784-字母大小写全排列/" >
+            
+                <span>Leetcode 784. 字母大小写全排列</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给定一个字符串 s ，通过将字符串 s 中的每个字母转变大小写，我们可以获得一个新的字符串。
+返回 所有可能得到的字符串集合 。以 任意顺序 返回输出。
+示例 1：
+12输入：s = &quot;a1b2&quot;输出：[&quot;a1b2&quot;, &quot;a1B2&quot;, &quot;A1b2&quot;, &quot;A1B2&quot;]
+示例 2:
+12输入: s = &quot;3z4&quot;输出: [&quot;3z4&quot;,&quot;3Z4&quot;]
+提示:
+
+1 &lt;= s.length &lt;= 12
+s 由小写英文字...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/30</span>
             </div>
             <!-- tags  -->
             
@@ -380,27 +443,28 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/17/Leetcode-685-冗余连接-II/" >
+        <a class="abstract-title" href = "/2022/10/28/Leetcode-907-子数组的最小值之和/" >
             
-                <span>Leetcode 685. 冗余连接 II</span>
+                <span>Leetcode 907. 子数组的最小值之和</span>
         </a>
         <div class="abstract-content">
-            题目简介：在本问题中，有根树指满足以下条件的有向图。该树只有一个根节点，所有其他节点都是该根节点的后继。每一个节点只有一个父节点，除了根节点没有父节点。
-输入一个有向图，该图由一个有着N个节点 (节点值不重复1, 2, …, N) 的树及一条附加的边构成。附加的边的两个顶点包含在1到N中间，这条附加的边不属于树中已存在的边。
-结果图是一个以边组成的二维数组。 每一个边 的元素是一对 [u, v]，用以表示有向图中连接顶点 u 和顶点 v 的边，其中 u 是 v 的一个父节点。
-返回一条能删除的边，使得剩下的图是有N个节点的有根树。若有多个答案，返回最后出现在给定二维数组的答案。
-示例 1...
+            题目简介：给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。
+由于答案可能很大，因此 返回答案模 10^9 + 7 。
+示例 1：
+12345输入：arr = [3,1,2,4]输出：17解释：子数组为 [3]，[1]，[2]，[4]，[3,1]，[1,2]，[2,4]，[3,1,2]，[1,2,4]，[3,1,2,4]。 最小值为 3，1，2，4，1，1，2，1，1，1，和为 17。
+思路：对于元素arr[i]，我们首先找到左右两边的端点，使其能在这个范围内为最小值。
+假设左端点为L，右端点为R，则范围为(L, R)。【注意都是开区...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/28</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "并查集">并查集</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "单调栈">单调栈</a>
     
 </div>
             
@@ -413,74 +477,30 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/16/Leetcode-226-翻转二叉树/" >
+        <a class="abstract-title" href = "/2022/10/27/Leetcode-1822-数组元素积的符号/" >
             
-                <span>Leetcode 226. 翻转二叉树</span>
+                <span>Leetcode 1822. 数组元素积的符号</span>
         </a>
         <div class="abstract-content">
-            题目简介：翻转一棵二叉树。
-示例：
-输入：
-12345     4   /   \  2     7 / \   / \1   3 6   9
-输出：
-12345     4   /   \  7     2 / \   / \9   6 3   1
-思路：相当于中序遍历，从根节点出发，将左右子树互换即可。
-代码如下：1234567891011121314151617181920212223242526272829303132/** * Definition for a binary tree node. * struct TreeNode &#123; *     int val; *...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/15/Leetcode-37-解数独/" >
-            
-                <span>Leetcode 37. 解数独</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：编写一个程序，通过已填充的空格来解决数独问题。
-一个数独的解法需遵循如下规则：
+            题目简介：已知函数 signFunc(x) 将会根据 x 的正负返回特定值：
 
-数字 1-9 在每一行只能出现一次。
-数字 1-9 在每一列只能出现一次。
-数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+如果 x 是正数，返回 1 。
+如果 x 是负数，返回 -1 。
+如果 x 是等于 0 ，返回 0 。
 
-空白格用 &#39;.&#39; 表示。
-
-​                                                                            一个数独。
-
-​                                                                        ...
+给你一个整数数组 nums 。令 product 为数组 nums 中所有元素值的乘积。
+返回 signFunc(product) 。
+示例 1：
+123输入：nums = [-1,-2,-3,-4,3,2,1]输出：1解释：数组中所有值的乘积是 144 ，且 signFunc(144) = 1
+示例 2：
+123输入：nums = [1,5,0,2,-3]输出：0解释：数组中所有值的乘积是 0 ，且 s...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/15</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/27</span>
             </div>
             <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-</div>
             
         </div>
     </article>
@@ -491,101 +511,73 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/14/Leetcode-94-二叉树的中序遍历/" >
+        <a class="abstract-title" href = "/2022/10/26/Leetcode-862-和至少为-K-的最短子数组/" >
             
-                <span>Leetcode 94. 二叉树的中序遍历</span>
+                <span>Leetcode 862. 和至少为 K 的最短子数组</span>
         </a>
         <div class="abstract-content">
-            题目简介：给定一个二叉树，返回它的中序 遍历。
-示例:
-12345678输入: [1,null,2,3]   1    \     2    /   3输出: [1,3,2]
-进阶: 递归算法很简单，你可以通过迭代算法完成吗？
-思路：先用递归做着，以后补迭代做法(将栈显示的表达出来)。
-代码如下：12345678910111213141516171819202122232425262728293031323334/** * Definition for a binary tree node. * struct TreeNode &#123; *     int val; *     Tr...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/13/Leetcode-79-单词搜索/" >
-            
-                <span>Leetcode 79. 单词搜索</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个二维网格和一个单词，找出该单词是否存在于网格中。
-单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
-示例:
-12345678910board =[  [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;E&apos;],  [&apos;S&apos;,&apos;F&apos;,&apos;C&apos;,&apos;S&apos;],  [&apos;A&apos;,&apos;D&apos;,&apos;E&apos;,&ap...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/12/Leetcode-637-二叉树的层平均值/" >
-            
-                <span>Leetcode 637. 二叉树的层平均值</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个非空二叉树, 返回一个由每层节点平均值组成的数组。
- 示例 1：
-123456789输入：    3   / \  9  20    /  \   15   7   输出：[3, 14.5, 11]解释：第 0 层的平均值是 3 ,  第1层是 14.5 , 第2层是 11 。因此返回 [3, 14.5, 11] 。
+            题目简介：给你一个整数数组 nums 和一个整数 k ，找出 nums 中和至少为 k 的 最短非空子数组 ，并返回该子数组的长度。如果不存在这样的 子数组 ，返回 -1 。
+子数组 是数组中 连续 的一部分。
+示例 1：
+12输入：nums = [1], k = 1输出：1
+示例 2：
+12输入：nums = [1,2], k = 4输出：-1
+示例 3：
+12输入：nums = [2,-1,2], k = 3输出：3
 提示：
 
-节点值的范围在32位有符号整数范围内。
-
-思路：广搜，每次出队前先记录当前队列的大小，即该层的结点数量。
-tip:
-
-需要使用long来存储sum，否则会溢出。
-
-代码如下：123456789101112131415161718192021222...
+1 &lt;= nums.length &lt;= 10^5
+-10^5 &lt;= nums[i] &lt;= 10^5
+1 &lt;= k &lt;= 1...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/12</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/26</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "双端队列">双端队列</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/10/25/Leetcode-934-最短的桥/" >
+            
+                <span>Leetcode 934. 最短的桥</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你一个大小为 n x n 的二元矩阵 grid ，其中 1 表示陆地，0 表示水域。
+岛 是由四面相连的 1 形成的一个最大组，即不会与非组内的任何其他 1 相连。grid 中 恰好存在两座岛 。
+你可以将任意数量的 0 变为 1 ，以使两座岛连接起来，变成 一座岛 。
+返回必须翻转的 0 的最小数目。
+示例 1：
+12输入：grid = [[0,1],[1,0]]输出：1
+示例 2：
+12输入：grid = [[0,1,0],[0,0,0],[0,0,1]]输出：2
+示例 3：
+12输入：grid = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1]...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "深度优先搜索">深度优先搜索</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "广度优先搜索">广度优先搜索</a>
     
@@ -600,112 +592,102 @@ tip:
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/11/Leetcode-216-组合总和-III/" >
+        <a class="abstract-title" href = "/2022/10/24/Leetcode-915-分割数组/" >
             
-                <span>Leetcode 216. 组合总和 III</span>
+                <span>Leetcode 915. 分割数组</span>
         </a>
         <div class="abstract-content">
-            题目简介：找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
-说明：
+            题目简介：给定一个数组 nums ，将其划分为两个连续子数组 left 和 right， 使得：
 
-所有数字都是正整数。
-解集不能包含重复的组合。 
+left 中的每个元素都小于或等于 right 中的每个元素。
+left 和 right 都是非空的。
+left 的长度要尽可能小。
 
-示例 1:
-12输入: k = 3, n = 7输出: [[1,2,4]]
-示例 2:
-12输入: k = 3, n = 9输出: [[1,2,6], [1,3,5], [2,3,4]]
-思路：依然是回溯的做法，当元素数量 &gt; k 或 和大于 n 时，直接return即可。
-需要注意的是要从上个元素的下一个位置开始遍历(不能取重复的数字)。
-代码如下：1234567891011121314151...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/10/Leetcode-40-组合总和-II/" >
-            
-                <span>Leetcode 40. 组合总和 II</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。candidates 中的每个数字在每个组合中只能使用一次。
-说明：
-
-所有数字（包括目标数）都是正整数。
-解集不能包含重复的组合。 
-
-示例 1:
-12345678输入: candidates = [10,1,2,7,6,1,5], target = 8,所求解集为:[  [1, 7],  [1, 2, 5],  [2, 6],  [1, 1, 6]]
-示例 2:
-123456输入: candidates = [2,5,2,1,2], ta...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/09/Leetcode-39-组合总和/" >
-            
-                <span>Leetcode 39. 组合总和</span>
-        </a>
-        <div class="abstract-content">
-            题目简介：给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
-candidates 中的数字可以无限制重复被选取。
-说明：
-
-所有数字（包括 target）都是正整数。
-解集不能包含重复的组合。 
-
+在完成这样的分组后返回 left 的 长度 。
+用例可以保证存在这样的划分方法。
 示例 1：
-123456输入：candidates = [2,3,6,7], target = 7,所求解集为：[  [7],  [2,2,3]]
+123输入：nums = [5,0,3,8,6]输出：3解释：left = [5,0,3]，right = [8,6]
 示例 2：
-1234567输入：candidates = [2,3,5], target = 8,所求解集为：[  [2,2,2,2],  [2,...
+123输入：nums = [1,1,1,0,6,12]输出：4解释：left = [1,1,1,0]，right = [6,12]
+...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/09</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/24</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯">回溯</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数组">数组</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/10/23/Leetcode-1768-交替合并字符串/" >
+            
+                <span>Leetcode 1768. 交替合并字符串</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。
+返回 合并后的字符串 。
+示例 1：
+123456输入：word1 = &quot;abc&quot;, word2 = &quot;pqr&quot;输出：&quot;apbqcr&quot;解释：字符串合并情况如下所示：word1：  a   b   cword2：    p   q   r合并后：  a p b q c r
+提示：
+
+1 &lt;= word1.length, word2.leng...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/23</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/10/22/Leetcode-1235-规划兼职工作/" >
+            
+                <span>Leetcode 1235. 规划兼职工作</span>
+        </a>
+        <div class="abstract-content">
+            题目简介：你打算利用空闲时间来做兼职工作赚些零花钱。
+这里有 n 份兼职工作，每份工作预计从 startTime[i] 开始到 endTime[i] 结束，报酬为 profit[i]。
+给你一份兼职工作表，包含开始时间 startTime，结束时间 endTime 和预计报酬 profit 三个数组，请你计算并返回可以获得的最大报酬。
+注意，时间上出现重叠的 2 份工作不能同时进行。
+如果你选择的工作在时间 X 结束，那么你可以立刻进行在时间 X 开始的下一份工作。
+示例 1：
+
+12345输入：startTime = [1,2,3,3], endTime = [3,4,5,6], pr...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/10/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "动态规划">动态规划</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "二分查找">二分查找</a>
     
 </div>
             
@@ -715,7 +697,7 @@ candidates 中的数字可以无限制重复被选取。
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/categories/算法相关/page/6/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/5/">5</a><a class="page-number" href="/categories/算法相关/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/categories/算法相关/page/8/">8</a><a class="page-number" href="/categories/算法相关/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/22/">22</a><a class="extend next" rel="next" href="/categories/算法相关/page/8/">NEXT &#62;</a>
+        <a class="extend prev" rel="prev" href="/categories/算法相关/page/6/">&#60; PREV</a><a class="page-number" href="/categories/算法相关/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/5/">5</a><a class="page-number" href="/categories/算法相关/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/categories/算法相关/page/8/">8</a><a class="page-number" href="/categories/算法相关/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/categories/算法相关/page/37/">37</a><a class="extend next" rel="next" href="/categories/算法相关/page/8/">NEXT &#62;</a>
     </nav>
     
 </main>
@@ -5745,9 +5727,3214 @@ candidates 中的数字可以无限制重复被选取。
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 277
+        Total : 424
         </div>
         <!-- search  -->
         
@@ -5758,8 +8945,752 @@ candidates 中的数字可以无限制重复被选取。
     
     
     
+    <div class="archive-year"> 2023 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/30</span><a class="archive-post-title" href= "/2023/05/30/Leetcode-1110-删点成林/" >Leetcode 1110. 删点成林</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2023/05/24/Leetcode-1377-T-秒后青蛙的位置/" >Leetcode 1377. T 秒后青蛙的位置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2023/05/16/Leetcode-1335-工作计划的最低难度/" >Leetcode 1335. 工作计划的最低难度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2023/05/15/Leetcode-1072-按列翻转得到最大值等行数/" >Leetcode 1072. 按列翻转得到最大值等行数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2023/05/11/Leetcode-1016-子串能表示从-1-到-N-数字的二进制串/" >Leetcode 1016. 子串能表示从 1 到 N 数字的二进制串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2023/05/06/Leetcode-1419-数青蛙/" >Leetcode 1419. 数青蛙</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2023/05/01/Leetcode-1376-通知所有员工所需的时间/" >Leetcode 1376. 通知所有员工所需的时间</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href= "/2023/04/30/Leetcode-1033-移动石子直到连续/" >Leetcode 1033. 移动石子直到连续</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span><a class="archive-post-title" href= "/2023/04/27/Leetcode-1048-最长字符串链/" >Leetcode 1048. 最长字符串链</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href= "/2023/04/23/Leetcode-1105-填充书架/" >Leetcode 1105. 填充书架</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/18</span><a class="archive-post-title" href= "/2023/04/18/Leetcode-1026-节点与其祖先之间的最大差值/" >Leetcode 1026. 节点与其祖先之间的最大差值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href= "/2023/04/15/Leetcode-1042-不邻接植花/" >Leetcode 1042. 不邻接植花</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span><a class="archive-post-title" href= "/2023/04/14/Leetcode-1023-驼峰式匹配/" >Leetcode 1023. 驼峰式匹配</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href= "/2023/04/13/Leetcode-2404-出现最频繁的偶数元素/" >Leetcode 2404. 出现最频繁的偶数元素</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2023/04/12/Leetcode-1147-段式回文/" >Leetcode 1147. 段式回文</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href= "/2023/04/11/Leetcode-1041-困于环中的机器人/" >Leetcode 1041. 困于环中的机器人</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2023/04/10/Leetcode-1019-链表中的下一个更大节点/" >Leetcode 1019. 链表中的下一个更大节点</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/2023/04/03/Leetcode-1053-交换一次的先前排列/" >Leetcode 1053. 交换一次的先前排列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/08</span><a class="archive-post-title" href= "/2023/03/08/Leetcode-剑指-Offer-47-礼物的最大价值/" >Leetcode 剑指 Offer 47. 礼物的最大价值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/05</span><a class="archive-post-title" href= "/2023/03/05/Leetcode-1599-经营摩天轮的最大利润/" >Leetcode 1599. 经营摩天轮的最大利润</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span><a class="archive-post-title" href= "/2023/03/02/Leetcode-面试题-05-02-二进制数转字符串/" >Leetcode 面试题 05.02. 二进制数转字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span><a class="archive-post-title" href= "/2023/02/25/Leetcode-1247-交换字符使得字符串相同/" >Leetcode 1247. 交换字符使得字符串相同</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2023/02/24/Leetcode-2357-使数组中所有元素都等于零/" >Leetcode 2357. 使数组中所有元素都等于零</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/22</span><a class="archive-post-title" href= "/2023/02/22/Leetcode-1140-石子游戏-II/" >Leetcode 1140. 石子游戏 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/19</span><a class="archive-post-title" href= "/2023/02/19/Leetcode-1792-最大平均通过率/" >Leetcode 1792. 最大平均通过率</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/17</span><a class="archive-post-title" href= "/2023/02/17/Leetcode-1139-最大的以-1-为边界的正方形/" >Leetcode 1139. 最大的以 1 为边界的正方形</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/14</span><a class="archive-post-title" href= "/2023/02/14/Leetcode-1124-表现良好的最长时间段/" >Leetcode 1124. 表现良好的最长时间段</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/13</span><a class="archive-post-title" href= "/2023/02/13/Leetcode-1234-替换子串得到平衡字符串/" >Leetcode 1234. 替换子串得到平衡字符串</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2022 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/19</span><a class="archive-post-title" href= "/2022/12/19/Leetcode-1971-寻找图中是否存在路径/" >Leetcode 1971. 寻找图中是否存在路径</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2022/12/11/Leetcode-1827-最少操作使数组递增/" >Leetcode 1827. 最少操作使数组递增</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/09</span><a class="archive-post-title" href= "/2022/12/09/Leetcode-1780-判断一个数字是否可以表示成三的幂的和/" >Leetcode 1780. 判断一个数字是否可以表示成三的幂的和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/07</span><a class="archive-post-title" href= "/2022/12/07/Leetcode-1775-通过最少操作次数使数组的和相等/" >Leetcode 1775. 通过最少操作次数使数组的和相等</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/06</span><a class="archive-post-title" href= "/2022/12/06/Leetcode-1805-字符串中不同整数的数目/" >Leetcode 1805. 字符串中不同整数的数目</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/04</span><a class="archive-post-title" href= "/2022/12/04/Leetcode-1774-最接近目标价格的甜点成本/" >Leetcode 1774. 最接近目标价格的甜点成本</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/02</span><a class="archive-post-title" href= "/2022/12/02/Leetcode-1769-移动所有球到每个盒子所需的最小操作数/" >Leetcode 1769. 移动所有球到每个盒子所需的最小操作数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span><a class="archive-post-title" href= "/2022/11/30/Leetcode-895-最大频率栈/" >Leetcode 895. 最大频率栈</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/29</span><a class="archive-post-title" href= "/2022/11/29/Leetcode-1758-生成交替二进制字符串的最少操作数/" >Leetcode 1758. 生成交替二进制字符串的最少操作数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/28</span><a class="archive-post-title" href= "/2022/11/28/Leetcode-813-最大平均值和的分组/" >Leetcode 813. 最大平均值和的分组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2022/11/27/Leetcode-1752-检查数组是否经排序和轮转得到/" >Leetcode 1752. 检查数组是否经排序和轮转得到</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2022/11/25/Leetcode-809-情感丰富的文字/" >Leetcode 809. 情感丰富的文字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/24</span><a class="archive-post-title" href= "/2022/11/24/Leetcode-795-区间子数组个数/" >Leetcode 795. 区间子数组个数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/23</span><a class="archive-post-title" href= "/2022/11/23/Leetcode-1742-盒子中小球的最大数量/" >Leetcode 1742. 盒子中小球的最大数量</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2022/11/21/Leetcode-808-分汤/" >Leetcode 808. 分汤</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/18</span><a class="archive-post-title" href= "/2022/11/18/Leetcode-891-子序列宽度之和/" >Leetcode 891. 子序列宽度之和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2022/11/17/Leetcode-792-匹配子序列的单词数/" >Leetcode 792. 匹配子序列的单词数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/16</span><a class="archive-post-title" href= "/2022/11/16/Leetcode-775-全局倒置与局部倒置/" >Leetcode 775. 全局倒置与局部倒置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2022/11/15/Leetcode-1710-卡车上的最大单元数/" >Leetcode 1710. 卡车上的最大单元数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href= "/2022/11/14/Leetcode-805-数组的均值分割/" >Leetcode 805. 数组的均值分割</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/13</span><a class="archive-post-title" href= "/2022/11/13/Leetcode-791-自定义字符串排序/" >Leetcode 791. 自定义字符串排序</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2022/11/12/Leetcode-790-多米诺和托米诺平铺/" >Leetcode 790. 多米诺和托米诺平铺</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/11</span><a class="archive-post-title" href= "/2022/11/11/Leetcode-1704-判断字符串的两半是否相似/" >Leetcode 1704. 判断字符串的两半是否相似</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/10</span><a class="archive-post-title" href= "/2022/11/10/Leetcode-864-获取所有钥匙的最短路径/" >Leetcode 864. 获取所有钥匙的最短路径</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/09</span><a class="archive-post-title" href= "/2022/11/09/Leetcode-764-最大加号标志/" >Leetcode 764. 最大加号标志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span><a class="archive-post-title" href= "/2022/11/08/Leetcode-1684-统计一致字符串的数目/" >Leetcode 1684. 统计一致字符串的数目</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/07</span><a class="archive-post-title" href= "/2022/11/07/Leetcode-816-模糊坐标/" >Leetcode 816. 模糊坐标</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/06</span><a class="archive-post-title" href= "/2022/11/06/Leetcode-1678-设计-Goal-解析器/" >Leetcode 1678. 设计 Goal 解析器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/05</span><a class="archive-post-title" href= "/2022/11/05/Leetcode-1106-解析布尔表达式/" >Leetcode 1106. 解析布尔表达式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2022/11/04/Leetcode-754-到达终点数字/" >Leetcode 754. 到达终点数字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2022/11/03/Leetcode-1668-最大重复子字符串/" >Leetcode 1668. 最大重复子字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/02</span><a class="archive-post-title" href= "/2022/11/02/Leetcode-1620-网络信号最好的坐标/" >Leetcode 1620. 网络信号最好的坐标</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2022/11/01/Leetcode-1662-检查两个字符串数组是否相等/" >Leetcode 1662. 检查两个字符串数组是否相等</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2022/10/31/Leetcode-481-神奇字符串/" >Leetcode 481. 神奇字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/30</span><a class="archive-post-title" href= "/2022/10/30/Leetcode-784-字母大小写全排列/" >Leetcode 784. 字母大小写全排列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/28</span><a class="archive-post-title" href= "/2022/10/28/Leetcode-907-子数组的最小值之和/" >Leetcode 907. 子数组的最小值之和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/27</span><a class="archive-post-title" href= "/2022/10/27/Leetcode-1822-数组元素积的符号/" >Leetcode 1822. 数组元素积的符号</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/26</span><a class="archive-post-title" href= "/2022/10/26/Leetcode-862-和至少为-K-的最短子数组/" >Leetcode 862. 和至少为 K 的最短子数组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/25</span><a class="archive-post-title" href= "/2022/10/25/Leetcode-934-最短的桥/" >Leetcode 934. 最短的桥</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/24</span><a class="archive-post-title" href= "/2022/10/24/Leetcode-915-分割数组/" >Leetcode 915. 分割数组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/23</span><a class="archive-post-title" href= "/2022/10/23/Leetcode-1768-交替合并字符串/" >Leetcode 1768. 交替合并字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/22</span><a class="archive-post-title" href= "/2022/10/22/Leetcode-1235-规划兼职工作/" >Leetcode 1235. 规划兼职工作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/21</span><a class="archive-post-title" href= "/2022/10/21/Leetcode-901-股票价格跨度/" >Leetcode 901. 股票价格跨度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/20</span><a class="archive-post-title" href= "/2022/10/20/Leetcode-779-第K个语法符号/" >Leetcode 779. 第K个语法符号</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/19</span><a class="archive-post-title" href= "/2022/10/19/Leetcode-1700-无法吃午餐的学生数量/" >Leetcode 1700. 无法吃午餐的学生数量</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/18</span><a class="archive-post-title" href= "/2022/10/18/Leetcode-902-最大为-N-的数字组合/" >Leetcode 902. 最大为 N 的数字组合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/17</span><a class="archive-post-title" href= "/2022/10/17/Leetcode-904-水果成篮/" >Leetcode 904. 水果成篮</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/16</span><a class="archive-post-title" href= "/2022/10/16/Leetcode-886-可能的二分法/" >Leetcode 886. 可能的二分法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/15</span><a class="archive-post-title" href= "/2022/10/15/Leetcode-1441-用栈操作构建数组/" >Leetcode 1441. 用栈操作构建数组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2022/10/14/Leetcode-940-不同的子序列-II/" >Leetcode 940. 不同的子序列 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2022/10/13/Leetcode-769-最多能完成排序的块/" >Leetcode 769. 最多能完成排序的块</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/12</span><a class="archive-post-title" href= "/2022/10/12/Leetcode-817-链表组件/" >Leetcode 817. 链表组件</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/11</span><a class="archive-post-title" href= "/2022/10/11/Leetcode-1790-仅执行一次字符串交换能否使两个字符串相等/" >Leetcode 1790. 仅执行一次字符串交换能否使两个字符串相等</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2022/10/10/Leetcode-801-使序列递增的最小交换次数/" >Leetcode 801. 使序列递增的最小交换次数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2022/10/09/Leetcode-856-括号的分数/" >Leetcode 856. 括号的分数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2022/10/08/Leetcode-870-优势洗牌/" >Leetcode 870. 优势洗牌</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2022/10/07/Leetcode-1800-最大升序子数组和/" >Leetcode 1800. 最大升序子数组和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2022/10/05/Leetcode-811-子域名访问计数/" >Leetcode 811. 子域名访问计数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/04</span><a class="archive-post-title" href= "/2022/10/04/Leetcode-921-使括号有效的最少添加/" >Leetcode 921. 使括号有效的最少添加</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/03</span><a class="archive-post-title" href= "/2022/10/03/Leetcode-1784-检查二进制字符串字段/" >Leetcode 1784. 检查二进制字符串字段</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/2022/10/02/Leetcode-777-在LR字符串中交换相邻字符/" >Leetcode 777. 在LR字符串中交换相邻字符</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2022/10/01/Leetcode-1694-重新格式化电话号码/" >Leetcode 1694. 重新格式化电话号码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/30</span><a class="archive-post-title" href= "/2022/09/30/Leetcode-面试题-01-08-零矩阵/" >Leetcode 面试题 01.08. 零矩阵</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2022/09/29/Leetcode-面试题-01-09-字符串轮转/" >Leetcode 面试题 01.09. 字符串轮转</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/28</span><a class="archive-post-title" href= "/2022/09/28/Leetcode-面试题-17-09-第-k-个数/" >Leetcode 面试题 17.09. 第 k 个数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2022/09/27/Leetcode-面试题-01-02-判定是否互为字符重排/" >Leetcode 面试题 01.02. 判定是否互为字符重排</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span><a class="archive-post-title" href= "/2022/09/25/Leetcode-788-旋转数字/" >Leetcode 788. 旋转数字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/24</span><a class="archive-post-title" href= "/2022/09/24/Leetcode-1652-拆炸弹/" >Leetcode 1652. 拆炸弹</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2022/09/23/Leetcode-707-设计链表/" >Leetcode 707. 设计链表</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2022/09/22/Leetcode-1640-能否连接形成数组/" >Leetcode 1640. 能否连接形成数组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/21</span><a class="archive-post-title" href= "/2022/09/21/Leetcode-854-相似度为-K-的字符串/" >Leetcode 854. 相似度为 K 的字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/20</span><a class="archive-post-title" href= "/2022/09/20/Leetcode-698-划分为k个相等的子集/" >Leetcode 698. 划分为k个相等的子集</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2022/09/19/Leetcode-1636-按照频率将数组升序排序/" >Leetcode 1636. 按照频率将数组升序排序</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/18</span><a class="archive-post-title" href= "/2022/09/18/Leetcode-827-最大人工岛/" >Leetcode 827. 最大人工岛</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/17</span><a class="archive-post-title" href= "/2022/09/17/Leetcode-1624-两个相同字符之间的最长子字符串/" >Leetcode 1624. 两个相同字符之间的最长子字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/14</span><a class="archive-post-title" href= "/2022/09/14/Leetcode-1619-删除某些元素后的数组均值/" >Leetcode 1619. 删除某些元素后的数组均值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/13</span><a class="archive-post-title" href= "/2022/09/13/Leetcode-670-最大交换/" >Leetcode 670. 最大交换</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2022/09/12/Leetcode-1608-特殊数组的特征值/" >Leetcode 1608. 特殊数组的特征值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2022/09/11/Leetcode-857-雇佣-K-名工人的最低成本/" >Leetcode 857. 雇佣 K 名工人的最低成本</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2022/09/10/Leetcode-669-修剪二叉搜索树/" >Leetcode 669. 修剪二叉搜索树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2022/09/09/Leetcode-1598-文件夹操作日志搜集器/" >Leetcode 1598. 文件夹操作日志搜集器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/08</span><a class="archive-post-title" href= "/2022/09/08/Leetcode-667-优美的排列-II/" >Leetcode 667. 优美的排列 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2022/09/07/Leetcode-1592-重新排列单词间的空格/" >Leetcode 1592. 重新排列单词间的空格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2022/09/06/Leetcode-828-统计子串中的唯一字符/" >Leetcode 828. 统计子串中的唯一字符</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/05</span><a class="archive-post-title" href= "/2022/09/05/Leetcode-652-寻找重复的子树/" >Leetcode 652. 寻找重复的子树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/04</span><a class="archive-post-title" href= "/2022/09/04/Leetcode-1582-二进制矩阵中的特殊位置/" >Leetcode 1582. 二进制矩阵中的特殊位置</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/03</span><a class="archive-post-title" href= "/2022/09/03/Leetcode-646-最长数对链/" >Leetcode 646. 最长数对链</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2022/09/02/Leetcode-687-最长同值路径/" >Leetcode 687. 最长同值路径</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/01</span><a class="archive-post-title" href= "/2022/09/01/Leetcode-1475-商品折扣后的最终价格/" >Leetcode 1475. 商品折扣后的最终价格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/31</span><a class="archive-post-title" href= "/2022/08/31/Leetcode-946-验证栈序列/" >Leetcode 946. 验证栈序列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/30</span><a class="archive-post-title" href= "/2022/08/30/Leetcode-998-最大二叉树-II/" >Leetcode 998. 最大二叉树 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2022/08/29/Leetcode-1470-重新排列数组/" >Leetcode 1470. 重新排列数组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/27</span><a class="archive-post-title" href= "/2022/08/27/Leetcode-662-二叉树最大宽度/" >Leetcode 662. 二叉树最大宽度</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/26</span><a class="archive-post-title" href= "/2022/08/26/Leetcode-1464-数组中两元素的最大乘积/" >Leetcode 1464. 数组中两元素的最大乘积</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/25</span><a class="archive-post-title" href= "/2022/08/25/Leetcode-658-找到-K-个最接近的元素/" >Leetcode 658. 找到 K 个最接近的元素</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/24</span><a class="archive-post-title" href= "/2022/08/24/Leetcode-1460-通过翻转子数组使两个数组相等/" >Leetcode 1460. 通过翻转子数组使两个数组相等</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/23</span><a class="archive-post-title" href= "/2022/08/23/Leetcode-782-变为棋盘/" >Leetcode 782. 变为棋盘</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2022/08/22/Leetcode-655-输出二叉树/" >Leetcode 655. 输出二叉树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2022/08/21/Leetcode-1455-检查单词是否为句中其他单词的前缀/" >Leetcode 1455. 检查单词是否为句中其他单词的前缀</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/20</span><a class="archive-post-title" href= "/2022/08/20/Leetcode-654-最大二叉树/" >Leetcode 654. 最大二叉树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/19</span><a class="archive-post-title" href= "/2022/08/19/Leetcode-1450-在既定时间做作业的学生人数/" >Leetcode 1450. 在既定时间做作业的学生人数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/18</span><a class="archive-post-title" href= "/2022/08/18/Leetcode-1224-最大相等频率/" >Leetcode 1224. 最大相等频率</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span><a class="archive-post-title" href= "/2022/08/17/Leetcode-1302-层数最深叶子节点的和/" >Leetcode 1302. 层数最深叶子节点的和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span><a class="archive-post-title" href= "/2022/08/16/Leetcode-1656-设计有序流/" >Leetcode 1656. 设计有序流</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2022/08/15/Leetcode-641-设计循环双端队列/" >Leetcode 641. 设计循环双端队列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/14</span><a class="archive-post-title" href= "/2022/08/14/Leetcode-1422-分割字符串的最大得分/" >Leetcode 1422. 分割字符串的最大得分</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2022/08/13/Leetcode-768-最多能完成排序的块-II/" >Leetcode 768. 最多能完成排序的块 II</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/12</span><a class="archive-post-title" href= "/2022/08/12/Leetcode-1282-用户分组/" >Leetcode 1282. 用户分组</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2022/08/11/Leetcode-1417-重新格式化字符串/" >Leetcode 1417. 重新格式化字符串</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/10</span><a class="archive-post-title" href= "/2022/08/10/Leetcode-640-求解方程/" >Leetcode 640. 求解方程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/09</span><a class="archive-post-title" href= "/2022/08/09/Leetcode-1413-逐步求和得到正数的最小值/" >Leetcode 1413. 逐步求和得到正数的最小值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2022/08/08/Leetcode-761-特殊的二进制序列/" >Leetcode 761. 特殊的二进制序列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span><a class="archive-post-title" href= "/2022/08/07/Leetcode-636-函数的独占时间/" >Leetcode 636. 函数的独占时间</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/06</span><a class="archive-post-title" href= "/2022/08/06/Leetcode-1408-数组中的字符串匹配/" >Leetcode 1408. 数组中的字符串匹配</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2022/08/05/Leetcode-623-在二叉树中增加一行/" >Leetcode 623. 在二叉树中增加一行</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/04</span><a class="archive-post-title" href= "/2022/08/04/Leetcode-1403-非递增顺序的最小子序列/" >Leetcode 1403. 非递增顺序的最小子序列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span><a class="archive-post-title" href= "/2022/08/03/Leetcode-899-有序队列/" >Leetcode 899. 有序队列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2022/08/02/Leetcode-622-设计循环队列/" >Leetcode 622. 设计循环队列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/01</span><a class="archive-post-title" href= "/2022/08/01/Leetcode-1374-生成每种字符都是奇数个的字符串/" >Leetcode 1374. 生成每种字符都是奇数个的字符串</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -5782,17 +9713,17 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">09/16</span><a class="archive-post-title" href= "/2021/09/16/吴恩达深度学习-C1-W4-Assignment/" >吴恩达深度学习 C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">09/16</span><a class="archive-post-title" href= "/2021/09/16/吴恩达深度学习-C1-W2-Assignment/" >吴恩达深度学习 C1_W2_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/16</span><a class="archive-post-title" href= "/2021/09/16/吴恩达深度学习-C1-W3-Assignment/" >吴恩达深度学习 C1_W3_Assignment</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/16</span><a class="archive-post-title" href= "/2021/09/16/吴恩达深度学习-C1-W4-Assignment/" >吴恩达深度学习 C1_W4_Assignment</a>
         </li>
     
     
@@ -5812,12 +9743,7 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W1-Assignment/" >吴恩达团队NLP C4_W1_Assignment</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W3-Assignment/" >吴恩达团队NLP C3_W3_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W2-Assignment/" >吴恩达团队NLP C3_W2_Assignment</a>
         </li>
     
     
@@ -5827,7 +9753,7 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W2-Assignment/" >吴恩达团队NLP C3_W2_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C4-W1-Assignment/" >吴恩达团队NLP C4_W1_Assignment</a>
         </li>
     
     
@@ -5837,7 +9763,7 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2021/08/28/吴恩达团队NLP-C3-W3-Assignment/" >吴恩达团队NLP C3_W3_Assignment</a>
         </li>
     
     
@@ -5847,17 +9773,22 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C1-W4-Assignment/" >吴恩达团队NLP C1_W4_Assignment</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W3-Assignment/" >吴恩达团队NLP C2_W3_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >吴恩达团队NLP C2_W2_Assignment</a>
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >吴恩达团队NLP C2_W4_Assignment</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W4-Assignment/" >吴恩达团队NLP C2_W4_Assignment</a>
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2021/08/08/吴恩达团队NLP-C2-W2-Assignment/" >吴恩达团队NLP C2_W2_Assignment</a>
         </li>
     
     
@@ -5877,22 +9808,22 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY52-位操作练习/" >牛客网 KY52.位操作练习</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY68-子串计算/" >牛客网 KY68.子串计算</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY52-位操作练习/" >牛客网 KY52.位操作练习</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY73-合唱队形/" >牛客网 KY73.合唱队形</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span><a class="archive-post-title" href= "/2021/03/03/牛客网-KY8-整数拆分/" >牛客网 KY8.整数拆分</a>
         </li>
     
     
@@ -5947,12 +9878,12 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1019-数字黑洞/" >PAT 1019.数字黑洞</a>
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2021/02/05/PAT-1020-月饼/" >PAT 1020.月饼</a>
         </li>
     
     
@@ -5967,12 +9898,12 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1008-数组元素循环右移问题/" >PAT 1008.数组元素循环右移问题</a>
+            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1005-继续-3n-1-猜想/" >PAT 1005.继续(3n+1)猜想</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1005-继续-3n-1-猜想/" >PAT 1005.继续(3n+1)猜想</a>
+            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/PAT-1008-数组元素循环右移问题/" >PAT 1008.数组元素循环右移问题</a>
         </li>
     
     
@@ -6986,12 +10917,12 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5396-连续字符/" >Leetcode 5396. 连续字符</a>
+            <span class="archive-post-date">05/16</span><a class="archive-post-title" href= "/2020/05/16/Leetcode-5397-最简分数/" >Leetcode 5397. 最简分数</a>
         </li>
     
     
@@ -7120,7 +11051,7 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
         </li>
     
     
@@ -7130,7 +11061,7 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《秘密》/" >东野圭吾《秘密》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/东野圭吾《新参者》/" >东野圭吾《新参者》</a>
         </li>
     
     
@@ -7145,12 +11076,12 @@ candidates 中的数字可以无限制重复被选取。
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《傀儡村事件》/" >时晨《傀儡村事件》</a>
+            <span class="archive-post-date">10/14</span><a class="archive-post-title" href= "/2019/10/14/时晨《镜狱岛事件》/" >时晨《镜狱岛事件》</a>
         </li>
     
     
@@ -7178,55 +11109,71 @@ candidates 中的数字可以无限制重复被选取。
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
     
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先搜索"><span class="iconfont-archer">&#xe606;</span>深度优先搜索</span>
     
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
+    
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
         <span class="sidebar-tag-name" data-tags="深度优先遍历"><span class="iconfont-archer">&#xe606;</span>深度优先遍历</span>
     
+        <span class="sidebar-tag-name" data-tags="单调栈"><span class="iconfont-archer">&#xe606;</span>单调栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
+    
         <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
+    
+        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
+    
+        <span class="sidebar-tag-name" data-tags="模拟"><span class="iconfont-archer">&#xe606;</span>模拟</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先搜索"><span class="iconfont-archer">&#xe606;</span>广度优先搜索</span>
     
         <span class="sidebar-tag-name" data-tags="回溯"><span class="iconfont-archer">&#xe606;</span>回溯</span>
     
-        <span class="sidebar-tag-name" data-tags="贪心"><span class="iconfont-archer">&#xe606;</span>贪心</span>
+        <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
-        <span class="sidebar-tag-name" data-tags="双指针"><span class="iconfont-archer">&#xe606;</span>双指针</span>
-    
-        <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
-    
-        <span class="sidebar-tag-name" data-tags="图"><span class="iconfont-archer">&#xe606;</span>图</span>
+        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
     
         <span class="sidebar-tag-name" data-tags="广度优先遍历"><span class="iconfont-archer">&#xe606;</span>广度优先遍历</span>
     
-        <span class="sidebar-tag-name" data-tags="二分查找"><span class="iconfont-archer">&#xe606;</span>二分查找</span>
+        <span class="sidebar-tag-name" data-tags="记忆化搜索"><span class="iconfont-archer">&#xe606;</span>记忆化搜索</span>
     
         <span class="sidebar-tag-name" data-tags="数学"><span class="iconfont-archer">&#xe606;</span>数学</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
+        <span class="sidebar-tag-name" data-tags="前缀和"><span class="iconfont-archer">&#xe606;</span>前缀和</span>
+    
         <span class="sidebar-tag-name" data-tags="双向链表"><span class="iconfont-archer">&#xe606;</span>双向链表</span>
+    
+        <span class="sidebar-tag-name" data-tags="优先队列"><span class="iconfont-archer">&#xe606;</span>优先队列</span>
     
         <span class="sidebar-tag-name" data-tags="拓扑排序"><span class="iconfont-archer">&#xe606;</span>拓扑排序</span>
     
         <span class="sidebar-tag-name" data-tags="KMP"><span class="iconfont-archer">&#xe606;</span>KMP</span>
     
-        <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
-    
         <span class="sidebar-tag-name" data-tags="堆"><span class="iconfont-archer">&#xe606;</span>堆</span>
     
         <span class="sidebar-tag-name" data-tags="字典树"><span class="iconfont-archer">&#xe606;</span>字典树</span>
     
+        <span class="sidebar-tag-name" data-tags="递归"><span class="iconfont-archer">&#xe606;</span>递归</span>
+    
         <span class="sidebar-tag-name" data-tags="并查集"><span class="iconfont-archer">&#xe606;</span>并查集</span>
     
-        <span class="sidebar-tag-name" data-tags="递归"><span class="iconfont-archer">&#xe606;</span>递归</span>
+        <span class="sidebar-tag-name" data-tags="矩阵"><span class="iconfont-archer">&#xe606;</span>矩阵</span>
+    
+        <span class="sidebar-tag-name" data-tags="位运算"><span class="iconfont-archer">&#xe606;</span>位运算</span>
+    
+        <span class="sidebar-tag-name" data-tags="双端队列"><span class="iconfont-archer">&#xe606;</span>双端队列</span>
     
         <span class="sidebar-tag-name" data-tags="吴恩达团队NLP"><span class="iconfont-archer">&#xe606;</span>吴恩达团队NLP</span>
     
@@ -7281,9 +11228,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="大三课程学习"><span class="iconfont-archer">&#xe60a;</span>大三课程学习</span>
     
-        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
-    
         <span class="sidebar-category-name" data-categories="大四课程学习"><span class="iconfont-archer">&#xe60a;</span>大四课程学习</span>
+    
+        <span class="sidebar-category-name" data-categories="浙工商OJ"><span class="iconfont-archer">&#xe60a;</span>浙工商OJ</span>
     
         <span class="sidebar-category-name" data-categories="牛客网"><span class="iconfont-archer">&#xe60a;</span>牛客网</span>
     
